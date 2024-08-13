@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+    <meta charset="utf-8">
+    <title>Panoramic56</title>
+    <!-- <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"> -->
+    <!-- <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest"> -->
+    <!-- <link rel="icon" type="image/x-icon" href="docs/assets/images/Panoramic-4.ico"> -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="side-nav">
+        <nav class="nav-bar">
+            <ul>
+                <li>
+                    <a href="index.html" class="logo">
+                        <img src="docs/assets/images/Panoramic-4.png">
+                        <span class="nav-item">BPanoramic56</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='fas bx bxs-landscape'></i>
+                        <span class="nav-item">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='fas bx bxs-grid-alt'></i>
+                        <span class="nav-item">Projects</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="server_page.html">
+                        <i class='fas bx bxs-server'></i> <span class="nav-item">Server</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='fas bx bxs-info-square'></i>
+                        <span class="nav-item">About</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="main">
+        <script>
+            fetch("docs/AirlineInfo.txt").then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.text();
+            })
+                .then(data => {
+                    console.log(data);
+                })
+                .catch(error => {
+                    console.error('There was a problem with the fetch operation:', error);
+                });
+        </script>
+    </div>
+</body>
+
+</html>

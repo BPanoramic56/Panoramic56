@@ -1,0 +1,522 @@
+:root {
+    --SideBar: rgba(68, 61, 230, 0.566);
+    --PageBackground: rgb(20, 20, 20);
+    /* #141414 */
+}
+
+* {
+    background-color: var(--PageBackground);
+    border: none;
+    box-sizing: border-box;
+    color: white;
+    margin: 0;
+    outline: none;
+    padding: 0;
+    text-decoration: none;
+}
+
+img {
+    float: left;
+    height: 100px;
+    object-fit: cover;
+    width: 100px;
+}
+
+h5 {
+    margin: 0;
+    padding: 0;
+}
+
+/* Introduction Sequence */
+
+.intro-div {
+    background-color: var(--PageBackground);
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    top: 0;
+    transition: 1s;
+    width: 100%;
+    z-index: 1;
+}
+
+.logo-header {
+    color: white;
+    left: 50%;
+    position: absolute;
+    top: 40%;
+    transform: translate(-50%, -50%);
+}
+
+.logo-header img {
+    height: 500px;
+    width: 500px;
+}
+
+.intro-logo {
+    display: inline-block;
+    opacity: 0;
+}
+
+.intro-logo.active {
+    bottom: 0;
+    opacity: 1;
+    transition: ease-in-out 0.4s;
+}
+
+.intro-logo.fade {
+    bottom: 150px;
+    opacity: 0;
+    transition: ease-in-out 0.5s;
+}
+
+/* Projects Section */
+
+.master-projects-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    margin-top: 100px;
+    transition: margin-left 0.3s linear;
+}
+
+.master-projects-div div:nth-child(1) {
+    animation-delay: 3000ms;
+}
+
+.master-projects-div div:nth-child(2) {
+    animation-delay: 3300ms;
+}
+
+.master-projects-div div:nth-child(3) {
+    animation-delay: 3600ms;
+}
+
+.master-projects-div div:nth-child(4) {
+    animation-delay: 3900ms;
+}
+
+.master-projects-div div:nth-child(5) {
+    animation-delay: 4200ms;
+}
+
+.master-projects-div div:nth-child(6) {
+    animation-delay: 4500ms;
+}
+
+.master-projects-div div:nth-child(7) {
+    animation-delay: 4800ms;
+}
+
+.master-projects-div div:nth-child(8) {
+    animation-delay: 5100ms;
+}
+
+.project-card {
+    width: 325px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 2);
+    margin: 20px;
+    opacity: 0;
+    animation: fadeIn ease 2.5s forwards;
+}
+
+.project-card img {
+    width: 100%;
+    padding-bottom: 15px;
+}
+
+.project-card h5 {
+    margin-bottom: 8px;
+}
+
+.project-card .btn {
+    background-color: white;
+    border-radius: 5px;
+    border: 4px;
+    box-shadow: 0px 2px 4px color(display-p3 0.8275 0.7608 0.9843);
+    color: black;
+    display: inline-block;
+    margin: 16px;
+    padding-bottom: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 8px;
+    text-decoration: none;
+    transition: box-shadow 0.5s ease;
+    white-space: nowrap;
+    width: 28%;
+}
+
+.project-card .btn:hover {
+    box-shadow: 0px 2px 80px rgb(112, 0, 203);
+}
+
+/* Side Bar */
+
+nav {
+    background-color: var(--PageBackground);
+    bottom: 0px;
+    box-shadow: 0 20px 35px 2px var(--SideBar);
+    height: 100%;
+    overflow: hidden;
+    position: fixed;
+    top: 0px;
+    transition: all 0.5s ease;
+    transition: width 0 2s linear;
+    width: 80px;
+}
+
+nav a span {
+    font-size: 18px;
+}
+
+nav a i,
+nav a span {
+    background-color: inherit;
+}
+
+.logo {
+    display: flex;
+    margin: 10px 0 0 10px;
+    text-align: center;
+    transition: all 1 ease;
+    transition: all 1s ease;
+}
+
+.logo:hover img,
+.logo:hover .nav-bar {
+    animation-direction: alternate;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-name: logo-hover;
+    animation-timing-function: linear;
+}
+
+.logo img {
+    border-radius: 50%;
+    height: 45px;
+    width: 45px;
+}
+
+.logo span {
+    font-size: 18px;
+    font-weight: bold;
+    padding-left: 15px;
+}
+
+nav a {
+    color: rgb(98, 98, 98);
+    display: table;
+    font-size: 14px;
+    height: 75px;
+    padding-bottom: 25px;
+    padding: 10px;
+    position: relative;
+    transition: all 0.5s ease;
+    width: 300px;
+}
+
+.fas {
+    font-size: 25px;
+    height: 40px;
+    position: relative;
+    text-align: center;
+    top: 14px;
+    width: 70px;
+}
+
+.nav-item {
+    margin-left: 10px;
+    position: relative;
+    top: 12px;
+}
+
+nav a:hover {
+    background: white;
+}
+
+nav a:hover i,
+nav a:hover span {
+    color: black;
+}
+
+nav:hover {
+    transition: all 0.5s ease;
+    width: 280px;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Main Page Section */
+
+.main {
+    margin-left: 120px;
+    margin-top: 40px;
+    transition: margin-left 0.5s;
+}
+
+.side-nav:hover+.main,
+.side-nav:hover+footer {
+    margin-left: 300px;
+}
+
+.link-image {
+    flex: 0;
+    margin: 25px;
+    text-align: center;
+}
+
+.link-image img {
+    display: flex;
+    flex-direction: collumn;
+    position: absolute;
+    text-align: center;
+}
+
+/* Recipe Page */
+
+.recipes_header {
+    font-family: cursive;
+    font-size: 40px;
+    text-align: center;
+}
+
+.paragraph_spacing {
+    line-height: 120%;
+    margin-left: 4%;
+}
+
+.recipe_time>*,
+.recipe_time {
+    background-color: rgb(250, 236, 236);
+    width: 50%;
+}
+
+.recipe_time {
+    border-color: rgb(0, 0, 0);
+    border-radius: 0.1%;
+    border-style: double;
+    border-width: 4px;
+}
+
+.recipe_time_title {
+    margin-left: 2%;
+}
+
+.recipe_list {
+    list-style-type: none;
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+.outer {
+    border: 1px solid #000;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    display: block;
+    height: 300px;
+    margin: 20px auto;
+    overflow: hidden;
+    position: relative;
+    width: 300px;
+}
+
+.inner {
+    background-repeat: no-repeat;
+    background-size: 200px 200px;
+    cursor: pointer;
+    display: block;
+    height: 300px;
+    width: 1200px;
+}
+
+/* .inner#chocolate_chip_coffee_cake_image {
+    background:
+        url(src/docs/assets/images/CCCC1.jpg) 0 0,
+        url(src/docs/assets/images/CCCC2.jpg) 300px 0,
+        url(src/docs/assets/images/CCCC3.jpg) 600px 0,
+        url(src/docs/assets/images/CCCC4.jpg) 900px 0;
+    background-size: 300px 300px;
+    background-repeat: no-repeat;
+}
+
+.inner#buffalo_chicken_sandwiches_image {
+    background:
+        url(src/docs/assets/images/BCS1.jpg) 0 0,
+        url(src/docs/assets/images/BCS2.jpg) 300px 0,
+        url(src/docs/assets/images/BCS3.jpg) 600px 0,
+        url(src/docs/assets/images/BCS4.jpg) 900px 0;
+    background-size: 300px 300px;
+    background-repeat: no-repeat;
+}
+
+.inner#cuban_ropa_vieja_image {
+    background:
+        url(src/docs/assets/images/CuRoVi1.jpg) 0 0,
+        url(src/docs/assets/images/CuRoVi2.jpg) 300px 0,
+        url(src/docs/assets/images/CuRoVi3.jpg) 600px 0,
+        url(src/docs/assets/images/CuRoVi4.jpg) 900px 0;
+    background-size: 300px 300px;
+    background-repeat: no-repeat;
+} */
+
+.outer:hover .inner,
+.outer:focus .inner {
+    animation: swap 8s ease-in-out infinite 2s;
+}
+
+/* Server Page CSS */
+/* Chart Section */
+
+.master-chart-div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+
+.DiagramIframe {
+    height: 500px;
+    width: 500px;
+}
+
+.ChartDiv {
+    background-color: var(--SideBar);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: block;
+    height: 150px;
+    margin: 50px;
+    position: relative;
+    transition: opacity 0.5s, visibility 0.5s;
+    width: 300px;
+}
+
+.ChartDiv iframe {
+    background-color: var(--SideBar);
+    border-radius: 5px;
+    display: block;
+    height: 100%;
+    padding: 10px;
+    transition: height 1s ease 2s, width 1s ease 2s, border-radius 1s linear 2s;
+    width: 100%;
+}
+
+.OverlayText {
+    background-color: var(--PageBackground);
+    color: rgb(204,205, 238);
+    font-size: 15px;
+    left: 50%;
+    opacity: 100%;
+    padding: 10px 20px;
+    pointer-events: none;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 1s ease 2s;
+}
+
+.LowerText{
+    background-color: inherit;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin: 0;
+    padding: 15px;
+    transition: opacity 1s ease 2s;
+    width: 300px;
+}
+
+.ChartDiv:hover iframe {
+    height: 500%;
+    width: 500%;
+    /* background-color: var(--SideBar); */
+}
+
+.ChartDiv:hover .LowerText{
+    opacity: 0;
+}
+
+.ChartDiv:hover .OverlayText {
+    opacity: 0;
+}
+
+.master-chart-div div:nth-child(1) {
+    animation-delay: 200ms;
+}
+.master-chart-div div:nth-child(2) {
+    animation-delay: 400ms;
+}
+.master-chart-div div:nth-child(3) {
+    animation-delay: 600ms;
+}
+
+/* Animation Section */
+
+@keyframes showUp {
+    0% {
+        opacity: 0;
+        transform: translateX(250px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(+50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes swap {
+    0% {
+        transform: translateX(0px);
+    }
+
+    25% {
+        transform: translateX(-300px)
+    }
+
+    50% {
+        transform: translateX(-600px)
+    }
+
+    75% {
+        transform: translateX(-900px)
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes logo-hover {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        filter: hue-rotate(+1turn)
+    }
+}
+
+/* Special Classes */
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
