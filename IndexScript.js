@@ -1,11 +1,6 @@
-// require("/Users/brunogomespascotto/odin-recipes/src/main.css");
-import "./styles.css";
-
-
 let intro = document.querySelector('.intro-div');
 let logo = document.querySelector('.logo-header');
 let logoSpan = document.querySelectorAll('.intro-logo');
-// require("./main.css");
 
 window.addEventListener('DOMContentLoaded', () => { // All contents within this block will trigger whenever the page is loaded
     setTimeout(() => {
@@ -25,7 +20,7 @@ window.addEventListener('DOMContentLoaded', () => { // All contents within this 
         }, 2000);
 
         setTimeout(() => {
-            intro.style.top = '100vh';
+            intro.style.top = '-100vh';
         }, 2300);
     })
 });
