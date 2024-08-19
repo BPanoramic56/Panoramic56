@@ -51,18 +51,31 @@
     </div>
     <div class="main">
         <script>
-            fetch("Assets/Docs/AirlineNameList.txt").then(response => {
+            fetch("https://raw.githubusercontent.com/BPanoramic56/Panoramic56/main/Assets/Docs/AirlineNameList.txt").then(response => 
+            {
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
                 return response.text();
             })
                 .then(data => {
-                    console.log(data);
+                    let dataSplit = data.split(" ");
+                    const list = document.createElement('ul');
+                    dataSplit.forEach((item) => {
+                        let li = document.createElement("li");
+                        li.innerText=item;
+                        list.appendChild(li);
+                    })
+                    console.log(dataSplit);
+                    const text = document.createTextNode(dataSplit);
+                    // paragraph.appendChild(completeArray);
+                    // paragraph.appendChild(text);
+                    const main = document.getElementsByClassName('main')[0];
+                    main.appendChild(list);
                 })
                 .catch(error => {
                     console.error('There was a problem with the fetch operation:', error);
-                });
+                })
         </script>
     </div>
 </body>

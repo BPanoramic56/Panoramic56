@@ -1,0 +1,502 @@
+{
+	"KSLC": {
+	"arrivals" : [
+		{ 
+			"CallSign" : "SKW4004", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "DAL1340", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "SKW4030", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "DAL1440", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "AAL344", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "DAL1502", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "DAL1314", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "SKW3745", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "FFT1508", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "SKW4138", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "DAL1331", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "N787FR", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "SKW3769", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "SKW4311", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "DAL1535", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "DAL2906", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "DAL1128", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "N557HD", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "DAL2392", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "DAL2674", 
+ 			"Destination" : "Sunlit Earth" 
+		}
+	],
+	"departures" : [
+		{ 
+			"CallSign" : "N796PC", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "N124PH", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "EJA519", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "DAL1453", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "UAL2182", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "DAL2798", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "N781HC", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "DAL1698", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "EJA412", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "DAL2916", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "DAL2445", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "SKW3661", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "SWA3106", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "DAL1177", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "DAL1447", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "DAL1367", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "DAL1198", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "DAL1203", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "DAL897", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "DAL2271", 
+ 			"Destination" : "Sunlit Earth" 
+		}
+	]
+	}
+}{
+	"KSFO": {
+	"arrivals" : [
+		{ 
+			"CallSign" : "ASA526", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "UAL781", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "UAL1041", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "SKW4678", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "FFT3801", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "UAL2248", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "SKW5464", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "UAL1355", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "SWA3369", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "UAL1712", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "UAL1627", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "SKW3301", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "EVA8", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "UAL1164", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "UAL573", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "SKW5736", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "UAL2650", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "UAL3774", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "SKW3473", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "SKW5313", 
+ 			"Destination" : "Sunlit Earth" 
+		}
+	],
+	"departures" : [
+		{ 
+			"CallSign" : "N248PH", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "WJA1521", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "EJA764", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "DAL400", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "AAL1960", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "DAL640", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "ASA434", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "ASA1001", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "ASA512", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "ASA879", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "UAL749", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "UAL1710", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "EJA759", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "SWA254", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "AMX699", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "UAL2035", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "EJA300", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "SKW3440", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "ASA28", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "JBU1216", 
+ 			"Destination" : "Sunlit Earth" 
+		}
+	]
+	}
+}{
+	"KBZN": {
+	"arrivals" : [
+		{ 
+			"CallSign" : "YEL26", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "N16EK", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "YEL14", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "PRE507", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "ASA419", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "SWA3385", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "SWA3886", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "AAL2522", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "N98JF", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "N868CW", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "N49RL", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "N328RS", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "EJA557", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "DAL2046", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "DAL2954", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "UAL1117", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "UAL778", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "TMB311", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "N97WY", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "SKW4041", 
+ 			"Destination" : "Sunlit Earth" 
+		}
+	],
+	"departures" : [
+		{ 
+			"CallSign" : "N8896V", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "SWA2779", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "N7539M", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "N7059V", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "UAL2052", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "YEL14", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "YEL26", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "AAL2523", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "N16EK", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "N675RM", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "EJA557", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "N500MW", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "N49RL", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "N509WA", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "YEL29", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "YEL48", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "YEL22", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "UAL2063", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "PRE507", 
+ 			"Destination" : "Sunlit Earth" 
+		},
+		{ 
+			"CallSign" : "SWA290", 
+ 			"Destination" : "Sunlit Earth" 
+		}
+	]
+	}
+}
