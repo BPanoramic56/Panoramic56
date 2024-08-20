@@ -3,3 +3,4 @@ webpack-demo/
 node_modules/
 dist/
 Gatherer.py
+Scrapper.py
