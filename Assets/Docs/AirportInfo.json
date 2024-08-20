@@ -1,0 +1,832 @@
+{
+    "KSLC": {
+        "Arrivals": {
+            "UPS840": {
+                "flight_number": "UPS840",
+                "flight_destination": "Muhammad Ali Intl (SDF)",
+                "departure_time": "01:44a EDT ",
+                "arrival_time": "02:57a MDT ",
+                "aircraft_type": "B752"
+            },
+            "N34SU": {
+                "flight_number": "N34SU",
+                "flight_destination": "Cedar City Rgnl (KCDC)",
+                "departure_time": "12:29a MDT ",
+                "arrival_time": "02:53a MDT ",
+                "aircraft_type": "SR20"
+            },
+            "N15SU": {
+                "flight_number": "N15SU",
+                "flight_destination": "Cedar City Rgnl (KCDC)",
+                "departure_time": "12:20a MDT ",
+                "arrival_time": "02:47a MDT ",
+                "aircraft_type": "SR20"
+            },
+            "JBU247": {
+                "flight_number": "JBU247",
+                "flight_destination": "Boston Logan Intl (BOS)",
+                "departure_time": "11:26p EDT ",
+                "arrival_time": "02:09a MDT ",
+                "aircraft_type": "A21N"
+            },
+            "N387AF": {
+                "flight_number": "N387AF",
+                "flight_destination": "Salt Lake City Intl (KSLC)",
+                "departure_time": "11:46p MDT ",
+                "arrival_time": "01:55a MDT ",
+                "aircraft_type": "C172"
+            },
+            "AAL344": {
+                "flight_number": "AAL344",
+                "flight_destination": "Dallas-Fort Worth Intl (DFW)",
+                "departure_time": "12:38a CDT ",
+                "arrival_time": "01:52a MDT ",
+                "aircraft_type": "A321"
+            },
+            "DAL445": {
+                "flight_number": "DAL445",
+                "flight_destination": "Boston Logan Intl (BOS)",
+                "departure_time": "10:34p EDT ",
+                "arrival_time": "01:45a MDT ",
+                "aircraft_type": "A21N"
+            },
+            "N796PC": {
+                "flight_number": "N796PC",
+                "flight_destination": "Central Wyoming Rgnl (KRIW)",
+                "departure_time": "12:39a MDT ",
+                "arrival_time": "01:42a MDT ",
+                "aircraft_type": "PC12"
+            },
+            "N103KF": {
+                "flight_number": "N103KF",
+                "flight_destination": "Provo Muni (KPVU)",
+                "departure_time": "12:56a MDT ",
+                "arrival_time": "01:35a MDT ",
+                "aircraft_type": "C172"
+            },
+            "DAL2117": {
+                "flight_number": "DAL2117",
+                "flight_destination": "Detroit Metro Wayne Co (DTW)",
+                "departure_time": "12:00a EDT ",
+                "arrival_time": "01:31a MDT ",
+                "aircraft_type": "A321"
+            },
+            "SKW4320": {
+                "flight_number": "SKW4320",
+                "flight_destination": "St George Rgnl (SGU)",
+                "departure_time": "12:23a MDT ",
+                "arrival_time": "01:25a MDT ",
+                "aircraft_type": "CRJ9"
+            },
+            "DAL863": {
+                "flight_number": "DAL863",
+                "flight_destination": "John F Kennedy Intl (JFK)",
+                "departure_time": "10:43p EDT ",
+                "arrival_time": "01:14a MDT ",
+                "aircraft_type": "A21N"
+            },
+            "SWA2431": {
+                "flight_number": "SWA2431",
+                "flight_destination": "Denver Intl (DEN)",
+                "departure_time": "11:38p MDT ",
+                "arrival_time": "12:47a MDT ",
+                "aircraft_type": "B738"
+            },
+            "DAL453": {
+                "flight_number": "DAL453",
+                "flight_destination": "Hartsfield-Jackson Intl (ATL)",
+                "departure_time": "11:06p EDT ",
+                "arrival_time": "12:44a MDT ",
+                "aircraft_type": "A321"
+            },
+            "AAL2587": {
+                "flight_number": "AAL2587",
+                "flight_destination": "Dallas-Fort Worth Intl (DFW)",
+                "departure_time": "11:14p CDT ",
+                "arrival_time": "12:28a MDT ",
+                "aircraft_type": "A321"
+            },
+            "DAL2033": {
+                "flight_number": "DAL2033",
+                "flight_destination": "Newark Liberty Intl (EWR)",
+                "departure_time": "09:42p EDT ",
+                "arrival_time": "12:20a MDT ",
+                "aircraft_type": "A21N"
+            },
+            "FFT4721": {
+                "flight_number": "FFT4721",
+                "flight_destination": "Denver Intl (DEN)",
+                "departure_time": "11:03p MDT ",
+                "arrival_time": "12:13a MDT ",
+                "aircraft_type": "A321"
+            },
+            "N621T": {
+                "flight_number": "N621T",
+                "flight_destination": "Salt Lake City Intl (KSLC)",
+                "departure_time": "10:30p MDT ",
+                "arrival_time": "12:11a MDT ",
+                "aircraft_type": "C172"
+            },
+            "SWA1132": {
+                "flight_number": "SWA1132",
+                "flight_destination": "Phoenix Sky Harbor Intl (PHX)",
+                "departure_time": "09:47p MST ",
+                "arrival_time": "12:02a MDT ",
+                "aircraft_type": "B737"
+            },
+            "UAL661": {
+                "flight_number": "UAL661",
+                "flight_destination": "Chicago O'Hare Intl (ORD)",
+                "departure_time": "09:51p CDT ",
+                "arrival_time": "11:50p MDT ",
+                "aircraft_type": "A320"
+            }
+        },
+        "Departures": {
+            "DAL705": {
+                "flight_number": "DAL705",
+                "flight_destination": "John F Kennedy Intl (JFK)",
+                "departure_time": "02:33a MDT ",
+                "arrival_time": "08:15a EDT ",
+                "aircraft_type": "A21N"
+            },
+            "DAL696": {
+                "flight_number": "DAL696",
+                "flight_destination": "Boston Logan Intl (BOS)",
+                "departure_time": "01:34a MDT ",
+                "arrival_time": "07:30a EDT ",
+                "aircraft_type": "A21N"
+            },
+            "DAL2075": {
+                "flight_number": "DAL2075",
+                "flight_destination": "Philadelphia Intl (PHL)",
+                "departure_time": "01:14a MDT ",
+                "arrival_time": "07:03a EDT ",
+                "aircraft_type": "A321"
+            },
+            "CTA306": {
+                "flight_number": "CTA306",
+                "flight_destination": "St George Rgnl (KSGU)",
+                "departure_time": "12:51a MDT ",
+                "arrival_time": "01:58a MDT ",
+                "aircraft_type": "PC12"
+            },
+            "DAL2998": {
+                "flight_number": "DAL2998",
+                "flight_destination": "Seattle-Tacoma Intl (SEA)",
+                "departure_time": "12:21a MDT ",
+                "arrival_time": "01:06a PDT ",
+                "aircraft_type": "A321"
+            },
+            "DAL2077": {
+                "flight_number": "DAL2077",
+                "flight_destination": "Tampa Intl (TPA)",
+                "departure_time": "12:20a MDT ",
+                "arrival_time": "05:55a EDT ",
+                "aircraft_type": "A321"
+            },
+            "DAL912": {
+                "flight_number": "DAL912",
+                "flight_destination": "Hartsfield-Jackson Intl (ATL)",
+                "departure_time": "12:19a MDT ",
+                "arrival_time": "05:21a EDT ",
+                "aircraft_type": "A321"
+            },
+            "DAL2046": {
+                "flight_number": "DAL2046",
+                "flight_destination": "Bozeman Yellowstone Intl (BZN)",
+                "departure_time": "12:10a MDT ",
+                "arrival_time": "12:59a MDT ",
+                "aircraft_type": "B739"
+            },
+            "AAL2176": {
+                "flight_number": "AAL2176",
+                "flight_destination": "Charlotte/Douglas Intl (CLT)",
+                "departure_time": "12:09a MDT ",
+                "arrival_time": "05:39a EDT ",
+                "aircraft_type": "A321"
+            },
+            "FFT9436": {
+                "flight_number": "FFT9436",
+                "flight_destination": "Harry Reid Intl (LAS)",
+                "departure_time": "12:00a MDT ",
+                "arrival_time": "11:57p PDT ",
+                "aircraft_type": "A20N"
+            },
+            "DAL1197": {
+                "flight_number": "DAL1197",
+                "flight_destination": "Los Angeles Intl (LAX)",
+                "departure_time": "11:56p MDT ",
+                "arrival_time": "12:34a PDT ",
+                "aircraft_type": "A321"
+            },
+            "DAL1224": {
+                "flight_number": "DAL1224",
+                "flight_destination": "Metro Oakland Intl (OAK)",
+                "departure_time": "11:54p MDT ",
+                "arrival_time": "12:30a PDT ",
+                "aircraft_type": "A320"
+            },
+            "DAL2111": {
+                "flight_number": "DAL2111",
+                "flight_destination": "Gowen Field (BOI)",
+                "departure_time": "11:52p MDT ",
+                "arrival_time": "12:40a MDT ",
+                "aircraft_type": "A321"
+            },
+            "SKW3721": {
+                "flight_number": "SKW3721",
+                "flight_destination": "Mahlon Sweet Fld (EUG)",
+                "departure_time": "11:51p MDT ",
+                "arrival_time": "12:28a PDT ",
+                "aircraft_type": "E75L"
+            },
+            "DAL2036": {
+                "flight_number": "DAL2036",
+                "flight_destination": "Fort Lauderdale Intl (FLL)",
+                "departure_time": "11:49p MDT ",
+                "arrival_time": "05:52a EDT ",
+                "aircraft_type": "A21N"
+            },
+            "DAL2079": {
+                "flight_number": "DAL2079",
+                "flight_destination": "Baltimore/Washington Intl (BWI)",
+                "departure_time": "11:48p MDT ",
+                "arrival_time": "05:16a EDT ",
+                "aircraft_type": "A321"
+            },
+            "N387AF": {
+                "flight_number": "N387AF",
+                "flight_destination": "Salt Lake City Intl (KSLC)",
+                "departure_time": "11:46p MDT ",
+                "arrival_time": "01:55a MDT ",
+                "aircraft_type": "C172"
+            },
+            "NKS2320": {
+                "flight_number": "NKS2320",
+                "flight_destination": "Fort Lauderdale Intl (FLL)",
+                "departure_time": "11:44p MDT ",
+                "arrival_time": "05:48a EDT ",
+                "aircraft_type": "A20N"
+            },
+            "DAL1464": {
+                "flight_number": "DAL1464",
+                "flight_destination": "Glacier Park Intl (GPI)",
+                "departure_time": "11:42p MDT ",
+                "arrival_time": "12:59a MDT ",
+                "aircraft_type": "A321"
+            }
+        }
+    },
+    "KSFO": {
+        "Arrivals": {
+            "JBU815": {
+                "flight_number": "JBU815",
+                "flight_destination": "John F Kennedy Intl (JFK)",
+                "departure_time": "11:04p EDT ",
+                "arrival_time": "01:54a PDT ",
+                "aircraft_type": "A321"
+            },
+            "DAL315": {
+                "flight_number": "DAL315",
+                "flight_destination": "John F Kennedy Intl (JFK)",
+                "departure_time": "11:03p EDT ",
+                "arrival_time": "01:47a PDT ",
+                "aircraft_type": "B752"
+            },
+            "AAL2280": {
+                "flight_number": "AAL2280",
+                "flight_destination": "Miami Intl (MIA)",
+                "departure_time": "11:27p EDT ",
+                "arrival_time": "01:42a PDT ",
+                "aircraft_type": "A21N"
+            },
+            "UAL448": {
+                "flight_number": "UAL448",
+                "flight_destination": "Newark Liberty Intl (EWR)",
+                "departure_time": "11:06p EDT ",
+                "arrival_time": "01:26a PDT ",
+                "aircraft_type": "B753"
+            },
+            "KAL214": {
+                "flight_number": "KAL214",
+                "flight_destination": "Los Angeles Intl (LAX)",
+                "departure_time": "12:34a PDT ",
+                "arrival_time": "01:25a PDT ",
+                "aircraft_type": "B748"
+            },
+            "SKW4819": {
+                "flight_number": "SKW4819",
+                "flight_destination": "Los Angeles Intl (LAX)",
+                "departure_time": "12:20a PDT ",
+                "arrival_time": "01:19a PDT ",
+                "aircraft_type": "E75L"
+            },
+            "CAL5345": {
+                "flight_number": "CAL5345",
+                "flight_destination": "Hartsfield-Jackson Intl (ATL)",
+                "departure_time": "11:15p EDT ",
+                "arrival_time": "12:41a PDT ",
+                "aircraft_type": "B77L"
+            },
+            "AAL177": {
+                "flight_number": "AAL177",
+                "flight_destination": "John F Kennedy Intl (JFK)",
+                "departure_time": "09:40p EDT ",
+                "arrival_time": "12:30a PDT ",
+                "aircraft_type": "A321"
+            },
+            "UAL2172": {
+                "flight_number": "UAL2172",
+                "flight_destination": "Washington Dulles Intl (IAD)",
+                "departure_time": "10:13p EDT ",
+                "arrival_time": "12:26a PDT ",
+                "aircraft_type": "B39M"
+            },
+            "FFT3439": {
+                "flight_number": "FFT3439",
+                "flight_destination": "Denver Intl (DEN)",
+                "departure_time": "10:56p MDT ",
+                "arrival_time": "12:25a PDT ",
+                "aircraft_type": "A321"
+            },
+            "JZA8846": {
+                "flight_number": "JZA8846",
+                "flight_destination": "Vancouver Int'l (YVR)",
+                "departure_time": "10:22p PDT ",
+                "arrival_time": "12:23a PDT ",
+                "aircraft_type": "CRJ9"
+            },
+            "AAL122": {
+                "flight_number": "AAL122",
+                "flight_destination": "Dallas-Fort Worth Intl (DFW)",
+                "departure_time": "11:01p CDT ",
+                "arrival_time": "12:18a PDT ",
+                "aircraft_type": "A321"
+            },
+            "UAL238": {
+                "flight_number": "UAL238",
+                "flight_destination": "Denver Intl (DEN)",
+                "departure_time": "10:47p MDT ",
+                "arrival_time": "12:16a PDT ",
+                "aircraft_type": "B39M"
+            },
+            "DAL2089": {
+                "flight_number": "DAL2089",
+                "flight_destination": "Minneapolis/St Paul Intl (MSP)",
+                "departure_time": "10:16p CDT ",
+                "arrival_time": "12:12a PDT ",
+                "aircraft_type": "B739"
+            },
+            "ASA1309": {
+                "flight_number": "ASA1309",
+                "flight_destination": "Seattle-Tacoma Intl (SEA)",
+                "departure_time": "10:15p PDT ",
+                "arrival_time": "12:12a PDT ",
+                "aircraft_type": "B39M"
+            },
+            "DAL399": {
+                "flight_number": "DAL399",
+                "flight_destination": "Hartsfield-Jackson Intl (ATL)",
+                "departure_time": "10:38p EDT ",
+                "arrival_time": "12:11a PDT ",
+                "aircraft_type": "B739"
+            },
+            "DAL667": {
+                "flight_number": "DAL667",
+                "flight_destination": "John F Kennedy Intl (JFK)",
+                "departure_time": "09:26p EDT ",
+                "arrival_time": "12:09a PDT ",
+                "aircraft_type": "B752"
+            },
+            "ACA747": {
+                "flight_number": "ACA747",
+                "flight_destination": "Toronto Pearson Int'l (YYZ)",
+                "departure_time": "09:53p EDT ",
+                "arrival_time": "12:08a PDT ",
+                "aircraft_type": "BCS3"
+            },
+            "ASA613": {
+                "flight_number": "ASA613",
+                "flight_destination": "Harry Reid Intl (LAS)",
+                "departure_time": "10:49p PDT ",
+                "arrival_time": "12:07a PDT ",
+                "aircraft_type": "B738"
+            },
+            "ASA878": {
+                "flight_number": "ASA878",
+                "flight_destination": "Kahului (OGG)",
+                "departure_time": "04:50p HST ",
+                "arrival_time": "12:04a PDT ",
+                "aircraft_type": "B39M"
+            }
+        },
+        "Departures": {
+            "CMP383": {
+                "flight_number": "CMP383",
+                "flight_destination": "Tocumen Int'l (PTY)",
+                "departure_time": "01:59a PDT ",
+                "arrival_time": "10:39a EST ",
+                "aircraft_type": "B39M"
+            },
+            "EVA27": {
+                "flight_number": "EVA27",
+                "flight_destination": "Taiwan Taoyuan Int'l (TPE)",
+                "departure_time": "01:52a PDT ",
+                "arrival_time": "05:14a CST ",
+                "aircraft_type": "B77W"
+            },
+            "PAL105": {
+                "flight_number": "PAL105",
+                "flight_destination": "Manila Int'l (MNL)",
+                "departure_time": "01:49a PDT ",
+                "arrival_time": "06:35a PST ",
+                "aircraft_type": "B77W"
+            },
+            "UAL189": {
+                "flight_number": "UAL189",
+                "flight_destination": "Manila Int'l (MNL)",
+                "departure_time": "01:45a PDT ",
+                "arrival_time": "05:40a PST ",
+                "aircraft_type": "B77W"
+            },
+            "AAL155": {
+                "flight_number": "AAL155",
+                "flight_destination": "Dallas-Fort Worth Intl (DFW)",
+                "departure_time": "01:40a PDT ",
+                "arrival_time": "06:37a CDT ",
+                "aircraft_type": "A321"
+            },
+            "EVA17": {
+                "flight_number": "EVA17",
+                "flight_destination": "Taiwan Taoyuan Int'l (TPE)",
+                "departure_time": "01:34a PDT ",
+                "arrival_time": "04:49a CST ",
+                "aircraft_type": "B77W"
+            },
+            "DAL2789": {
+                "flight_number": "DAL2789",
+                "flight_destination": "Minneapolis/St Paul Intl (MSP)",
+                "departure_time": "01:33a PDT ",
+                "arrival_time": "06:30a CDT ",
+                "aircraft_type": "B739"
+            },
+            "CPA873": {
+                "flight_number": "CPA873",
+                "flight_destination": "Hong Kong Int'l (HKG)",
+                "departure_time": "01:19a PDT ",
+                "arrival_time": "05:25a HKT ",
+                "aircraft_type": "A359"
+            },
+            "CAL3": {
+                "flight_number": "CAL3",
+                "flight_destination": "Taiwan Taoyuan Int'l (TPE)",
+                "departure_time": "01:17a PDT ",
+                "arrival_time": "04:15a CST ",
+                "aircraft_type": "B77W"
+            },
+            "CSN660": {
+                "flight_number": "CSN660",
+                "flight_destination": "Wuhan Tianhe (WUH)",
+                "departure_time": "01:10a PDT ",
+                "arrival_time": "04:30a CST ",
+                "aircraft_type": "B77W"
+            },
+            "UAL512": {
+                "flight_number": "UAL512",
+                "flight_destination": "Houston Bush Int'ctl (IAH)",
+                "departure_time": "01:00a PDT ",
+                "arrival_time": "06:26a CDT ",
+                "aircraft_type": "B39M"
+            },
+            "UAL238": {
+                "flight_number": "UAL238",
+                "flight_destination": "Newark Liberty Intl (EWR)",
+                "departure_time": "12:57a PDT ",
+                "arrival_time": "08:49a EDT ",
+                "aircraft_type": "B752"
+            },
+            "DLH459": {
+                "flight_number": "DLH459",
+                "flight_destination": "Munich Int'l (MUC)",
+                "departure_time": "12:43a PDT ",
+                "arrival_time": "07:45p CEST ",
+                "aircraft_type": "A359"
+            },
+            "DAL1182": {
+                "flight_number": "DAL1182",
+                "flight_destination": "John F Kennedy Intl (JFK)",
+                "departure_time": "12:42a PDT ",
+                "arrival_time": "08:30a EDT ",
+                "aircraft_type": "B752"
+            },
+            "AAL1910": {
+                "flight_number": "AAL1910",
+                "flight_destination": "Chicago O'Hare Intl (ORD)",
+                "departure_time": "12:33a PDT ",
+                "arrival_time": "06:10a CDT ",
+                "aircraft_type": "B738"
+            },
+            "UAL877": {
+                "flight_number": "UAL877",
+                "flight_destination": "Hong Kong Int'l (HKG)",
+                "departure_time": "12:28a PDT ",
+                "arrival_time": "04:42a HKT ",
+                "aircraft_type": "B77W"
+            },
+            "UAL805": {
+                "flight_number": "UAL805",
+                "flight_destination": "Incheon Int'l (ICN)",
+                "departure_time": "12:26a PDT ",
+                "arrival_time": "03:52a KST ",
+                "aircraft_type": "B772"
+            },
+            "UAL853": {
+                "flight_number": "UAL853",
+                "flight_destination": "Taiwan Taoyuan Int'l (TPE)",
+                "departure_time": "12:21a PDT ",
+                "arrival_time": "03:07a CST ",
+                "aircraft_type": "B772"
+            },
+            "UAL96": {
+                "flight_number": "UAL96",
+                "flight_destination": "Brisbane (BNE)",
+                "departure_time": "12:18a PDT ",
+                "arrival_time": "06:17a AEST ",
+                "aircraft_type": "B789"
+            },
+            "UAL60": {
+                "flight_number": "UAL60",
+                "flight_destination": "Melbourne Tullamarine (MEL)",
+                "departure_time": "12:17a PDT ",
+                "arrival_time": "07:37a AEST ",
+                "aircraft_type": "B789"
+            }
+        }
+    },
+    "KBZN": {
+        "Arrivals": {
+            "N500MW": {
+                "flight_number": "N500MW",
+                "flight_destination": "Jackson Hole (KJAC)",
+                "departure_time": "05:14p MDT ",
+                "arrival_time": "05:50p MDT ",
+                "aircraft_type": "PC12"
+            },
+            "DAL2046": {
+                "flight_number": "DAL2046",
+                "flight_destination": "Salt Lake City Intl (SLC)",
+                "departure_time": "12:10a MDT ",
+                "arrival_time": "12:59a MDT ",
+                "aircraft_type": "B739"
+            },
+            "ASA419": {
+                "flight_number": "ASA419",
+                "flight_destination": "Seattle-Tacoma Intl (SEA)",
+                "departure_time": "09:32p PDT ",
+                "arrival_time": "11:47p MDT ",
+                "aircraft_type": "B738"
+            },
+            "DAL2954": {
+                "flight_number": "DAL2954",
+                "flight_destination": "Minneapolis/St Paul Intl (MSP)",
+                "departure_time": "10:27p CDT ",
+                "arrival_time": "11:42p MDT ",
+                "aircraft_type": "B739"
+            },
+            "UAL310": {
+                "flight_number": "UAL310",
+                "flight_destination": "Chicago O'Hare Intl (ORD)",
+                "departure_time": "09:17p CDT ",
+                "arrival_time": "11:19p MDT ",
+                "aircraft_type": "B739"
+            },
+            "UAL778": {
+                "flight_number": "UAL778",
+                "flight_destination": "Denver Intl (DEN)",
+                "departure_time": "09:49p MDT ",
+                "arrival_time": "11:08p MDT ",
+                "aircraft_type": "B739"
+            },
+            "SWA3813": {
+                "flight_number": "SWA3813",
+                "flight_destination": "Denver Intl (DEN)",
+                "departure_time": "09:42p MDT ",
+                "arrival_time": "11:06p MDT ",
+                "aircraft_type": "B737"
+            },
+            "SWA3062": {
+                "flight_number": "SWA3062",
+                "flight_destination": "Harry Reid Intl (LAS)",
+                "departure_time": "07:59p PDT ",
+                "arrival_time": "10:37p MDT ",
+                "aircraft_type": "B38M"
+            },
+            "EJA235": {
+                "flight_number": "EJA235",
+                "flight_destination": "Laurence G Hanscom Fld (KBED)",
+                "departure_time": "06:40p EDT ",
+                "arrival_time": "09:05p MDT ",
+                "aircraft_type": "CL60"
+            },
+            "N229CE": {
+                "flight_number": "N229CE",
+                "flight_destination": "Schulz-Sonoma County (KSTS)",
+                "departure_time": "05:53p PDT ",
+                "arrival_time": "08:21p MDT ",
+                "aircraft_type": "C750"
+            },
+            "AAL2522": {
+                "flight_number": "AAL2522",
+                "flight_destination": "Dallas-Fort Worth Intl (DFW)",
+                "departure_time": "06:33p CDT ",
+                "arrival_time": "08:19p MDT ",
+                "aircraft_type": "B738"
+            },
+            "EJA917": {
+                "flight_number": "EJA917",
+                "flight_destination": "Phoenix Sky Harbor Intl (KPHX)",
+                "departure_time": "04:50p MST ",
+                "arrival_time": "07:42p MDT ",
+                "aircraft_type": "C68A"
+            },
+            "SKW4041": {
+                "flight_number": "SKW4041",
+                "flight_destination": "Salt Lake City Intl (SLC)",
+                "departure_time": "06:25p MDT ",
+                "arrival_time": "07:21p MDT ",
+                "aircraft_type": "E75L"
+            },
+            "ASA557": {
+                "flight_number": "ASA557",
+                "flight_destination": "Seattle-Tacoma Intl (SEA)",
+                "departure_time": "04:55p PDT ",
+                "arrival_time": "07:17p MDT ",
+                "aircraft_type": "B738"
+            },
+            "KFB18": {
+                "flight_number": "KFB18",
+                "flight_destination": "Laurence G Hanscom Fld (KBED)",
+                "departure_time": "04:57p EDT ",
+                "arrival_time": "07:16p MDT ",
+                "aircraft_type": "GLF4"
+            },
+            "SKW3470": {
+                "flight_number": "SKW3470",
+                "flight_destination": "Portland Intl (PDX)",
+                "departure_time": "04:42p PDT ",
+                "arrival_time": "07:06p MDT ",
+                "aircraft_type": "E75L"
+            },
+            "N411TJ": {
+                "flight_number": "N411TJ",
+                "flight_destination": "Page Muni (KPGA)",
+                "departure_time": "03:42p MST ",
+                "arrival_time": "05:55p MDT ",
+                "aircraft_type": "CL60"
+            },
+            "EJM22": {
+                "flight_number": "EJM22",
+                "flight_destination": "Eagle County (KEGE)",
+                "departure_time": "04:18p MDT ",
+                "arrival_time": "05:24p MDT ",
+                "aircraft_type": "G280"
+            }
+        },
+        "Departures": {
+            "ASA812": {
+                "flight_number": "ASA812",
+                "flight_destination": "Seattle-Tacoma Intl (SEA)",
+                "departure_time": "08:25p MDT ",
+                "arrival_time": "08:57p PDT ",
+                "aircraft_type": "B738"
+            },
+            "SKW3970": {
+                "flight_number": "SKW3970",
+                "flight_destination": "Salt Lake City Intl (SLC)",
+                "departure_time": "08:13p MDT ",
+                "arrival_time": "09:23p MDT ",
+                "aircraft_type": "E75L"
+            },
+            "SKW3470": {
+                "flight_number": "SKW3470",
+                "flight_destination": "Portland Intl (PDX)",
+                "departure_time": "08:02p MDT ",
+                "arrival_time": "08:33p PDT ",
+                "aircraft_type": "E75L"
+            },
+            "N500MW": {
+                "flight_number": "N500MW",
+                "flight_destination": "Fresno Yosemite Intl (KFAT)",
+                "departure_time": "07:38p MDT ",
+                "arrival_time": "09:46p PDT ",
+                "aircraft_type": "PC12"
+            },
+            "SWA1625": {
+                "flight_number": "SWA1625",
+                "flight_destination": "Denver Intl (DEN)",
+                "departure_time": "07:33p MDT ",
+                "arrival_time": "09:01p MDT ",
+                "aircraft_type": "B737"
+            },
+            "SKW5786": {
+                "flight_number": "SKW5786",
+                "flight_destination": "Denver Intl (DEN)",
+                "departure_time": "07:30p MDT ",
+                "arrival_time": "08:59p MDT ",
+                "aircraft_type": "E75L"
+            },
+            "UAL1109": {
+                "flight_number": "UAL1109",
+                "flight_destination": "Denver Intl (DEN)",
+                "departure_time": "07:24p MDT ",
+                "arrival_time": "08:50p MDT ",
+                "aircraft_type": "B39M"
+            },
+            "UAL1646": {
+                "flight_number": "UAL1646",
+                "flight_destination": "Denver Intl (DEN)",
+                "departure_time": "07:21p MDT ",
+                "arrival_time": "08:49p MDT ",
+                "aircraft_type": "B738"
+            },
+            "N757CP": {
+                "flight_number": "N757CP",
+                "flight_destination": "Clinton National (KLIT)",
+                "departure_time": "06:42p MDT ",
+                "arrival_time": "10:43p CDT ",
+                "aircraft_type": "C25A"
+            },
+            "CFS7771": {
+                "flight_number": "CFS7771",
+                "flight_destination": "Great Falls Intl (GTF)",
+                "departure_time": "06:27p MDT ",
+                "arrival_time": "07:01p MDT ",
+                "aircraft_type": "AT72"
+            },
+            "EJA814": {
+                "flight_number": "EJA814",
+                "flight_destination": "Oakland County Intl (KPTK)",
+                "departure_time": "06:16p MDT ",
+                "arrival_time": "11:02p EDT ",
+                "aircraft_type": "C700"
+            },
+            "EJA456": {
+                "flight_number": "EJA456",
+                "flight_destination": "Rocky Mtn Metropolitan (KBJC)",
+                "departure_time": "06:13p MDT ",
+                "arrival_time": "07:32p MDT ",
+                "aircraft_type": "E55P"
+            },
+            "AIP1594": {
+                "flight_number": "AIP1594",
+                "flight_destination": "Billings Logan Intl (BIL)",
+                "departure_time": "06:07p MDT ",
+                "arrival_time": "06:45p MDT ",
+                "aircraft_type": "B190"
+            },
+            "SKW3690": {
+                "flight_number": "SKW3690",
+                "flight_destination": "Salt Lake City Intl (SLC)",
+                "departure_time": "06:04p MDT ",
+                "arrival_time": "07:04p MDT ",
+                "aircraft_type": "E75L"
+            },
+            "EJA628": {
+                "flight_number": "EJA628",
+                "flight_destination": "San Jose Int'l (KSJC)",
+                "departure_time": "05:59p MDT ",
+                "arrival_time": "07:19p PDT ",
+                "aircraft_type": "C68A"
+            },
+            "AAY1980": {
+                "flight_number": "AAY1980",
+                "flight_destination": "Nashville Intl (BNA)",
+                "departure_time": "05:48p MDT ",
+                "arrival_time": "09:40p CDT ",
+                "aircraft_type": "A320"
+            },
+            "N756EM": {
+                "flight_number": "N756EM",
+                "flight_destination": "Tacoma Narrows (KTIW)",
+                "departure_time": "05:37p MDT ",
+                "arrival_time": "08:36p PDT ",
+                "aircraft_type": "C82R"
+            },
+            "UAL589": {
+                "flight_number": "UAL589",
+                "flight_destination": "San Francisco Int'l (SFO)",
+                "departure_time": "04:51p MDT ",
+                "arrival_time": "05:57p PDT ",
+                "aircraft_type": "A320"
+            },
+            "ASA905": {
+                "flight_number": "ASA905",
+                "flight_destination": "Seattle-Tacoma Intl (SEA)",
+                "departure_time": "04:36p MDT ",
+                "arrival_time": "05:15p PDT ",
+                "aircraft_type": "B739"
+            }
+        }
+    }
+}
