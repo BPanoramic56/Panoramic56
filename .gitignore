@@ -5,3 +5,4 @@ dist/
 Gatherer.py
 Scrapper.py
 .vscode
+AcronymGatherer.py
