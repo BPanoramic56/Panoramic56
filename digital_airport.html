@@ -51,31 +51,110 @@
     </div>
     <div class="main">
         <script>
-            fetch("https://raw.githubusercontent.com/BPanoramic56/Panoramic56/main/Assets/Docs/AirportInfo.txt").then(response => 
+            let flightGrid = document.getElementsByClassName("main")[0]; // Access the first element in the collection
+            let currentAirport = document.createElement("span");
+            let displayedInfo = document.createElement("div");
+            // let arrivalSign = document.createElement("span");
+            // let departureSign = document.createElement("span");
+            // let arrivalDepartureCombine = document.createElement("div");
+
+            // arrivalSign.innerHTML = "Arrivals";
+            // departureSign.innerHTML = "Departures";
+
+            // arrivalDepartureCombine.appendChild(arrivalSign);
+            // arrivalDepartureCombine.appendChild(departureSign);
+            // flightGrid.appendChild(arrivalDepartureCombine);
+
+            const infoParameters = ["flight_number", "flight_destination", "departure_time", "arrival_time", "aircraft_type"];
+            const gridHeaders = ["Flight", "Destination/Origin", "Departure", "Arrival", "Aircraft"];
+
+            function updateGrid(completeJSON, selectedAirport){
+                if (displayedInfo.firstChild != null){
+                    displayedInfo.removeChild(flight);
+                }
+                currentAirport.innerHTML = "Currently selected airport: " + selectedAirport;
+                flightGrid.appendChild(displayedInfo);
+                displayedInfo.classList.add("flight_grid");
+                airportComplete = completeJSON[selectedAirport];
+                airportArrivals = airportComplete["Arrivals"];
+                airportDepartures = airportComplete["Departures"];
+
+                let ArrivalSign = document.createElement("span");
+                ArrivalSign.innerHTML = "Arrivals";
+                let DepartureSign = document.createElement("span");
+                DepartureSign.innerHTML = "Departures";
+
+                arrival_flights = document.createElement("div");
+                arrival_flights.classList.add("flight_column");
+                departure_flights = document.createElement("div");
+                departure_flights.classList.add("flight_column");
+
+                arrival_flights.appendChild(ArrivalSign);
+                let headerDiv = document.createElement('div');
+                headerDiv.classList.add("flight_complete");
+
+                for (var index in gridHeaders){
+                    // console.log(header);
+                    header = document.createElement("div");
+                    header.innerHTML = gridHeaders[index];
+                    header.classList.add("flight_info");
+                    headerDiv.append(header);
+                }
+                arrival_flights.appendChild(headerDiv);
+
+                for (var key in airportArrivals){
+                    let completeFlightInfo = document.createElement('div');
+                    completeFlightInfo.classList.add("flight_complete")
+                    infoParameters.forEach(function generateList(item){
+                        let newInfo = document.createElement('p');
+                        newInfo.innerText = airportArrivals[key][item];
+                        newInfo.classList.add("flight_info");
+                        completeFlightInfo.appendChild(newInfo);
+                    });
+                    arrival_flights.appendChild(completeFlightInfo);
+                }
+                departure_flights.appendChild(DepartureSign);
+                for (var key in airportDepartures){
+                    let completeFlightInfo = document.createElement('div');
+                    completeFlightInfo.classList.add("flight_complete")
+                    infoParameters.forEach(function generateList(item){
+                        let newInfo = document.createElement('p');
+                        newInfo.innerText = airportDepartures[key][item];
+                        newInfo.classList.add("flight_info");
+                        completeFlightInfo.appendChild(newInfo);
+                    });
+                    departure_flights.appendChild(completeFlightInfo);
+                }
+
+                displayedInfo.appendChild(arrival_flights);
+                displayedInfo.appendChild(departure_flights);
+            }
+
+            fetch("https://raw.githubusercontent.com/BPanoramic56/Panoramic56/main/Assets/Docs/AirportInfo.json").then(response => 
             {
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
                 return response.text();
             })
-                .then(data => {
-                    let dataSplit = data.split(" ");
-                    const list = document.createElement('ul');
-                    dataSplit.forEach((item) => {
-                        let li = document.createElement("li");
-                        li.innerText=item;
-                        list.appendChild(li);
-                    })
-                    console.log(dataSplit);
-                    const text = document.createTextNode(dataSplit);
-                    // paragraph.appendChild(completeArray);
-                    // paragraph.appendChild(text);
-                    const main = document.getElementsByClassName('main')[0];
-                    main.appendChild(list);
+            .then(data => {
+                var currentSelection;
+                selectMaster = document.createElement("select");
+                completeJSON = JSON.parse(data);
+                Object.keys(completeJSON).forEach(function(key) {
+                    selectElement = document.createElement("option");
+                    selectElement.text = key;
+                    selectMaster.appendChild(selectElement);
                 })
-                .catch(error => {
-                    console.error('There was a problem with the fetch operation:', error);
+                selectMaster.addEventListener("change", function() {
+                    updateGrid(completeJSON, selectMaster.value)
                 })
+                flightGrid.appendChild(selectMaster)
+                flightGrid.appendChild(currentAirport)
+            })
+            .catch(error => {
+                console.error('There was a problem with the fetch operation:', error);
+            })
         </script>
     </div>
 </body>
