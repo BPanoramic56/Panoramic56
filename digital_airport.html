@@ -54,6 +54,8 @@
             let flightGrid = document.getElementsByClassName("main")[0]; // Access the first element in the collection
             let currentAirport = document.createElement("span");
             let displayedInfo = document.createElement("div");
+            let selectState = document.createElement("select");
+            let airportSelector = document.createElement("select");
             // let arrivalSign = document.createElement("span");
             // let departureSign = document.createElement("span");
             // let arrivalDepartureCombine = document.createElement("div");
@@ -67,8 +69,17 @@
 
             const infoParameters = ["flight_number", "flight_destination", "departure_time", "arrival_time", "aircraft_type"];
             const gridHeaders = ["Flight", "Destination/Origin", "Departure", "Arrival", "Aircraft"];
+            
+            function removeOptions(selectElement) { // Cleans the selector
+                var i, L = selectElement.options.length - 1;
+                for(i = L; i >= 0; i--) {
+                    selectElement.remove(i);
+                }
+            }
 
-            function updateGrid(completeJSON, selectedAirport){
+            function updateGridByAirport(completeJSON){
+                selectedAirport = airportSelector.value
+                console.log(completeJSON)
                 if (displayedInfo.firstChild != null){
                     displayedInfo.removeChild(flight);
                 }
@@ -82,54 +93,72 @@
                 let ArrivalSign = document.createElement("span");
                 ArrivalSign.innerHTML = "Arrivals";
                 let DepartureSign = document.createElement("span");
-                DepartureSign.innerHTML = "Departures";
+                    DepartureSign.innerHTML = "Departures";
 
-                arrival_flights = document.createElement("div");
-                arrival_flights.classList.add("flight_column");
-                departure_flights = document.createElement("div");
-                departure_flights.classList.add("flight_column");
+                    arrival_flights = document.createElement("div");
+                    arrival_flights.classList.add("flight_column");
+                    departure_flights = document.createElement("div");
+                    departure_flights.classList.add("flight_column");
 
-                arrival_flights.appendChild(ArrivalSign);
-                let headerDiv = document.createElement('div');
-                headerDiv.classList.add("flight_complete");
+                    arrival_flights.appendChild(ArrivalSign);
+                    let headerDiv = document.createElement('div');
+                    headerDiv.classList.add("flight_complete");
 
-                for (var index in gridHeaders){
-                    header = document.createElement("div");
-                    header.innerHTML = gridHeaders[index];
-                    header.classList.add("flight_info");
-                    headerDiv.append(header);
-                }
-                arrival_flights.appendChild(headerDiv);
+                    for (var index in gridHeaders){
+                        header = document.createElement("div");
+                        header.innerHTML = gridHeaders[index];
+                        header.classList.add("flight_info");
+                        headerDiv.append(header);
+                    }
+                    arrival_flights.appendChild(headerDiv);
 
-                for (var key in airportArrivals){
-                    let completeFlightInfo = document.createElement('div');
-                    completeFlightInfo.classList.add("flight_complete")
-                    infoParameters.forEach(function generateList(item){
-                        let newInfo = document.createElement('p');
-                        newInfo.innerText = airportArrivals[key][item];
-                        newInfo.classList.add("flight_info");
-                        completeFlightInfo.appendChild(newInfo);
-                    });
-                    arrival_flights.appendChild(completeFlightInfo);
-                }
-                departure_flights.appendChild(DepartureSign);
-                for (var key in airportDepartures){
-                    let completeFlightInfo = document.createElement('div');
-                    completeFlightInfo.classList.add("flight_complete")
-                    infoParameters.forEach(function generateList(item){
-                        let newInfo = document.createElement('p');
-                        newInfo.innerText = airportDepartures[key][item];
-                        newInfo.classList.add("flight_info");
-                        completeFlightInfo.appendChild(newInfo);
-                    });
-                    departure_flights.appendChild(completeFlightInfo);
-                }
+                    for (var key in airportArrivals){
+                        let completeFlightInfo = document.createElement('div');
+                        completeFlightInfo.classList.add("flight_complete")
+                        infoParameters.forEach(function generateList(item){
+                            let newInfo = document.createElement('p');
+                            newInfo.innerText = airportArrivals[key][item];
+                            newInfo.classList.add("flight_info");
+                            completeFlightInfo.appendChild(newInfo);
+                        });
+                        arrival_flights.appendChild(completeFlightInfo);
+                    }
+                    departure_flights.appendChild(DepartureSign);
+                    for (var key in airportDepartures){
+                        let completeFlightInfo = document.createElement('div');
+                        completeFlightInfo.classList.add("flight_complete")
+                        infoParameters.forEach(function generateList(item){
+                            let newInfo = document.createElement('p');
+                            newInfo.innerText = airportDepartures[key][item];
+                            newInfo.classList.add("flight_info");
+                            completeFlightInfo.appendChild(newInfo);
+                        });
+                        departure_flights.appendChild(completeFlightInfo);
+                    }
 
-                displayedInfo.appendChild(arrival_flights);
-                displayedInfo.appendChild(departure_flights);
+                    displayedInfo.appendChild(arrival_flights);
+                    displayedInfo.appendChild(departure_flights);
+            
             }
 
-            fetch("https://raw.githubusercontent.com/BPanoramic56/Panoramic56/main/Assets/Docs/AirportInfo.json").then(response => 
+            function updateGrid(){
+                fetch("https://raw.githubusercontent.com/BPanoramic56/Panoramic56/main/Assets/Docs/AirportInfo.json")
+                .then(response => 
+                {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                        airportJSON = JSON.parse(data);
+                        updateGridByAirport(airportJSON)
+                    }
+                )
+            }
+
+            fetch("https://raw.githubusercontent.com/BPanoramic56/Panoramic56/main/Assets/Docs/Acronyms.json")
+            .then(response => 
             {
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
@@ -138,22 +167,31 @@
             })
             .then(data => {
                 var currentSelection;
-                selectMaster = document.createElement("select");
                 completeJSON = JSON.parse(data);
                 Object.keys(completeJSON).forEach(function(key) {
                     selectElement = document.createElement("option");
                     selectElement.text = key;
-                    selectMaster.appendChild(selectElement);
+                    selectState.appendChild(selectElement);
                 })
-                selectMaster.addEventListener("change", function() {
-                    updateGrid(completeJSON, selectMaster.value)
+                selectState.addEventListener("change", function() {
+                    removeOptions(airportSelector)
+                    Object.keys(completeJSON[selectState.value]).forEach(function(key){
+                        selectElement = document.createElement("option");
+                        selectElement.text = key;
+                        airportSelector.appendChild(selectElement);
+                    })
                 })
-                flightGrid.appendChild(selectMaster)
+                airportSelector.addEventListener("change", function() {
+                    updateGrid()
+                })
+                flightGrid.appendChild(selectState)
+                flightGrid.appendChild(airportSelector)
                 flightGrid.appendChild(currentAirport)
             })
             .catch(error => {
                 console.error('There was a problem with the fetch operation:', error);
             })
+
         </script>
     </div>
 </body>
