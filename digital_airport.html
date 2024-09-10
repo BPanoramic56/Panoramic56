@@ -41,9 +41,9 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="AboutMe.html">
                         <i class='fas bx bxs-info-square'></i>
-                        <span class="nav-item">About</span>
+                        <span class="nav-item">About Me</span>
                     </a>
                 </li>
             </ul>
@@ -86,9 +86,11 @@
                 }
             }
 
-            function updateGridByAirport(completeJSON){
+            function updateGridByAirport(completeJSON, selectedState){
                 selectedAirport = airportSelector.value
                 console.log(completeJSON)
+
+                emptyDisplayedGrid()
 
                 // if (displayedInfo.firstChild != null){
                 //     displayedInfo.removeChild(arrival_flights);
@@ -96,8 +98,8 @@
                 // if (displayedInfo.firstChild != null){
                 //     displayedInfo.removeChild(departure_flights);
                 // }
-
-                currentAirport.innerHTML = "Currently selected airport: " + selectedAirport;
+                console.log(translateAiportAcronym())
+                currentAirport.innerHTML = "Currently selected airport: " + translateAiportAcronym(selectedState, selectedAirport);
                 flightGrid.appendChild(displayedInfo);
                 displayedInfo.classList.add("flight_grid");
                 airportComplete = completeJSON[selectedAirport];
@@ -155,7 +157,7 @@
             
             }
 
-            function updateGrid(){
+            function updateGrid(selectedState){
                 fetch("https://raw.githubusercontent.com/BPanoramic56/Panoramic56/main/Assets/Docs/AirportInfo.json")
                 .then(response => 
                 {
@@ -166,9 +168,27 @@
                 })
                 .then(data => {
                         airportJSON = JSON.parse(data);
-                        updateGridByAirport(airportJSON)
+                        updateGridByAirport(airportJSON, selectedState)
                     }
                 )
+            }
+
+            function translateAiportAcronym(selectedState, selectedAirport){
+                fetch("https://raw.githubusercontent.com/BPanoramic56/Panoramic56/main/Assets/Docs/Acronyms.json")
+                .then(response => 
+                {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    // console.log(selectState.value);
+                    // console.log(airportSelector.value);
+                    // console.log(data);
+                    // console.log(data[selectedState][selectedAirport]);
+                    return data[selectedState][selectedAirport];
+                })
             }
 
             fetch("https://raw.githubusercontent.com/BPanoramic56/Panoramic56/main/Assets/Docs/Acronyms.json")
@@ -182,22 +202,22 @@
             .then(data => {
                 var currentSelection;
                 completeJSON = JSON.parse(data);
-                console.log(completeJSON)
-                Object.keys(completeJSON).forEach(function(key) {
+                Object.keys(completeJSON["Airports"]).forEach(function(key) {
                     selectElement = document.createElement("option");
                     selectElement.text = key;
                     selectState.appendChild(selectElement);
                 })
                 selectState.addEventListener("change", function() {
                     removeOptions(airportSelector)
-                    Object.keys(completeJSON[selectState.value]).forEach(function(key){
+                    Object.keys(completeJSON["Airports"][selectState.value]).forEach(function(key){
                         selectElement = document.createElement("option");
                         selectElement.text = key;
                         airportSelector.appendChild(selectElement);
                     })
                 })
                 airportSelector.addEventListener("change", function() {
-                    updateGrid()
+                    selectedState = selectState.value;
+                    updateGrid(selectedState);
                 })
                 flightGrid.appendChild(selectState)
                 flightGrid.appendChild(airportSelector)

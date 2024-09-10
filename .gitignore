@@ -3,6 +3,7 @@ webpack-demo/
 node_modules/
 dist/
 Gatherer.py
+Gatherer2.py
 Scrapper.py
 .vscode
 AcronymGatherer.py
