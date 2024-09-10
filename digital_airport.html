@@ -98,8 +98,7 @@
                 // if (displayedInfo.firstChild != null){
                 //     displayedInfo.removeChild(departure_flights);
                 // }
-                console.log(translateAiportAcronym())
-                currentAirport.innerHTML = "Currently selected airport: " + translateAiportAcronym(selectedState, selectedAirport);
+                currentAirport.innerHTML = "Currently selected airport: " + completeJSON[selectedAirport]["Name"]
                 flightGrid.appendChild(displayedInfo);
                 displayedInfo.classList.add("flight_grid");
                 airportComplete = completeJSON[selectedAirport];
@@ -126,7 +125,7 @@
                         header.classList.add("flight_info");
                         headerDiv.append(header);
                     }
-                    arrival_flights.appendChild(headerDiv);
+                    arrival_flights.appendChild(headerDiv.cloneNode(true));
 
                     for (var key in airportArrivals){
                         let completeFlightInfo = document.createElement('div');
@@ -140,6 +139,7 @@
                         arrival_flights.appendChild(completeFlightInfo);
                     }
                     departure_flights.appendChild(DepartureSign);
+                    departure_flights.appendChild(headerDiv.cloneNode(true));
                     for (var key in airportDepartures){
                         let completeFlightInfo = document.createElement('div');
                         completeFlightInfo.classList.add("flight_complete")
@@ -173,24 +173,6 @@
                 )
             }
 
-            function translateAiportAcronym(selectedState, selectedAirport){
-                fetch("https://raw.githubusercontent.com/BPanoramic56/Panoramic56/main/Assets/Docs/Acronyms.json")
-                .then(response => 
-                {
-                    if (!response.ok) {
-                        throw new Error(`HTTP error! status: ${response.status}`);
-                    }
-                    return response.text();
-                })
-                .then(data => {
-                    // console.log(selectState.value);
-                    // console.log(airportSelector.value);
-                    // console.log(data);
-                    // console.log(data[selectedState][selectedAirport]);
-                    return data[selectedState][selectedAirport];
-                })
-            }
-
             fetch("https://raw.githubusercontent.com/BPanoramic56/Panoramic56/main/Assets/Docs/Acronyms.json")
             .then(response => 
             {
@@ -219,6 +201,11 @@
                     selectedState = selectState.value;
                     updateGrid(selectedState);
                 })
+
+                selectState.classList.add("state-selector");
+                airportSelector.classList.add("airport-selector");
+                currentAirport.classList.add("selected-airport");
+
                 flightGrid.appendChild(selectState)
                 flightGrid.appendChild(airportSelector)
                 flightGrid.appendChild(currentAirport)
