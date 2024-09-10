@@ -1646,7 +1646,7 @@
             "KVGT": "North Las Vegas Airport\n",
             "KWMC": "Winnemucca Municipal Airport (Franklin Field)\n"
         },
-        "NewHampshire": {
+        "New Hampshire": {
             "KAFN": "Jaffrey/Silver Ranch Airport\n",
             "KASH": "Boire Field\n",
             "KBML": "Berlin Regional Airport (was Berlin Municipal)\n",
@@ -1661,7 +1661,7 @@
             "KMHT": "Manchester\u2013Boston Regional Airport\n",
             "KPSM": "Portsmouth International Airport at Pease\n"
         },
-        "NewJersey": {
+        "New Jersey": {
             "KACY": "Atlantic City International Airport\n",
             "KAIY": "Atlantic City Municipal Airport (Bader Field) (closed 2006)\n",
             "KBLM": "Monmouth Executive Airport (was Allaire Airport)\n",
@@ -1681,7 +1681,7 @@
             "KWRI": "McGuire Air Force Base\n",
             "KWWD": "Cape May Airport (Cape May County Airport)\n"
         },
-        "NewMexico": {
+        "New Mexico": {
             "KABQ": "Albuquerque International Sunport\n",
             "KAEG": "Double Eagle II Airport\n",
             "KALM": "Alamogordo-White Sands Regional Airport\n",
@@ -1719,7 +1719,7 @@
             "KXNI": "Andrew Othole Memorial Airport\n",
             "KZUN": "Black Rock Airport (closed 2017)\n"
         },
-        "NewYork": {
+        "New York": {
             "KALB": "Albany International Airport\n",
             "KART": "Watertown International Airport\n",
             "KBGM": "Greater Binghamton Airport (Edwin A. Link Field)\n",
@@ -1775,7 +1775,7 @@
             "KUCA": "Oneida County Airport (closed 2007) [39]\n",
             "KVGC": "Hamilton Municipal Airport\n"
         },
-        "NorthCarolina": {
+        "North Carolina": {
             "KACZ": "Henderson Field\n",
             "KAFP": "Anson County Airport (Jeff Cloud Field)\n",
             "KAKH": "Gastonia Municipal Airport\n",
@@ -1850,7 +1850,7 @@
             "KVUJ": "Stanly County Airport\n",
             "KZEF": "Elkin Municipal Airport\n"
         },
-        "NorthDakota": {
+        "North Dakota": {
             "KASY": "Ashley Municipal Airport\n",
             "KBAC": "Barnes County Municipal Airport\n",
             "KBIS": "Bismarck Municipal Airport\n",
@@ -2091,7 +2091,7 @@
             "KXLL": "Allentown Queen City Municipal Airport\n",
             "KZER": "Schuylkill County/Joe Zerbey Airport\n"
         },
-        "RhodeIsland": {
+        "Rhode Island": {
             "KBID": "Block Island State Airport\n",
             "KOQU": "Quonset State Airport\n",
             "KPVD": "Rhode Island T. F. Green International Airport\n",
@@ -2099,7 +2099,7 @@
             "KUUU": "Newport State Airport\n",
             "KWST": "Westerly State Airport\n"
         },
-        "SouthCarolina": {
+        "South Carolina": {
             "KAIK": "Aiken Regional Airport\n",
             "KAND": "Anderson Regional Airport\n",
             "KAQX": "Allendale County Airport\n",
@@ -2150,7 +2150,7 @@
             "KUZA": "Rock Hill/York County Airport (Bryant Field)\n",
             "KXNO": "North Air Force Auxiliary Field\n"
         },
-        "SouthDakota": {
+        "South Dakota": {
             "KABR": "Aberdeen Regional Airport\n",
             "KAGZ": "Wagner Municipal Airport\n",
             "KATY": "Watertown Regional Airport\n",
@@ -2566,7 +2566,7 @@
             "KVUO": "Pearson Field\n",
             "KYKM": "Yakima Air Terminal (McAllister Field)\n"
         },
-        "WestVirginia": {
+        "West Virginia": {
             "KBKW": "Raleigh County Memorial Airport\n",
             "KBLF": "Mercer County Airport\n",
             "KCBE": "Greater Cumberland Regional Airport[nb 1]\n",
@@ -2688,10 +2688,5 @@
             "KTOR": "Torrington Municipal Airport\n",
             "KWRL": "Worland Municipal Airport\n"
         }
-    },
-
-    "Airlines":{
-        "UAL":  "United Airlines",
-        "JBU":  "JetBlue Airways"
     }
 }
