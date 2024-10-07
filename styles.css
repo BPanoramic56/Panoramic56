@@ -601,6 +601,11 @@ ul {
 .RCL_main .bxl-github{
     font-size: 20px;
 }
+.bxl-github{
+    font-size: 17px;
+    color: inherit;
+    background-color: inherit;
+}
 
 @keyframes showUp {
     0% {
