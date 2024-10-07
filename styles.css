@@ -159,7 +159,7 @@ h5 {
     width: 28%;
 }
 
-.project-card .btn:hover {
+.project-card .btn:hover, .RCL_main .btn:hover{
     box-shadow: 0px 2px 80px rgb(112, 0, 203);
 }
 
@@ -438,47 +438,47 @@ ul {
 .Arrival_Departure_Sign{
     background-color: rgb(255, 49, 49);
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: minmax(100px, auto);
+    grid-template-columns: repeat(2, 1fr);
     text-align: center;
 }
 
 .flight_grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    padding: 10px;
     background-color: #1e1e1e;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    padding: 10px;
 }
 
 .flight_column {
     background-color: #2d2d2d;
-    border: 2px solid #444;
     border-radius: 8px;
-    padding: 10px;
+    border: 2px solid #444;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    padding: 10px;
 }
 
 .flight_column span {
+    color: #f5f5f5;
     display: block;
     font-size: 1.2em;
     font-weight: bold;
-    text-align: center;
     margin-bottom: 10px;
-    color: #f5f5f5;
+    text-align: center;
 }
 
 .flight_complete {
+    background-color: var(--PageBackground);
+    border-radius: 4px;
+    border: 1px solid #555;
     display: grid;
+    gap: 5px;
     grid-template-columns: repeat(5, 1fr);
-    gap: 5px; 
     margin-bottom: 10px;
     padding: 5px;
-    border: 1px solid #555;
-    border-radius: 4px;
-    background-color: var(--PageBackground); 
-    transition-property: transform, background-color, box-shadow;
     transition-duration: 0.6s;
+    transition-property: transform, background-color, box-shadow;
     transition-timing-function: ease;
 }
 
@@ -496,47 +496,110 @@ ul {
 }
 
 .flight_complete:hover {
-    background-color: #686868; 
-    transform: scale(1.05); 
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7); 
+    background-color: #686868;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
+    transform: scale(1.05);
 }
 
 .state-selector, .airport-selector {
     appearance: none;
     background-color: transparent;
-    color: rgb(221, 219, 241); 
-    border: 1px solid #555;
     border-radius: 3px;
-    padding: 8px 12px;
+    border: 1px solid #555;
+    color: rgb(221, 219, 241);
     font-family: "B612-Mono", monospace;
     font-size: 0.9em;
     outline: none;
-    transition: background-color 0.3s ease, border-color 0.3s ease; 
+    padding: 8px 12px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .airport-selector:hover, .state-selector:hover{
-  background-color: var(--SideBar);
+    background-color: var(--SideBar);
 }
 
 .selected-airport {
-    font-family: "B612-Mono", monospace;
     color: rgb(221, 219, 241);
+    font-family: "B612-Mono", monospace;
     font-size: 1em;
-    padding: 8px 120px;
+    padding-left: 90px;
 }
 
+.RCL_main p{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
 
-@keyframes enhanceFlight {
-    0% {
-        background-color: var(--PageBackground);
-        transform: scale(1.00);
-        box-shadow: none;
-    }
-    100% {
-        background-color: rgba(130, 130, 130, 0.638);
-        transform: scale(1.08);
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
-    }
+.title{
+    display: inline-block;
+    font-size: 22pt;
+}
+
+.subtitle{
+    color: rgb(45, 173, 253);
+    font-size: 1.8em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.RCL_table{
+    text-align: left;
+    width: 80%;
+    margin-left: 40px;
+    border-collapse: collapse;
+    margin-top: 20px;
+    transform: scale(0.2);
+}
+
+.RCL_table a{
+    background-color: inherit;
+}
+
+.RCL_table, tr{
+    background-color: var(--PageBackground);
+    transition-duration: 1s;
+    transition-property: background-color, transform, box-shadow;
+}
+
+.RCL_table, tr:hover td{
+    transition-property: background-color;
+    transition-duration: 1s;
+    /* transition-timing-function: ease; */
+}
+
+.RCL_table, th, td{
+    border:1px solid white;
+    padding: 4pt;
+}
+
+.RCL_table, tr:hover{
+    transform: scale(1.05);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.RCL_table, tr:hover td{
+    background-color: var(--SideBar);
+}
+
+.Panoramic56Dot{
+    width: 95%;
+    height: 400px;
+    text-align: center;
+    margin: 5px;
+}
+
+.Panoramic56Dot img{
+    height: auto;
+}
+.RCL_main .btn{
+    border-style: solid;
+    border-radius: 5px;
+    font-size: 25px;
+    border-color: var(--SideBar);
+    transition: box-shadow 0.5s ease;
+}
+.RCL_main .bxl-github{
+    font-size: 20px;
 }
 
 @keyframes showUp {
