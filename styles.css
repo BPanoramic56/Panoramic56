@@ -555,29 +555,29 @@ ul {
     background-color: inherit;
 }
 
-.RCL_table, tr{
+.RCL_table, .RCL_table tr{
     background-color: var(--PageBackground);
     transition-duration: 1s;
     transition-property: background-color, transform, box-shadow;
 }
 
-.RCL_table, tr:hover td{
+.RCL_table, .RCL_table tr:hover td{
     transition-property: background-color;
     transition-duration: 1s;
     /* transition-timing-function: ease; */
 }
 
-.RCL_table, th, td{
+.RCL_table, .RCL_table th, .RCL_table td{
     border:1px solid white;
     padding: 4pt;
 }
 
-.RCL_table, tr:hover{
+.RCL_table, .RCL_table tr:hover{
     transform: scale(1.05);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.RCL_table, tr:hover td{
+.RCL_table, .RCL_table tr:hover td{
     background-color: var(--SideBar);
 }
 
@@ -607,6 +607,83 @@ ul {
     background-color: inherit;
 }
 
+.grid_div tr, .grid_div td{
+    border:1px solid white;
+    height: 45pt;
+    text-align: center;
+    width: 45pt;
+}
+
+.open_cell{
+    background-color: inherit;
+}
+.closed_cell{
+    background-color: white;
+}
+.start_cell{
+    background-color: green;
+}
+.end_cell{
+    background-color: red;
+}
+.moving_cell{
+    background-color: var(--SideBar);
+}
+.shortest_path_cell{
+    background-color: rgb(0, 154, 159);
+}
+.temp_start{
+    background-color: rgb(177, 255, 177);
+}
+.py-terminal{
+    width: 640px;
+    height: auto;
+    border: white solid 10px;
+}
+
+.start_btn, .restart_btn, .status, .random_btn, .move_endpoints_btn{
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    border: 4px;
+    box-shadow: 0px 4px 6px color(display-p3 0.8275 0.7608 0.9843);
+    color: black;
+    display: inline-block;
+    margin: 16px;
+    padding-bottom: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 8px;
+    text-decoration: none;
+    transition: box-shadow 0.5s ease;
+    white-space: nowrap;
+    width: 80%;
+}
+.start_btn:hover, .restart_btn:hover, .random_btn:hover, .move_endpoints_btn:hover{
+    box-shadow: 0px 2px 50px rgb(112, 0, 203);
+
+}
+.negative_cell{
+    background-color: rgba(255, 0, 0, 0.647);
+}
+
+button[disabled] {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.buttons_div{
+    display: grid;
+    width: 640px;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+}
+
+
+.status{
+    background-color: var(--PageBackground);
+    color: rgb(255, 190, 190);
+    height: auto;
+}
 @keyframes showUp {
     0% {
         opacity: 0;

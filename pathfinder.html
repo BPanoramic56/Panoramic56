@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+    <meta charset="utf-8">
+    <title>Panoramic56</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="Assets/Images/favicon_package_v0/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Assets/Images/favicon_package_v0/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Assets/Images/favicon_package_v0/favicon-16x16.png">
+    <!-- <link rel="manifest" href="Assets/Images/favicon_package_v0/site.webmanifest"> -->
+    <link rel="mask-icon" href="Assets/Images/favicon_package_v0/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>    
+</head>
+
+<body class="index">
+    <div class="side-nav">
+        <nav class="nav-bar">
+            <ul>
+                <li>
+                    <a href="index.html" class="logo">
+                        <img src="Assets/Images/Panoramic-4-bg.jpg">
+                        <span class="nav-item">BPanoramic56</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='fas bx bxs-landscape'></i>
+                        <span class="nav-item">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='fas bx bxs-grid-alt'></i>
+                        <span class="nav-item">Projects</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="server_page.html">
+                        <i class='fas bx bxs-server'></i> <span class="nav-item">Server</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="AboutMe.html">
+                        <i class='fas bx bxs-info-square'></i>
+                        <span class="nav-item">About Me</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <py-script>
+        import js
+        from pyodide.ffi import create_proxy
+        from time import sleep
+        from random import randint
+    
+        class Pathfinder():
+            
+            def __init__(self):
+                # Initialize grid and cells
+                self.start_endpoint_id = "00"
+                self.finish_endpoint_id = "99"
+                self.moving = False
+                self.grid = js.document.getElementsByClassName("grid_div")
+                self.status = js.document.getElementsByClassName("status")[0]
+                self.cells = self.init_cells()  # Initialize the grid cells
+                self.add_events()
+                self.add_button_events()
+                self.enable_buttons()
+                self.status.innerHTML = "Ready"
+                self.moving_cells = []
+    
+            def restart_grid(self, event):
+                print("Restarting Grid")
+                for row in self.cells:
+                    for cell in row:
+                        cell.className = ""  # Clear any classes
+                        cell.innerHTML = ""   # Clear inner content
+            
+                self.cells = self.init_cells()  # Initialize the grid cells
+
+                self.enable_buttons()
+
+                self.status.innerHTML = "Ready"
+
+            def disable_buttons(self):
+                self.start_btn.setAttribute("disabled", "true")
+                self.random_btn.setAttribute("disabled", "true")
+            
+            def enable_buttons(self):
+                self.start_btn.removeAttribute("disabled")
+                self.random_btn.removeAttribute("disabled")
+
+            def disable_all(self):
+                self.disable_buttons()
+                self.restart_btn.setAttribute("disabled", "true")
+            
+            def enable_all(self):
+                self.enable_buttons()
+                self.restart_btn.removeAttribute("disabled")
+
+            def add_button_events(self):
+                self.start_btn = js.document.getElementsByClassName("start_btn")[0]
+                start_pathfinder_proxy = create_proxy(self.start_pathfinder)
+                self.start_btn.addEventListener("click", start_pathfinder_proxy)
+
+                self.restart_btn = js.document.getElementsByClassName("restart_btn")[0]
+                restart_pathfinder_proxy = create_proxy(self.restart_grid)
+                self.restart_btn.addEventListener("click", restart_pathfinder_proxy)
+
+                self.random_btn = js.document.getElementsByClassName("random_btn")[0]
+                random_grid_proxy = create_proxy(self.random_grid)
+                self.random_btn.addEventListener("click", random_grid_proxy)
+
+                self.move_endpoints_btn = js.document.getElementsByClassName("move_endpoints_btn")[0]
+                move_endpoints_proxy = create_proxy(self.move_endpoints)
+                self.move_endpoints_btn.addEventListener("click", move_endpoints_proxy)
+            
+            def move_endpoints(self, event):
+                self.restart_grid(None)
+                self.moving = True
+
+                self.status.innerHTML = "Not Ready"
+                self.disable_all()
+                print(f"Movement of endpoints initated\n\tPress any cell to set new START")
+
+                start_cell = js.document.getElementById(self.start_endpoint_id)
+                start_cell.innerHTML = self.start_endpoint_id
+                start_cell.className = ""
+
+                end_cell = js.document.getElementById(self.finish_endpoint_id)
+                end_cell.innerHTML = self.finish_endpoint_id
+                end_cell.className = ""
+
+            def new_endpoints(self):
+                print("New endpoints set:")
+
+                self.start_endpoint_id = self.moving_cells[0]
+                self.finish_endpoint_id = self.moving_cells[1]
+
+                print(f"\tNew start: {self.start_endpoint_id}")
+                print(f"\tNew end: {self.finish_endpoint_id}")
+
+                new_start_cell = js.document.getElementById(self.moving_cells[0])
+                new_end_cell = js.document.getElementById(self.moving_cells[1])
+
+                new_start_cell.className = ""
+                new_start_cell.classList.add("start_cell")
+                new_start_cell.innerHTML = "START"
+
+                new_end_cell.className = ""
+                new_end_cell.classList.add("end_cell")
+                new_end_cell.innerHTML = "END"
+
+                self.moving = False
+                self.enable_all()
+
+            def init_cells(self):
+                self.cells = []  # Reset the cells list
+
+                start_cell_first_digit = int(self.start_endpoint_id[0])
+                start_cell_second_digit = int(self.start_endpoint_id[1])
+                end_cell_first_digit = int(self.finish_endpoint_id[0])
+                end_cell_second_digit = int(self.finish_endpoint_id[1])
+
+                for i in range(10):
+                    row = []
+                    for j in range(10):
+                        cell = js.document.getElementById(f"{i}{j}")
+                        if (i == start_cell_first_digit and j == start_cell_second_digit):
+                            cell.innerHTML = "START"
+                            cell.classList.add("start_cell")
+                            row.append(cell)
+                        elif (i == end_cell_first_digit and j == end_cell_second_digit):
+                            cell.innerHTML = "END"
+                            cell.classList.add("end_cell")
+                            row.append(cell)
+                        else:
+                            cell.innerHTML = f"{i}{j}"
+                            cell.className = ""  # Clear previous class names
+                            cell.classList.add("open_cell")  # Set default class
+                            row.append(cell)
+                    self.cells.append(row)
+                return self.cells  # Return the cells for use
+            
+            def random_grid(self, event):
+                print("Randomizing Grid")
+                for row in self.cells:
+                    for cell in row:
+                        if cell.id == self.start_endpoint_id or cell.id == self.finish_endpoint_id:
+                            continue
+                        n = randint(0, 3)
+                        if n == 3:
+                            cell.classList.remove("open_cell")
+                            cell.classList.add("closed_cell")
+                        else:
+                            cell.classList.remove("closed_cell")
+                            cell.classList.add("open_cell")
+            
+            def add_events(self):
+                for row in self.cells:
+                    for cell in row:
+                        click_proxy = create_proxy(self.block_cell)
+                        cell.addEventListener("click", click_proxy)  # Attach event listener
+
+            def block_cell(self, event):
+                clicked_cell_id = event.target.id
+                if self.moving:
+                    self.moving_cells.append(clicked_cell_id)
+                    if len(self.moving_cells) == 2:
+                        if self.moving_cells[0] == self.moving_cells[1]:
+                            print("End point cannot be the same as start point")
+                            self.moving_cells = self.moving_cells[:-1]
+                            return
+                        self.new_endpoints()
+                        self.moving_cells = []
+                    if len(self.moving_cells) == 1:
+                        event.target.classList.add("temp_start")
+                        print(f"\tPress any cell to set new END")
+                    return
+
+                if clicked_cell_id == self.start_endpoint_id or clicked_cell_id == self.finish_endpoint_id:
+                    return
+                
+                # Get the ID of the clicked cell
+                clicked_cell = event.target
+                if clicked_cell.classList.contains("open_cell"):
+                    clicked_cell.classList.remove("open_cell")
+                    clicked_cell.classList.add("closed_cell")
+                    print(f"Blocking cell {clicked_cell.id}")  # Log cell ID
+                else:
+                    clicked_cell.classList.remove("closed_cell")
+                    clicked_cell.classList.add("open_cell")
+                    print(f"Opening cell {clicked_cell.id}")  # Log cell ID
+
+            def transform_no_path(self):
+                for row in self.cells:
+                    for cell in row:
+                        if cell.id != self.start_endpoint_id and cell.id != self.finish_endpoint_id:
+                            if cell.classList.contains("closed_cell"):
+                                cell.classList.add("negative_cell")
+                                cell.innerHTML = ""
+            
+            def transform_shortest_path(self, current_cell_id, parent_dict):
+                self.status.innerHTML = "Path Found"
+                while current_cell_id != self.start_endpoint_id:
+                    current_cell = js.document.getElementById(current_cell_id)  # getting cell by id
+                    
+                    if current_cell_id != self.start_endpoint_id and current_cell_id != self.finish_endpoint_id:
+                        current_cell.classList.remove("moving_cell")
+                        current_cell.classList.add("shortest_path_cell")
+
+                    current_cell_id = parent_dict[current_cell_id]
+
+            def start_pathfinder(self, event):
+                self.disable_buttons()
+
+                initial_cell = js.document.getElementById(self.start_endpoint_id)
+                initial_cell_id = initial_cell.id
+                final_cell = js.document.getElementById(self.finish_endpoint_id)
+                final_cell_id = final_cell.id
+                
+                # Queue for BFS
+                queue = []
+                queue.append(initial_cell_id)
+                
+                seen_cells = []
+                seen_cells.append(initial_cell_id)
+                return self.path_bfs(queue, seen_cells)
+        
+
+            def path_bfs(self, queue, seen_cells):
+                parent_dict = dict()
+                while len(queue) > 0:
+                    current_cell_id = queue.pop(0)                              # getting next queue item
+                    current_cell = js.document.getElementById(current_cell_id)  # getting cell by id
+        
+                    if current_cell_id == self.finish_endpoint_id:  # Reached the end cell
+                        self.transform_shortest_path(current_cell_id, parent_dict)
+                        return True
+        
+                    possible_movements = []
+                    first_digit = int(current_cell_id[0])
+                    second_digit = int(current_cell_id[1])
+            
+                    if first_digit > 0:  # Move up
+                        possible_movements.append(js.document.getElementById(f"{first_digit-1}{second_digit}"))
+                    if first_digit < 9:  # Move down
+                        possible_movements.append(js.document.getElementById(f"{first_digit+1}{second_digit}"))
+                    if second_digit > 0:  # Move left
+                        possible_movements.append(js.document.getElementById(f"{first_digit}{second_digit-1}"))
+                    if second_digit < 9:  # Move right
+                        possible_movements.append(js.document.getElementById(f"{first_digit}{second_digit+1}"))
+                    
+                    for cell in possible_movements:
+                        if cell.id in seen_cells:  # Skip already seen cells
+                            continue
+                        if cell.classList.contains("closed_cell"):  # Skip blocked cells
+                            continue
+        
+                        # Mark cell as seen
+                        seen_cells.append(cell.id)
+                        queue.append(cell.id)  # Enqueue for future exploration
+
+                        parent_dict[cell.id] = current_cell_id
+
+                        if cell.id != self.start_endpoint_id and cell.id != self.finish_endpoint_id:
+                            cell.classList.add("moving_cell")  # Visual representation of movement
+                
+                print("No path found!")
+                self.status.innerHTML = "No path"
+                self.transform_no_path()
+                return False
+        
+        Pathfinder()
+        
+    </py-script>
+    <div class="main">
+        <div class="grid_div">
+            <table>
+                <tr>
+                        <td id=00></td>
+                        <td id=01></td>
+                        <td id=02></td>
+                        <td id=03></td>
+                        <td id=04></td>
+                        <td id=05></td>
+                        <td id=06></td>
+                        <td id=07></td>
+                        <td id=08></td>
+                        <td id=09></td>
+                </td>
+                <tr>
+                        <td id=10></td>
+                        <td id=11></td>
+                        <td id=12></td>
+                        <td id=13></td>
+                        <td id=14></td>
+                        <td id=15></td>
+                        <td id=16></td>
+                        <td id=17></td>
+                        <td id=18></td>
+                        <td id=19></td>
+                </td>
+                <tr>
+                        <td id=20></td>
+                        <td id=21></td>
+                        <td id=22></td>
+                        <td id=23></td>
+                        <td id=24></td>
+                        <td id=25></td>
+                        <td id=26></td>
+                        <td id=27></td>
+                        <td id=28></td>
+                        <td id=29></td>
+                </td>
+                <tr>
+                        <td id=30></td>
+                        <td id=31></td>
+                        <td id=32></td>
+                        <td id=33></td>
+                        <td id=34></td>
+                        <td id=35></td>
+                        <td id=36></td>
+                        <td id=37></td>
+                        <td id=38></td>
+                        <td id=39></td>
+                </td>
+                <tr>
+                        <td id=40></td>
+                        <td id=41></td>
+                        <td id=42></td>
+                        <td id=43></td>
+                        <td id=44></td>
+                        <td id=45></td>
+                        <td id=46></td>
+                        <td id=47></td>
+                        <td id=48></td>
+                        <td id=49></td>
+                </td>
+                <tr>
+                        <td id=50></td>
+                        <td id=51></td>
+                        <td id=52></td>
+                        <td id=53></td>
+                        <td id=54></td>
+                        <td id=55></td>
+                        <td id=56></td>
+                        <td id=57></td>
+                        <td id=58></td>
+                        <td id=59></td>
+                </td>
+                <tr>
+                        <td id=60></td>
+                        <td id=61></td>
+                        <td id=62></td>
+                        <td id=63></td>
+                        <td id=64></td>
+                        <td id=65></td>
+                        <td id=66></td>
+                        <td id=67></td>
+                        <td id=68></td>
+                        <td id=69></td>
+                </td>
+                <tr>
+                        <td id=70></td>
+                        <td id=71></td>
+                        <td id=72></td>
+                        <td id=73></td>
+                        <td id=74></td>
+                        <td id=75></td>
+                        <td id=76></td>
+                        <td id=77></td>
+                        <td id=78></td>
+                        <td id=79></td>
+                </td>
+                <tr>
+                        <td id=80></td>
+                        <td id=81></td>
+                        <td id=82></td>
+                        <td id=83></td>
+                        <td id=84></td>
+                        <td id=85></td>
+                        <td id=86></td>
+                        <td id=87></td>
+                        <td id=88></td>
+                        <td id=89></td>
+                </td>
+                <tr>
+                        <td id=90></td>
+                        <td id=91></td>
+                        <td id=92></td>
+                        <td id=93></td>
+                        <td id=94></td>
+                        <td id=95></td>
+                        <td id=96></td>
+                        <td id=97></td>
+                        <td id=98></td>
+                        <td id=99></td>
+                </td>
+        </table>
+        </div>
+        <div class="buttons_div">
+            <button class="start_btn">Run</button>
+            <button class="restart_btn">Restart Grid</button>
+            <button class="random_btn">Randomize</button>
+            <button class="move_endpoints_btn">Move</button>
+            <span class="status"></span>
+        </div>
+        <py-terminal id="terminal"></py-terminal>
+    </div>
+    
+</body>
+
+</html>
