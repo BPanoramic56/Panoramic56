@@ -327,7 +327,6 @@
                 final_cell = js.document.getElementById(self.finish_endpoint_id)
                 final_cell_id = final_cell.id
                 
-                # Queue for BFS
                 queue = []
                 queue.append(initial_cell_id)
                 
@@ -348,11 +347,9 @@
             
                     possible_movements = []
                     
-                    # Extract row and column digits from the cell ID
                     id_first_digit = int(current_cell_id[:2])
                     id_second_digit = int(current_cell_id[2:])
                     
-                    # Check and add valid movements (up, down, left, right)
                     if id_first_digit > 0:  # Move up
                         possible_movements.append(js.document.getElementById(f"{id_first_digit-1:02}{id_second_digit:02}"))
                     if id_first_digit < self.grid_size - 1:  # Move down
@@ -394,8 +391,8 @@
         <div class="grid_div"></div>
         <div class="buttons_div">
             <button class="start_btn">Run</button>
-            <button class="restart_btn">Restart Grid</button>
-            <button class="random_btn">Randomize</button>
+            <button class="restart_btn">Restart</button>
+            <button class="random_btn">Random</button>
             <button class="move_endpoints_btn">Move</button>
             <span class="status"></span>
             <select class = "size_selector"></select>

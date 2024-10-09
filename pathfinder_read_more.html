@@ -56,95 +56,104 @@
         <span class="title">
             <i class='bx bx-current-location'></i>
             <h1 class="title">Pathfinder</h1>
+            <a href="https://github.com/BPanoramic56/Panoramic56/blob/main/pathfinder.html" class="btn" target="blank" rel=noreferrer>
+                <i class='bx bxl-github'>Repo</i>
+            </a>
         </span>
         
         <p>The pathfinder project was made so I could learn how a pathfinding algorithm works, since it is not an algorithm I have ever programmed, and also how python programming in the web work, using <a href="https://pyscript.com" target=blank></a></p>
     
         <h2 class="subtitle">Functionality</h2>
-        <p>The Recursive Link Crawler traverses a given link, gathering all subsequent links recursively. It builds a Trie structure representing the website's link tree.</p>
-    
+        <p>The pathfinder consists of a grid, initially 10x10, of squares (which I will call nodes from now on), with the two edges (row 1, column 1 and row 10, column 10) being labeled START and END respectively. By clicking "Run", the algorithm finds the shortest path betweem those two nodes. The grid is color coded based on the type of node: </p>
+        <ul class="component_list">
+            <li> - <strong style="color:Green">START</strong> The start cell indicates where the algorithm will begin (also labeled "start_endpoint" in the code).</li>
+            <li> - <strong style="color:Red">END</strong> The node the algorithm tries to reach. If reachin it is not possible, the algorithm fails (also labeled "finish_endpoint" in the code).</li>
+            <li> - <strong style="color:rgb(102, 102, 102)">OPEN</strong> open nodes are transparent, and they always contain a 4-digit value representing their position (first two digits: row number, last two digits: column number). The pathfinder can step into these nodes, transforming them into MOVING nodes if so</li>
+            <li> - <strong style="color:white">BLOCKED</strong> By clicking on any non-endpoint node, the user will "block" that node. The pathfinder cannot walk through blocked nodes, and will go around them.</li>
+            <li> - <strong style="color:rgba(255, 0, 0, 0.647)">FAIL</strong> If a path between the START and END nodes is not possible, all BLOCKED cells will turn red to indicated a fail state was reached (also labeled "negative_cell" in the code)</li>
+            <li> - <strong style="color:rgb(67, 61, 230)">MOVING</strong> These are nodes the pathfinder has stepped on. When the shortest path is displayed, MOVING nodes that are part of the shortest path will be changed to PATH nodes</li>
+            <li> - <strong style="color:rgb(0, 154, 159)">PATH</strong> When a path is reached between endpoints, the shortest path between the two will be changed to PATH nodes and colored green (apparently the name of this color is "persian green") (these are also labeled "shortest_path_cell")</li>
+            <li> - <strong style="color:rgb(177, 255, 177)">TEMP START</strong> When moving the endpoints or sizing the grid, if a START node is not placed in the grid, the next cell clicked will be changed to a TEMP START, this is only to give visual feedback to the user that a START cell has ben chosen, and the next cell clicked will become the END cell</li>
+        </ul>
+
         <h2 class="subtitle">Components</h2>
-        <ul>
-            <li><strong>TrieCrawler.py</strong> contains the main functionality of the program.</li>
-            <li><strong>Node.py</strong> handles background calculations and branching.</li>
-            <li><strong>Crawler.py</strong>Creates and calls the TrieCrawler class with a specified website and title</li>
+        <ul class="component_list">
+            
+            <li>- <strong>Grid</strong>: The grid is where the calculation and actual interaction with the pathfinder happens</li>
+            
+            <li>- <strong>Run</strong>: The Run button initates the pathfinder algorithm, trying to find the shortest path (or any path) between the two endpoints</li>
+            
+            <li>- <strong>Restart</strong>: Restart empties all the components of the grid, while still keeping the endpoints. More specifically, any <strong style="color:white">BLOCKED</strong>, <strong style="color:rgb(255, 0, 0, 0.647)">FAIL</strong>, <strong style="color:rgb(67, 61, 240)">MOVING</strong> or <strong style="color:rgb(0, 154, 159)">PATH</strong>nodes will be switched back to <strong style="color:rgb(102, 102, 102)">OPEN</strong> nodes. The Restart button has to be pressed before another Run is done</li>
+
+            <li>- <strong>Random</strong>: Randomizes the OPEN nodes to either OPEN or BLOCKED nodes</li>
+
+            <li>- <strong>Move</strong>: The Move button is used to move the endpoints. This will deactivate all other buttons, and another run cannot be done before both endpoints are placed in the grid. The user can place the endpoints by clicking on any node. The first blocked node will be changed to a <strong style="color:rgb(177, 255, 177)">TEMP START</strong> node, indicating that node will become the new START point. The next click will be the new END point</li>
+
+            <li>- <strong>Status Bar</strong>: The status bar shows the current state of the game. These can be: </li>
+                <ul class="component_list">
+                    <li style="text-indent: 50px;"> -> Ready: the user is free to click any button, including Run</li>
+                    <li style="text-indent: 50px;"> -> Path Found: A run was performed and a path between the two endpoints was found. The user has to either restart the grid, move the endpoints or change the grid's size before performing another run</li>
+                    <li style="text-indent: 50px;"> -> Not Ready: One of the endpoints is not present in the grid. The user must place both START and END nodes before progressing</li>
+                </ul>
+
+            <li>- <strong>Selector and Size</strong>: A selector with a default value of 10 and a button labeled "Size" can be seen below all other buttons. By cslicking Size, a new grid with the specified number will be created, and new endpoints will have to be placed in the grid before another run can be performed. A higher grid size may affect performance</li>
+
+            <li>- <strong>Terminal</strong>: A terminal is placed below every other item. This will show outputs of the program. Although mostly used for debugging, the terminal can also be used if the user is confused with the current state of the game</li>
         </ul>
     
-        <h2 class="subtitle">Understanding Links and Nodes</h2>
-        <p>In this context, a link is defined as any element with an <code>HREF</code> attribute, whether or not it is accessible. This means that not all links lead to valid websites. For example, <em>./styles.css</em> is considered a node but not a reachable website.</p>
-    
-        <h2 class="subtitle">Size Calculation and Scalability</h2>
-        <p>The size of a Recursive Link Crawler (RLC) Trie is determined by the number of unique nodes it contains, not the number of links. Here’s an example:</p>
-    
-        <pre>
-            -> Website 1 (Links to 2, 3, and 4)
-            -   -> Website 2 (Links to 1)
-            -   -> Website 3 (Links to 1 and 2)
-            -   -> Website 4 (Links to 5 and 6)
-            -   -   -> Website 5 (Links to 4 and 2)
-            -   -   -> Website 6 (Links to 1 and 5)
-        </pre>
-    
-        <p>In this case, the Trie would have a size of 6, as there are 6 unique websites, even though there are 11 total links.</p>
-        <br>
-        <p>It's easy to see how quickly this process can grow in complexity with any modern website. The following table provides examples of RLC sizes for different websites:</p>
-    
-        <table cellpadding="10" class="RCL_table">
-            <tr class="RCL_table_header">
-                <th>Website</th>
-                <th>Link</th>
-                <th>RCL Size</th>
-            </tr>
-            <tr>
-                <td>Panoramic56</td>
-                <td><a href="file:///Users/brunogomespascotto/Panoramic56/index.html">Panoramic56/index.html</a></td>
-                <td>11</td>
-            </tr>
-            <tr>
-                <td>IBM</td>
-                <td><a href="https://www.ibm.com/us-en">www.ibm.com/us-en</a></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Apple</td>
-                <td><a href="https://www.apple.com">www.apple.com</a></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>The New York Times</td>
-                <td><a href="https://www.nytimes.com">www.nytimes.com</a></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>The University of Utah</td>
-                <td><a href="https://www.utah.edu">www.utah.edu</a></td>
-                <td></td>
-            </tr>
-             <tr>
-                <td>Snowbird</td>
-                <td><a href="https://www.snowbird.com">www.snowbird.com</a></td>
-                <td></td>
-            </tr>
-        </table>
-    
-        <h2 class="subtitle">Dot Graphs</h2>
-        <p>I decided to add a dot graph representation for the websites I was scrapping</p>
-        <p>The creation of these dot graphs is done based on the website title, which is the last section of the website's URL with it's punctuation changed to an underline (done in order to be compatible with <a href="https://dreampuf.github.io/GraphvizOnline/#digraph%20G%20%7B%0A%0A%20%20subgraph%20cluster_0%20%7B%0A%20%20%20%20style%3Dfilled%3B%0A%20%20%20%20color%3Dlightgrey%3B%0A%20%20%20%20node%20%5Bstyle%3Dfilled%2Ccolor%3Dwhite%5D%3B%0A%20%20%20%20a0%20-%3E%20a1%20-%3E%20a2%20-%3E%20a3%3B%0A%20%20%20%20label%20%3D%20%22process%20%231%22%3B%0A%20%20%7D%0A%0A%20%20subgraph%20cluster_1%20%7B%0A%20%20%20%20node%20%5Bstyle%3Dfilled%5D%3B%0A%20%20%20%20b0%20-%3E%20b1%20-%3E%20b2%20-%3E%20b3%3B%0A%20%20%20%20label%20%3D%20%22process%20%232%22%3B%0A%20%20%20%20color%3Dblue%0A%20%20%7D%0A%20%20start%20-%3E%20a0%3B%0A%20%20start%20-%3E%20b0%3B%0A%20%20a1%20-%3E%20b3%3B%0A%20%20b2%20-%3E%20a3%3B%0A%20%20a3%20-%3E%20a0%3B%0A%20%20a3%20-%3E%20end%3B%0A%20%20b3%20-%3E%20end%3B%0A%0A%20%20start%20%5Bshape%3DMdiamond%5D%3B%0A%20%20end%20%5Bshape%3DMsquare%5D%3B%0A%7D" target="blank" rel=noreferrer>GraphvizOnline</a></p>
-        <p>Since most of the websites have gigantic RCL Tries, the dot graph is almost unreadable, but for some smaller websites it is a good way of visualizing what the algorithm is doing</p>
-        <p>The following is a dot graph of my website (the grey box with the gigantic URL is the draw.oi website)</p>
-        <div class="Panoramic56Dot"> 
-            <img class="Panoramic56Dot" src="Assets/Images/Panoramic56Dot.png">
-        </div>
-        <h2 class="subtitle">Conclusion</h2>
-        <p>The time to scrape all these websites is significant, but optimizing web scraping is not the focus of this project. The goal is to understand the vast connectivity of the internet.</p>
-        <p>This was mostly a research experiment and not an actual, usable script</p>
-        <p>If you want to see the github repo where the code is stored, click the button below. The repo also has dot graphs for the example websites and their text representation</p>
-        <br>
-        <a href="https://github.com/BPanoramic56/Recursive-Link-Crawler-" class="btn" target="blank" rel=noreferrer>
-            <i class='bx bxl-github'> 
-            </i>
-            Recursive-Link-Crawler-
-        </a>
+        <h2 class="subtitle">The Algorithm</h2>
+        <p>The pathfinder algorithm itself is composed of a breadth-first search starting from the START node, adding nodes to a queue and dequeing as it goes. It continues until a path is found or the queue is completely empty, meaning no path is possible between the two endpoints</p>
+        <p>Nodes are added to a "parent dictionary" once stepped in. Whenever a path is found, the algorithm walks backwards from that path dicitonary, now starting at the END node. This will show the shortest path</p>
+
+        <h2 class="subtitle">Time complexity</h2>
+        <p>Passing the code through <strong><a href="https://www.bigocalc.com" target="_blank">Big O Calc</a></strong>, the following explanation is gathered: </p>
+        <blockquote class="quote">
+            <p>
+                The time complexity of this pathfinding algorithm is O(V + E), where V is the number of vertices (cells) and E is the number of edges (connections between cells). This is because the algorithm uses a breadth-first search (BFS) approach to explore the graph of cells, visiting each cell and its neighbors once.
+            </p>
+            <p>
+                The space complexity of this algorithm is O(V), where V is the number of vertices (cells) in the graph. This is because the algorithm uses a queue to keep track of cells to visit next, and a list to keep track of cells that have already been visited. The maximum number of cells that can be in the queue at any given time is equal to the number of cells in the graph.
+            </p>
+            <p>
+                Overall, this algorithm is efficient in terms of time complexity as it explores the graph in a systematic manner, visiting each cell and its neighbors in a predictable order. The space complexity is also reasonable as it only requires storing a queue and a list of seen cells.
+            </p>
+        </blockquote>
+        <p>While BFS is effective for unweighted grids, other algorithms like A* or Dijkstra's could provide more optimal paths in different scenarios. For example, A* incorporates heuristics to estimate the distance to the end node, allowing it to find the shortest path more efficiently in larger or more complex grids. However, BFS's simplicity and guaranteed pathfinding make it a solid choice for beginners and educational purposes.</p>
+
+        <h2 class="subtitle">Challenges and Solutions</h2>
+        <p>I decided to write the entire implementation using py-script, utilizing JavaScript to interact with the page elements. The entire program was made thrugh a py-script tag instead of linking with a Python file</p>
+        <p>Although this made the code simpler and easier, as I am pretty familiar with Python, it also meant I had no debugger, autocompletion or warnings, which slowed down debugging quite a lot</p>
+        <p>As a solution, I utilized the py-terminal tag extensively, outputting and printing any errors or assertion I made along the way</p>
+        <p>One big hurdle was modyfying the grid. Initally, the grid had fixed size of 10x10, meaning the top-left node had id "00" and bottom-right had id "99". however, by introducing variable grid sizes, id values were not reliable anymore. if the id value "119" was given to the algorithm, how could that be understood? Is it row 11 column 9 or row 1 column 19?</p>
+        <p>My solution to this was fixing the ids to 4 digits. Since grid sizes bigger than 99x99 are not very desirable as computational speed slows down too much, a 4-digit id allows the algorithm to always understand the given values. The value "0119" could be translated easily to row 1, column 19</p>
+        <p>Of course, this also brought problems in regards to the calculations being performed by the algorith, as now it is necessary to account for string manipulation. For example: if given the id "1", the algorithm has to add a leading "0" to consider it a valid id, otherwise the number will fall thorugh and no cell will be fetched</p>
+
+        <h2 class="subtitle">Learning Outcomes</h2>
+        <p>This project was mainly done so I could learn pathfinding algorithms, but it also ended up becoming my first responsive and user-interactable website (of course ignoring the <strong><a href="digital_airport.html" target="_blank">Digital Airport</a></strong> as that was mostly just a JavaScript learning project and not super interactable apart from two select tags)</p>
+        <p>I learned how to operate with py-script as was as how to modify the Document Object Model (DOM) to create responsive web applications, definetely a skill I will be utilizing in my next projects</p>
+
+        <h2 class="subtitle">The Code and Examples</h2>
+        <p>You can check out the whole code for the pathfinder in the Git repo linked at the top. The entire code is condensed into one py-script tag</p>
+        <p>I will take this section to showcase some of the implementation of the code and show some screenshots that may be of interest</p>
+        <ul class="screenshot_list">
+            <li>
+                - A randomized 10x10 (default size) grid, with it's shortest path marked<br>
+                <img src="./Assets/Images/10x10RandomGrid.png" style="width:300px;height:auto;" />
+            </li>
+            <li>
+                - A grid after the Move button is clicked and the <strong style="color:rgb(177, 255, 177)">TEMP START</strong> is placed in cell "0203". You can see how the Status Bar shows "Not Ready" as the <strong style="color:Red">END</strong> node has not yet been placed<br>
+                <img src="./Assets/Images/TempStartGrid.png" style="width:300px;height:auto;"/>
+            </li>
+            <li>
+                - A grid with no possible path. This shows how the <strong style="color:white">BLOCKED</strong> nodes have changed to <strong style="color:rgba(255, 0, 0, 0.647)">FAIL</strong> nodes and the Status Bar now shows "No Path"
+                <img src="./Assets/Images/FailGrid.png" style="width:300px;height:auto;"/>
+            </li>
+            <li>
+                - A 99x99 sized grid, with random blocking and the shortest path visible
+                <img src="./Assets/Images/GiganticGrid.pdf" style="width:300px;height:auto;"/>
+            </li>
+        </ul>
+
     </div>
 </body>
 

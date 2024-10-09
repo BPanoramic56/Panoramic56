@@ -600,6 +600,7 @@ ul {
 }
 .RCL_main .bxl-github{
     font-size: 20px;
+    margin: 10px;
 }
 .bxl-github{
     font-size: 17px;
@@ -620,7 +621,7 @@ ul {
     background-color: inherit;
 }
 .closed_cell{
-    background-color: white;
+    background-color: rgb(255, 255, 255);
 }
 .start_cell{
     background-color: green;
@@ -642,6 +643,27 @@ ul {
     width: 640px;
     height: auto;
     border: white dashed 4px;
+}
+.component_list *{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.screenshot_list{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 50% 50%;
+}
+.screenshot_list li{
+    border: #2d2d2d solid 1px;
+    padding: 10px;
+}
+.quote{
+    text-indent: 50px;
+    margin-left: 40px;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-left: rgb(123, 123, 123) solid 4px;
 }
 
 .start_btn, .restart_btn, .status, .random_btn, .move_endpoints_btn, .change_size_btn{
