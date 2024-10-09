@@ -96,7 +96,19 @@
                     <li style="text-indent: 50px;"> -> Not Ready: One of the endpoints is not present in the grid. The user must place both START and END nodes before progressing</li>
                 </ul>
 
-            <li>- <strong>Selector and Size</strong>: A selector with a default value of 10 and a button labeled "Size" can be seen below all other buttons. By cslicking Size, a new grid with the specified number will be created, and new endpoints will have to be placed in the grid before another run can be performed. A higher grid size may affect performance</li>
+            <li>- <strong>Selector and Size</strong>: A selector with a default value of 10 and a button labeled "Size" can be seen below all other buttons. By cslicking Size, a new grid with the specified number will be created, and new endpoints will have to be placed in the grid before another run can be performed. A higher grid size may affect performance</li> 
+            <li>- <strong>Test</strong>: This button was created specifically for the purposes of testing the speed of the algorith. By clickign this the following happens: 
+            <ol class="component_list" style="margin-left: 50px;">
+                <li>A temporary variable called "success_count" is created and initialized to 0</li>
+                <li>The algorithim restarts the grid, randomizes it, and saves the curent time using "time.time()" to a variable called "start_time"</li>
+                <li>The pathfinder is run</li>
+                <li>If a path is found, success_count goes up by one and the process time is printed to the terminal</li>
+                <li>If no path is found, go back to step 2</li>
+                <li>When "success_count" reaches 5, the test stops</li>
+            </ol>
+            <p>This process may take a long time depending on the size of the array, and it will freeze the page until it is completed, so use it wisely</p>
+            <p>We will talk about performance and time complexity later</p>
+            </li>
 
             <li>- <strong>Terminal</strong>: A terminal is placed below every other item. This will show outputs of the program. Although mostly used for debugging, the terminal can also be used if the user is confused with the current state of the game</li>
         </ul>
@@ -104,8 +116,26 @@
         <h2 class="subtitle">The Algorithm</h2>
         <p>The pathfinder algorithm itself is composed of a breadth-first search starting from the START node, adding nodes to a queue and dequeing as it goes. It continues until a path is found or the queue is completely empty, meaning no path is possible between the two endpoints</p>
         <p>Nodes are added to a "parent dictionary" once stepped in. Whenever a path is found, the algorithm walks backwards from that path dicitonary, now starting at the END node. This will show the shortest path</p>
+        <p>The process for finding a path is as follows:</p>
+        <ol class="component_list" style="margin-left: 50px;">
+            <li>Disable other interactions: It starts by making sure no other actions or buttons can be clicked while it's running</li>
+            <li>Mark the start and goal: It identifies where the search will begin and where it should end by locating two points on the grid (the start and end points)</li>
+            <li>Prepare to explore: It creates a list where the first point (start) is added to kick off the search. Another list is kept to remember which places have already been visited to avoid checking the same spot more than once</li>
+            <li>Search process: The algorithm begins looking for the path:</li>
+            <ul class="component_list" style="margin-left: 50px;">
+                <li>- It picks a spot from the list to check next</li>
+                <li>- If this spot happens to be the destination, the search stops, and it marks the shortest route found</li>
+                <li>- Otherwise, it checks in four possible directions (up, down, left, right) to find where it can go next</li>
+            </ul>
+            <li>Skip obstacles and repeat:</li>
+            <ul class="component_list" style="margin-left: 50px;">
+                <li>- It ignores spots already checked and places it can’t go (blocked paths)</li>
+                <li>- If a valid new spot is found, it adds it to the list of places to check next and marks it visually to show it's being explored</li>
+            </ul>
+            <li>Finish the search: The process repeats until either the destination is found, or there are no more possible moves. If no path is found, the algorithm notifies that it's impossible to reach the goal</li>
+        </ol>
 
-        <h2 class="subtitle">Time complexity</h2>
+        <h2 class="subtitle">Time Complexity</h2>
         <p>Passing the code through <strong><a href="https://www.bigocalc.com" target="_blank">Big O Calc</a></strong>, the following explanation is gathered: </p>
         <blockquote class="quote">
             <p>
@@ -119,14 +149,96 @@
             </p>
         </blockquote>
         <p>While BFS is effective for unweighted grids, other algorithms like A* or Dijkstra's could provide more optimal paths in different scenarios. For example, A* incorporates heuristics to estimate the distance to the end node, allowing it to find the shortest path more efficiently in larger or more complex grids. However, BFS's simplicity and guaranteed pathfinding make it a solid choice for beginners and educational purposes.</p>
-
+        
+        <p>The following table will showcase the time complexity as it relates to grid size. Three calculations are done:</p>
+        <ul class="component_list">
+            <li>Best Case: No blocking</li>
+            <li>Average Case: Random blocking, with a random factor of 0.25 (25% of the nodes are blocked on average, this is the default value for the Random button)</li>
+            <li>Worst Case: Random blocking, with a random factor of 0.60 (60% of the nodes are blocked on average)</li>
+        </ul>
+        <p>The process of calculating the cases goes as follows:</p>
+        <ol class="component_list" style="margin-left: 50px;">
+            <li>The grid size is set and the endpoints are placed in the corners (top-left and bottom-right nodes)</li>
+            <li>The blocking is randomized until a possible path is available</li>
+            <li>The algorithm is run and the process time is calculated</li>
+            <li>Steps 2 and 3 are repeated 5 times and the average is taken</li>
+        </ol>
+        <p>A special button was created to automate this process, the Test button</p>
+        <p>Here is the gathered info:</p>
+        <table cellpadding="10" class="RCL_table" >
+            <tr class="RCL_table_header">
+                <th>Grid Size</th>
+                <th>Best Case</th>
+                <th>Average Case</th>
+                <th>Worst Case</th>
+            </tr>
+            <tr>
+                <td>3x3</td>
+                <td>1.39</td>
+                <td>1.39</td>
+                <td>3.99</td>
+            </tr>
+            <tr>
+                <td>5x5</td>
+                <td>3.00</td>
+                <td>2.19</td>
+                <td>2.99</td>
+            </tr>
+            <tr>
+                <td>10x10</td>
+                <td>10.39</td>
+                <td>1.79</td>
+                <td>9.00</td>
+            </tr>
+            <tr>
+                <td>20x20</td>
+                <td>48.99</td>
+                <td>35.59</td>
+                <td>29.40</td>
+            </tr>
+            <tr>
+                <td>50x50</td>
+                <td>480.60</td>
+                <td>326.79</td>
+                <td>170.39</td>
+            </tr>
+            <tr>
+                <td>75x75</td>
+                <td>1846.79</td>
+                <td>1183.99</td>
+                <td>507.59</td>
+            </tr>
+            <tr>
+                <td>90x90</td>
+                <td>4858.78</td>
+                <td>3241.39</td>
+                <td>1458.59</td>
+            </tr>
+            <tr>
+                <td>100x100</td>
+                <td>6880.60</td>
+                <td>4434.99</td>
+                <td>1792.39</td>
+            </tr>
+        </table>
+        <br>
+        <p style="text-align: center; margin: 20px 0;">The following is a graph showing these results in a more visual manner:</p>
+        <div style="width: 100%; margin: 20px auto; text-align: center; display: grid;">
+            <img src="./Assets/Images/PathFinderTimingAlgorithm.png" style="width:600px; height:auto; display: block; margin: 0 auto;"/>
+        </div>
+        
+        <p style="margin-top: 20px; width: 100%; display: block;">
+            It is possible to see that the "best case" actually performed the worst time-wise. This can be explained by the fact that a less-blocked grid results in more nodes having to be stepped-on, and, therefore, more nodes added to the queue, which means more calculations are necessary. A more blocked grid, as in the worst case, may have fewer possible paths, or even no possible paths, but the possible ones can be calculated quickly, as fewer nodes have to be checked and more nodes can be outright ignored.
+        </p>
+        
+        
         <h2 class="subtitle">Challenges and Solutions</h2>
         <p>I decided to write the entire implementation using py-script, utilizing JavaScript to interact with the page elements. The entire program was made thrugh a py-script tag instead of linking with a Python file</p>
         <p>Although this made the code simpler and easier, as I am pretty familiar with Python, it also meant I had no debugger, autocompletion or warnings, which slowed down debugging quite a lot</p>
         <p>As a solution, I utilized the py-terminal tag extensively, outputting and printing any errors or assertion I made along the way</p>
         <p>One big hurdle was modyfying the grid. Initally, the grid had fixed size of 10x10, meaning the top-left node had id "00" and bottom-right had id "99". however, by introducing variable grid sizes, id values were not reliable anymore. if the id value "119" was given to the algorithm, how could that be understood? Is it row 11 column 9 or row 1 column 19?</p>
         <p>My solution to this was fixing the ids to 4 digits. Since grid sizes bigger than 99x99 are not very desirable as computational speed slows down too much, a 4-digit id allows the algorithm to always understand the given values. The value "0119" could be translated easily to row 1, column 19</p>
-        <p>Of course, this also brought problems in regards to the calculations being performed by the algorith, as now it is necessary to account for string manipulation. For example: if given the id "1", the algorithm has to add a leading "0" to consider it a valid id, otherwise the number will fall thorugh and no cell will be fetched</p>
+        <p>Of course, this also brought problems in regards to the calculations being performed by the algorithm, as now it is necessary to account for string manipulation. For example: if given the id "1", the algorithm has to add a leading "0" to consider it a valid id, otherwise the number will fall thorugh and no cell will be fetched</p>
 
         <h2 class="subtitle">Learning Outcomes</h2>
         <p>This project was mainly done so I could learn pathfinding algorithms, but it also ended up becoming my first responsive and user-interactable website (of course ignoring the <strong><a href="digital_airport.html" target="_blank">Digital Airport</a></strong> as that was mostly just a JavaScript learning project and not super interactable apart from two select tags)</p>
@@ -134,26 +246,32 @@
 
         <h2 class="subtitle">The Code and Examples</h2>
         <p>You can check out the whole code for the pathfinder in the Git repo linked at the top. The entire code is condensed into one py-script tag</p>
-        <p>I will take this section to showcase some of the implementation of the code and show some screenshots that may be of interest</p>
+        <p>I will take this section to showcase some screenshots that may be of interest and that present the components of the project</p>
         <ul class="screenshot_list">
             <li>
-                - A randomized 10x10 (default size) grid, with it's shortest path marked<br>
+                <strong>Example 1:</strong>
+                <p>- A randomized 10x10 (default size) grid, with it's shortest path marked</p>
                 <img src="./Assets/Images/10x10RandomGrid.png" style="width:300px;height:auto;" />
             </li>
             <li>
-                - A grid after the Move button is clicked and the <strong style="color:rgb(177, 255, 177)">TEMP START</strong> is placed in cell "0203". You can see how the Status Bar shows "Not Ready" as the <strong style="color:Red">END</strong> node has not yet been placed<br>
+                <strong>Example 2:</strong>
+                <p>- A grid after the Move button is clicked and the <strong style="color:rgb(177, 255, 177)">TEMP START</strong> is placed in cell "0203". You can see how the Status Bar shows "Not Ready" as the <strong style="color:Red">END</strong> node has not yet been placed</p>
                 <img src="./Assets/Images/TempStartGrid.png" style="width:300px;height:auto;"/>
             </li>
             <li>
-                - A grid with no possible path. This shows how the <strong style="color:white">BLOCKED</strong> nodes have changed to <strong style="color:rgba(255, 0, 0, 0.647)">FAIL</strong> nodes and the Status Bar now shows "No Path"
+                <strong>Example 3:</strong>
+                <p>- A grid with no possible path. This shows how the <strong style="color:white">BLOCKED</strong> nodes have changed to <strong style="color:rgba(255, 0, 0, 0.647)">FAIL</strong> nodes and the Status Bar now shows "No Path"</p>
                 <img src="./Assets/Images/FailGrid.png" style="width:300px;height:auto;"/>
             </li>
             <li>
-                - A 99x99 sized grid, with random blocking and the shortest path visible
+                <strong>Example 4:</strong>
+                <p>- A 99x99 sized grid, with random blocking and the shortest path visible</p>
                 <img src="./Assets/Images/GiganticGrid.pdf" style="width:300px;height:auto;"/>
             </li>
         </ul>
-
+        <footer>
+            <p>&copy; 2024 BPanoramic56</p>
+        </footer>
     </div>
 </body>
 

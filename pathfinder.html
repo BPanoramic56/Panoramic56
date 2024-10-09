@@ -55,9 +55,10 @@
     </div>
     <py-script>
         import js
+        import time
         from pyodide.ffi import create_proxy
-        from time import sleep
         from random import randint
+        
     
         class Pathfinder():
             
@@ -91,7 +92,7 @@
                     self.selector.appendChild(new_value)
 
             def restart_grid(self, event):
-                print("Restarting Grid")
+                # print("Restarting Grid")
                 for row in self.cells:
                     for cell in row:
                         cell.className = ""  # Clear any classes
@@ -139,7 +140,22 @@
                 self.move_endpoints_btn = js.document.getElementsByClassName("move_endpoints_btn")[0]
                 move_endpoints_proxy = create_proxy(self.move_endpoints)
                 self.move_endpoints_btn.addEventListener("click", move_endpoints_proxy)
+
+                self.test_grid_btn = js.document.getElementsByClassName("test_grid_btn")[0]
+                test_grid_proxy = create_proxy(self.test_grid)
+                self.test_grid_btn.addEventListener("click", test_grid_proxy)
             
+            def test_grid(self, event):
+                print("Testing Grid")
+                success = 0
+                while success < 5:
+                    self.restart_grid(None)
+                    # self.random_grid(None)
+                    start_time = time.time()
+                    if(self.start_pathfinder(None)):
+                        print(f"Time: {(time.time() - start_time) * 1000}")
+                        success = success + 1
+
             def change_size(self, event):
                 self.grid_size = int(self.selector.value)   
                 grid_div = js.document.getElementsByClassName("grid_div")[0]
@@ -251,7 +267,6 @@
                 return self.cells  # Return the cells for use
             
             def random_grid(self, event):
-                print("Randomizing Grid")
                 for row in self.cells:
                     for cell in row:
                         if cell.id == self.start_endpoint_id or cell.id == self.finish_endpoint_id:
@@ -333,7 +348,6 @@
                 seen_cells = []
                 seen_cells.append(initial_cell_id)
                 return self.path_bfs(queue, seen_cells)
-        
 
             def path_bfs(self, queue, seen_cells):
                 parent_dict = dict()
@@ -374,12 +388,7 @@
                         if cell.id != self.start_endpoint_id and cell.id != self.finish_endpoint_id:
                             cell.classList.add("moving_cell")  # Visual representation of movement
             
-                print("No path found!")
-                self.status.innerHTML = "No path"
-                self.transform_no_path()
-                return False
-            
-                print("No path found!")
+                # print("No path found!")
                 self.status.innerHTML = "No path"
                 self.transform_no_path()
                 return False
@@ -397,6 +406,7 @@
             <span class="status"></span>
             <select class = "size_selector"></select>
             <button class="change_size_btn">Size</button>
+            <button class="test_grid_btn">Test</button>
         </div>
         <py-terminal id="terminal"></py-terminal>
     </div>

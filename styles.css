@@ -656,6 +656,7 @@ ul {
 .screenshot_list li{
     border: #2d2d2d solid 1px;
     padding: 10px;
+    margin: 10px;
 }
 .quote{
     text-indent: 50px;
@@ -666,7 +667,7 @@ ul {
     border-left: rgb(123, 123, 123) solid 4px;
 }
 
-.start_btn, .restart_btn, .status, .random_btn, .move_endpoints_btn, .change_size_btn{
+.start_btn, .restart_btn, .status, .random_btn, .move_endpoints_btn, .change_size_btn, .test_grid_btn{
     text-align: center;
     background-color: white;
     border-radius: 5px;
@@ -684,7 +685,7 @@ ul {
     white-space: nowrap;
     width: 80%;
 }
-.start_btn:hover, .restart_btn:hover, .random_btn:hover, .move_endpoints_btn:hover, .change_size_btn:hover{
+.start_btn:hover, .restart_btn:hover, .random_btn:hover, .move_endpoints_btn:hover, .change_size_btn:hover, .test_grid_btn:hover{
     box-shadow: 0px 2px 50px rgb(112, 0, 203);
 
 }
