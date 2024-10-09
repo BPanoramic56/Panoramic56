@@ -63,18 +63,33 @@
             
             def __init__(self):
                 # Initialize grid and cells
-                self.start_endpoint_id = "00"
-                self.finish_endpoint_id = "99"
+                self.start_endpoint_id = "0000"
+                self.finish_endpoint_id = "0909"
+                self.grid_size = 10
                 self.moving = False
+                self.selector = js.document.getElementsByClassName("size_selector")[0]
                 self.grid = js.document.getElementsByClassName("grid_div")
                 self.status = js.document.getElementsByClassName("status")[0]
+
+                self.create_grid()
+
                 self.cells = self.init_cells()  # Initialize the grid cells
+                self.moving_cells = []
+                self.add_numbers_to_select()
                 self.add_events()
                 self.add_button_events()
                 self.enable_buttons()
+
                 self.status.innerHTML = "Ready"
-                self.moving_cells = []
-    
+        
+            def add_numbers_to_select(self):
+                for i in range(100):
+                    new_value = js.document.createElement('option')
+                    new_value.innerHTML = i+1
+                    if (i+1 == 10):
+                        new_value.setAttribute('selected', True)
+                    self.selector.appendChild(new_value)
+
             def restart_grid(self, event):
                 print("Restarting Grid")
                 for row in self.cells:
@@ -105,6 +120,10 @@
                 self.restart_btn.removeAttribute("disabled")
 
             def add_button_events(self):
+                self.change_size_btn = js.document.getElementsByClassName("change_size_btn")[0]
+                change_size_proxy = create_proxy(self.change_size)
+                self.change_size_btn.addEventListener("click", change_size_proxy)
+
                 self.start_btn = js.document.getElementsByClassName("start_btn")[0]
                 start_pathfinder_proxy = create_proxy(self.start_pathfinder)
                 self.start_btn.addEventListener("click", start_pathfinder_proxy)
@@ -121,6 +140,36 @@
                 move_endpoints_proxy = create_proxy(self.move_endpoints)
                 self.move_endpoints_btn.addEventListener("click", move_endpoints_proxy)
             
+            def change_size(self, event):
+                self.grid_size = int(self.selector.value)   
+                grid_div = js.document.getElementsByClassName("grid_div")[0]
+                grid_div.innerHTML = ''
+                self.create_grid()
+                self.restart_grid(None)
+                self.add_events()
+                self.move_endpoints(None)
+                
+            def create_grid(self):
+                grid_div = js.document.getElementsByClassName("grid_div")[0]
+                table = js.document.createElement('table')
+                for i in range(self.grid_size):
+                    tr = js.document.createElement('tr')
+                    for j in range(self.grid_size):
+                        td = js.document.createElement('td')
+                        id_first_digit = str(i)
+                        id_second_digit = str(j)
+
+                        if len(id_first_digit) == 1:
+                            id_first_digit = '0' + id_first_digit
+                        if len(id_second_digit) == 1:
+                            id_second_digit = '0' + id_second_digit
+                        td.setAttribute("id", f"{id_first_digit}{id_second_digit}");
+
+                        tr.appendChild(td)
+                    table.appendChild(tr)
+                grid_div.appendChild(table)
+                
+
             def move_endpoints(self, event):
                 self.restart_grid(None)
                 self.moving = True
@@ -158,33 +207,46 @@
                 new_end_cell.innerHTML = "END"
 
                 self.moving = False
+                self.status.innerHTML = "Ready"
                 self.enable_all()
 
             def init_cells(self):
                 self.cells = []  # Reset the cells list
 
-                start_cell_first_digit = int(self.start_endpoint_id[0])
-                start_cell_second_digit = int(self.start_endpoint_id[1])
-                end_cell_first_digit = int(self.finish_endpoint_id[0])
-                end_cell_second_digit = int(self.finish_endpoint_id[1])
+                start_cell_first_digit = self.start_endpoint_id[0:2]
+                start_cell_second_digit = self.start_endpoint_id[-2:]
+                end_cell_first_digit = self.finish_endpoint_id[0:2]
+                end_cell_second_digit = self.finish_endpoint_id[-2:]
 
-                for i in range(10):
+                for i in range(self.grid_size):
                     row = []
-                    for j in range(10):
-                        cell = js.document.getElementById(f"{i}{j}")
-                        if (i == start_cell_first_digit and j == start_cell_second_digit):
+                    for j in range(self.grid_size):
+
+                        id_first_digit = str(i)
+                        id_second_digit = str(j)
+                        if len(id_first_digit) == 1:
+                            id_first_digit = '0' + id_first_digit
+                        if len(id_second_digit) == 1:
+                            id_second_digit = '0' + id_second_digit
+
+                        cell = js.document.getElementById(f"{id_first_digit}{id_second_digit}")
+                        
+                        if (id_first_digit == start_cell_first_digit and id_second_digit == start_cell_second_digit):
                             cell.innerHTML = "START"
                             cell.classList.add("start_cell")
                             row.append(cell)
-                        elif (i == end_cell_first_digit and j == end_cell_second_digit):
+                        
+                        elif (id_first_digit == end_cell_first_digit and id_second_digit == end_cell_second_digit):
                             cell.innerHTML = "END"
                             cell.classList.add("end_cell")
                             row.append(cell)
+                        
                         else:
-                            cell.innerHTML = f"{i}{j}"
+                            cell.innerHTML = f"{id_first_digit}{id_second_digit}"
                             cell.className = ""  # Clear previous class names
                             cell.classList.add("open_cell")  # Set default class
                             row.append(cell)
+
                     self.cells.append(row)
                 return self.cells  # Return the cells for use
             
@@ -277,41 +339,49 @@
             def path_bfs(self, queue, seen_cells):
                 parent_dict = dict()
                 while len(queue) > 0:
-                    current_cell_id = queue.pop(0)                              # getting next queue item
-                    current_cell = js.document.getElementById(current_cell_id)  # getting cell by id
-        
+                    current_cell_id = queue.pop(0)  # Get next queue item
+                    current_cell = js.document.getElementById(current_cell_id)  # Get cell by id
+            
                     if current_cell_id == self.finish_endpoint_id:  # Reached the end cell
                         self.transform_shortest_path(current_cell_id, parent_dict)
                         return True
-        
-                    possible_movements = []
-                    first_digit = int(current_cell_id[0])
-                    second_digit = int(current_cell_id[1])
             
-                    if first_digit > 0:  # Move up
-                        possible_movements.append(js.document.getElementById(f"{first_digit-1}{second_digit}"))
-                    if first_digit < 9:  # Move down
-                        possible_movements.append(js.document.getElementById(f"{first_digit+1}{second_digit}"))
-                    if second_digit > 0:  # Move left
-                        possible_movements.append(js.document.getElementById(f"{first_digit}{second_digit-1}"))
-                    if second_digit < 9:  # Move right
-                        possible_movements.append(js.document.getElementById(f"{first_digit}{second_digit+1}"))
+                    possible_movements = []
+                    
+                    # Extract row and column digits from the cell ID
+                    id_first_digit = int(current_cell_id[:2])
+                    id_second_digit = int(current_cell_id[2:])
+                    
+                    # Check and add valid movements (up, down, left, right)
+                    if id_first_digit > 0:  # Move up
+                        possible_movements.append(js.document.getElementById(f"{id_first_digit-1:02}{id_second_digit:02}"))
+                    if id_first_digit < self.grid_size - 1:  # Move down
+                        possible_movements.append(js.document.getElementById(f"{id_first_digit+1:02}{id_second_digit:02}"))
+                    if id_second_digit > 0:  # Move left
+                        possible_movements.append(js.document.getElementById(f"{id_first_digit:02}{id_second_digit-1:02}"))
+                    if id_second_digit < self.grid_size - 1:  # Move right
+                        possible_movements.append(js.document.getElementById(f"{id_first_digit:02}{id_second_digit+1:02}"))
                     
                     for cell in possible_movements:
                         if cell.id in seen_cells:  # Skip already seen cells
                             continue
                         if cell.classList.contains("closed_cell"):  # Skip blocked cells
                             continue
-        
+            
                         # Mark cell as seen
                         seen_cells.append(cell.id)
                         queue.append(cell.id)  # Enqueue for future exploration
-
+            
                         parent_dict[cell.id] = current_cell_id
-
+            
                         if cell.id != self.start_endpoint_id and cell.id != self.finish_endpoint_id:
                             cell.classList.add("moving_cell")  # Visual representation of movement
-                
+            
+                print("No path found!")
+                self.status.innerHTML = "No path"
+                self.transform_no_path()
+                return False
+            
                 print("No path found!")
                 self.status.innerHTML = "No path"
                 self.transform_no_path()
@@ -321,136 +391,15 @@
         
     </py-script>
     <div class="main">
-        <div class="grid_div">
-            <table>
-                <tr>
-                        <td id=00></td>
-                        <td id=01></td>
-                        <td id=02></td>
-                        <td id=03></td>
-                        <td id=04></td>
-                        <td id=05></td>
-                        <td id=06></td>
-                        <td id=07></td>
-                        <td id=08></td>
-                        <td id=09></td>
-                </td>
-                <tr>
-                        <td id=10></td>
-                        <td id=11></td>
-                        <td id=12></td>
-                        <td id=13></td>
-                        <td id=14></td>
-                        <td id=15></td>
-                        <td id=16></td>
-                        <td id=17></td>
-                        <td id=18></td>
-                        <td id=19></td>
-                </td>
-                <tr>
-                        <td id=20></td>
-                        <td id=21></td>
-                        <td id=22></td>
-                        <td id=23></td>
-                        <td id=24></td>
-                        <td id=25></td>
-                        <td id=26></td>
-                        <td id=27></td>
-                        <td id=28></td>
-                        <td id=29></td>
-                </td>
-                <tr>
-                        <td id=30></td>
-                        <td id=31></td>
-                        <td id=32></td>
-                        <td id=33></td>
-                        <td id=34></td>
-                        <td id=35></td>
-                        <td id=36></td>
-                        <td id=37></td>
-                        <td id=38></td>
-                        <td id=39></td>
-                </td>
-                <tr>
-                        <td id=40></td>
-                        <td id=41></td>
-                        <td id=42></td>
-                        <td id=43></td>
-                        <td id=44></td>
-                        <td id=45></td>
-                        <td id=46></td>
-                        <td id=47></td>
-                        <td id=48></td>
-                        <td id=49></td>
-                </td>
-                <tr>
-                        <td id=50></td>
-                        <td id=51></td>
-                        <td id=52></td>
-                        <td id=53></td>
-                        <td id=54></td>
-                        <td id=55></td>
-                        <td id=56></td>
-                        <td id=57></td>
-                        <td id=58></td>
-                        <td id=59></td>
-                </td>
-                <tr>
-                        <td id=60></td>
-                        <td id=61></td>
-                        <td id=62></td>
-                        <td id=63></td>
-                        <td id=64></td>
-                        <td id=65></td>
-                        <td id=66></td>
-                        <td id=67></td>
-                        <td id=68></td>
-                        <td id=69></td>
-                </td>
-                <tr>
-                        <td id=70></td>
-                        <td id=71></td>
-                        <td id=72></td>
-                        <td id=73></td>
-                        <td id=74></td>
-                        <td id=75></td>
-                        <td id=76></td>
-                        <td id=77></td>
-                        <td id=78></td>
-                        <td id=79></td>
-                </td>
-                <tr>
-                        <td id=80></td>
-                        <td id=81></td>
-                        <td id=82></td>
-                        <td id=83></td>
-                        <td id=84></td>
-                        <td id=85></td>
-                        <td id=86></td>
-                        <td id=87></td>
-                        <td id=88></td>
-                        <td id=89></td>
-                </td>
-                <tr>
-                        <td id=90></td>
-                        <td id=91></td>
-                        <td id=92></td>
-                        <td id=93></td>
-                        <td id=94></td>
-                        <td id=95></td>
-                        <td id=96></td>
-                        <td id=97></td>
-                        <td id=98></td>
-                        <td id=99></td>
-                </td>
-        </table>
-        </div>
+        <div class="grid_div"></div>
         <div class="buttons_div">
             <button class="start_btn">Run</button>
             <button class="restart_btn">Restart Grid</button>
             <button class="random_btn">Randomize</button>
             <button class="move_endpoints_btn">Move</button>
             <span class="status"></span>
+            <select class = "size_selector"></select>
+            <button class="change_size_btn">Size</button>
         </div>
         <py-terminal id="terminal"></py-terminal>
     </div>

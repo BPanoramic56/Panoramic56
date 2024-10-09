@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+    <meta charset="utf-8">
+    <title>Panoramic56</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="Assets/Images/favicon_package_v0/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Assets/Images/favicon_package_v0/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Assets/Images/favicon_package_v0/favicon-16x16.png">
+    <!-- <link rel="manifest" href="Assets/Images/favicon_package_v0/site.webmanifest"> -->
+    <link rel="mask-icon" href="Assets/Images/favicon_package_v0/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+
+<body class="index">
+    <div class="side-nav">
+        <nav class="nav-bar">
+            <ul>
+                <li>
+                    <a href="index.html" class="logo">
+                        <img src="Assets/Images/Panoramic-4-bg.jpg">
+                        <span class="nav-item">BPanoramic56</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='fas bx bxs-landscape'></i>
+                        <span class="nav-item">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='fas bx bxs-grid-alt'></i>
+                        <span class="nav-item">Projects</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="server_page.html">
+                        <i class='fas bx bxs-server'></i> <span class="nav-item">Server</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="AboutMe.html">
+                        <i class='fas bx bxs-info-square'></i>
+                        <span class="nav-item">About Me</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="main RCL_main">
+        <span class="title">
+            <i class='bx bx-current-location'></i>
+            <h1 class="title">Pathfinder</h1>
+        </span>
+        
+        <p>The pathfinder project was made so I could learn how a pathfinding algorithm works, since it is not an algorithm I have ever programmed, and also how python programming in the web work, using <a href="https://pyscript.com" target=blank></a></p>
+    
+        <h2 class="subtitle">Functionality</h2>
+        <p>The Recursive Link Crawler traverses a given link, gathering all subsequent links recursively. It builds a Trie structure representing the website's link tree.</p>
+    
+        <h2 class="subtitle">Components</h2>
+        <ul>
+            <li><strong>TrieCrawler.py</strong> contains the main functionality of the program.</li>
+            <li><strong>Node.py</strong> handles background calculations and branching.</li>
+            <li><strong>Crawler.py</strong>Creates and calls the TrieCrawler class with a specified website and title</li>
+        </ul>
+    
+        <h2 class="subtitle">Understanding Links and Nodes</h2>
+        <p>In this context, a link is defined as any element with an <code>HREF</code> attribute, whether or not it is accessible. This means that not all links lead to valid websites. For example, <em>./styles.css</em> is considered a node but not a reachable website.</p>
+    
+        <h2 class="subtitle">Size Calculation and Scalability</h2>
+        <p>The size of a Recursive Link Crawler (RLC) Trie is determined by the number of unique nodes it contains, not the number of links. Here’s an example:</p>
+    
+        <pre>
+            -> Website 1 (Links to 2, 3, and 4)
+            -   -> Website 2 (Links to 1)
+            -   -> Website 3 (Links to 1 and 2)
+            -   -> Website 4 (Links to 5 and 6)
+            -   -   -> Website 5 (Links to 4 and 2)
+            -   -   -> Website 6 (Links to 1 and 5)
+        </pre>
+    
+        <p>In this case, the Trie would have a size of 6, as there are 6 unique websites, even though there are 11 total links.</p>
+        <br>
+        <p>It's easy to see how quickly this process can grow in complexity with any modern website. The following table provides examples of RLC sizes for different websites:</p>
+    
+        <table cellpadding="10" class="RCL_table">
+            <tr class="RCL_table_header">
+                <th>Website</th>
+                <th>Link</th>
+                <th>RCL Size</th>
+            </tr>
+            <tr>
+                <td>Panoramic56</td>
+                <td><a href="file:///Users/brunogomespascotto/Panoramic56/index.html">Panoramic56/index.html</a></td>
+                <td>11</td>
+            </tr>
+            <tr>
+                <td>IBM</td>
+                <td><a href="https://www.ibm.com/us-en">www.ibm.com/us-en</a></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Apple</td>
+                <td><a href="https://www.apple.com">www.apple.com</a></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>The New York Times</td>
+                <td><a href="https://www.nytimes.com">www.nytimes.com</a></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>The University of Utah</td>
+                <td><a href="https://www.utah.edu">www.utah.edu</a></td>
+                <td></td>
+            </tr>
+             <tr>
+                <td>Snowbird</td>
+                <td><a href="https://www.snowbird.com">www.snowbird.com</a></td>
+                <td></td>
+            </tr>
+        </table>
+    
+        <h2 class="subtitle">Dot Graphs</h2>
+        <p>I decided to add a dot graph representation for the websites I was scrapping</p>
+        <p>The creation of these dot graphs is done based on the website title, which is the last section of the website's URL with it's punctuation changed to an underline (done in order to be compatible with <a href="https://dreampuf.github.io/GraphvizOnline/#digraph%20G%20%7B%0A%0A%20%20subgraph%20cluster_0%20%7B%0A%20%20%20%20style%3Dfilled%3B%0A%20%20%20%20color%3Dlightgrey%3B%0A%20%20%20%20node%20%5Bstyle%3Dfilled%2Ccolor%3Dwhite%5D%3B%0A%20%20%20%20a0%20-%3E%20a1%20-%3E%20a2%20-%3E%20a3%3B%0A%20%20%20%20label%20%3D%20%22process%20%231%22%3B%0A%20%20%7D%0A%0A%20%20subgraph%20cluster_1%20%7B%0A%20%20%20%20node%20%5Bstyle%3Dfilled%5D%3B%0A%20%20%20%20b0%20-%3E%20b1%20-%3E%20b2%20-%3E%20b3%3B%0A%20%20%20%20label%20%3D%20%22process%20%232%22%3B%0A%20%20%20%20color%3Dblue%0A%20%20%7D%0A%20%20start%20-%3E%20a0%3B%0A%20%20start%20-%3E%20b0%3B%0A%20%20a1%20-%3E%20b3%3B%0A%20%20b2%20-%3E%20a3%3B%0A%20%20a3%20-%3E%20a0%3B%0A%20%20a3%20-%3E%20end%3B%0A%20%20b3%20-%3E%20end%3B%0A%0A%20%20start%20%5Bshape%3DMdiamond%5D%3B%0A%20%20end%20%5Bshape%3DMsquare%5D%3B%0A%7D" target="blank" rel=noreferrer>GraphvizOnline</a></p>
+        <p>Since most of the websites have gigantic RCL Tries, the dot graph is almost unreadable, but for some smaller websites it is a good way of visualizing what the algorithm is doing</p>
+        <p>The following is a dot graph of my website (the grey box with the gigantic URL is the draw.oi website)</p>
+        <div class="Panoramic56Dot"> 
+            <img class="Panoramic56Dot" src="Assets/Images/Panoramic56Dot.png">
+        </div>
+        <h2 class="subtitle">Conclusion</h2>
+        <p>The time to scrape all these websites is significant, but optimizing web scraping is not the focus of this project. The goal is to understand the vast connectivity of the internet.</p>
+        <p>This was mostly a research experiment and not an actual, usable script</p>
+        <p>If you want to see the github repo where the code is stored, click the button below. The repo also has dot graphs for the example websites and their text representation</p>
+        <br>
+        <a href="https://github.com/BPanoramic56/Recursive-Link-Crawler-" class="btn" target="blank" rel=noreferrer>
+            <i class='bx bxl-github'> 
+            </i>
+            Recursive-Link-Crawler-
+        </a>
+    </div>
+</body>
+
+</html>
