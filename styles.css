@@ -159,6 +159,32 @@ h5 {
     width: 28%;
 }
 
+.Externals{
+    width: 90%;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(4, 150px);
+    justify-content: space-between;
+}
+
+.Externals > *{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    box-shadow: 0px 2px 4px color(display-p3 0.8275 0.7608 0.9843);
+    transition: box-shadow 0.5s ease;
+    padding: 10px;
+    margin: 10px;
+}
+
+.Externals > *:hover{
+    box-shadow: 0px 2px 80px rgb(112, 0, 203);
+}
+
+.Externals i{
+    font-size: xx-large;
+}
+
 .project-card .btn:hover, .RCL_main .btn:hover{
     box-shadow: 0px 2px 80px rgb(112, 0, 203);
 }
@@ -424,17 +450,6 @@ ul {
 .ChartDiv:hover .OverlayText {
     opacity: 0;
 }
-
-.master-chart-div div:nth-child(1) {
-    animation-delay: 200ms;
-}
-.master-chart-div div:nth-child(2) {
-    animation-delay: 400ms;
-}
-.master-chart-div div:nth-child(3) {
-    animation-delay: 600ms;
-}
-
 .Arrival_Departure_Sign{
     background-color: rgb(255, 49, 49);
     display: grid;
@@ -525,6 +540,13 @@ ul {
     padding-left: 90px;
 }
 
+.RCL_main > * {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInSlideUp 1.2s ease-out forwards;
+}
+  
+
 .RCL_main p{
     margin-top: 5px;
     margin-bottom: 5px;
@@ -602,7 +624,8 @@ ul {
     font-size: 20px;
     margin: 10px;
 }
-.bxl-github{
+.bxl-github, .bxl-linkedin-square, .bxl-reddit{
+    margin: 10px;
     font-size: 17px;
     color: inherit;
     background-color: inherit;
@@ -722,6 +745,25 @@ button[disabled] {
     color: rgb(255, 190, 190);
     height: auto;
 }
+
+.AboutMain > *{
+    opacity: 0;
+    transform: translateY(50px);
+    padding: 10px;
+    animation: fadeInSlideUp 1.2s ease-out forwards;
+}
+
+@keyframes fadeInSlideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
 @keyframes showUp {
     0% {
         opacity: 0;

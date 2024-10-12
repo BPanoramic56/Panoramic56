@@ -51,7 +51,6 @@
             </ul>
         </nav>
     </div>
-
     <div class="main RCL_main">
         <span class="title">
             <i class='bx bx-current-location'></i>
@@ -273,6 +272,16 @@
             <p>&copy; 2024 BPanoramic56</p>
         </footer>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          const elements = document.querySelectorAll('.RCL_main > *');
+          elements.forEach((el, index) => {
+            el.style.animationDelay = `${index * 0.1}s`;
+          });
+        });
+    </script>
+      
 </body>
 
 </html>

@@ -49,8 +49,43 @@
             </ul>
         </nav>
     </div>
-    <div class="main">
+    <div class="AboutMain main">
+        <span class="title">
+            <i class='bx bxs-coffee'></i>
+            <h1 class="title">About Me</h1>
+        </span>
+        <h3>Hello Everyone!</h3>
+        <p>I am a current student at the <strong>University of Utah</strong>, pursuing a Bachelor's Degree in Computer Science</p>
+        <p>Currently in my Junior year, looking for internships and building projects on the side</p>
+        <p>I am interested in software development, data science and web development mostly</p>
+        <p>Also interested in other fields, such as physics, nuclear engineering and aviation</p>
+        <p>I am willing to colaborate in any project, so feel free to reach me through my email: panoramic56@proton.me </p>
+        <p>This website will mostly compose of me showing off some of my projects. If they are not web-related, I will make a page explaining what I did and what I learned on it</p>
+        <p>Here are some external websites:</p>
+        <div class="Externals">
+            <a href="https://github.com/BPanoramic56/Panoramic56/blob/main/pathfinder.html" class="btn" target="blank" rel=noreferrer>
+                <i class='bx bxl-github'></i>
+                <p>BPanoramic56</p>
+            </a>
+            <a href="https://www.linkedin.com/in/bruno-gomes-pascotto-6640a5230/" class="btn" target="blank" rel=noreferrer>
+                <i class='bx bxl-linkedin-square'></i>
+                <p>Bruno</p>
+            </a>
+            <a href="https://www.reddit.com/user/Panoramic56/" class="btn" target="blank" rel=noreferrer>
+                <i class='bx bxl-reddit' ></i>
+                <p>u/Panoramic56</p>
+            </a>
+        </div>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          const elements = document.querySelectorAll('.AboutMain > *');
+          elements.forEach((el, index) => {
+            el.style.animationDelay = `${index * 0.1}s`;
+          });
+        });
+    </script>
 </body>
 
 </html>
