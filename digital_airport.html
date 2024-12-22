@@ -26,13 +26,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
-                        <i class='fas bx bxs-landscape'></i>
-                        <span class="nav-item">Home</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
+                    <a href="projects.html">
                         <i class='fas bx bxs-grid-alt'></i>
                         <span class="nav-item">Projects</span>
                     </a>
@@ -58,17 +52,7 @@
             let displayedInfo = document.createElement("div");
             let selectState = document.createElement("select");
             let airportSelector = document.createElement("select");
-            // let arrivalSign = document.createElement("span");
-            // let departureSign = document.createElement("span");
-            // let arrivalDepartureCombine = document.createElement("div");
-
-            // arrivalSign.innerHTML = "Arrivals";
-            // departureSign.innerHTML = "Departures";
-
-            // arrivalDepartureCombine.appendChild(arrivalSign);
-            // arrivalDepartureCombine.appendChild(departureSign);
-            // flightGrid.appendChild(arrivalDepartureCombine);
-
+            
             const infoParameters = ["flight_number", "flight_destination", "departure_time", "arrival_time", "aircraft_type"];
             const gridHeaders = ["Flight", "Destination/Origin", "Departure", "Arrival", "Aircraft"];
             
@@ -94,12 +78,6 @@
 
                 emptyDisplayedGrid()
 
-                // if (displayedInfo.firstChild != null){
-                //     displayedInfo.removeChild(arrival_flights);
-                // }
-                // if (displayedInfo.firstChild != null){
-                //     displayedInfo.removeChild(departure_flights);
-                // }
                 currentAirport.innerHTML = "Currently selected airport: " + completeJSON[selectedAirport]["Name"]
                 flightGrid.appendChild(displayedInfo);
                 displayedInfo.classList.add("flight_grid");

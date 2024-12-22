@@ -1,7 +1,6 @@
 :root {
     --SideBar: rgba(68, 61, 230, 0.566);
     --PageBackground: rgb(20, 20, 20);
-    /* #141414 */
 }
 
 * {
@@ -562,6 +561,13 @@ ul {
 .subtitle{
     color: rgb(45, 173, 253);
     font-size: 1.8em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.section_title{
+    color: rgb(45, 104, 253);
+    font-size: 1.4em;
     margin-top: 10px;
     margin-bottom: 10px;
 }

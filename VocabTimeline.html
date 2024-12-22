@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+    <meta charset="utf-8">
+    <title>Panoramic56</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="Assets/Images/favicon_package_v0/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Assets/Images/favicon_package_v0/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Assets/Images/favicon_package_v0/favicon-16x16.png">
+    <!-- <link rel="manifest" href="Assets/Images/favicon_package_v0/site.webmanifest"> -->
+    <link rel="mask-icon" href="Assets/Images/favicon_package_v0/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+
+<body class="index">
+    <div class="side-nav">
+        <nav class="nav-bar">
+            <ul>
+                <li>
+                    <a href="index.html" class="logo">
+                        <img src="Assets/Images/Panoramic-4-bg.jpg">
+                        <span class="nav-item">BPanoramic56</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <i class='fas bx bxs-grid-alt'></i>
+                        <span class="nav-item">Projects</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="server_page.html">
+                        <i class='fas bx bxs-server'></i> <span class="nav-item">Server</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="AboutMe.html">
+                        <i class='fas bx bxs-info-square'></i>
+                        <span class="nav-item">About Me</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="main">
+        <span class="title">
+            <i class='bx bxs-time'></i>
+            <h1 class="title">Vocab Timeline</h1>
+            <a href="https://github.com/BPanoramic56/Vocab" class="btn" target="blank" rel=noreferrer>
+                <i class='bx bxl-github'>Repo</i>
+            </a>
+        </span>
+
+        <p>Vocab is my first try at developing an app. The app will be a helper for vocabulary learning in English, and the idea came from my mom needing some help in that endeavor</p>
+        <p>This page will mostly be talking about development and descriptions of the app</p>
+
+        <h2 class="subtitle">Specifics of the development</h2>
+        <ul class="component_list">
+            <li> - Language: Swift 6</li>
+            <li> - Lowest iOS: iOS 17.0</li>
+            <li> - IDE: XCode 16.2</li>
+            <li> - Simulated Environment: Iphone 16</li>
+        </ul>
+
+        <h2 class="subtitle">Setup</h2>
+        <p>On December 17h, I started my development journey by installing the necessary components and updating them to the latest version. This includes XCode, the simulator for the Iphone 16 with the newest IOS and the Swift 6 language</p>
+        <p>I plan on keeping this app very simple, as it's purpose is mostly to be a database of words</p>
+        <p>December 18th was the actual first day of coding, where I learned how Swift works and what is needed for an app to function</p>
+        <p>The app was ready for testing on December 21th, and this is when I created my Apple Developer account</p>
+
+        <h2 class="subtitle">Features</h2>
+        <p>The app features 6 main pages, which I will display and explain here, screenshots for every page are provided in the bottom of this website</p>
+        <p>As of the writing of this page, December 21, 2024, the app is still under review by Apple, and should be released before the end of the year</p>
+
+        <h2 class="section_title">Main Page</h2>
+        <p>The main page features the title, Vocab, and 5 buttons. Each button sneds the user to a separate page in the app</p>
+        <p>The background image is randomized every time the user opens the app, being chosen from a set of imagery from Utah. The image can be of Zions National Park, Arches National Park, Park City and Park City Mountain, Little Cottonwod Canyon or Timpanogos</p>
+       
+
+        <h2 class="section_title">Add Word Page</h2>
+        <p>In this page, users can add any word they desire, as long as it within the available words list, which consists of about three hundred thousand English words</p>       
+        <p>Users are asked to add an example and a description of the word. The example must use the word they specified, but the description has no constraints, apart from not being empty</p>
+        <p>By clicking "Submit Word", the system will check if the word is valid, if the example uses it and if the description is not empty, and if so, it will add it to the words learned collection</p>
+        <p>This page serves as a baseline for all other pages, and they all follow a similar style and guideline</p>
+
+        <h2 class="section_title">Random Word Page</h2>
+        <p>In here, users will be prompted to add random words from the three hundred thousand word list. This page tends to give harder words than the usual vocabulary, so it could be beneficial if the user wnats to learn harder and longer words</p>
+        <p>The user can click on "New Word" to start or to change the given word</p>
+        <p>The "Submit Word" button works just like the Add Word Page, and follow the same constraints</p>
+
+        <h2 class="section_title">Collections Page</h2>
+        <p>The Collections Page serves as a repository of different vocabulary types the user can explore</p>
+        <p>Each collection has a theme and a number of words. By choosing a collection, the user will see a page similar to the Random Word Page, but the words are from a specific topic and they are orderd alphabetically</p>
+        <p>When the user finishes the Collection, a checkmark will appear in the page congratulating the user</p>
+
+        <h2 class="section_title">See Words Page</h2>
+        <p>This is where users can see what words they have learned so far</p>
+        <p>Words are colored by where they were added from, and ordered from most to least recently added</p>
+        <p>By clicking in a word, a form will appear where users can modify the description and example they have given</p>
+        <p>Users are not able to modify the word, date or source, but they are allowed to swipe left on a word to delete it if they deem necessary</p>
+        <p>If a word from a collection is deleted, that word will appear again in that collection</p>
+
+        <h2 class="section_title">Info or Profile Page</h2>
+        <p>The Info Page is where users can see statistics about their learning in flashcards</p>
+        <p>This page is very simple, and although my initial idea was to have the user create an actual profile, I decided to keep the app as simple as possible and ditch that idea</p>
+
+        <h2 class="subtitle">Resources</h2>
+        <p>Here are some resources I utilized in order to make this app. Although, I know that I am not a good programmer yet, I feel like it is a good idea to credit those who helped me get started in this endeavor. All of these will hace links to them</p>
+
+        <ul class="component_list">
+            <li>1 - <strong><a href="https://www.swift.org/getting-started/swiftui/">The SwiftUI org website</a></strong></li>
+
+            <li>2 - <strong><a href="https://coolors.co/494947-35ff69-44ccff-7494ea-d138bf">Coolors - Used this for color gradients and palletes</a></strong></li>
+
+            <li>3 - <strong><a href="https://www.vocabulary.com">Vocabulary.com - Got a lot of the collections from this</a></strong></li>
+
+            <li>4 - <strong><a href="https://www.youtube.com/@iOSAcademy">iOS Academy Youtube channel</a></strong></li>
+
+            <li>5 - <strong><a href="https://www.youtube.com/@seanallen">Sean Allen Youtube channel</a></strong></li>
+        </ul>
+        <h2 class="section_title">Screenshots</h2>
+        <ul class="screenshot_list">
+            <li>
+                <strong>Main Page:</strong>
+                <p></p>
+                <img src="./Assets/Images/MainPage.jpeg" style="width:300px;height:auto;" />
+            </li>
+            <li>
+                <strong>Info Page:</strong>
+                <p></p>
+                <img src="./Assets/Images/InfoPage.jpeg" style="width:300px;height:auto;"/>
+            </li>
+            <li>
+                <strong>Random Word Page:</strong>
+                <p></p>
+                <img src="./Assets/Images/RandomWord.jpeg" style="width:300px;height:auto;"/>
+            </li>
+            <li>
+                <strong>See Words Page:</strong>
+                <p></p>
+                <img src="./Assets/Images/SeeWords.jpeg" style="width:300px;height:auto;"/>
+            </li>
+            <li>
+                <strong>Collections Page:</strong>
+                <p></p>
+                <img src="./Assets/Images/CollectionPage.jpeg" style="width:300px;height:auto;"/>
+            </li>
+            <li>
+                <strong>Add Word Page</strong>
+                <p></p>
+                <img src="./Assets/Images/AddWord.jpeg" style="width:300px;height:auto;"/>
+            </li>
+        </ul>
+        </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          const elements = document.querySelectorAll('.RCL_main > *');
+          elements.forEach((el, index) => {
+            el.style.animationDelay = `${index * 0.1}s`;
+          });
+        });
+    </script>
+</body>
+
+</html>

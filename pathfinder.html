@@ -14,7 +14,12 @@
     <meta name="theme-color" content="#ffffff">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
-    <script defer src="https://pyscript.net/latest/pyscript.js"></script>    
+    <script src="https://pyscript.net/latest/pyscript.js"></script> 
+    <py-env>
+        - name: random
+        - name: time
+        - name: js
+    </py-env>
 </head>
 
 <body class="index">
@@ -28,7 +33,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="index.html">
+                    <a href="projects.html">
                         <i class='fas bx bxs-grid-alt'></i>
                         <span class="nav-item">Projects</span>
                     </a>
@@ -142,7 +147,7 @@
             def test_grid(self, event):
                 print("Testing Grid")
                 success = 0
-                while success < 5:
+                while success != 5:
                     self.restart_grid(None)
                     # self.random_grid(None)
                     start_time = time.time()

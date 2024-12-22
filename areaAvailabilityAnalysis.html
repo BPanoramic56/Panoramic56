@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+    <meta charset="utf-8">
+    <title>Panoramic56</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="Assets/Images/favicon_package_v0/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Assets/Images/favicon_package_v0/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Assets/Images/favicon_package_v0/favicon-16x16.png">
+    <!-- <link rel="manifest" href="Assets/Images/favicon_package_v0/site.webmanifest"> -->
+    <link rel="mask-icon" href="Assets/Images/favicon_package_v0/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+
+<body class="index">
+
+    <div class="side-nav">
+        <nav class="nav-bar">
+            <ul>
+                <li>
+                    <a href="index.html" class="logo">
+                        <img src="Assets/Images/Panoramic-4-bg.jpg">
+                        <span class="nav-item">BPanoramic56</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <i class='fas bx bxs-grid-alt'></i>
+                        <span class="nav-item">Projects</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="server_page.html">
+                        <i class='fas bx bxs-server'></i> <span class="nav-item">Server</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="AboutMe.html">
+                        <i class='fas bx bxs-info-square'></i>
+                        <span class="nav-item">About Me</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="main RCL_main">
+        <span class="title">
+            <i class='bx bxs-area'></i>
+            <h1 class="title">Area Availability Analyzer</h1>
+            <a href="https://github.com/BPanoramic56/AreaAvailabilityAnalyser" class="btn" target="blank" rel=noreferrer>
+                <i class='bx bxl-github'>Repo</i>
+            </a>
+        </span>
+
+        <h2 class="subtitle">Main Idea</h2>
+
+        <p>The University of Utah owns a gym facility called the Legacy Gym (also known as the Life Center). The facility has a website that periodically updates showing the amount of people inside the facility, they call this the Area Availability. For the sake of simplificiation, I will call it the Area Availability Website, or AAW for short</p>
+
+        <p>The main point of this project is to analyze this number, considering how often it is updated and what can we gather from the given data</p>
+
+        <p>This page will show the hours, methodology and results from this project, as well as some future predictions of what this could entail</p>
+
+        <h2 class="subtitle">Methodology</h2>
+
+        <p>My methodology was simple, but there wasa lot I had to learn to make it work as expected: </p>
+        <ol class="component_list">
+            <li>Start the script by opening the AAW</li>
+            <li>Look at the current availability, and save that to a variable</li>
+            <li>Establish a connection with some sort of database and store that variable number</li>
+            <li>Close the website</li>
+            <li>Repeat after x amount of time</li>
+        </ol>
+
+        <h2 class="subtitle">Hours</h2>
+
+        <p>The Life Center is not open 24-7, therefore, my program will have to account for that</p>
+        <p>Let's look at what hours the life center is open and work from there:</p>
+
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          const elements = document.querySelectorAll('.RCL_main > *');
+          elements.forEach((el, index) => {
+            el.style.animationDelay = `${index * 0.1}s`;
+          });
+        });
+    </script>
+</body>
+
+</html>
