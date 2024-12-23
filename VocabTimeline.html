@@ -45,41 +45,64 @@
             </ul>
         </nav>
     </div>
-
+    
     <div class="main">
         <span class="title">
-            <i class='bx bxs-time'></i>
-            <h1 class="title">Vocab Timeline</h1>
-            <a href="https://github.com/BPanoramic56/Vocab" class="btn" target="blank" rel=noreferrer>
-                <i class='bx bxl-github'>Repo</i>
-            </a>
+            <i class='bx bxl-apple'></i>
+            <h1 class="title">Vocab</h1>
+            <div style="margin: 20px;">
+                <a href="https://github.com" target= "https://github.com/BPanoramic56/Vocab" class="github-button">
+                    <i class='bx bxl-github'></i> View GitHub Repository
+                </a>
+            </div>
         </span>
+        <div class="entrance-display">
+            <div class="table-of-contents">
+                <h2>Table of Contents</h2>
+                <ul class="component_list">
+                    <li><h2>1. <a href="#Development">Specifics of the Development</a></h2></li>
+                    <li><h2>2. <a href="#Features">Features</a></h2></li>
+                    <li><h2>3. <a href="#Privacy">Privacy Notice</a></h2></li>
+                    <li><h2>4. <a href="#Feedback">Feedback</a></h2></li>
+                    <li><h2>5. <a href="#Updates">Updates</a></h2></li>
+                    <li><h2>6. <a href="#Resources">Resources</a></h2></li>
+                    <li><h2>7. <a href="#Screenshots">Screenshots</a></h2></li>
+                </ul>
+            </div>
+
+            <div class="image-container">
+                <img src="./Assets/Images/icon.png" style="width:400px; height:auto; display: block; margin: 0 auto;"/>
+            </div>
+        </div>
 
         <p>Vocab is my first try at developing an app. The app will be a helper for vocabulary learning in English, and the idea came from my mom needing some help in that endeavor</p>
         <p>This page will mostly be talking about development and descriptions of the app</p>
 
-        <h2 class="subtitle">Specifics of the development</h2>
+        <h2 class="subtitle" id="Development">Specifics of the development</h2>
         <ul class="component_list">
             <li> - Language: Swift 6</li>
             <li> - Lowest iOS: iOS 17.0</li>
+            <li> - Translation feature is only available on iOS 17.4 onwards</li>
             <li> - IDE: XCode 16.2</li>
             <li> - Simulated Environment: Iphone 16</li>
         </ul>
 
-        <h2 class="subtitle">Setup</h2>
-        <p>On December 17h, I started my development journey by installing the necessary components and updating them to the latest version. This includes XCode, the simulator for the Iphone 16 with the newest IOS and the Swift 6 language</p>
+        <h2 class="section_title">Setup</h2>
+        <p>On December 17h, I initiated my development journey by installing the necessary components and updating them to the latest version. This includes XCode, the simulator for the Iphone 16 with the newest IOS and the Swift 6 language</p>
         <p>I plan on keeping this app very simple, as it's purpose is mostly to be a database of words</p>
         <p>December 18th was the actual first day of coding, where I learned how Swift works and what is needed for an app to function</p>
         <p>The app was ready for testing on December 21th, and this is when I created my Apple Developer account</p>
+        <p>The app was tested by an external group of tests on December 22th and subsequently submitted for review on the same day</p>
 
-        <h2 class="subtitle">Features</h2>
+        <h2 class="subtitle" id="Features">Features</h2>
         <p>The app features 6 main pages, which I will display and explain here, screenshots for every page are provided in the bottom of this website</p>
         <p>As of the writing of this page, December 21, 2024, the app is still under review by Apple, and should be released before the end of the year</p>
 
         <h2 class="section_title">Main Page</h2>
         <p>The main page features the title, Vocab, and 5 buttons. Each button sneds the user to a separate page in the app</p>
         <p>The background image is randomized every time the user opens the app, being chosen from a set of imagery from Utah. The image can be of Zions National Park, Arches National Park, Park City and Park City Mountain, Little Cottonwod Canyon or Timpanogos</p>
-       
+        <p>Depending on your screen size (mostly prominent on Ipads), the main page will appear as a side bar, and not as an actual page</p>
+
 
         <h2 class="section_title">Add Word Page</h2>
         <p>In this page, users can add any word they desire, as long as it within the available words list, which consists of about three hundred thousand English words</p>       
@@ -108,7 +131,23 @@
         <p>The Info Page is where users can see statistics about their learning in flashcards</p>
         <p>This page is very simple, and although my initial idea was to have the user create an actual profile, I decided to keep the app as simple as possible and ditch that idea</p>
 
-        <h2 class="subtitle">Resources</h2>
+        <h2 class="subtitle" id="Privacy">Privacy Notice</h2>
+        <p><strong>Vocab does not gather or store any info from it's users</strong></p>
+        <p>All information on the app is saved locally and is not sent to any servers or third-parties</p>
+        <p>The entirety of the Vocab App code is available in the Github link at the top of this page or through the following link: </p>
+        <br>
+        <p><strong><a href="https://github.com/BPanoramic56/Vocab" class="stylized-button">Vocab Github Repo</a></strong></p>
+
+        <h2 class="subtitle" id="Privacy">Feedback</h2>
+        <p>if you have any feedback, concern, question or critique, feel free to send an email to <strong>panoramic56@proton.me</strong></p>
+        <p>I will gladly accept any valid suggestion and incorporate it into my next projects or future versions of this one</p>
+
+        <h2 class="subtitle" id="Updates">Updates</h2>
+        <h2 class="section_title">Version 1.0.1</h2>
+        <p>Added a translation button to Random Word, Collection and See Words pages</p>
+        <p>Users can use this button to translate the given word to their native language</p>
+
+        <h2 class="subtitle" id="Resources">Resources</h2>
         <p>Here are some resources I utilized in order to make this app. Although, I know that I am not a good programmer yet, I feel like it is a good idea to credit those who helped me get started in this endeavor. All of these will hace links to them</p>
 
         <ul class="component_list">
@@ -122,7 +161,8 @@
 
             <li>5 - <strong><a href="https://www.youtube.com/@seanallen">Sean Allen Youtube channel</a></strong></li>
         </ul>
-        <h2 class="section_title">Screenshots</h2>
+
+        <h2 class="subtitle" id="Screenshots">Screenshots</h2>
         <ul class="screenshot_list">
             <li>
                 <strong>Main Page:</strong>
@@ -154,7 +194,18 @@
                 <p></p>
                 <img src="./Assets/Images/AddWord.jpeg" style="width:300px;height:auto;"/>
             </li>
+            <li>
+                <strong>Light Vocab App Icon</strong>
+                <p></p>
+                <img src="./Assets/Images/LightVocabIcon.png" style="width:300px;height:auto;"/>
+            </li>
+            <li>
+                <strong>Dark Vocab App Icon</strong>
+                <p></p>
+                <img src="./Assets/Images/DarkVocabIcon.png" style="width:300px;height:auto;"/>
+            </li>
         </ul>
+
         </div>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
