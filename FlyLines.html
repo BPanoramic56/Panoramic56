@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+    <meta charset="utf-8">
+    <title>Panoramic56</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="Assets/Images/favicon_package_v0/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Assets/Images/favicon_package_v0/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Assets/Images/favicon_package_v0/favicon-16x16.png">
+    <!-- <link rel="manifest" href="Assets/Images/favicon_package_v0/site.webmanifest"> -->
+    <link rel="mask-icon" href="Assets/Images/favicon_package_v0/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+
+<body class="index">
+    <div class="side-nav">
+        <nav class="nav-bar">
+            <ul>
+                <li>
+                    <a href="index.html" class="logo">
+                        <img src="Assets/Images/Panoramic-4-bg.jpg">
+                        <span class="nav-item">BPanoramic56</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <i class='fas bx bxs-grid-alt'></i>
+                        <span class="nav-item">Projects</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="server_page.html">
+                        <i class='fas bx bxs-server'></i> <span class="nav-item">Server</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="AboutMe.html">
+                        <i class='fas bx bxs-info-square'></i>
+                        <span class="nav-item">About Me</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    
+    <div class="main">
+        <span class="title">
+            <i class='bx bxl-apple'></i>
+            <h1 class="title">FlyLines</h1>
+            <div style="margin: 20px;">
+                <a href="https://github.com" target= "https://github.com/BPanoramic56/InitialPlace" class="github-button">
+                    <i class='bx bxl-github'></i> View GitHub Repository
+                </a>
+            </div>
+        </span>
+        <div class="entrance-display">
+            <div class="table-of-contents">
+                <h2>Table of Contents</h2>
+                <ul class="component_list">
+                    <li><h2>1. <a href="#Development">Specifics of the Development</a></h2></li>
+                    <li><h2>2. <a href="#Features">Features</a></h2></li>
+                    <li><h2>3. <a href="#Privacy">Privacy Notice</a></h2></li>
+                    <li><h2>4. <a href="#Feedback">Feedback</a></h2></li>
+                    <li><h2>5. <a href="#Updates">Updates</a></h2></li>
+                    <li><h2>6. <a href="#Resources">Resources</a></h2></li>
+                    <li><h2>7. <a href="#Screenshots">Screenshots</a></h2></li>
+                </ul>
+            </div>
+
+            <div class="image-container">
+                <img src="./Assets/Images/FlyLinesLogo.png" style="width:400px; height:auto; display: block; margin: 0 auto;"/>
+            </div>
+        </div>
+        <p>FlyLines is my second iOS app released to the App Store. As a continuation of my previous work, Vocab, I decided to dive deeper into different frameworks and more detailed views</p>
+        <p>This page will mostly be talking about development and descriptions of the app</p>
+        <p>The app's original name was "InitialPlace", which then got changed to "SoaringSkyPath", and eventually "FlyLines"</p>
+        <h2 class="subtitle" id="Development">Specifics of the development</h2>
+        <ul class="component_list">
+            <li> - Language: Swift 6</li>
+            <li> - Lowest iOS: iOS 17.0</li>
+            <li> - Features such as the map may require an internet connection, but the app is fully functional without one</li>
+            <li> - IDE: XCode 16.2</li>
+            <li> - Simulated Environment: Iphone 16 and Ipad Air 13-inch (M2)</li>
+            <li> - Technologies utilized: SwiftUI, MapKit, Charts Framework</li>
+        </ul>
+
+        <h2 class="section_title">Setup</h2>
+        <p>Development started on December 22nd, with the app being sent for review on January 2nd, 2025</p>
+        <p>The app was initially denied over a naming convetion problem, being sent for review again on January 6th, being approved and released two days later, on January 8th, 2025</p>
+
+        <h2 class="subtitle" id="Features">Features</h2>
+        <p>The app's main focus is being a flight logger with a connected flight route map. It is composed of 6 main pages/views. We will explain these views in this section. Helper views will be discussed last</p>
+
+        <h2 class="section_title">Profile Page</h2>
+        <p>The profile page shows the user's logged flights and statistics about those flights. Both the flights list and the statistics list are presented via a dropdown menu, and can be collapsed or expanded as the user's desire</p>
+        <p>Each flight will be displayed with a <strong>Fligh Summary View</strong>, which shows the following information the following information:</p>
+        <ol class="component_list">
+            <li>The flight's airline symbol/logo in the left side</li>
+            <li>The airline's name</li>
+            <li>The origin airport and destination airport's ICAO Code, with an arrow pointing the direction of the flight</li>
+            <li>The aircraft type</li>
+            <li>The date the flight was done</li>
+        </ol>
+        <p>The statistics section will display the following information, in this order</p>
+        <ol class="component_list">
+            <li>Number of flights logged</li>
+            <li>The number of airlines the user has flown with and a list of the airlines with the amount of flights in each one (ranked by amount of flights)</li>
+            <li>The number of airlines the user has flown to or from and a list of the aiport with the amount of flights in each one (ranked by amount of flights)</li>
+            <li>The number of states the user has flown to or from and a list of the states with the amount of flights in each one (ranked by amount of flights)</li>
+            <li>The number of routes (combination two airports, regardless of direction) the user has done and a list of the routes with the amount of flights in each one (ranked by amount of flights),followed by two side by side lists of which airports the user has departed from and which airports the user has arrived at, both ranked by amount of flights</li>
+            <li>The amount of miles travelled and list of route's mileages (ranked by longest to shorted)</li>
+            <li>The number of aircraft types the user has flown in and a list of those ranked by amount of flights in each one</li>
+            <li>Three side by side lists ranking the user's location, row and type of flight seats</li>
+        </ol>
+
+        <h2 class="section_title">Add Flight Page</h2>
+        <p>This page serves as the actual "flight logging" section of the app. For a flight to be logged, the user has to present the following information</p>
+        <ol class="component_list">
+            <li>Origin and destination airports, which can be searched via full name or ICAO code (some airports may have their IATA code also added to facilitate searching). This area is mandatory, and the "Save" button will not be active if the fields are empty or if the specified airport is not recognized</li>
+            <li>The airline the user flew with. This list ordered alphabetically and will default to the first airline. Favorite airlines will appear at the top of the list, and will contain a star next to their name</li>
+            <li>The aircraft type the user flew in. This list is also sorted alphabetically and will default to the first value. The options shown are only types that are currently part of the selected airline's fleet, therefore, this list is bounded by the airline the user has selected</li>
+            <li>The seat type: economy, first or business</li>
+            <li>The row number: from 1 to 88 (88 was chosen as the maximum value as, from some sources I read, is the maximum row number is any commercial airlines, coming from Emirates Airbus A380)</li>
+            <li>The seat location: window, middle or isle</li>
+            <li>The flight's date, which defaults to the current date bu can be modified with a calendar picker</li>
+        </ol>
+        <p>Once this information is filled, the "Save" button can be pressed to log the flight. An animation with the airline's logo and "Flight Saved" will appear, and the origin-destination airport text fields will be emptied. The background of this animation is a gradient between the airline's color and the user's app color of choice</p>
+
+        <h2 class="section_title">Map Page</h2>
+        <p>The map page is the most visually appealing section of the app. It utilizes the MapKit framework to display an Apple Maps instance.</p>
+        <p>Initially, the map will be completely empty, and will focus on the continental United States.</p>
+        <p>A "Choose Airline" is visible at the bottom. Clicking on it will pull up a rotating list of all airlines available, alongside their symbol/logo. Choosing an airline by rotating to it's position will add markers to the map with the airline hubs. The markers will have the airline's color, not the user specified app color.</p>
+        <ul class="component_list">
+            <li>- <strong>My Flights</strong>: The first and default choice on the list. This will display all airports the user has visited, with geodesic lines between them. The markers and the lines will be displayed with the user specified app color. The lines get more pronounced (bright) the more times the user flies between the two airports connected by the line (regardless of direction). Additionaly, the marker will contain a departure and arrival icon (SF Symbol) representing which airport was the departure airport and the arrival airport of any given flight</li>
+            <li>- <strong>All Airlines Hubs/Operational Bases</strong>: The last option on the list, this will display all hubs from all airlines and this option </li>
+        </ul>
+        <p>Once any of the options in the list are chosen, the map's camera will change to focus and display all options, following the default MapKit behavior. The user is able to move the map following the same controls of the Apple Maps app, and modifying the camera will make the panning stop</p>
+        <p>Clicking on a marker will pull up the<strong>Airport Info Card</strong>, which will be explained later</p>
+
+        <h2 class="section_title">Airlines Page</h2>
+        <p>The Airlines Page contains a list of all airlines in alphabetical order, with the airline's symbol, name and a star showing it's favorite status in rows.</p>
+        <p>Clicking on an airline will open it's <strong>Airline Info Card</strong> (which will be explained later as well), and clicking on the star will switch the airline from favorited or not. The star will be filled if the airline is favorited and empty if not</p>
+
+        <h2 class="section_title">Badges Page</h2>
+        <p>The Badges Page contains a list of badges that serve as achievements for flying, adding a gamefication element to the app.</p>
+        <p>Badges can be either locked or unlocked</p>
+        <ol class="component_list">
+            <li><strong>Locked Badges</strong> will have a gradient background from white to black, it's image will have a greyscale and a lock will be placed on top of it</li>
+            <li><strong>Unlocked Badges</strong> will have a gradient background from indigo to the user's app color, and it's image will be in it's original colors</li>
+        </ol>
+        <p>Badges can have several types, which are defined by it's unlock parameters, and can identified by it's name. The following list contain all current badges (as of version 1.0.0), with it's unlock parameter and an example that is present in the app currently (more specifically, the first badge from that type alphabetically)</p>
+        <ol class="component_list">
+            <li><strong>Bank Angle: </strong>An unusual event happened to your flight</li>
+            <p style="margin-left: 10px">Example -> Bank Angle: Diversion - Have a flight divert back to it's departure airport</p>
+            <li><strong>Flighpath: </strong>The user completed a specific list of routes (regardless of the order)</li>
+            <p style="margin-left: 10px">Example -> Flightpath: Island Hopper - Complete all legs of United Airlines Flight 155, the Island Hopper</p>
+            <li><strong>Frequent Flyer: </strong>The user has visited all hubs/operating bases from a certain airline using that specific airline</li>
+            <p style="margin-left: 10px">Example -> Frequent Flyer: Alaska Airlines - Fly Alaska Airlines to all hubs/operating bases from Alaska Airlines</p>
+            <li><strong>Skyline: </strong>The user has flown with aircraft types from a specific aircraft manufacturer a specific amount of times</li>
+            <p style="margin-left: 10px">Example -> Skyline: Airbus - Fly an Airbus jet ten times</p>
+            <li><strong>Soaring: </strong>Fly an specific aircraft an arbitrary number of times</li>
+            <p style="margin-left: 10px">Example -> Soaring: The Best Seller - Fly five times in a Boeing B737</p>
+            <li><strong>Voyage: </strong>Fly an arbitrary amount of times with all specified airlines</li>
+            <p style="margin-left: 10px">Example -> Voyage: Low Cost Carriers - Fly one time with each of the Low Cost Carries in the U.S.</p>
+        </ol>
+
+        <h2 class="section_title">Settings Page</h2>
+        <p>This page allows the user to modify some aspects of the app to make the app experience better</p>
+        <p>The following are the possible settings the use is allowed to change</p>
+        <ol class="component_list">
+            <li>"Show airport ICAO": Switches between airports' full name and it's ICAO Code in map views</li>
+            <li>"Show satellite imagery": Switches between the default Apple maps style and a satellite image of the maps</li>
+            <li>"Unit of Measurement: Used to calculate flight mileage. The user is allowed to switch between: feet, meters, kilometers, miles and nautical miles</li>
+            <li>"Charts on profile page": Enables or disables the charts on the stats section of the profile page as some users may prever a simplified view with no images/charts</li>
+            <li>"Change app color": Pull a wheel picker where users can choose the color of most UI elements</li>
+            <li>"Delete all flights": Removes all flights from the user's data. This is not a reversible action, as data is only saved locally, and the user will see a warning message before confirming this choice</li>
+        </ol>
+
+
+        <h2 class="section_title">Other Pages: Airport Info Card</h2>
+        <p>The airport info card shows up if an airport pin is clicked in any map view</p>
+        <p>It will display:</p>
+        <p>- Information about the airport, such as name, ICAO and/or IATA codes and coordinates</p>
+        <p>- A  map of the airport satellite imagery slowly rotation around it</p>
+        <p>- A list of flights taken from or to this airport</p>
+        <p>- Followed by a list of which airlines use this aiport as a hub</p>
+
+        <h2 class="section_title">Other Pages: Airline Info Card</h2>
+        <p>Clicking on an airline in the Airlines Page will bring up that airline's info card</p>
+        <p>This page consists of:</p>
+        <p>- The airline's symbol/logo, followed by it's name and ICAO code</p>
+        <p>- A map view with the airline's hubs pinned</p>
+        <p>- Flights taken with this airline or a message saying that no flights with this airline have been taken</p>
+        <p>- A list of badges this airline is a part of</p>
+        <p>- A list containing this airline's fleet</p>
+
+        <h2 class="section_title">Other Pages: The Sidebar</h2>
+        <p>The sidebar can be accessed in any page by clicking the three lines on the top left of the screen (the color of this icon is dependent on the user's app color selection)</p>
+        <p>The sidebar contain links for all main pages as well as a link to the "About page", which is the page you are currently in</p>
+
+        <h2 class="subtitle" id="Privacy">Privacy Notice</h2>
+        <p><strong>FlyLines does not gather or store any info from it's users</strong></p>
+        <p>All information on the app is saved locally and is not sent to any servers or third-parties</p>
+        <p>Deleting or removing flights is a permanent move, as FlyLines does not create any backup or external storage of user's information</p>
+        <p>The entirety of the FlyLines App code is available in the Github link at the top of this page or through the following link: </p>
+        <br>
+        <p><strong><a href="https://github.com/BPanoramic56/InitialPlace" class="stylized-button">FlyLines Github Repo</a></strong></p>
+
+        <h2 class="subtitle" id="Privacy">Feedback</h2>
+        <p>if you have any feedback, concern, question or critique, feel free to send an email to <strong>panoramic56@proton.me</strong></p>
+        <p>I will gladly accept any valid suggestion and incorporate it into my next projects or future versions of this one</p>
+
+        <h2 class="subtitle" id="Updates">Updates</h2>
+        <p>Whenever this page is published, no updates will be done yet, however, version 1.0.1 is being developed and it's changes will be noted here</p>
+        <h2 class="section_title">Version 1.0.1</h2>
+        <p>New Profiles View style, with a switch style button for flights and stats lists</p>
+        <p>Airline fleets list added to the Airlines View</p>
+        <p>Airline search bar now starts with the IATA code to simplify searching. Full name can still be used and this change should not affect that</p>
+
+        <h2 class="subtitle" id="Resources">Resources</h2>
+        <p>Here are some resources I utilized in order to make this app, in no specific order. All of these will hace links to them</p>
+
+        <ol class="component_list">
+            <li> <strong><a href="https://www.swift.org/getting-started/swiftui/">The SwiftUI Org Website</a></strong></li>
+
+            <li><strong><a href="https://developer.apple.com/maps/">MapKit Framework Website</a></strong> </li>
+            <li><strong><a href="https://developer.apple.com/documentation/charts">The Swift Charts Framework Website</a></strong> </li>
+            
+            <li><strong><a href="https://www.youtube.com/@iOSAcademy">iOS Academy Youtube Channel</a></strong></li>
+
+            <li><strong><a href="https://www.youtube.com/@seanallen">Sean Allen Youtube Channel</a></strong></li>
+
+            <li><strong><a href="https://www.youtube.com/@appstuff5778">AppStuff Youtube Channel</a></strong></li>
+
+            <li><strong><a href="https://www.youtube.com/@AppleDeveloper">The Apple Developer Youtube Channel</a></strong> </li>
+        </ol>
+
+        <h2 class="subtitle" id="Screenshots">Screenshots</h2>
+        <ul class="screenshot_list">
+            <li>
+                <strong>The Map Page - Airlines</strong>
+                <p>This image of the Map page shows the "All Airline Hubs/Operating Bases" selection, with the colorful markers over the airline hubs. The screenshot can only accomodate this section of the map, but all airline hubs were drawn even outside this range</p>
+                <img src="./Assets/Images/MapPageAirlines.png" style="width:300px;height:auto;"/>
+            </li>
+            <li>
+                <strong>The Map Page - Lines</strong>
+                <p>This image of the Map page shows the difference between a more travelled route (KSEA - KSFO) and a less travelled route (KSFO - KSLC), with the latter being less prominent</p>
+                <img src="./Assets/Images/MapPageLineDifference.png" style="width:300px;height:auto;"/>
+            </li>
+            <li>
+                <strong>Airline List Page</strong>
+                <p>The list of airlines, with some being favorited (with the full star) and some not (empty star). Clicking on the star changes it's favorite status</p>
+                <img src="./Assets/Images/AirlineList.png" style="width:300px;height:auto;"/>
+            </li>
+            <li>
+                <strong>Badge Page</strong>
+                <p>The badges page, with some being unlocked (colorful) and some locked (black and white)</p>
+                <img src="./Assets/Images/BadgeList.png" style="width:300px;height:auto;"/>
+            </li>
+            <li>
+                <strong>Airport Info Page</strong>
+                <p>Clicking an airport pin will bring this page, with the airport info</p>
+                <img src="./Assets/Images/AirportInfo.png" style="width:300px;height:auto;"/>
+            </li>
+            <li>
+                <strong>Stats Page</strong>
+                <p>A page showing stats. with the charts setting enabled</p>
+                <img src="./Assets/Images/StatsPage.png" style="width:300px;height:auto;"/>
+            </li>
+            <li>
+                <strong>Settings Page</strong>
+                <p></p>
+                <img src="./Assets/Images/SettingsPage.png" style="width:300px;height:auto;"/>
+            </li>
+            <li>
+                <strong>Sidebar View</strong>
+                <p></p>
+                <img src="./Assets/Images/SideBarView.png" style="width:300px;height:auto;"/>
+            </li>
+        </ul>
+
+        </div> 
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          const elements = document.querySelectorAll('.RCL_main > *');
+          elements.forEach((el, index) => {
+            el.style.animationDelay = `${index * 0.1}s`;
+          });
+        });
+    </script>
+</body>
+
+</html>

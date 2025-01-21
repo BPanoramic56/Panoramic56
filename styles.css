@@ -24,7 +24,7 @@
     src: url('Assets/Fonts/B612Mono-Regular.ttf');
 }
 
-img {
+.card-img {
     float: left;
     height: 100px;
     object-fit: cover;
@@ -89,6 +89,7 @@ h5 {
     transition: margin-left 0.3s linear;
 }
 
+/* I plan on making this more efficient and scalable in the future*/
 .master-projects-div div:nth-child(1) {
     animation-delay: 3000ms;
 }
@@ -119,6 +120,22 @@ h5 {
 
 .master-projects-div div:nth-child(8) {
     animation-delay: 5100ms;
+}
+
+.master-projects-div div:nth-child(9) {
+    animation-delay: 5300ms;
+}
+
+.master-projects-div div:nth-child(10) {
+    animation-delay: 5500ms;
+}
+
+.master-projects-div div:nth-child(11) {
+    animation-delay: 5700ms;
+}
+
+.master-projects-div div:nth-child(12) {
+    animation-delay: 5900ms;
 }
 
 .project-card {
@@ -693,6 +710,7 @@ ul {
 .Panoramic56Dot img{
     height: auto;
 }
+
 .RCL_main .btn{
     border-style: solid;
     border-radius: 5px;
@@ -700,6 +718,7 @@ ul {
     border-color: var(--SideBar);
     transition: box-shadow 0.5s ease;
 }
+
 .RCL_main .bxl-github{
     font-size: 10px;
     margin: 10px;

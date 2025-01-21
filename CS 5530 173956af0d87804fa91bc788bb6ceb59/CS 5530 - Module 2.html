@@ -1,0 +1,691 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Module 2 - ER Model</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	background-color: rgb(20, 20, 20);
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(255, 255, 255);
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="17a956af-0d87-80bd-8ce0-ead279f7c0a9" class="page sans"><header><img class="page-cover-image" src="Module%202%20-%20ER%20Model%2017a956af0d8780bd8ce0ead279f7c0a9/er.webp" style="object-position:center 50%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="https://www.notion.so/icons/preview_green.svg"/></div><h1 class="page-title">Module 2 - ER Model</h1><p class="page-description"></p></header><div class="page-body"><hr id="17a956af-0d87-80da-be1b-d7acae1a5fab"/><p id="17a956af-0d87-80ca-9fa8-c8ce6348e21e" class="">Lecture 3</p><ul id="17a956af-0d87-80f5-9063-e89972ea890f" class="toggle"><li><details open=""><summary>Database Design Steps</summary><ul id="17a956af-0d87-8067-b772-dfa5e18d5ecc" class="bulleted-list"><li style="list-style-type:disc">Requirement Analysis <ul id="17a956af-0d87-80a0-a5a1-ff4cd5fed2b7" class="bulleted-list"><li style="list-style-type:circle">What does the user need</li></ul><ul id="17a956af-0d87-80d2-9c01-e0669607172d" class="bulleted-list"><li style="list-style-type:circle">What it must do?</li></ul></li></ul><ul id="17a956af-0d87-8000-928a-d211257850d4" class="bulleted-list"><li style="list-style-type:disc">Conceptual Design<ul id="17a956af-0d87-8069-841c-e4058e994b35" class="bulleted-list"><li style="list-style-type:circle">High level formal description</li></ul><ul id="17a956af-0d87-8088-83ff-ecfb1a36f538" class="bulleted-list"><li style="list-style-type:circle">Entity Relationship (ER) Model</li></ul></li></ul><ul id="17a956af-0d87-8074-b167-cb4e2933ae84" class="bulleted-list"><li style="list-style-type:disc">Schema Refinement<ul id="17a956af-0d87-8032-a6c9-c8ee8bdd3bee" class="bulleted-list"><li style="list-style-type:circle">Consistency and normalization</li></ul><ul id="17a956af-0d87-803d-8192-ed9b0d266c32" class="bulleted-list"><li style="list-style-type:circle">Normalization</li></ul></li></ul><ul id="17a956af-0d87-8012-b206-dc5598583d73" class="bulleted-list"><li style="list-style-type:disc">Physical Design<ul id="17a956af-0d87-80ff-bf4d-ca8ad066cc74" class="bulleted-list"><li style="list-style-type:circle">Indexes, disk layout</li></ul><ul id="17a956af-0d87-806e-8102-e847ad5bf729" class="bulleted-list"><li style="list-style-type:circle">How to store the DB</li></ul></li></ul><ul id="17a956af-0d87-8011-9952-f8c5d2de37c1" class="bulleted-list"><li style="list-style-type:disc">Security Design<ul id="17a956af-0d87-8009-a44c-de587d2b4461" class="bulleted-list"><li style="list-style-type:circle">Who accesses it, and how?</li></ul></li></ul></details></li></ul><ul id="17a956af-0d87-809b-bf41-d4dbdb9fadbd" class="toggle"><li><details open=""><summary>ER Model</summary><p id="17a956af-0d87-8003-87d3-f5e4d8cec384" class="">Entity → A concrete “object” distinguishable from other entities, described by a set of attributes<div class="indented"><ul id="17a956af-0d87-80ed-a124-ec901760219e" class="bulleted-list"><li style="list-style-type:disc">uID (string), name (string), DOB (date)</li></ul></div></p><p id="17a956af-0d87-80cf-91fc-e3777085776c" class="">Entity Set → Set of all entities of the same type<div class="indented"><ul id="17a956af-0d87-8056-a7ac-ec7198cadf6b" class="bulleted-list"><li style="list-style-type:disc">All students, all cars, all library books</li></ul><ul id="17a956af-0d87-8029-b059-f5fda98196f2" class="bulleted-list"><li style="list-style-type:disc">All entities in the set have the same attributes</li></ul><ul id="17a956af-0d87-8090-98e8-cc9a1d39c2f1" class="bulleted-list"><li style="list-style-type:disc">An entity set <span style="border-bottom:0.05em solid">has a key attribute</span></li></ul></div></p><p id="17a956af-0d87-8034-ab06-d20ace6eccd8" class="">Relationship → Relationship between 2 or more entities</p><ul id="17a956af-0d87-8034-a22b-c2ebc86fb1ed" class="bulleted-list"><li style="list-style-type:disc">Can have attributes as well<p id="17a956af-0d87-8021-910d-f531f74a99bf" class="">Ex: “Danny works in SoC since 2010” → ‘since 2010’ is an attribute of the relationship, it does not belong to Danny or SoC</p></li></ul><p id="17a956af-0d87-80e3-9d63-f34dc99b019d" class="">Relationship Set → The set of relationships between entity sets</p><figure id="17a956af-0d87-80a6-9f4d-e1fd75a3dc3b" class="image"><a href="Module%202%20-%20ER%20Model%2017a956af0d8780bd8ce0ead279f7c0a9/Screenshot_2025-01-13_at_13.42.44.png"><img style="width:1170px" src="Module%202%20-%20ER%20Model%2017a956af0d8780bd8ce0ead279f7c0a9/Screenshot_2025-01-13_at_13.42.44.png"/></a></figure></details></li></ul><ul id="17a956af-0d87-8061-a2f7-f25b08d7566d" class="toggle"><li><details open=""><summary>Intro to ER Diagrams</summary><ul id="17a956af-0d87-808a-b45c-f22a5ba03879" class="toggle"><li><details open=""><summary>Entity Set</summary><p id="17a956af-0d87-80ff-888a-f86df49c7fad" class="">A square represents the entity set, circles represent attributes of the set and underlines represent parts of the key</p><figure id="17a956af-0d87-80eb-bfcc-e8994e433213" class="image"><a href="Module%202%20-%20ER%20Model%2017a956af0d8780bd8ce0ead279f7c0a9/Screenshot_2025-01-13_at_13.48.37.png"><img style="width:244.0204315185547px" src="Module%202%20-%20ER%20Model%2017a956af0d8780bd8ce0ead279f7c0a9/Screenshot_2025-01-13_at_13.48.37.png"/></a></figure></details></li></ul><ul id="17a956af-0d87-8080-9e59-c0ebb9ca19c5" class="toggle"><li><details open=""><summary>Relationship Set</summary><p id="17a956af-0d87-80fa-b05f-e038e62a6393" class=""><strong>Diamonds</strong> represent the relationship set and they do not need a key. Circles connected to the diamond represent that relationship’s attributes</p><figure id="17a956af-0d87-80b7-b6bf-da84cfa364b0" class="image"><a href="Module%202%20-%20ER%20Model%2017a956af0d8780bd8ce0ead279f7c0a9/Screenshot_2025-01-13_at_13.49.18.png"><img style="width:272.0072021484375px" src="Module%202%20-%20ER%20Model%2017a956af0d8780bd8ce0ead279f7c0a9/Screenshot_2025-01-13_at_13.49.18.png"/></a></figure><p id="17a956af-0d87-803f-a8f3-f4ad44d1a56d" class=""><strong>Inter-Relationships: </strong>Relationships can connect entity’s set to itself (inter-relationship). These need to be labeled</p><figure id="17a956af-0d87-80b9-bc91-ee621eaeb9d4" class="image"><a href="Module%202%20-%20ER%20Model%2017a956af0d8780bd8ce0ead279f7c0a9/Screenshot_2025-01-13_at_13.52.07.png"><img style="width:652.0192260742188px" src="Module%202%20-%20ER%20Model%2017a956af0d8780bd8ce0ead279f7c0a9/Screenshot_2025-01-13_at_13.52.07.png"/></a></figure><p id="17a956af-0d87-80e8-9fdb-e349bf9f97f6" class=""><strong>Cardinality</strong>: Determine constraints of the relationship</p><ul id="17a956af-0d87-8030-94aa-f1d6ff4c0966" class="bulleted-list"><li style="list-style-type:disc">Many-to-Many: Entities in sets one and two can participate in multiple relationships</li></ul><ul id="17a956af-0d87-80ef-9ad1-dd4250a3674c" class="bulleted-list"><li style="list-style-type:disc">One-to-Many: Entities of set one can participate in multiple relationships, but entities of set two can only participate in one</li></ul><ul id="17a956af-0d87-8020-b217-fc9e78a73a52" class="bulleted-list"><li style="list-style-type:disc">One-to-One: Entities of sets one and two can only participate in one relationship<figure id="17a956af-0d87-803b-8106-ff96984b858b" class="image"><a href="Module%202%20-%20ER%20Model%2017a956af0d8780bd8ce0ead279f7c0a9/Screenshot_2025-01-13_at_13.57.41.png"><img style="width:216.0396728515625px" src="Module%202%20-%20ER%20Model%2017a956af0d8780bd8ce0ead279f7c0a9/Screenshot_2025-01-13_at_13.57.41.png"/></a></figure></li></ul><p id="17a956af-0d87-8023-8745-f1f10eb7af84" class=""><strong>Participation Constraint</strong>: Double lines indicates all entities in the set <em>must</em> participate in the relationship</p></details></li></ul><p id="17a956af-0d87-8020-8b77-ca92bf29fc3b" class="">
+</p></details></li></ul><ul id="17a956af-0d87-80a5-aa46-d4c725b09c74" class="toggle"><li><details open=""><summary>Advanced ER patters</summary><p id="17a956af-0d87-8088-96a3-cd8f3a5638d5" class=""><strong>Hierarchical Types</strong></p><ul id="17a956af-0d87-8065-96ca-f1d876bdbf15" class="bulleted-list"><li style="list-style-type:disc"><strong>Triangles</strong> represent inheritance<figure id="17a956af-0d87-8062-9c7d-cf54515ae61b" class="image"><a href="Module%202%20-%20ER%20Model%2017a956af0d8780bd8ce0ead279f7c0a9/Screenshot_2025-01-13_at_14.13.44.png"><img style="width:244.0204315185547px" src="Module%202%20-%20ER%20Model%2017a956af0d8780bd8ce0ead279f7c0a9/Screenshot_2025-01-13_at_14.13.44.png"/></a></figure></li></ul><ul id="17a956af-0d87-803d-9940-f3aef3b92c21" class="bulleted-list"><li style="list-style-type:disc">Entity or Attribute?<p id="17a956af-0d87-807c-b0d5-c2ba786e5750" class="">Is it a complex data that needs its own keys or individuality → Entity</p><p id="17a956af-0d87-8051-b172-c2c88faf07d4" class="">Can an entity have more than one of them? → Entity</p><p id="17a956af-0d87-8020-a380-cb2244e839b9" class="">Does the data make sense in another relationship → Entity</p><p id="17a956af-0d87-806e-b741-dacb87d4e449" class="">Just some examples, there are several ways of designing the same database</p><p id="17a956af-0d87-8032-aacf-c443f0df9c10" class="">
+</p></li></ul></details></li></ul><ul id="17a956af-0d87-8035-b6fe-ddb727a993e6" class="toggle"><li><details open=""><summary>Ternary Relationships</summary><p id="17a956af-0d87-8034-b6a3-e76213002d3b" class="">A diamond may be connected with three (or more) entities</p><p id="17a956af-0d87-80ab-a774-db0e065b0418" class="">Example: An employee can live in an address during a certain duration, or, an address can have an employee living in it during a certain duration</p><figure id="17a956af-0d87-80f5-bbd9-cb622733d975" class="image"><a href="Module%202%20-%20ER%20Model%2017a956af0d8780bd8ce0ead279f7c0a9/Screenshot_2025-01-13_at_15.00.03.png"><img style="width:272.001220703125px" src="Module%202%20-%20ER%20Model%2017a956af0d8780bd8ce0ead279f7c0a9/Screenshot_2025-01-13_at_15.00.03.png"/></a></figure></details></li></ul><ul id="17a956af-0d87-8093-bf8a-e8936f0c2178" class="toggle"><li><details open=""><summary>ER Diagram Notations</summary><p id="17a956af-0d87-8050-a1ec-c184e4a0c822" class="">There are a lot of different notations. We will use the <span style="border-bottom:0.05em solid">Chen Notation</span></p><p id="17a956af-0d87-8065-8b31-ecc28cc30b25" class="">Resources: <a href="http://draw.io">draw.io</a> (free), lucidchart (better, not free), Powerpoint, Illustrator, MS Paint, <a href="https://online.visual-paradigm.com/app/diagrams/#diagram:proj=0&amp;type=ChenEntityRelationshipDiagram&amp;width=11&amp;height=8.5&amp;unit=inch&amp;gallery=/repository/7df8465a-3aa3-4660-8682-ed1b94010e47.xml">Visual Paradigm</a></p></details></li></ul><hr id="17a956af-0d87-80b9-afbf-e8dd5ee953b9"/><p id="17a956af-0d87-809d-ac20-d9cc63cae511" class="">Lecture 4</p><ul id="17a956af-0d87-809f-ab6f-fec2d4e64801" class="toggle"><li><details open=""><summary>Weak Entities</summary><p id="17a956af-0d87-8086-a499-f0a613354a40" class="">Represented by a double rectangle</p><p id="17a956af-0d87-801a-8341-f3c51e6e7e6e" class="">A double diamond is used to represent the supporting relationship set. It must have a cardinality of 1 on the strong side and a weak entity must participate</p><p id="17a956af-0d87-8099-9e40-ce0e981ef645" class="">Weak entities don’t have keys, they have partial keys, represented by a dashed underline</p><p id="17a956af-0d87-804f-b0de-fef2dab4ff04" class="">They can have normal relationships too</p><p id="17a956af-0d87-80d6-b9af-e1c4105f775a" class="">Something that cannot be identified by its own attributes</p><p id="17a956af-0d87-80a8-b4d2-fd9d0f8a5dc2" class="">It is identified by a combination of its own attributes and another entity’s key</p><figure id="17a956af-0d87-80f9-97da-fb0f19fedb1d" class="image"><a href="Module%202%20-%20ER%20Model%2017a956af0d8780bd8ce0ead279f7c0a9/Screenshot_2025-01-13_at_15.44.47.png"><img style="width:1056px" src="Module%202%20-%20ER%20Model%2017a956af0d8780bd8ce0ead279f7c0a9/Screenshot_2025-01-13_at_15.44.47.png"/></a></figure><p id="17a956af-0d87-80e6-a701-fe8e43e90c43" class="">Example: Course vs Class</p><div id="17a956af-0d87-809d-bbf5-d6536e57ccc5" class="column-list"><div id="68150703-5e38-4e1c-a34d-d48604b6c460" style="width:56.25%" class="column"><p id="a36f61e0-86c6-4ec7-87ba-b44d7f4edcc7" class=""><span style="border-bottom:0.05em solid">Course</span> (Strong Entity Set)</p><ul id="17a956af-0d87-8056-aaef-e83ade00c4be" class="bulleted-list"><li style="list-style-type:disc">Subject</li></ul><ul id="17a956af-0d87-805f-9f48-fd1ee5934576" class="bulleted-list"><li style="list-style-type:disc">Number</li></ul><ul id="17a956af-0d87-80e9-91fd-ca4e0f1ce287" class="bulleted-list"><li style="list-style-type:disc">Name</li></ul><ul id="17a956af-0d87-8062-aad0-e2e09d283d8d" class="bulleted-list"><li style="list-style-type:disc">Description</li></ul></div><div id="5a4524c7-8bfc-42f0-8bad-62c8d12a995d" style="width:43.75%" class="column"><p id="ebdfcfd2-df8f-4562-bb37-9327d65536cb" class=""><span style="border-bottom:0.05em solid">Class</span> (Weak Entity Set)</p><ul id="17a956af-0d87-8072-b3f8-f18b21e4c675" class="bulleted-list"><li style="list-style-type:disc">Semester</li></ul><ul id="17a956af-0d87-80d6-b513-dde41a324627" class="bulleted-list"><li style="list-style-type:disc">&lt;Reference to course&gt;</li></ul><p id="17a956af-0d87-80e6-9fcc-faf45ffe5303" class="">
+</p></div></div><p id="17a956af-0d87-80af-b346-dfe3b5979281" class="">Weak entity sets can be weak themselves, as long as there is a strong entity at the end, and their keys compound together</p><figure id="17a956af-0d87-80f9-b0ff-c587d2f92744" class="image"><a href="Module%202%20-%20ER%20Model%2017a956af0d8780bd8ce0ead279f7c0a9/Screenshot_2025-01-13_at_15.50.12.png"><img style="width:281.00360107421875px" src="Module%202%20-%20ER%20Model%2017a956af0d8780bd8ce0ead279f7c0a9/Screenshot_2025-01-13_at_15.50.12.png"/></a></figure></details></li></ul><ul id="17a956af-0d87-8066-a83a-d755b1811141" class="toggle"><li><details open=""><summary>ER → RM Algorithm</summary><p id="17a956af-0d87-80cf-b153-f6632522d6e2" class="">Basic Algorithm:</p><ul id="17a956af-0d87-806e-8047-f8eef8bd620a" class="toggle"><li><details open=""><summary>1. Every entity set becomes a schema</summary><ol type="1" id="17a956af-0d87-8039-8260-eb2a26bc274a" class="numbered-list" start="1"><li>Attributes become columns<ol type="a" id="17a956af-0d87-80f8-8650-d6ff90222564" class="numbered-list" start="1"><li>They are set as NN (Not Null)</li></ol></li></ol><ol type="1" id="17a956af-0d87-80b4-8ae4-dcf29663b5b9" class="numbered-list" start="2"><li>Set the key attribute(s) as the primary key</li></ol></details></li></ul><ul id="17a956af-0d87-8036-a4fb-f1b4ffea08a5" class="toggle"><li><details open=""><summary>2. Relationship sets <em>might</em> become schemas depending on cardinality, otherwise they are <em>merged</em></summary><ul id="17a956af-0d87-8084-8ab5-e62788b60ed2" class="toggle"><li><details open=""><summary>Many-to-Many: becomes it’s own table → Combination of the two keys of the relationship and that becomes the new table’s key)</summary><figure id="17a956af-0d87-8057-8131-d12e5867ca88" class="image"><a href="Module%202%20-%20ER%20Model%2017a956af0d8780bd8ce0ead279f7c0a9/Screenshot_2025-01-13_at_15.59.41.png"><img style="width:832px" src="Module%202%20-%20ER%20Model%2017a956af0d8780bd8ce0ead279f7c0a9/Screenshot_2025-01-13_at_15.59.41.png"/></a></figure></details></li></ul><ul id="17a956af-0d87-80de-a2c3-d739a3a3b4b5" class="toggle"><li><details open=""><summary>One-to-Many: Merge the relationships into the M-side entity</summary><p id="17a956af-0d87-80b7-a379-caf4657f4c96" class="">A foreign key (FK) is used to denote the relationship’s destination, and it can be Null</p><p id="17a956af-0d87-8099-a9d0-fb62af5dc939" class="">If participation is required, the attribute is set as NN, otherwise, Null is allowed</p><figure id="17a956af-0d87-800b-b7d1-e1583dcdcd08" class="image"><a href="Module%202%20-%20ER%20Model%2017a956af0d8780bd8ce0ead279f7c0a9/Screenshot_2025-01-13_at_16.04.35.png"><img style="width:1050px" src="Module%202%20-%20ER%20Model%2017a956af0d8780bd8ce0ead279f7c0a9/Screenshot_2025-01-13_at_16.04.35.png"/></a></figure></details></li></ul><ul id="17a956af-0d87-80b3-9020-cd5d501c932b" class="toggle"><li><details open=""><summary>One-to-One: Merge relationship into one of the other tables</summary><p id="17a956af-0d87-8028-9c84-ebcd09b19950" class="">Same as One-to-Many, but the foreign key now has to be unique</p><figure id="17a956af-0d87-8030-8d2e-c0d0a3d688b7" class="image"><a href="Module%202%20-%20ER%20Model%2017a956af0d8780bd8ce0ead279f7c0a9/Screenshot_2025-01-13_at_16.10.50.png"><img style="width:1052px" src="Module%202%20-%20ER%20Model%2017a956af0d8780bd8ce0ead279f7c0a9/Screenshot_2025-01-13_at_16.10.50.png"/></a></figure></details></li></ul><ul id="17a956af-0d87-806b-ab69-c34801d6dd0a" class="toggle"><li><details open=""><summary>Supporting relationships</summary><p id="17a956af-0d87-806f-8fa4-e5f0b30b1ec7" class="">Treat as One-to-Man, merge into M side</p><p id="17a956af-0d87-8025-813f-c947f53224f5" class="">Same procedure, except supporting key is combined with partial key</p></details></li></ul></details></li></ul></details></li></ul><ul id="17a956af-0d87-8039-8e94-c691ed7a7a4d" class="toggle"><li><details open=""><summary>Double Participation</summary><p id="17a956af-0d87-804a-ab44-df98964df221" class="">If participation is required on both sides of a relationship (can happen in other participation/cardinality restraints too), that becomes difficult to capture with schema design<div class="indented"><ul id="17a956af-0d87-8088-806a-c0fb95f3c91c" class="bulleted-list"><li style="list-style-type:disc">How can you add attributes as foreign keys if those entities don’t even exist yet? (Chicken-egg problem<del>)</del></li></ul><ul id="17a956af-0d87-80f9-896e-cf088261b9f8" class="bulleted-list"><li style="list-style-type:disc">Instead, enforce with SQL commands</li></ul></div></p><p id="17a956af-0d87-80bc-862b-c293c9003ed6" class="">Incompatible Constraints<div class="indented"><p id="17a956af-0d87-80f4-81ce-f85160d6aea7" class="">If some combination of participation/cardinality can not be represented in tables, cardinality takes precedence, and enforce participation through software (or make software aware that it is not enforced</p></div></p></details></li></ul><ul id="17a956af-0d87-8042-b3f2-ff6510e5920a" class="toggle"><li><details open=""><summary>Hierarchy to Tables</summary><ul id="17a956af-0d87-8068-88e0-dd287c102820" class="toggle"><li><details open=""><summary>Method 1</summary><p id="17a956af-0d87-809d-9673-d20f9adaec64" class="">Create a schema for every entity set</p><p id="17a956af-0d87-8087-9641-e031d2f974b6" class="">Copy the primary key for the base type as a primary key for the derived type → is-a relationship</p><p id="17a956af-0d87-802b-afb5-d716a1c53b73" class="">The other attributes will be referenced by the existence of the foreign key, so they do not need to be copied to the derived types</p><figure id="17a956af-0d87-80db-8f8b-d14c9e11070c" class="image"><a href="Module%202%20-%20ER%20Model%2017a956af0d8780bd8ce0ead279f7c0a9/Screenshot_2025-01-13_at_16.24.00.png"><img style="width:253.0108184814453px" src="Module%202%20-%20ER%20Model%2017a956af0d8780bd8ce0ead279f7c0a9/Screenshot_2025-01-13_at_16.24.00.png"/></a></figure></details></li></ul><ul id="17a956af-0d87-8044-a8c1-fc180da2a82d" class="toggle"><li><details open=""><summary>Method 2</summary><p id="17a956af-0d87-802c-8190-fec4e17d77de" class="">No schema for the base type, only derived types</p><p id="17a956af-0d87-805a-91c2-f3225e075208" class="">All attributes from base type are copied to derived type as primary keys</p><figure id="17a956af-0d87-80c9-a772-f480ce574ef2" class="image"><a href="Module%202%20-%20ER%20Model%2017a956af0d8780bd8ce0ead279f7c0a9/Screenshot_2025-01-13_at_16.26.20.png"><img style="width:253.0108184814453px" src="Module%202%20-%20ER%20Model%2017a956af0d8780bd8ce0ead279f7c0a9/Screenshot_2025-01-13_at_16.26.20.png"/></a></figure></details></li></ul><ul id="17a956af-0d87-80e7-a173-da494ba1b5f3" class="toggle"><li><details open=""><summary>Which one to use</summary><div id="17a956af-0d87-8013-9e31-e79febf2a236" class="column-list"><div id="1e1d79c5-2ad8-454e-a083-84c567f1f7f2" style="width:50%" class="column"><p id="13657510-d335-4155-bc7c-c439dbddf714" class="">Method 1:</p><ul id="17a956af-0d87-803a-b551-c52dc649e713" class="bulleted-list"><li style="list-style-type:disc">If an entity can be two different derived types</li></ul><ul id="17a956af-0d87-80ef-a3b7-efadc7464d1d" class="bulleted-list"><li style="list-style-type:disc">If the base type has relationships</li></ul><ul id="17a956af-0d87-80b5-9704-f9b177373011" class="bulleted-list"><li style="list-style-type:disc">E.g.: Attributes, such as <em>SSN</em>, need to have a direct relation to <em>name</em>, regardless of which table they appear</li></ul></div><div id="2197d285-c86d-4f22-877f-1152da49a6d2" style="width:50%" class="column"><p id="742a03fe-195c-4875-b95c-39a339d0c355" class="">Method 2:</p><ul id="17a956af-0d87-804d-8f04-cfb141866110" class="bulleted-list"><li style="list-style-type:disc">If the base type is “abstract”. The base type can never be instantiated</li></ul><ul id="17a956af-0d87-80b0-8989-de25777cf283" class="bulleted-list"><li style="list-style-type:disc">E.g.: An employee has to either be a salaried employee or an hourly employee, it cannot be neither</li></ul></div></div></details></li></ul></details></li></ul><ul id="17a956af-0d87-80ab-8beb-c918b027bfcb" class="toggle"><li><details open=""><summary>Summary Slides</summary><figure id="17a956af-0d87-8075-a7d7-c05b6ba0e00c" class="image"><a href="Module%202%20-%20ER%20Model%2017a956af0d8780bd8ce0ead279f7c0a9/Screenshot_2025-01-13_at_16.34.35.png"><img style="width:1222px" src="Module%202%20-%20ER%20Model%2017a956af0d8780bd8ce0ead279f7c0a9/Screenshot_2025-01-13_at_16.34.35.png"/></a></figure><figure id="17a956af-0d87-80f6-a2f8-f1a558e7dbfc" class="image"><a href="Module%202%20-%20ER%20Model%2017a956af0d8780bd8ce0ead279f7c0a9/Screenshot_2025-01-13_at_16.34.58.png"><img style="width:281.00360107421875px" src="Module%202%20-%20ER%20Model%2017a956af0d8780bd8ce0ead279f7c0a9/Screenshot_2025-01-13_at_16.34.58.png"/></a></figure></details></li></ul><hr id="17a956af-0d87-8082-a178-fb25bfff906c"/><p id="17a956af-0d87-80ae-919d-f095e0b8090f" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span><a href="/Users/brunogomespascotto/Panoramic56/CS 5530 - Main.html"><p>Back to main page</p></a></body></html>

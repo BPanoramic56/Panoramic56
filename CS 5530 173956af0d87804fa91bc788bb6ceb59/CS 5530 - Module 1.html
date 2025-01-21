@@ -1,0 +1,692 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Module 1 - Intro to DB</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	background-color: rgb(20, 20, 20);
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(255, 255, 255);
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="174956af-0d87-80df-92d1-d1e843da20b1" class="page sans"><header><img class="page-cover-image" src="Module%201%20-%20Intro%20to%20DB%20174956af0d8780df92d1d1e843da20b1/database-cycnflysweg912mv.jpg" style="object-position:center 50%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="https://www.notion.so/icons/preview_green.svg"/></div><h1 class="page-title">Module 1 - Intro to DB</h1><p class="page-description"></p></header><div class="page-body"><ul id="174956af-0d87-80ad-b351-e450106c4aee" class="toggle"><li><details open=""><summary><mark class="highlight-gray_background">Project</mark></summary><ul id="174956af-0d87-80df-9eb0-eb36e070f95b" class="bulleted-list"><li style="list-style-type:disc">Implement your own Canvas-like system<ul id="174956af-0d87-8021-b10f-d5f9a0b7608a" class="bulleted-list"><li style="list-style-type:circle">UI is provided</li></ul><ul id="174956af-0d87-800b-870b-e4cd9179c7cc" class="bulleted-list"><li style="list-style-type:circle">Implement the back-end</li></ul></li></ul><ul id="174956af-0d87-80d1-b7ac-f0ea97552913" class="bulleted-list"><li style="list-style-type:disc">Multiple phases throughout the semester</li></ul><ul id="174956af-0d87-80a8-ba6b-ce9023905fd4" class="bulleted-list"><li style="list-style-type:disc">C# <a href="http://ASP.NET">ASP.NET</a> Core</li></ul></details></li></ul><p id="174956af-0d87-8072-b5a6-da95845c7ec0" class="">
+</p><ul id="174956af-0d87-800f-a17a-ed59512d6764" class="toggle"><li><details open=""><summary><mark class="highlight-yellow">Saving large amounts of data</mark></summary><ul id="174956af-0d87-8092-9a5c-cc6c199ff0aa" class="toggle"><li><details open=""><summary><mark class="highlight-yellow">Ability to save and then query that data</mark></summary><p id="174956af-0d87-80f6-9581-fafa40b1ff5f" class="">Representing data<div class="indented"><ul id="174956af-0d87-80b4-96c8-ec56a02d70c9" class="bulleted-list"><li style="list-style-type:disc">Plain English (useless words, linear scan for queries)</li></ul><ul id="174956af-0d87-80c8-b779-d92f8f45731f" class="bulleted-list"><li style="list-style-type:disc">Self-describing data [JSON, XML] (still linear scan)<ul id="174956af-0d87-800a-b6c9-f4ce49421049" class="bulleted-list"><li style="list-style-type:circle">Both are not very scalable</li></ul></li></ul></div></p></details></li></ul><ul id="174956af-0d87-80de-9980-e89c48145f26" class="toggle"><li><details open=""><summary><mark class="highlight-yellow">Solution</mark>:</summary><ul id="174956af-0d87-80b1-b5b1-d05f12902756" class="bulleted-list"><li style="list-style-type:disc">Structured Data → Self Describing Data<ul id="174956af-0d87-803e-a8ef-d54a7ae38f1f" class="bulleted-list"><li style="list-style-type:circle">Records of the same type have the same structure</li></ul><ul id="174956af-0d87-801a-a113-c0f3e3b7a3a7" class="bulleted-list"><li style="list-style-type:circle">Records can not have arbitrary/unpredictable fields</li></ul></li></ul><ul id="174956af-0d87-80f8-b043-e5f0960e80a9" class="bulleted-list"><li style="list-style-type:disc">Relational Model → Relations between data, structure (what should each data have) (avoid lists as values)</li></ul><ul id="174956af-0d87-80ce-b0bb-d5c9a3fa0f3a" class="bulleted-list"><li style="list-style-type:disc">Data Structures<ul id="174956af-0d87-803d-8b0f-d3ace27180e2" class="bulleted-list"><li style="list-style-type:circle">Store the data itself + auxiliary data structures</li></ul><ul id="174956af-0d87-809e-93fe-d22385b73c12" class="bulleted-list"><li style="list-style-type:circle">Trees, hash tables, etc…</li></ul><ul id="174956af-0d87-8097-ad4e-fc73ce96eca8" class="bulleted-list"><li style="list-style-type:circle">A binary tree by names, a tree for GPA, etc…</li></ul></li></ul><ul id="174956af-0d87-8054-8707-e256d11aa71e" class="bulleted-list"><li style="list-style-type:disc">Query Language → SQL</li></ul></details></li></ul></details></li></ul><p id="174956af-0d87-8078-b1a2-d5abddad263e" class="">
+</p><ul id="174956af-0d87-8074-a376-df53786a8a8c" class="toggle"><li><details open=""><summary><mark class="highlight-teal">Database System</mark></summary><p id="174956af-0d87-8062-8ef6-fb4d0cd66e30" class=""><mark class="highlight-teal">Database Management System (DBMS)</mark><div class="indented"><p id="174956af-0d87-8091-84e8-f723d4f1c84c" class="">Underlying machinery</p><p id="174956af-0d87-8082-8d8c-eae0d00e2ad2" class="">In this class → mySQL</p></div></p><p id="174956af-0d87-8082-9c77-d670100760e1" class=""><mark class="highlight-teal">Query Language</mark><div class="indented"><p id="174956af-0d87-8004-aaf3-c8c479a629bf" class="">Common Interface</p><p id="174956af-0d87-802f-89ff-cf76c979f4ba" class="">In this class → SQL</p></div></p></details></li></ul><p id="175956af-0d87-808d-a9f8-c7b1399953cf" class="">
+</p><p id="175956af-0d87-80b6-bce9-e8833e7f7d8c" class=""><em><mark class="highlight-blue"><mark class="highlight-gray_background">Relational Databases</mark></mark></em><div class="indented"><hr id="178956af-0d87-808e-8601-ea2a9760f4ed"/><ul id="175956af-0d87-8023-bae7-c08fc9b2ac76" class="toggle"><li><details open=""><summary><mark class="highlight-blue">Structured Data Storage</mark></summary><ul id="175956af-0d87-80ac-834f-e89ca4052050" class="bulleted-list"><li style="list-style-type:disc">Related data are grouped together or stored next to each others in relations (tables)</li></ul><ul id="175956af-0d87-800d-ae4b-c945812c67e0" class="bulleted-list"><li style="list-style-type:disc">Non directly related information are stored in separate relations (separate tables)</li></ul><ul id="175956af-0d87-804c-8792-d6020393374a" class="bulleted-list"><li style="list-style-type:disc">Cells do not need to be unique, but rows are - there is some unique cell in all rows</li></ul><ul id="175956af-0d87-8038-b021-e75fbfbb422c" class="bulleted-list"><li style="list-style-type:disc">Key → A unique identifier for each row. All relations must have this, if no field is specifically unique, an ID number for the rows has to be created</li></ul><ul id="175956af-0d87-80b0-a054-ffe79f218cdd" class="bulleted-list"><li style="list-style-type:disc">Relations can have entities or relation-based entities<ul id="175956af-0d87-8024-a371-ce109cc65555" class="bulleted-list"><li style="list-style-type:circle">One relation between name → phone number, one for name → card number, one for card number → book, etc</li></ul></li></ul></details></li></ul><hr id="178956af-0d87-809a-a0e3-f3ab5993f16c"/><ul id="176956af-0d87-80b7-af1b-c36365729833" class="toggle"><li><details open=""><summary><mark class="highlight-blue">Nomenclature</mark></summary><p id="176956af-0d87-80c9-974c-d683f2bb6f80" class=""><span style="border-bottom:0.05em solid">Attribute</span> → A name and a type (column heading)</p><p id="176956af-0d87-80fa-95ff-c8671652b56a" class=""><span style="border-bottom:0.05em solid">Schema</span> → Combination of all attributes + Relation name</p><p id="176956af-0d87-8097-a3f2-f149c70b4597" class=""><span style="border-bottom:0.05em solid">Instance</span> → The values in a table (a set of tuples)</p><p id="176956af-0d87-80df-acf1-cdc10914eb19" class=""><span style="border-bottom:0.05em solid">Tuples</span> → One row of the data (one value for each attribute)</p><p id="176956af-0d87-8050-bd74-e2c81bf38a7b" class=""><span style="border-bottom:0.05em solid">Relation</span> → The Schema + Instance</p><p id="176956af-0d87-802b-a213-c39273442217" class=""><span style="border-bottom:0.05em solid">Temporary Relation</span> → Relations are not necessarily a fixed part of the database (a filter will only show relevant tuples, that is a temporary relation)</p></details></li></ul><hr id="178956af-0d87-80b6-9d89-dc444caf84df"/><ul id="176956af-0d87-8008-b4d7-d445a1b78af7" class="toggle"><li><details open=""><summary><mark class="highlight-blue">Row Uniqueness</mark></summary><p id="176956af-0d87-8051-b622-e74c9950cfbb" class=""><span style="border-bottom:0.05em solid">Key</span>: Unique identifier of each row</p><ul id="178956af-0d87-806d-9c40-dcb4a4fba333" class="bulleted-list"><li style="list-style-type:disc">A set of attributes is a key if: it is a superkey and no proper subset of its attributes is a superkey (the empty set is not usually considered a superkey)</li></ul><ul id="178956af-0d87-806e-a08e-d9fda3c5203c" class="bulleted-list"><li style="list-style-type:disc">Keys define what data is valid (not vice-versa)</li></ul><p id="176956af-0d87-80a7-9d24-ee6b2edf97d4" class=""><span style="border-bottom:0.05em solid">Superkey</span>: A set of attributes is a superkey if no two rows are allowed to have the same values in those columns (no duplicates)<div class="indented"><ul id="176956af-0d87-8087-b17a-ee1c7944f235" class="bulleted-list"><li style="list-style-type:disc">Ex: <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mn>1</mn></msub><mtext> </mtext><mi>a</mi><mi>n</mi><mi>d</mi><mtext> </mtext><msub><mi>A</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">A_1 \space and \space A_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace"> </span><span class="mord mathnormal">an</span><span class="mord mathnormal">d</span><span class="mspace"> </span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span> are superkeys<p id="176956af-0d87-802e-a515-e410d045a54b" class="">No items of <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">A_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span> can repeat an no items of <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">A_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span> can repeat</p></li></ul><ul id="176956af-0d87-80b5-9e96-d5dcb5f6b109" class="bulleted-list"><li style="list-style-type:disc">Ex: <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mn>1</mn></msub><msub><mi>A</mi><mn>2</mn></msub><mtext> </mtext><mo stretchy="false">(</mo><mtext>compound</mtext><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">A_1A_2 \space(\text{compound})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace"> </span><span class="mopen">(</span><span class="mord text"><span class="mord">compound</span></span><span class="mclose">)</span></span></span></span></span><span>﻿</span></span> is a superkey <p id="176956af-0d87-8051-8001-d25abcd3bd7b" class="">Items of <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">A_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span> can repeat, items of <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">A_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span> can repeat, but <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mn>1</mn></msub><msub><mi>A</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">A_1A_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span> items cannot</p></li></ul><p id="176956af-0d87-800b-b3e3-dcee9ca5f2fe" class="">We define the superkeys, not the data</p></div></p><p id="176956af-0d87-803a-b36c-d69b43074445" class="">Critical for DBMS underlying operation</p><p id="176956af-0d87-8017-85ca-eb3fd30792f8" class="">Keys can be composed of more than one column</p></details></li></ul><hr id="178956af-0d87-804b-b462-dbf3235996ec"/><ul id="178956af-0d87-8053-b00d-d1fd27b34131" class="toggle"><li><details open=""><summary><mark class="highlight-blue">Multi-key Table</mark></summary><ul id="178956af-0d87-804e-ad06-cf20a3a31215" class="bulleted-list"><li style="list-style-type:disc">In multi-key relations, one of the keys need to be a <span style="border-bottom:0.05em solid">primary key</span>, specified by the Database Administrator (DBA), the other keys are called <span style="border-bottom:0.05em solid">candidate keys</span><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="178956af-0d87-8084-ade5-edc003b9fd0a" class="code"><code class="language-SQL" style="white-space:pre-wrap;word-break:break-all">PRIMARY KEY (sID, cID)
+UNIQUE (sID, cID)</code></pre></li></ul><ul id="178956af-0d87-8089-9ec2-f17ea6281972" class="bulleted-list"><li style="list-style-type:disc">There is no difference between primary and candidate keys in terms of uniqueness constraints (both will be enforced equally)<ul id="178956af-0d87-80f7-8843-c9d425745491" class="bulleted-list"><li style="list-style-type:circle">There is, however, performance differences<p id="178956af-0d87-8036-a536-f41feb195a22" class="">The primary key should be small in terms of data size (easy copying) and ideally an integer type (fast comparison)</p></li></ul></li></ul><ul id="178956af-0d87-8009-9044-f8a21217f051" class="toggle"><li><details open=""><summary>Examples</summary><ul id="178956af-0d87-80fd-a9df-ff517851957f" class="toggle"><li><details open=""><summary><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">{</mo><mi>s</mi><mi>I</mi><mi>D</mi><mo separator="true">,</mo><mi>c</mi><mi>I</mi><mi>D</mi><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\{sID, cID\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord mathnormal">s</span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">c</span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mclose">}</span></span></span></span></span><span>﻿</span></span> compounded table</summary><ul id="178956af-0d87-802d-83d5-d7b6862eb819" class="bulleted-list"><li style="list-style-type:disc">A student cannot enroll in the sane course more than once)</li></ul></details></li></ul><ul id="178956af-0d87-80da-9d94-d686fa0461ec" class="toggle"><li><details open=""><summary>What if we made it two separate keys? <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">{</mo><mi>s</mi><mi>I</mi><mi>D</mi><mo stretchy="false">}</mo><mtext> </mtext><mi>a</mi><mi>n</mi><mi>d</mi><mtext> </mtext><mo stretchy="false">{</mo><mi>c</mi><mi>I</mi><mi>D</mi><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\{sID\} \space and \space \{cID\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord mathnormal">s</span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mclose">}</span><span class="mspace"> </span><span class="mord mathnormal">an</span><span class="mord mathnormal">d</span><span class="mspace"> </span><span class="mopen">{</span><span class="mord mathnormal">c</span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mclose">}</span></span></span></span></span><span>﻿</span></span></summary><ul id="178956af-0d87-8077-a0b3-d117d9b4cf72" class="bulleted-list"><li style="list-style-type:disc">A course can only have one student and each student can only have one course</li></ul></details></li></ul><ul id="178956af-0d87-8037-af33-fe52c8e49c1f" class="toggle"><li><details open=""><summary>What if a student can not take the same course twice and can not receive the same grade twice (in any course)?</summary><ul id="178956af-0d87-80b3-a3f4-c28880396c80" class="bulleted-list"><li style="list-style-type:disc">We need two keys:<p id="178956af-0d87-80ff-b3d0-c58b197d978d" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">{</mo><mi>s</mi><mi>I</mi><mi>D</mi><mo separator="true">,</mo><mi>c</mi><mi>I</mi><mi>D</mi><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\{sID, cID\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord mathnormal">s</span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">c</span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mclose">}</span></span></span></span></span><span>﻿</span></span> → student can not take the same course twice</p><p id="178956af-0d87-8049-bb99-e4a81041337b" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">{</mo><mi>s</mi><mi>I</mi><mi>D</mi><mo separator="true">,</mo><mi>G</mi><mi>r</mi><mi>a</mi><mi>d</mi><mi>e</mi><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\{sID, Grade\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord mathnormal">s</span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">G</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal">a</span><span class="mord mathnormal">d</span><span class="mord mathnormal">e</span><span class="mclose">}</span></span></span></span></span><span>﻿</span></span> → student can not receive the same grade twice (in any course)</p></li></ul></details></li></ul><ul id="178956af-0d87-8065-8184-d24691995ba1" class="toggle"><li><details open=""><summary>A student can not take the same course twice, and no students can receive the same grade in the same course</summary><p id="178956af-0d87-8071-9aa9-c7b9b8ba1574" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>Candidate Key: </mtext><mo stretchy="false">{</mo><mi>c</mi><mi>I</mi><mi>D</mi><mo separator="true">,</mo><mi>G</mi><mi>r</mi><mi>a</mi><mi>d</mi><mi>e</mi><mo stretchy="false">}</mo><mo separator="true">,</mo><mspace linebreak="newline"></mspace><mtext>Primary Key: </mtext><mo stretchy="false">{</mo><mi>s</mi><mi>I</mi><mi>D</mi><mo separator="true">,</mo><mi>c</mi><mi>I</mi><mi>D</mi><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\text{Candidate Key: }\{cID, Grade\}, \\ \text{Primary Key: }\{sID, cID\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord">Candidate Key: </span></span><span class="mopen">{</span><span class="mord mathnormal">c</span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">G</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal">a</span><span class="mord mathnormal">d</span><span class="mord mathnormal">e</span><span class="mclose">}</span><span class="mpunct">,</span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord">Primary Key: </span></span><span class="mopen">{</span><span class="mord mathnormal">s</span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">c</span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mclose">}</span></span></span></span></span><span>﻿</span></span></p></details></li></ul><ul id="178956af-0d87-80f4-938d-e5a7b3a5a58e" class="toggle"><li><details open=""><summary>A student can only take one course, and no two students can earn the same grade (among all courses)</summary><p id="178956af-0d87-805c-8254-dcf85d934a18" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>Candidate Key: </mtext><mo stretchy="false">{</mo><mi>G</mi><mi>r</mi><mi>a</mi><mi>d</mi><mi>e</mi><mo stretchy="false">}</mo><mo separator="true">,</mo><mspace linebreak="newline"></mspace><mtext>Primary Key: </mtext><mo stretchy="false">{</mo><mi>s</mi><mi>I</mi><mi>D</mi><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\text{Candidate Key: }\{Grade\}, \\ \text{Primary Key: }\{sID\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord">Candidate Key: </span></span><span class="mopen">{</span><span class="mord mathnormal">G</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal">a</span><span class="mord mathnormal">d</span><span class="mord mathnormal">e</span><span class="mclose">}</span><span class="mpunct">,</span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord">Primary Key: </span></span><span class="mopen">{</span><span class="mord mathnormal">s</span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mclose">}</span></span></span></span></span><span>﻿</span></span></p></details></li></ul></details></li></ul></details></li></ul><hr id="178956af-0d87-806f-b334-e6c9c229d258"/><ul id="178956af-0d87-80f6-b9e8-c7220188a889" class="toggle"><li><details open=""><summary><mark class="highlight-blue">Foreign Key</mark></summary><p id="178956af-0d87-80f4-859a-d5ad1b35fed7" class="">Attribute whose values are a key in another table (like a pointer in C++)</p><ul id="178956af-0d87-80a8-88c4-ffab893baf0a" class="bulleted-list"><li style="list-style-type:disc">Foreign Keys are not necessarily unique itself </li></ul><ul id="178956af-0d87-8033-8743-d613dcd2dc20" class="toggle"><li><details open=""><summary>Referential Integrity</summary><ul id="178956af-0d87-80c9-aa19-d3feafde5d61" class="bulleted-list"><li style="list-style-type:disc">References between values should always be meaningful</li></ul><ul id="178956af-0d87-80f5-8133-f8c2505701f2" class="bulleted-list"><li style="list-style-type:disc">This is an invariant - gold true at all times</li></ul><ul id="178956af-0d87-803b-a7f8-c53c8af2ee10" class="bulleted-list"><li style="list-style-type:disc">SQL supports this trough <span style="border-bottom:0.05em solid">Foreign Keys</span></li></ul></details></li></ul><ul id="178956af-0d87-8037-bd78-f3a89bcb6506" class="toggle"><li><details open=""><summary>If a column is specified as a foreign key:</summary><ul id="178956af-0d87-8076-8f47-f613449ecb07" class="bulleted-list"><li style="list-style-type:disc">We can not insert values that don’t exist in the other table</li></ul><ul id="178956af-0d87-8005-b380-f797ab981459" class="bulleted-list"><li style="list-style-type:disc">When a value is removed from the other table, it is either disallowed of the foreign key is updated</li></ul></details></li></ul><ul id="178956af-0d87-80d4-8b81-f465424fbfdd" class="toggle"><li><details open=""><summary>References have directions</summary><p id="178956af-0d87-80e5-95d0-cb2d6301714d" class="">The initial table can have keys that are not present as foreign keys in the referencing table, but all keys in the referencing table need to have an equivalent key in the initial one</p></details></li></ul><ul id="178956af-0d87-80ea-a90b-e6df5505fa1d" class="toggle"><li><details open=""><summary>Ways of enforcing integrity</summary><ul id="178956af-0d87-80d6-93e9-f9eeb53d9f51" class="bulleted-list"><li style="list-style-type:disc">Cascade<p id="178956af-0d87-8040-8fd0-ea9e711f38ff" class="">If row of initial table is deleted, the equivalent foreign key rows are also deleted</p></li></ul><ul id="178956af-0d87-80df-94e6-e3d11a758fa7" class="bulleted-list"><li style="list-style-type:disc">Set Null<p id="178956af-0d87-80c7-b1a4-f39b78814150" class="">If row of initial table is deleted, nullify the foreign keys (set them to NULL), but keep the rows the same otherwise</p></li></ul><ul id="178956af-0d87-8060-acbe-cfdffe32e660" class="bulleted-list"><li style="list-style-type:disc">Restrict<p id="178956af-0d87-8071-9c8a-f2d6fe5b9273" class="">Disallow changes  to referenced table (deleting the rows in the original table that have equivalent foreign keys is not allowed</p><p id="178956af-0d87-8079-828e-cb1be31d9e29" class="">Makes sense if there is some action that needs to happen in case a row is deleted</p></li></ul></details></li></ul></details></li></ul><hr id="178956af-0d87-8042-acba-fbc5ce8657e5"/><p id="178956af-0d87-808a-be9c-cd737072d88b" class="">
+</p></div></p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span><a href="/Users/brunogomespascotto/Panoramic56/CS 5530 - Main.html"><p>Back to main page</p></a></body></html>
