@@ -13,6 +13,22 @@
                 "KSEA",
                 "PANC"
             ]
+        },
+        {
+            "KLAX": [
+                "KJFK"
+            ]
+        },
+        {
+            "KMCO": [
+                "KSLC"
+            ]
+        },
+        {
+            "KSLC": [
+                "KORD",
+                "KJFK"
+            ]
         }
     ]
 }
