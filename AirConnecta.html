@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>City Connections</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <style>#map { height: 100vh; }</style>
+</head>
+<body>
+  <div id="map"></div> <!-- Creates the map object -->
+  
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script> <!-- Brings Leaflet for the map projection -->
+  
+  <script src="https://unpkg.com/leaflet.polyline.snakeanim@1.0.0/leaflet.polyline.snakeanim.min.js"></script> <!-- Brings the animation plugin (snakeanim) --> 
+  
+  <script type="text/javascript" src="AirlineConnecta.json"></script> <!-- Adding the Airline-Airport info JSON to the script-->
+  
+  <script type="module">
+    // const map = L.map('map').setView([20, 0], 2);
+
+    // // const map = L.map('map').setView([37.8, -96], 4);
+
+    // L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    //   attribution: '&copy; OpenStreetMap contributors'
+    // }).addTo(map);
+    fetch('Assets/Docs/AirlineConnecta.json')
+    .then(response => response.json()) // Parse JSON
+    .then(data => console.log(data)) // Work with JSON data
+    .catch(error => console.error('Error fetching JSON:', error));
+    // const cities = {
+    //   NewYork: [40.7128, -74.0060],
+    //   London: [51.5074, -0.1278],
+    //   Tokyo: [35.6762, 139.6503]
+    // };
+
+    // Draw a line from New York to London to Tokyo
+    // const latlngs = [cities.NewYork, cities.London, cities.Tokyo];
+    // const polyline = L.polyline(latlngs, { color: 'red' }).addTo(map);
+    // map.setView([40.7128, -74.0060], 10);
+  </script>
+</body>
+</html>
