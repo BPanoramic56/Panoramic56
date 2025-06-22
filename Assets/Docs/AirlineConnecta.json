@@ -1,9 +1,18 @@
 {
-    "Alaska":{
-        "KSEA": [
-            "KPDX",
-            "KSFO",
-            "PANC"
-        ]
-    } 
+    "Alaska":[
+        {
+            "KSEA": [
+                "KPDX",
+                "KSFO",
+                "PANC"
+            ]
+        },
+        {
+            "KSFO": [
+                "KPDX",
+                "KSEA",
+                "PANC"
+            ]
+        }
+    ]
 }
