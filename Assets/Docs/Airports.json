@@ -238,7 +238,7 @@
         "state": "Alaska"
     },
     "PAJN": {
-        "name": "AJN Juneau International Airport",
+        "name": "JNU Juneau International Airport (PAJN)",
         "icao": "PAJN",
         "latitude": 58.35684544889219,
         "longitude": -134.5769566550004,
@@ -266,7 +266,7 @@
         "state": "Alaska"
     },
     "PASI": {
-        "name": "ASI Sitka Rocky Gutierrez Airport",
+        "name": "SIT Sitka Rocky Gutierrez Airport (PASI)",
         "icao": "PASI",
         "latitude": 57.0468344,
         "longitude": -135.3610687,
@@ -301,7 +301,7 @@
         "state": "Alaska"
     },
     "PABR": {
-        "name": "ABR Wiley Post-Will Rogers Memorial Airport",
+        "name": "BRW Wiley Post-Will Rogers Memorial Airport",
         "icao": "PABR",
         "latitude": 71.2848611,
         "longitude": -156.7685833,
@@ -329,7 +329,7 @@
         "state": "Alaska"
     },
     "PACV": {
-        "name": "ACV Merle K (Mudhole) Smith Airport",
+        "name": "CDV Merle K (Mudhole) Smith Airport",
         "icao": "PACV",
         "latitude": 60.4916397,
         "longitude": -145.4775578,
@@ -364,7 +364,7 @@
         "state": "Alaska"
     },
     "PASC": {
-        "name": "ASC Deadhose Airport",
+        "name": "SCC Deadhose Airport (PASC)",
         "icao": "PASC",
         "latitude": 70.19533697677362,
         "longitude": -148.45831999671194,
@@ -385,7 +385,7 @@
         "state": "Alaska"
     },
     "PAPG": {
-        "name": "APG Petersburg James A. Johnson Airport",
+        "name": "PSG Petersburg James A. Johnson Airport (PAPG)",
         "icao": "PAPG",
         "latitude": 56.80227421583223,
         "longitude": -132.94254519145184,
@@ -8274,7 +8274,7 @@
         "state": "Montana"
     },
     "KGPI": {
-        "name": "GPI Glacier Park International Airport",
+        "name": "FCA Glacier Park International Airport (KGPI)",
         "icao": "KGPI",
         "latitude": 48.3105,
         "longitude": -114.256,
@@ -15050,7 +15050,7 @@
         "state": "Jiangsu - China"
     },
     "MGGT": {
-        "name": "GUA La Aurora International Airport",
+        "name": "GUA La Aurora International Airport (MGGT)",
         "icao": "MGGT",
         "latitude": 14.588800809616131,
         "longitude": -90.5282874930461,
@@ -15237,5 +15237,110 @@
         "latitude": 62.9936074497047,
         "longitude": -157.70739647974824,
         "state": "Alaska"
+    },
+    "MZBZ": {
+        "name": "BZE Philip S. W. Goldson International Airport",
+        "icao": "MZBZ",
+        "latitude": 17.53664032678669,
+        "longitude": -88.30540898087493,
+        "state": "Ladyville - Belize City"
+    },
+    "MMLP": {
+        "name": "LAP La Paz International Airport",
+        "icao": "MMLP",
+        "latitude": 24.07673078234719,
+        "longitude": -110.36427019300648,
+        "state": "La Paz - Mexico"
+    },
+    "MRLP": {
+        "name": "LIR Guanacaste Airport",
+        "icao": "MRLP",
+        "latitude": 10.601702140846884,
+        "longitude": -85.53406613883979,
+        "state": "Liberia - Costa Rica"
+    },
+    "MYNN": {
+        "name": "Lynden Pindling International Airport",
+        "icao": "MYNN",
+        "latitude": 25.051203084720886,
+        "longitude": -77.46366329160303,
+        "state": "Nassau - Bahamas"
+    },
+    "NTAA": {
+        "name": "PPT Faaʻa International Airport",
+        "icao": "NTAA",
+        "latitude": -17.558856681650354,
+        "longitude": -149.6083417399667,
+        "state": "Tahiti - France"
+    },
+    "MMPR": {
+        "name": "PVR Licenciado Gustavo Díaz Ordaz International Airport / Puerto Vallarta International Airport (MMPR)",
+        "icao": "MMPR",
+        "latitude": 20.68152184248097, 
+        "longitude": -105.24980140314828,
+        "state": "Puerto Vallarta - Mexico"
+    },
+    "CYYJ": {
+        "name": "YYJ Victoria International Airport",
+        "icao": "CYYJ",
+        "latitude": 48.6409334725445,
+        "longitude": -123.43114836022299,
+        "state": "British Columbia - Canada"
+    },
+    "MMSL": {
+        "name": "CSW Cabo San Lucas International Airport",
+        "icao": "MMSL",
+        "latitude": 22.94634717865619,
+        "longitude": 109.93479841374021,
+        "state": "Cabo San Lucas - Mexico"
+    },
+    "MMUN": {
+        "name": "CUN Cancún International Airport (MMUN)",
+        "icao": "MMUN",
+        "latitude": 21.043450888167484,
+        "longitude": -86.87127113466711,
+        "state": "Quintana Roo - Mexico"
+    },
+    "MMZH": {
+        "name": "ZIH Ixtapa-Zihuatanejo International Airport (MMZH)",
+        "icao": "MMZH",
+        "latitude": 17.606513154898394,
+        "longitude": -101.46283225605724,
+        "state": "Guerrero - Mexico"
+    },
+    "MMLT": {
+        "name": "LTO Loreto International Airport (MMLT)",
+        "icao": "MMLT",
+        "latitude": 25.99286223668564,
+        "longitude": -111.35230204850396,
+        "state": "Baja California Sur - Mexico"
+    },
+    "MMMZ": {
+        "name": "MZT Mazatlán International Airport (MMMZ)",
+        "icao": "MMMZ",
+        "latitude": 23.167302525203713,
+        "longitude": -106.26935588915237,
+        "state": "Sinaloa - Mexico"
+    },
+    "MMGL": {
+        "name": "GDL Mazatlán International Airport (MMGL)",
+        "icao": "MMGL",
+        "latitude": 20.52577257860841,
+        "longitude": -103.30889198929115,
+        "state": "Jalisco - Mexico"
+    },
+    "CYLW": {
+        "name": "YLW Kelowna International Airport (CYLW)",
+        "icao": "CYLW",
+        "latitude": 49.95693120470843,
+        "longitude": -119.37838735382506,
+        "state": "British Columbia - Canada"
+    },
+    "MMZO": {
+        "name": "ZLO Playa de Oro International Airport (MMZO)",
+        "icao": "MMZO",
+        "latitude": 19.148606105601974,
+        "longitude": -104.55804072509581,
+        "state": "Colima - Mexico"
     }
 }
