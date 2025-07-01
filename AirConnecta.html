@@ -76,17 +76,20 @@
     // Function to update the selected airline
     function updateSelectedAirline(airlineName) {
       polylineGroup.clearLayers();
+
       if (airlineRoutes[airlineName]) {
-        selectedAirlineRoutes = airlineRoutes[airlineName];
+        // Convert object to array of route objects
+        selectedAirlineRoutes = Object.entries(airlineRoutes[airlineName]).map(([origin, destinations]) => {
+          return { [origin]: destinations };
+        });
 
         selectedAirlineRoutes.forEach(route => {
           const origin = Object.keys(route)[0];
           const destinations = route[origin];
         });
 
-        createPolylines()
-      } 
-      else {
+        createPolylines();
+      } else {
         console.warn(`Airline "${airlineName}" not found.`);
       }
     }
