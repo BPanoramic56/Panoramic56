@@ -7,7 +7,12 @@
   <style>#map { height: 100vh; }</style>
 </head>
 <body>
-  <button onClick="updateSelectedAirline('Alaska')">Alaska</button>
+  <button onClick="updateSelectedAirline('AAL')">American</button>
+  <button onClick="updateSelectedAirline('UAL')">United</button>
+  <button onClick="updateSelectedAirline('DAL')">Delta</button>
+  <button onClick="updateSelectedAirline('QTR')">Qatar</button>
+  <button onClick="updateSelectedAirline('KLM')">KLM</button>
+  <button onClick="updateSelectedAirline('BAW')">British Airways</button>
 
   <div id="map"></div> <!-- Creates the map object -->
   
@@ -22,7 +27,23 @@
 
   <script>
     const map = L.map('map').setView([20, 0], 2);
-    console.log(typeof L.FeatureGroup.prototype.snakeIn);
+    
+    // Naming the styles to make it easier to change and more consistent
+    const polylineStyles = {
+      default: {
+        color: 'rgb(0, 89, 179)',
+        snakingSpeed: 75,
+        weight: 1
+      },
+      hover: {
+        color: 'orange',
+        weight: 3
+      },
+      inactive: {
+        color: 'rgb(230, 249, 255)',
+        weight: 0.1
+      }
+    }
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; OpenStreetMap contributors'
@@ -38,14 +59,13 @@
       .then(response => response.json()) // Parse JSON
       .then(data => {
         airportInfo = data
-        console.log(airportInfo)
       }) 
       .catch(error => console.error('Error fetching JSON:', error));
     }
 
     // Load all airline routes
     function getAirlineRoute(){
-      fetch('https://raw.githubusercontent.com/BPanoramic56/Panoramic56/refs/heads/main/Assets/Docs/AirlineConnecta.json') 
+      fetch('https://raw.githubusercontent.com/BPanoramic56/Panoramic56/refs/heads/main/Assets/Docs/AirConnecta.json') 
       .then(response => response.json())
       .then(data => {
         airlineRoutes = data;
@@ -56,15 +76,12 @@
     // Function to update the selected airline
     function updateSelectedAirline(airlineName) {
       polylineGroup.clearLayers();
-      console.log(airlineRoutes)
       if (airlineRoutes[airlineName]) {
         selectedAirlineRoutes = airlineRoutes[airlineName];
 
-        console.log(`Routes for ${airlineName}:`);
         selectedAirlineRoutes.forEach(route => {
           const origin = Object.keys(route)[0];
           const destinations = route[origin];
-          console.log(`  ${origin} → ${destinations.join(', ')}`);
         });
 
         createPolylines()
@@ -79,18 +96,36 @@
       selectedAirlineRoutes.forEach(route => {
         const origin = Object.keys(route)[0];
         const destinations = route[origin];      
-        console.log(`Origin: ${origin}`);
 
         destinations.forEach(destination => {
           const latlngs = [
             [airportInfo[origin]["latitude"], airportInfo[origin]["longitude"]],
             [airportInfo[destination]["latitude"], airportInfo[destination]["longitude"]]
           ];
+          // var marker = L.marker([airportInfo[origin]["latitude"], airportInfo[origin]["longitude"]]).addTo(map);
+          // var marker = L.marker([airportInfo[destination]["latitude"], airportInfo[destination]["longitude"]]).addTo(map);
 
-          const polyline = L.polyline(latlngs, {
-            color: 'red',
-            snakingSpeed: 75 // Constrols animation time
-          })
+          const polyline = L.polyline(latlngs, polylineStyles.default)
+
+          // Add hover effects
+          polyline.on('mouseover', function (e) {
+            polylineGroup.eachLayer(line => {
+              if (line != polyline){
+                line.setStyle(polylineStyles.inactive);
+              }
+            })
+            polyline.setStyle(polylineStyles.hover);
+          });
+
+          polyline.on('mouseout', function (e) {
+            polylineGroup.eachLayer(line => {
+              line.setStyle(polylineStyles.default);
+            })
+          });
+
+          // Optional: Show tooltip or popup on hover
+          polyline.bindTooltip(airportInfo[origin]["name"] + ' - ' + airportInfo[destination]["name"], { sticky: true });
+
 
           polyline.addTo(map)
           polyline.snakeIn()
