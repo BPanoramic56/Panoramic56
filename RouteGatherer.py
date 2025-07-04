@@ -125,8 +125,10 @@ while True:
                         if tries >= 3:
                             export(flights, airline)
                         sleep(1)
-                if code % 10 == 0:
+                if code % 20 == 0:
+                    print(f"\t\tDispatched [{code}][{len(flights)}]")
                     export(flights, airline)
+                    flights = {}
                     update_start(airline, code)
                     
             export(flights, airline)

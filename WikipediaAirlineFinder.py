@@ -33,7 +33,6 @@ def alternate_search(airport_icao, not_available, added_airports):
         data = json.load(info)
     
     for airport in data:
-        print(airport["icao"])
         if airport["icao"] and airport["icao"] == airport_icao:
             added_airports[airport["icao"]] = {
                 "name": airport["airport"],
@@ -53,7 +52,6 @@ added_airports = {}
 
 for airport in airports:
     airport = airport.strip()
-    print(f"\nAirport: {airport.strip()}")
     try:
         url = (base_query + airport).replace("\n", "")
         request = requests.get(url)

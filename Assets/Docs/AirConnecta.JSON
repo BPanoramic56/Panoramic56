@@ -679,7 +679,6 @@
     ],
     "LIMC": ["KPHL", "KJFK", "EGLL", "LEMD"],
     "EHAM": ["KDFW", "EGLL", "EIDW", "LEMD"],
-    "first seen near": ["KDFW"],
     "MUHA": ["KMIA"],
     "LPPT": ["KPHL", "EGLL", "EIDW", "LEMD"],
     "PHLI": ["KPHX", "KLAX", "PHNL"],
@@ -4721,7 +4720,6 @@
     "KPGV": ["KBOS"]
   },
   "BAW": {
-    "first seen near": ["KLFI", "LGTS", "EGKK"],
     "EGLL": [
       "RJTT",
       "WSSS",
@@ -7890,7 +7888,6 @@
     "KTYS": ["KPHL", "KDFW", "KMIA"],
     "KONT": ["KSEA"],
     "KSBA": ["KSEA", "KDFW"],
-    "first seen near": ["OTHH", "OOMS"],
     "KSNA": ["KSFO", "KORD", "KDFW", "KSEA", "KJFK"],
     "KSJC": ["KSEA", "KLAX", "KDFW"],
     "KPUW": ["KSEA"],

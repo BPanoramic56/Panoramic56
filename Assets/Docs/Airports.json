@@ -18391,8 +18391,8 @@
     "FALE": {
         "name": "King Shaka International Airport",
         "icao": "FALE",
-        "latitude": null,
-        "longitude": null,
+        "latitude": -29.6098573143835,
+        "longitude": 31.11735916569101,
         "state": "La Mercy  -  South Africa"
     },
     "FAGG": {
@@ -18797,8 +18797,8 @@
     "ORMM": {
         "name": "Basra International Airport",
         "icao": "ORMM",
-        "latitude": null,
-        "longitude": null,
+        "latitude": 30.55306571645876,
+        "longitude": 47.66897367656834,
         "state": "BSR of airport in Iraq"
     },
     "ORER": {
@@ -18965,8 +18965,8 @@
     "OJAQ": {
         "name": "King Hussein International Airport",
         "icao": "OJAQ",
-        "latitude": null,
-        "longitude": null,
+        "latitude": 29.609229464634733,
+        "longitude": 35.02132983870544,
         "state": "AQJ of airport in Jordan"
     },
     "OTBD": {
@@ -19084,8 +19084,8 @@
     "VTCL": {
         "name": "Lampang Airport",
         "icao": "VTCL",
-        "latitude": null,
-        "longitude": null,
+        "latitude": 18.27314184261584,
+        "longitude": 99.50644922821434,
         "state": "Tambon Phra Bat  -  Thailand"
     },
     "VTPO": {
@@ -19112,8 +19112,8 @@
     "VTBO": {
         "name": "Trat Airport",
         "icao": "VTBO",
-        "latitude": null,
-        "longitude": null,
+        "latitude": 12.281421237553626,
+        "longitude": 102.3249207094967,
         "state": "Bang Pit  -  Thailand"
     },
     "VLLB": {
@@ -19159,11 +19159,11 @@
         "state": "Sarawak - MY"
     },
     "WBKW": {
-        "name": "WBKW",
+        "name": "Tawau Airport",
         "icao": "WBKW",
-        "latitude": null,
-        "longitude": null,
-        "state": "Medo\u0161evac and Popovac - Serbia"
+        "latitude": 4.314156869102642,
+        "longitude": 118.1148675670988,
+        "state": "Sabah - Malaysia"
     },
     "WBKS": {
         "name": "WBKS",
@@ -19336,8 +19336,8 @@
     "FQVL": {
         "name": "Vilankulo Airport",
         "icao": "FQVL",
-        "latitude": null,
-        "longitude": null,
+        "latitude": -22.016007771645114,
+        "longitude": 35.31533420836102,
         "state": "Vilankulo - Mozambique"
     },
     "FAUT": {
@@ -19350,15 +19350,15 @@
     "FZQA": {
         "name": "Lubumbashi International Airport",
         "icao": "FZQA",
-        "latitude": null,
-        "longitude": null,
+        "latitude": -11.588655436723124,
+        "longitude": 27.531905249966357,
         "state": "Lubumbashi - Democratic Republic of the Congo"
     },
     "FQNP": {
         "name": "Nampula Airport",
         "icao": "FQNP",
-        "latitude": null,
-        "longitude": null,
+        "latitude": -15.107393605100132,
+        "longitude": 39.28431924816507,
         "state": "Nampula - Mozambique"
     },
     "FQTT": {
@@ -19399,8 +19399,8 @@
     "GBYD": {
         "name": "Banjul International Airport",
         "icao": "GBYD",
-        "latitude": null,
-        "longitude": null,
+        "latitude": 13.344147570527106,
+        "longitude": -16.651861305831964,
         "state": "Banjul - Gambia"
     },
     "GABS": {

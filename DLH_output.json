@@ -1,0 +1,2498 @@
+{
+    "DLH": {
+        "HAM": [
+            "FRA",
+            "MUC",
+            "LHR",
+            "DUS",
+            "LIS"
+        ],
+        "FRA": [
+            "HAM",
+            "HAJ",
+            "DUS",
+            "MUC",
+            "STR",
+            "NUE",
+            "LEJ",
+            "BER",
+            "DRS",
+            "GWT",
+            "FCO",
+            "MXP",
+            "LIN",
+            "SUF",
+            "CTA",
+            "VCE",
+            "NAP",
+            "BRE",
+            "LUX",
+            "JFK",
+            "EWR",
+            "RDU",
+            "IAD",
+            "BOS",
+            "ORD",
+            "DFW",
+            "IAH",
+            "DTW",
+            "ATL",
+            "DEN",
+            "STL",
+            "LAX",
+            "SFO",
+            "MIA",
+            "AUS",
+            "YYZ",
+            "YUL",
+            "SEA",
+            "YVR",
+            "MEX",
+            "GIG",
+            "GRU",
+            "EZE",
+            "SJO",
+            "BOG",
+            "LAD",
+            "JNB",
+            "CPT",
+            "CAI",
+            "NBO",
+            "GYD",
+            "DXB",
+            "ALA",
+            "ICN",
+            "HND",
+            "PVG",
+            "HYD",
+            "BLR",
+            "BOM",
+            "MAA",
+            "DEL",
+            "SIN",
+            "HKG",
+            "ARN",
+            "GOT",
+            "CPH",
+            "BLL",
+            "KEF",
+            "HEL",
+            "OSL",
+            "SVG",
+            "TLL",
+            "RIX",
+            "VNO",
+            "LHR",
+            "MAN",
+            "BHX",
+            "EDI",
+            "NCL",
+            "GLA",
+            "DUB",
+            "ORK",
+            "AMS",
+            "BRU",
+            "CDG",
+            "NTE",
+            "NCE",
+            "LYS",
+            "SXB",
+            "MRS",
+            "BIA",
+            "TLS",
+            "SZG",
+            "SCQ",
+            "MAD",
+            "BCN",
+            "BIO",
+            "AGP",
+            "VLC",
+            "LIS",
+            "OPO",
+            "ZRH",
+            "EAP",
+            "VIE",
+            "ATH",
+            "LCA",
+            "IST",
+            "MLA",
+            "ALG",
+            "TUN",
+            "BUD",
+            "WAW",
+            "KRK",
+            "GDN",
+            "KTW",
+            "POZ",
+            "PRG",
+            "ZAG",
+            "BEG",
+            "OTP",
+            "SOF",
+            "TIA",
+            "LJU",
+            "FAO",
+            "SKP",
+            "SJJ",
+            "OVD",
+            "EVN",
+            "BOJ",
+            "MCO",
+            "PHL",
+            "PMI",
+            "ZAD",
+            "SPU",
+            "DBV",
+            "WDH",
+            "IBZ",
+            "MRU",
+            "JTR",
+            "JMK",
+            "ACE",
+            "RSW",
+            "MBA",
+            "YHZ",
+            "TPA",
+            "YYC",
+            "DJE",
+            "HER",
+            "CHQ",
+            "CFU",
+            "JSI",
+            "AYT",
+            "BJV",
+            "VAR",
+            "MSP",
+            "COV",
+            "FSC",
+            "PUY",
+            "LCY",
+            "BLQ",
+            "FLR",
+            "BOD",
+            "GVA",
+            "SKG",
+            "LNZ",
+            "GRZ",
+            "TFU",
+            "PEK",
+            "SZX",
+            "PSA",
+            "TPE",
+            "SGN",
+            "NLU",
+            "CWB",
+            "VCP",
+            "BEY",
+            "NRT",
+            "CTU",
+            "CGO"
+        ],
+        "HAJ": [
+            "FRA",
+            "MUC"
+        ],
+        "DUS": [
+            "FRA",
+            "MUC",
+            "CPH",
+            "LHR",
+            "HAM",
+            "SPU"
+        ],
+        "MUC": [
+            "FRA",
+            "JFK",
+            "EWR",
+            "BOS",
+            "CLT",
+            "ORD",
+            "LAX",
+            "SFO",
+            "SAN",
+            "YUL",
+            "YVR",
+            "DEN",
+            "SEA",
+            "YYZ",
+            "MEX",
+            "CAI",
+            "HND",
+            "ICN",
+            "PEK",
+            "PVG",
+            "KIX",
+            "DEL",
+            "BLR",
+            "BOM",
+            "SIN",
+            "BKK",
+            "RZE",
+            "DEB",
+            "WAW",
+            "KRK",
+            "WRO",
+            "POZ",
+            "GDN",
+            "OTP",
+            "SBZ",
+            "CLJ",
+            "BUD",
+            "PRG",
+            "SOF",
+            "DBV",
+            "TIA",
+            "SPU",
+            "ZAD",
+            "PUY",
+            "ZAG",
+            "BEG",
+            "TUN",
+            "ATH",
+            "CFU",
+            "LIS",
+            "OPO",
+            "PMI",
+            "MAD",
+            "BCN",
+            "BIO",
+            "VLC",
+            "MXP",
+            "FCO",
+            "NAP",
+            "SUF",
+            "CTA",
+            "OLB",
+            "PMO",
+            "CAG",
+            "BER",
+            "CGN",
+            "DUS",
+            "HAM",
+            "HAJ",
+            "DRS",
+            "FMO",
+            "STR",
+            "PAD",
+            "GWT",
+            "BRE",
+            "TLS",
+            "CDG",
+            "NTE",
+            "LYS",
+            "BOD",
+            "MRS",
+            "NCE",
+            "BRU",
+            "AMS",
+            "LUX",
+            "EAP",
+            "TLL",
+            "ARN",
+            "TRD",
+            "GOT",
+            "BLL",
+            "CPH",
+            "OSL",
+            "HEL",
+            "LHR",
+            "STN",
+            "MAN",
+            "BHX",
+            "DUB",
+            "TBS",
+            "TRS",
+            "GOA",
+            "TSR",
+            "SVQ",
+            "HER",
+            "CHQ",
+            "JTR",
+            "MIR",
+            "LPA",
+            "VNO",
+            "MCO",
+            "KEF",
+            "LIN",
+            "GRZ",
+            "VCE",
+            "ZRH",
+            "GVA",
+            "SKG",
+            "RJK",
+            "MLA",
+            "VIE",
+            "BDS",
+            "AOI",
+            "JER",
+            "IAH"
+        ],
+        "STR": [
+            "FRA",
+            "MUC"
+        ],
+        "NUE": [
+            "FRA",
+            "ZRH"
+        ],
+        "LEJ": [
+            "FRA"
+        ],
+        "BER": [
+            "FRA",
+            "MUC",
+            "ARN",
+            "GVA",
+            "EWR"
+        ],
+        "DRS": [
+            "FRA",
+            "MUC"
+        ],
+        "GWT": [
+            "FRA",
+            "MUC"
+        ],
+        "FCO": [
+            "FRA",
+            "MUC",
+            "FLR",
+            "LIN",
+            "PMO",
+            "SOF",
+            "TIA",
+            "BKK",
+            "CAI",
+            "GIG",
+            "JED",
+            "RUH",
+            "YYZ",
+            "YUL",
+            "EWR",
+            "ORD"
+        ],
+        "MXP": [
+            "FRA",
+            "MUC",
+            "EWR",
+            "ORD"
+        ],
+        "LIN": [
+            "FRA",
+            "FCO",
+            "MUC"
+        ],
+        "BLQ": [
+            "FRA",
+            "FCO"
+        ],
+        "SUF": [
+            "FRA",
+            "MUC",
+            "ZRH",
+            "FCO"
+        ],
+        "CTA": [
+            "FRA",
+            "MUC",
+            "FCO"
+        ],
+        "OLB": [
+            "FRA",
+            "MUC"
+        ],
+        "PMO": [
+            "FRA",
+            "MUC",
+            "FCO"
+        ],
+        "VCE": [
+            "FRA",
+            "FCO",
+            "MUC",
+            "YUL",
+            "YYZ",
+            "EWR"
+        ],
+        "NAP": [
+            "FRA",
+            "MUC",
+            "FCO",
+            "YUL"
+        ],
+        "CAG": [
+            "FRA",
+            "MUC"
+        ],
+        "ZRH": [
+            "FRA",
+            "HAJ",
+            "TFS",
+            "LPA",
+            "TOS",
+            "KEF",
+            "HRG",
+            "RMF",
+            "LAS",
+            "SUF",
+            "HER",
+            "TPA",
+            "YYC",
+            "CUN",
+            "SJO",
+            "PDL",
+            "BIQ",
+            "MUC",
+            "ORD",
+            "EWR"
+        ],
+        "BRE": [
+            "FRA",
+            "MUC"
+        ],
+        "LUX": [
+            "FRA",
+            "MUC"
+        ],
+        "JFK": [
+            "FRA",
+            "MUC",
+            "AKL"
+        ],
+        "EWR": [
+            "FRA",
+            "MUC",
+            "DUB",
+            "SNN",
+            "CDG",
+            "IAD",
+            "CMH",
+            "ORF",
+            "NAP",
+            "IAH",
+            "BER",
+            "MXP",
+            "FCO",
+            "LHR",
+            "CLE",
+            "EDI",
+            "PBI",
+            "SNA",
+            "MSY",
+            "MSP",
+            "VCE",
+            "FLL",
+            "LAS",
+            "TPA",
+            "SJU",
+            "SDF",
+            "LAX",
+            "CVG",
+            "SFO",
+            "GSO",
+            "BNA",
+            "GVA",
+            "AMS",
+            "LIS",
+            "BCN",
+            "MAD",
+            "BRU",
+            "AUS",
+            "MKE",
+            "PHX",
+            "MCO",
+            "KEF",
+            "DBV",
+            "NCE",
+            "ATH",
+            "AGP",
+            "FAO",
+            "ZRH"
+        ],
+        "RDU": [
+            "FRA",
+            "IAD",
+            "EWR",
+            "ORD"
+        ],
+        "IAD": [
+            "MUC",
+            "FRA",
+            "BOS",
+            "DEN",
+            "MCO",
+            "SEA",
+            "SFO",
+            "JAX",
+            "FLL",
+            "CDG",
+            "CVG",
+            "ORF",
+            "RIC",
+            "ALB",
+            "SAT",
+            "TPA",
+            "BCN",
+            "BDL",
+            "CLE",
+            "CMH",
+            "IND",
+            "LIS"
+        ],
+        "BOS": [
+            "FRA",
+            "MUC",
+            "IAD",
+            "EWR"
+        ],
+        "CLT": [
+            "MUC",
+            "ORD",
+            "IAD"
+        ],
+        "ORD": [
+            "FRA",
+            "MUC",
+            "ATL",
+            "BOI",
+            "IAD",
+            "LGA",
+            "DFW",
+            "BUF",
+            "DTW",
+            "RDU",
+            "SAN",
+            "MCO",
+            "SEA",
+            "PHL",
+            "CLT",
+            "GRR",
+            "LAX",
+            "SMF",
+            "FSD",
+            "IND",
+            "RSW",
+            "TUL",
+            "DCA",
+            "ROC",
+            "ELP",
+            "ANC",
+            "OKC",
+            "SNA",
+            "STL",
+            "LNK",
+            "TVC",
+            "MLI",
+            "IAH",
+            "CVG",
+            "PHX",
+            "MKE",
+            "LIT",
+            "GRB",
+            "PIA",
+            "ASE",
+            "SGF",
+            "LAS",
+            "BOS",
+            "LEX",
+            "JAC",
+            "BNA",
+            "BRU",
+            "EWR",
+            "CLE",
+            "SFO",
+            "SJC",
+            "AUS",
+            "FCO",
+            "COS",
+            "CMH",
+            "ICT",
+            "MCI",
+            "BZN",
+            "MSY",
+            "OMA",
+            "HSV",
+            "CID",
+            "PDX",
+            "PIT",
+            "SLC",
+            "DSM",
+            "CAK",
+            "DAY",
+            "ZRH",
+            "GSP",
+            "MEM",
+            "KEF",
+            "MSN",
+            "BCN",
+            "FLL",
+            "ABQ"
+        ],
+        "DFW": [
+            "FRA",
+            "ORD"
+        ],
+        "IAH": [
+            "FRA",
+            "AKL",
+            "MAF",
+            "ORD",
+            "LHR",
+            "TAM",
+            "SJU",
+            "SAT",
+            "CUN",
+            "MTY",
+            "BJX",
+            "AMS",
+            "MFE",
+            "SHV",
+            "PHX",
+            "ATL",
+            "AUS",
+            "MSY",
+            "TUL",
+            "MEM",
+            "TUS",
+            "ICT",
+            "DFW",
+            "CHS",
+            "ELP",
+            "LAS",
+            "OKC",
+            "ONT",
+            "PNS",
+            "SAN",
+            "IAD",
+            "CRP",
+            "SNA",
+            "MSP",
+            "LFT"
+        ],
+        "DTW": [
+            "FRA",
+            "ORD"
+        ],
+        "ATL": [
+            "FRA",
+            "ORD",
+            "IAD"
+        ],
+        "DEN": [
+            "FRA",
+            "MUC",
+            "AUS",
+            "ORD",
+            "IAD",
+            "COS",
+            "LGA",
+            "BIL",
+            "YYZ",
+            "SAN",
+            "SAT",
+            "SNA",
+            "SLC",
+            "ICT",
+            "LHR",
+            "SMF",
+            "ANC",
+            "MRY",
+            "BZN",
+            "EUG",
+            "LNK",
+            "ABQ",
+            "OMA",
+            "PSP",
+            "RNO",
+            "GJT",
+            "JAC",
+            "PDX",
+            "TUS"
+        ],
+        "STL": [
+            "FRA",
+            "IAD"
+        ],
+        "LAX": [
+            "FRA",
+            "MUC",
+            "AKL",
+            "IAD",
+            "SYD",
+            "MRY",
+            "HNL",
+            "FAT",
+            "KOA",
+            "SLC",
+            "RNO",
+            "SMF",
+            "SEA",
+            "ORD",
+            "SAN",
+            "SBA"
+        ],
+        "SFO": [
+            "FRA",
+            "MUC",
+            "AKL",
+            "LAX",
+            "IAD",
+            "EWR",
+            "ANC",
+            "SNA",
+            "PDX",
+            "EUG",
+            "HNL",
+            "PSP",
+            "GEG",
+            "ORD",
+            "LAS",
+            "LHR",
+            "SLC",
+            "KOA",
+            "RNO",
+            "CDG",
+            "AMS",
+            "BCN",
+            "SMF",
+            "DEN",
+            "FAT",
+            "SBA"
+        ],
+        "MIA": [
+            "FRA",
+            "ORD"
+        ],
+        "SAN": [
+            "MUC",
+            "LAX",
+            "DEN",
+            "ORD"
+        ],
+        "AUS": [
+            "FRA",
+            "IAD",
+            "EWR",
+            "DEN",
+            "ORD",
+            "IAH"
+        ],
+        "YYZ": [
+            "FRA",
+            "MUC",
+            "YHZ",
+            "YWG",
+            "YYJ",
+            "YVR",
+            "YOW",
+            "VIE",
+            "YUL",
+            "ARN",
+            "EDI",
+            "YXE",
+            "LHR",
+            "MAD",
+            "ZRH",
+            "FCO",
+            "YQT",
+            "YYC",
+            "YQB",
+            "ATH",
+            "BCN",
+            "YYT",
+            "YEG",
+            "DUB",
+            "PRG",
+            "LIS",
+            "MAN",
+            "CPH",
+            "CDG",
+            "AMS"
+        ],
+        "YUL": [
+            "MUC",
+            "FRA",
+            "YEG",
+            "DUB",
+            "NCE",
+            "YVR",
+            "VCE",
+            "KEF",
+            "EDI",
+            "LIS",
+            "YWG",
+            "YQB",
+            "YYZ",
+            "CPH",
+            "OPO",
+            "YHZ",
+            "BRU",
+            "FCO",
+            "ATH",
+            "NAP",
+            "BCN",
+            "YYC",
+            "YYT",
+            "LYS",
+            "TLS",
+            "MXP",
+            "MAD",
+            "PHX",
+            "YQM",
+            "AMS",
+            "LGA",
+            "CDG",
+            "GVA",
+            "LHR"
+        ],
+        "YVR": [
+            "MUC",
+            "FRA",
+            "HNL",
+            "YYC",
+            "DUB",
+            "YUL",
+            "YYZ",
+            "LHR",
+            "AKL"
+        ],
+        "SEA": [
+            "MUC",
+            "FRA",
+            "ORD",
+            "IAD"
+        ],
+        "MEX": [
+            "FRA",
+            "MUC"
+        ],
+        "GIG": [
+            "FRA",
+            "GRU",
+            "POA",
+            "FCO"
+        ],
+        "GRU": [
+            "FRA",
+            "GIG",
+            "CNF",
+            "POA",
+            "FCO"
+        ],
+        "EZE": [
+            "FRA",
+            "GRU"
+        ],
+        "SJO": [
+            "FRA"
+        ],
+        "BOG": [
+            "FRA"
+        ],
+        "LAD": [
+            "FRA"
+        ],
+        "SSG": [
+            "LOS"
+        ],
+        "JNB": [
+            "FRA",
+            "WDH",
+            "CPT",
+            "GRJ",
+            "PLZ",
+            "HDS",
+            "ELS",
+            "SZX"
+        ],
+        "CPT": [
+            "FRA",
+            "JNB"
+        ],
+        "CAI": [
+            "FRA",
+            "MUC",
+            "FCO",
+            "HRG",
+            "LXR"
+        ],
+        "NBO": [
+            "FRA",
+            "BRU"
+        ],
+        "PHC": [
+            "ABV"
+        ],
+        "GYD": [
+            "FRA"
+        ],
+        "RUH": [
+            "DMM",
+            "FCO"
+        ],
+        "DMM": [
+            "RUH"
+        ],
+        "DXB": [
+            "FRA"
+        ],
+        "ALA": [
+            "FRA"
+        ],
+        "NQZ": [
+            "FRA"
+        ],
+        "ICN": [
+            "FRA",
+            "MUC"
+        ],
+        "HND": [
+            "MUC",
+            "FRA",
+            "TOY",
+            "ITM",
+            "HIJ",
+            "OKJ",
+            "OIT",
+            "KMQ",
+            "OKA",
+            "KMJ",
+            "NGS",
+            "KMI",
+            "AXT",
+            "TAK",
+            "KOJ",
+            "MYJ",
+            "KCZ",
+            "HKD",
+            "TKS",
+            "CTS",
+            "UBJ",
+            "FUK",
+            "ARN",
+            "KIX",
+            "NGO"
+        ],
+        "PEK": [
+            "MUC",
+            "CAN",
+            "CGQ",
+            "CKG",
+            "CTU",
+            "DLC",
+            "HFE",
+            "HGH",
+            "WUH",
+            "NKG",
+            "FRA",
+            "SHE",
+            "WNZ",
+            "XIY",
+            "XMN",
+            "HRB",
+            "CSX",
+            "SHA",
+            "NGB",
+            "TFU",
+            "TAO"
+        ],
+        "PVG": [
+            "MUC",
+            "FRA",
+            "CTU",
+            "PEK",
+            "CAN",
+            "KWE",
+            "AKL",
+            "IST"
+        ],
+        "KIX": [
+            "MUC",
+            "HND"
+        ],
+        "HYD": [
+            "FRA",
+            "BOM",
+            "DEL"
+        ],
+        "BOM": [
+            "FRA",
+            "MUC",
+            "DEL",
+            "BLR",
+            "MAA",
+            "TRV",
+            "AMD",
+            "GOI",
+            "HYD"
+        ],
+        "MAA": [
+            "FRA",
+            "BOM"
+        ],
+        "DEL": [
+            "FRA",
+            "MUC",
+            "SYD",
+            "MEL",
+            "BOM",
+            "CCU",
+            "HYD",
+            "PNQ",
+            "BBI",
+            "BLR",
+            "ATQ"
+        ],
+        "BLR": [
+            "MUC",
+            "BOM",
+            "DEL",
+            "HKG"
+        ],
+        "SIN": [
+            "MUC",
+            "FRA",
+            "USM",
+            "AKL",
+            "CGK",
+            "DAD",
+            "MNL",
+            "MEL",
+            "CEB",
+            "BWN",
+            "SGN",
+            "HAN",
+            "KUL",
+            "DRW",
+            "BRU",
+            "PEN",
+            "KNO",
+            "CNS",
+            "ADL"
+        ],
+        "BKK": [
+            "MUC",
+            "CNX",
+            "HKT",
+            "PNH",
+            "SAI",
+            "TDX",
+            "USM",
+            "VIE"
+        ],
+        "HKG": [
+            "FRA",
+            "SYD",
+            "MEL",
+            "AKL",
+            "IST"
+        ],
+        "ARN": [
+            "FRA",
+            "MUC",
+            "HND",
+            "BER",
+            "YYZ",
+            "EWR",
+            "HEL"
+        ],
+        "GOT": [
+            "FRA",
+            "MUC"
+        ],
+        "CPH": [
+            "FRA",
+            "MUC",
+            "DUS",
+            "YUL",
+            "YYZ"
+        ],
+        "BLL": [
+            "FRA",
+            "MUC"
+        ],
+        "KEF": [
+            "FRA",
+            "YYZ",
+            "EWR",
+            "ORD"
+        ],
+        "HEL": [
+            "FRA",
+            "MUC"
+        ],
+        "OSL": [
+            "FRA",
+            "MUC"
+        ],
+        "SVG": [
+            "FRA",
+            "CPH"
+        ],
+        "BGO": [
+            "FRA",
+            "MUC"
+        ],
+        "TOS": [
+            "FRA",
+            "MUC"
+        ],
+        "TLL": [
+            "FRA",
+            "MUC"
+        ],
+        "RIX": [
+            "FRA",
+            "MUC"
+        ],
+        "VNO": [
+            "FRA",
+            "MUC"
+        ],
+        "LHR": [
+            "FRA",
+            "MUC",
+            "DUS",
+            "HAM",
+            "YYZ",
+            "YOW",
+            "YVR",
+            "YHZ",
+            "YUL",
+            "YYC",
+            "DEN",
+            "IAH",
+            "EWR",
+            "BOS",
+            "SFO"
+        ],
+        "MAN": [
+            "FRA",
+            "MUC",
+            "YYZ"
+        ],
+        "BHX": [
+            "FRA",
+            "MUC",
+            "DUB"
+        ],
+        "EDI": [
+            "FRA",
+            "MUC",
+            "YYZ",
+            "YUL",
+            "ORD",
+            "EWR"
+        ],
+        "NCL": [
+            "FRA"
+        ],
+        "GLA": [
+            "FRA"
+        ],
+        "DUB": [
+            "FRA",
+            "MUC",
+            "YVR",
+            "YUL",
+            "YYZ",
+            "ORD",
+            "EWR"
+        ],
+        "ORK": [
+            "FRA"
+        ],
+        "AMS": [
+            "FRA",
+            "MUC",
+            "YUL",
+            "YYZ",
+            "IAD",
+            "EWR",
+            "IAH",
+            "SFO"
+        ],
+        "BRU": [
+            "FRA",
+            "MUC",
+            "OUA",
+            "KGL",
+            "NBO",
+            "YUL",
+            "YYZ",
+            "SIN",
+            "EWR",
+            "ORD"
+        ],
+        "CDG": [
+            "FRA",
+            "MUC",
+            "YYZ",
+            "YUL",
+            "EWR",
+            "IAD",
+            "SFO"
+        ],
+        "NTE": [
+            "FRA",
+            "MUC"
+        ],
+        "NCE": [
+            "FRA",
+            "MUC",
+            "YUL",
+            "EWR"
+        ],
+        "LYS": [
+            "FRA",
+            "MUC",
+            "YUL"
+        ],
+        "SXB": [
+            "FRA"
+        ],
+        "MRS": [
+            "FRA",
+            "MUC"
+        ],
+        "BIA": [
+            "FRA",
+            "MUC"
+        ],
+        "TLS": [
+            "FRA",
+            "MUC",
+            "YUL"
+        ],
+        "SZG": [
+            "FRA"
+        ],
+        "SCQ": [
+            "FRA"
+        ],
+        "MAD": [
+            "FRA",
+            "MUC",
+            "YYZ",
+            "YUL",
+            "EWR"
+        ],
+        "PMI": [
+            "FRA",
+            "MUC",
+            "EWR"
+        ],
+        "BCN": [
+            "FRA",
+            "MUC",
+            "YUL",
+            "YYZ",
+            "IAD",
+            "EWR",
+            "SFO",
+            "ORD"
+        ],
+        "SVQ": [
+            "FRA",
+            "MUC"
+        ],
+        "BIO": [
+            "FRA",
+            "MUC"
+        ],
+        "AGP": [
+            "FRA",
+            "MUC",
+            "EWR"
+        ],
+        "VLC": [
+            "FRA",
+            "MUC"
+        ],
+        "LIS": [
+            "FRA",
+            "MUC",
+            "SID",
+            "YUL",
+            "YYZ",
+            "FAO",
+            "FNC",
+            "HAM",
+            "OPO",
+            "PDL",
+            "EWR"
+        ],
+        "ALC": [
+            "FRA",
+            "MUC"
+        ],
+        "OPO": [
+            "FRA",
+            "MUC",
+            "YUL",
+            "LIS",
+            "FNC"
+        ],
+        "EAP": [
+            "FRA",
+            "MUC"
+        ],
+        "VIE": [
+            "FRA",
+            "MUC",
+            "VAR",
+            "SKP",
+            "TGD",
+            "IAS",
+            "PRN",
+            "RMO",
+            "BKK",
+            "YYZ"
+        ],
+        "ATH": [
+            "FRA",
+            "MUC",
+            "FCO",
+            "YUL",
+            "YYZ",
+            "IAD",
+            "EWR",
+            "ORD"
+        ],
+        "SKG": [
+            "FRA",
+            "MUC"
+        ],
+        "LCA": [
+            "FRA",
+            "MUC",
+            "ATH"
+        ],
+        "IST": [
+            "FRA"
+        ],
+        "BEY": [
+            "FRA",
+            "IST"
+        ],
+        "MLA": [
+            "FRA",
+            "MUC",
+            "FCO",
+            "TUN"
+        ],
+        "ALG": [
+            "FRA"
+        ],
+        "TUN": [
+            "FRA",
+            "MUC"
+        ],
+        "CMN": [
+            "FRA",
+            "MAD"
+        ],
+        "BUD": [
+            "FRA",
+            "MUC"
+        ],
+        "WAW": [
+            "FRA",
+            "MUC"
+        ],
+        "BZG": [
+            "FRA"
+        ],
+        "KRK": [
+            "FRA",
+            "MUC"
+        ],
+        "GDN": [
+            "FRA",
+            "MUC"
+        ],
+        "KTW": [
+            "FRA"
+        ],
+        "POZ": [
+            "FRA",
+            "MUC"
+        ],
+        "PRG": [
+            "FRA",
+            "MUC",
+            "YYZ"
+        ],
+        "ZAG": [
+            "FRA",
+            "MUC",
+            "SPU",
+            "DBV"
+        ],
+        "RJK": [
+            "FRA",
+            "MUC"
+        ],
+        "BEG": [
+            "FRA",
+            "MUC"
+        ],
+        "OTP": [
+            "FRA",
+            "MUC"
+        ],
+        "SOF": [
+            "FRA",
+            "MUC",
+            "FCO"
+        ],
+        "TIA": [
+            "FRA",
+            "MUC",
+            "FCO"
+        ],
+        "LJU": [
+            "FRA",
+            "MUC"
+        ],
+        "IBZ": [
+            "FRA",
+            "MUC"
+        ],
+        "TIV": [
+            "FRA"
+        ],
+        "FAO": [
+            "FRA",
+            "MUC",
+            "LIS",
+            "EWR"
+        ],
+        "SKP": [
+            "FRA",
+            "VIE"
+        ],
+        "SJJ": [
+            "FRA"
+        ],
+        "PDL": [
+            "FRA",
+            "ZRH",
+            "LIS",
+            "EWR"
+        ],
+        "OVD": [
+            "FRA",
+            "MUC"
+        ],
+        "RMO": [
+            "FRA",
+            "VIE"
+        ],
+        "EVN": [
+            "FRA",
+            "VIE"
+        ],
+        "RZE": [
+            "MUC"
+        ],
+        "DEB": [
+            "MUC"
+        ],
+        "WRO": [
+            "MUC",
+            "FRA"
+        ],
+        "GRZ": [
+            "MUC",
+            "FRA",
+            "VIE"
+        ],
+        "SBZ": [
+            "MUC"
+        ],
+        "CLJ": [
+            "MUC"
+        ],
+        "DBV": [
+            "MUC",
+            "FRA",
+            "ATH",
+            "ZAG",
+            "EWR"
+        ],
+        "SPU": [
+            "MUC",
+            "ZAG",
+            "FCO",
+            "DUS",
+            "FRA"
+        ],
+        "ZAD": [
+            "MUC",
+            "FRA"
+        ],
+        "PUY": [
+            "MUC",
+            "FRA"
+        ],
+        "RHO": [
+            "MUC"
+        ],
+        "CFU": [
+            "MUC",
+            "FRA"
+        ],
+        "PFO": [
+            "MUC"
+        ],
+        "CGN": [
+            "MUC"
+        ],
+        "FMO": [
+            "MUC"
+        ],
+        "PAD": [
+            "MUC"
+        ],
+        "BOD": [
+            "MUC",
+            "FRA"
+        ],
+        "TRD": [
+            "MUC"
+        ],
+        "OUL": [
+            "MUC"
+        ],
+        "STN": [
+            "MUC"
+        ],
+        "JMK": [
+            "MUC",
+            "FRA"
+        ],
+        "OMR": [
+            "MUC"
+        ],
+        "TBS": [
+            "MUC"
+        ],
+        "TRS": [
+            "MUC",
+            "FCO"
+        ],
+        "GOA": [
+            "MUC",
+            "FCO"
+        ],
+        "JTR": [
+            "MUC",
+            "FRA"
+        ],
+        "HER": [
+            "MUC",
+            "FRA"
+        ],
+        "BRI": [
+            "MUC",
+            "FRA",
+            "FCO"
+        ],
+        "TSR": [
+            "MUC"
+        ],
+        "BOJ": [
+            "FRA"
+        ],
+        "MCO": [
+            "FRA",
+            "MUC",
+            "IAD",
+            "ORD",
+            "EWR"
+        ],
+        "PHL": [
+            "FRA",
+            "YUL"
+        ],
+        "VFA": [
+            "WDH"
+        ],
+        "MAH": [
+            "FRA"
+        ],
+        "CHQ": [
+            "MUC",
+            "FRA"
+        ],
+        "WDH": [
+            "FRA",
+            "JNB"
+        ],
+        "MBA": [
+            "FRA"
+        ],
+        "TFS": [
+            "FRA"
+        ],
+        "ACE": [
+            "FRA"
+        ],
+        "RSW": [
+            "FRA"
+        ],
+        "YHZ": [
+            "FRA",
+            "YYZ",
+            "YUL",
+            "LHR"
+        ],
+        "YYC": [
+            "FRA",
+            "ZRH",
+            "YYZ",
+            "YUL",
+            "YVR",
+            "LHR"
+        ],
+        "DJE": [
+            "FRA"
+        ],
+        "FNC": [
+            "FRA",
+            "LIS",
+            "OPO"
+        ],
+        "JSI": [
+            "FRA"
+        ],
+        "AYT": [
+            "FRA"
+        ],
+        "BJV": [
+            "FRA"
+        ],
+        "VAR": [
+            "FRA",
+            "VIE"
+        ],
+        "LPA": [
+            "MUC"
+        ],
+        "RMF": [
+            "ZRH"
+        ],
+        "CUN": [
+            "ZRH",
+            "IAH"
+        ],
+        "ZNZ": [
+            "ZRH"
+        ],
+        "MSP": [
+            "FRA",
+            "ORD"
+        ],
+        "CNX": [
+            "BKK"
+        ],
+        "HKT": [
+            "BKK",
+            "SIN"
+        ],
+        "PNH": [
+            "BKK"
+        ],
+        "USM": [
+            "SIN"
+        ],
+        "BSB": [
+            "GIG",
+            "GRU"
+        ],
+        "NVT": [
+            "GRU"
+        ],
+        "IGU": [
+            "GIG",
+            "GRU"
+        ],
+        "POA": [
+            "GIG",
+            "GRU"
+        ],
+        "SSA": [
+            "GIG",
+            "GRU"
+        ],
+        "VIX": [
+            "GIG",
+            "GRU"
+        ],
+        "CNF": [
+            "GRU"
+        ],
+        "CWB": [
+            "GRU"
+        ],
+        "FLN": [
+            "GRU"
+        ],
+        "GYN": [
+            "GRU"
+        ],
+        "MVD": [
+            "SCL",
+            "GRU"
+        ],
+        "COV": [
+            "MUC",
+            "FRA"
+        ],
+        "ASR": [
+            "FRA",
+            "MUC"
+        ],
+        "KOJ": [
+            "HND"
+        ],
+        "KMQ": [
+            "HND"
+        ],
+        "ITM": [
+            "HND"
+        ],
+        "OIT": [
+            "HND"
+        ],
+        "OKA": [
+            "HND"
+        ],
+        "KMJ": [
+            "HND"
+        ],
+        "NGS": [
+            "HND"
+        ],
+        "FUK": [
+            "HND"
+        ],
+        "KCZ": [
+            "HND"
+        ],
+        "TAK": [
+            "HND"
+        ],
+        "MYJ": [
+            "HND"
+        ],
+        "TOY": [
+            "HND"
+        ],
+        "KMI": [
+            "HND"
+        ],
+        "AXT": [
+            "HND"
+        ],
+        "OKJ": [
+            "HND"
+        ],
+        "UBJ": [
+            "HND"
+        ],
+        "HKD": [
+            "HND"
+        ],
+        "CTS": [
+            "HND"
+        ],
+        "HIJ": [
+            "HND"
+        ],
+        "NGO": [
+            "HND"
+        ],
+        "AHO": [
+            "FCO"
+        ],
+        "BDS": [
+            "FCO",
+            "MUC"
+        ],
+        "FLR": [
+            "FCO",
+            "FRA",
+            "MUC"
+        ],
+        "REG": [
+            "FCO"
+        ],
+        "TRN": [
+            "FCO"
+        ],
+        "AMD": [
+            "DEL",
+            "BOM"
+        ],
+        "COK": [
+            "BOM",
+            "DEL"
+        ],
+        "TRV": [
+            "BOM",
+            "DEL"
+        ],
+        "MEL": [
+            "DEL",
+            "HKG",
+            "SIN"
+        ],
+        "PNQ": [
+            "DEL"
+        ],
+        "SYD": [
+            "DEL",
+            "HKG",
+            "LAX"
+        ],
+        "ATQ": [
+            "DEL"
+        ],
+        "GOI": [
+            "BOM"
+        ],
+        "BBI": [
+            "DEL"
+        ],
+        "OUA": [
+            "ABJ"
+        ],
+        "ABJ": [
+            "BRU"
+        ],
+        "ACC": [
+            "LFW"
+        ],
+        "EBB": [
+            "BRU"
+        ],
+        "DSS": [
+            "BRU"
+        ],
+        "FSC": [
+            "FRA"
+        ],
+        "LCY": [
+            "FRA"
+        ],
+        "GVA": [
+            "FRA",
+            "BER",
+            "MUC",
+            "YUL",
+            "EWR"
+        ],
+        "SID": [
+            "LIS"
+        ],
+        "INN": [
+            "VIE"
+        ],
+        "LNZ": [
+            "FRA"
+        ],
+        "KSC": [
+            "VIE"
+        ],
+        "TGD": [
+            "VIE"
+        ],
+        "IAS": [
+            "VIE"
+        ],
+        "PRN": [
+            "VIE"
+        ],
+        "KLU": [
+            "VIE"
+        ],
+        "GRJ": [
+            "JNB"
+        ],
+        "PLZ": [
+            "JNB"
+        ],
+        "HDS": [
+            "JNB"
+        ],
+        "ELS": [
+            "JNB"
+        ],
+        "DUR": [
+            "JNB"
+        ],
+        "YWG": [
+            "YYZ",
+            "YUL"
+        ],
+        "MSY": [
+            "YYZ",
+            "IAD",
+            "ORD",
+            "IAH"
+        ],
+        "YYJ": [
+            "YYZ"
+        ],
+        "YQB": [
+            "YUL",
+            "YYZ"
+        ],
+        "YEG": [
+            "YYZ",
+            "YUL"
+        ],
+        "YQT": [
+            "YYZ"
+        ],
+        "YXE": [
+            "YYZ"
+        ],
+        "YQM": [
+            "YUL"
+        ],
+        "YOW": [
+            "YYZ",
+            "LHR"
+        ],
+        "FLL": [
+            "YUL",
+            "YYZ",
+            "IAD"
+        ],
+        "YYT": [
+            "YYZ",
+            "YUL"
+        ],
+        "PHX": [
+            "YYZ",
+            "YUL",
+            "IAD",
+            "SFO",
+            "EWR",
+            "LAX",
+            "IAH"
+        ],
+        "LGA": [
+            "YUL",
+            "ORD"
+        ],
+        "HNL": [
+            "YVR"
+        ],
+        "AKL": [
+            "HKG",
+            "SIN",
+            "YVR",
+            "SFO",
+            "LAX",
+            "PVG",
+            "IAH",
+            "JFK"
+        ],
+        "CAN": [
+            "PEK",
+            "PVG"
+        ],
+        "CGQ": [
+            "PEK",
+            "PVG"
+        ],
+        "CKG": [
+            "PEK"
+        ],
+        "CTU": [
+            "PEK",
+            "PVG",
+            "FRA"
+        ],
+        "FOC": [
+            "PEK"
+        ],
+        "HFE": [
+            "PEK"
+        ],
+        "HGH": [
+            "PEK"
+        ],
+        "WNZ": [
+            "PVG",
+            "PEK"
+        ],
+        "HRB": [
+            "PEK"
+        ],
+        "DLC": [
+            "PEK"
+        ],
+        "NKG": [
+            "PEK"
+        ],
+        "SHE": [
+            "PEK"
+        ],
+        "WUH": [
+            "PEK"
+        ],
+        "XIY": [
+            "PEK"
+        ],
+        "XMN": [
+            "PEK"
+        ],
+        "TFU": [
+            "FRA"
+        ],
+        "SZX": [
+            "FRA"
+        ],
+        "CGO": [
+            "PEK",
+            "FRA"
+        ],
+        "CSX": [
+            "PEK"
+        ],
+        "KWE": [
+            "PVG"
+        ],
+        "SHA": [
+            "PEK"
+        ],
+        "HRG": [
+            "CAI"
+        ],
+        "LXR": [
+            "CAI"
+        ],
+        "PEN": [
+            "SIN"
+        ],
+        "DAD": [
+            "SIN"
+        ],
+        "HAN": [
+            "SIN",
+            "FRA"
+        ],
+        "PER": [
+            "SIN"
+        ],
+        "SGN": [
+            "SIN"
+        ],
+        "SAI": [
+            "SIN"
+        ],
+        "ADL": [
+            "SIN"
+        ],
+        "BWN": [
+            "SIN"
+        ],
+        "MNL": [
+            "SIN"
+        ],
+        "KUL": [
+            "SIN"
+        ],
+        "CEB": [
+            "SIN"
+        ],
+        "SUB": [
+            "SIN"
+        ],
+        "KNO": [
+            "SIN"
+        ],
+        "DRW": [
+            "SIN"
+        ],
+        "CNS": [
+            "SIN"
+        ],
+        "PSA": [
+            "FRA"
+        ],
+        "AOI": [
+            "MUC"
+        ],
+        "JER": [
+            "MUC"
+        ],
+        "BIL": [
+            "ORD",
+            "DEN"
+        ],
+        "ALB": [
+            "IAD",
+            "ORD"
+        ],
+        "BZN": [
+            "DEN",
+            "ORD"
+        ],
+        "SRQ": [
+            "ORD"
+        ],
+        "BNA": [
+            "EWR",
+            "IAD",
+            "ORD"
+        ],
+        "EUG": [
+            "DEN",
+            "SFO"
+        ],
+        "ASE": [
+            "DEN",
+            "ORD"
+        ],
+        "CLE": [
+            "IAD",
+            "EWR",
+            "ORD"
+        ],
+        "PSP": [
+            "SFO",
+            "DEN"
+        ],
+        "BDL": [
+            "IAD"
+        ],
+        "RNO": [
+            "DEN",
+            "LAX",
+            "SFO"
+        ],
+        "SNN": [
+            "EWR"
+        ],
+        "CHS": [
+            "IAD",
+            "EWR",
+            "ORD"
+        ],
+        "BTV": [
+            "ORD"
+        ],
+        "MEM": [
+            "ORD",
+            "IAH"
+        ],
+        "FSD": [
+            "ORD"
+        ],
+        "RIC": [
+            "EWR",
+            "IAD"
+        ],
+        "MLI": [
+            "ORD"
+        ],
+        "ORF": [
+            "IAD",
+            "EWR"
+        ],
+        "TAM": [
+            "IAH"
+        ],
+        "LIT": [
+            "ORD",
+            "IAH"
+        ],
+        "BUF": [
+            "IAD",
+            "ORD"
+        ],
+        "DSM": [
+            "ORD"
+        ],
+        "FAT": [
+            "DEN",
+            "SFO",
+            "LAX"
+        ],
+        "DAY": [
+            "ORD",
+            "IAD"
+        ],
+        "PIA": [
+            "ORD"
+        ],
+        "JAX": [
+            "IAD",
+            "EWR"
+        ],
+        "ROA": [
+            "ORD",
+            "IAD"
+        ],
+        "ROC": [
+            "IAD"
+        ],
+        "SJU": [
+            "IAH",
+            "EWR"
+        ],
+        "TPA": [
+            "EWR",
+            "IAD"
+        ],
+        "LNK": [
+            "ORD",
+            "DEN"
+        ],
+        "PBI": [
+            "EWR"
+        ],
+        "BOI": [
+            "ORD",
+            "DEN"
+        ],
+        "ICT": [
+            "DEN"
+        ],
+        "MYR": [
+            "EWR"
+        ],
+        "FWA": [
+            "ORD"
+        ],
+        "SAV": [
+            "EWR",
+            "IAD"
+        ],
+        "GJT": [
+            "DEN"
+        ],
+        "GRB": [
+            "ORD"
+        ],
+        "CAK": [
+            "ORD"
+        ],
+        "GSP": [
+            "ORD",
+            "IAD"
+        ],
+        "MRY": [
+            "DEN",
+            "LAX",
+            "SFO"
+        ],
+        "ATW": [
+            "ORD"
+        ],
+        "SGF": [
+            "ORD"
+        ],
+        "SDF": [
+            "IAD",
+            "EWR",
+            "ORD"
+        ],
+        "GRR": [
+            "ORD",
+            "EWR"
+        ],
+        "JAC": [
+            "DEN"
+        ],
+        "CAE": [
+            "ORD",
+            "IAD"
+        ],
+        "ELP": [
+            "ORD",
+            "IAH",
+            "DEN"
+        ],
+        "SMF": [
+            "ORD",
+            "DEN"
+        ],
+        "TUL": [
+            "DEN",
+            "IAH",
+            "ORD"
+        ],
+        "SLC": [
+            "ORD",
+            "SFO",
+            "DEN"
+        ],
+        "LAS": [
+            "SFO",
+            "DEN"
+        ],
+        "OMA": [
+            "ORD",
+            "DEN"
+        ],
+        "LIH": [
+            "SFO"
+        ],
+        "PDX": [
+            "SFO",
+            "DEN",
+            "EWR"
+        ],
+        "COS": [
+            "DEN"
+        ],
+        "SYR": [
+            "IAD"
+        ],
+        "SBP": [
+            "SFO"
+        ],
+        "CMH": [
+            "EWR",
+            "IAD"
+        ],
+        "LEX": [
+            "ORD"
+        ],
+        "SBA": [
+            "SFO"
+        ],
+        "MTY": [
+            "IAH",
+            "FRA"
+        ],
+        "GEG": [
+            "SFO"
+        ],
+        "OGG": [
+            "LAX"
+        ],
+        "SNA": [
+            "ORD"
+        ],
+        "PIT": [
+            "IAD"
+        ],
+        "TPE": [
+            "DWC"
+        ],
+        "DWC": [
+            "FRA"
+        ],
+        "GDL": [
+            "FRA"
+        ],
+        "NRT": [
+            "ICN"
+        ],
+        "MFE": [
+            "IAH"
+        ],
+        "BRO": [
+            "IAH"
+        ],
+        "SHV": [
+            "IAH"
+        ],
+        "LRD": [
+            "IAH"
+        ],
+        "ABQ": [
+            "ORD",
+            "IAH",
+            "IAD"
+        ],
+        "DRO": [
+            "DEN"
+        ],
+        "GSO": [
+            "IAD",
+            "ORD"
+        ],
+        "CID": [
+            "ORD"
+        ],
+        "OKC": [
+            "ORD",
+            "IAH"
+        ],
+        "TYS": [
+            "ORD"
+        ],
+        "HSV": [
+            "IAD"
+        ],
+        "CVG": [
+            "IAD",
+            "ORD"
+        ],
+        "MDT": [
+            "IAD"
+        ],
+        "SAT": [
+            "IAH"
+        ],
+        "BHM": [
+            "IAH"
+        ],
+        "TUS": [
+            "IAH",
+            "SFO"
+        ],
+        "MOB": [
+            "IAH"
+        ],
+        "PNS": [
+            "IAH"
+        ],
+        "JAN": [
+            "IAH"
+        ],
+        "CRP": [
+            "IAH"
+        ],
+        "MAF": [
+            "IAH"
+        ],
+        "LBB": [
+            "IAH"
+        ],
+        "LFT": [
+            "IAH"
+        ],
+        "BTR": [
+            "IAH"
+        ],
+        "MCI": [
+            "ORD"
+        ],
+        "IND": [
+            "ORD",
+            "EWR"
+        ],
+        "MKE": [
+            "ORD"
+        ],
+        "MSN": [
+            "ORD"
+        ],
+        "XNA": [
+            "ORD"
+        ],
+        "FAR": [
+            "ORD"
+        ]
+    }
+}

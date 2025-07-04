@@ -1,0 +1,1428 @@
+{
+    "ASA": {
+        "DCA": [
+            "SEA",
+            "LAX",
+            "SFO",
+            "PDX",
+            "SAN",
+            "ORD",
+            "PNS",
+            "CLE",
+            "PWM",
+            "GRR",
+            "CID",
+            "SYR",
+            "CMH",
+            "PBI",
+            "FLL",
+            "ILM",
+            "RSW",
+            "ATL",
+            "SDF",
+            "SRQ",
+            "AVL",
+            "ORF",
+            "IND",
+            "JAX",
+            "BHM",
+            "BGR",
+            "ROC",
+            "CLT",
+            "TPA",
+            "XNA",
+            "MCO",
+            "CVG",
+            "ALB",
+            "CHA",
+            "CHS"
+        ],
+        "SEA": [
+            "DCA",
+            "JFK",
+            "ANC",
+            "JNU",
+            "SIT",
+            "KTN",
+            "FAI",
+            "PSP",
+            "RDM",
+            "SFO",
+            "EUG",
+            "LAX",
+            "SMF",
+            "SAN",
+            "LAS",
+            "ABQ",
+            "MKE",
+            "EWR",
+            "MCI",
+            "BOS",
+            "OMA",
+            "DTW",
+            "CMH",
+            "ORD",
+            "PIT",
+            "BWI",
+            "MSP",
+            "IAD",
+            "AUS",
+            "TPA",
+            "BNA",
+            "STL",
+            "MCO",
+            "IAH",
+            "CHS",
+            "OKC",
+            "DFW",
+            "SAT",
+            "DEN",
+            "CVG",
+            "SLC",
+            "CLE",
+            "PHL",
+            "RNO",
+            "ATL",
+            "MSY",
+            "PDX",
+            "FLL",
+            "IND",
+            "YVR",
+            "PHX",
+            "TUS",
+            "FAT",
+            "SNA",
+            "KOA",
+            "OGG",
+            "HNL",
+            "LIH",
+            "PVR",
+            "BZN",
+            "PSC",
+            "SJC",
+            "RDU",
+            "GEG",
+            "YYZ",
+            "ONT",
+            "BOI",
+            "BUR",
+            "SBA",
+            "OAK",
+            "SJD",
+            "YKM",
+            "IDA",
+            "YYJ",
+            "MFR",
+            "GPI",
+            "YYC",
+            "YEG",
+            "BIL",
+            "ICT",
+            "ALW",
+            "PUW",
+            "SUN",
+            "MSO",
+            "HLN",
+            "EAT",
+            "BLI",
+            "RDD",
+            "JAC",
+            "STS",
+            "YLW",
+            "LHR",
+            "PPT",
+            "KEF"
+        ],
+        "LAX": [
+            "DCA",
+            "SEA",
+            "ANC",
+            "IAD",
+            "SJD",
+            "EWR",
+            "MZT",
+            "KOA",
+            "PDX",
+            "NAS",
+            "SJO",
+            "PVR",
+            "GEG",
+            "CUN",
+            "GUA",
+            "LIR",
+            "GDL",
+            "LAS",
+            "SJC",
+            "STS",
+            "EUG",
+            "BOI",
+            "SFO",
+            "MFR",
+            "RDM",
+            "PAE",
+            "RNO",
+            "PSC",
+            "ZLO",
+            "LTO",
+            "MTY",
+            "TUS",
+            "AUS",
+            "IND",
+            "RDU",
+            "ELP",
+            "BNA",
+            "TUL",
+            "ABQ",
+            "CMH",
+            "DEN",
+            "ATL",
+            "MEL",
+            "BNE",
+            "SYD",
+            "LHR",
+            "PPT",
+            "CDG"
+        ],
+        "SFO": [
+            "DCA",
+            "JFK",
+            "SEA",
+            "ANC",
+            "EWR",
+            "BOS",
+            "MCO",
+            "IAD",
+            "AUS",
+            "PDX",
+            "LAS",
+            "ORD",
+            "SNA",
+            "KOA",
+            "LIH",
+            "SAN",
+            "SJD",
+            "PVR",
+            "PAE",
+            "BZN",
+            "BOI",
+            "LAX",
+            "GEG",
+            "RDM",
+            "BUR",
+            "PSP",
+            "JAC",
+            "SYD",
+            "LHR"
+        ],
+        "PDX": [
+            "DCA",
+            "JFK",
+            "BUR",
+            "SFO",
+            "LAX",
+            "PHX",
+            "ANC",
+            "EWR",
+            "MCO",
+            "ORD",
+            "DEN",
+            "OGG",
+            "BOS",
+            "DFW",
+            "SEA",
+            "AUS",
+            "GEG",
+            "LAS",
+            "BOI",
+            "ATL",
+            "KOA",
+            "HNL",
+            "SAN",
+            "SNA",
+            "BNA",
+            "PVR",
+            "IAH",
+            "SJD",
+            "BZN",
+            "SJC",
+            "STS",
+            "GPI",
+            "RNO",
+            "MFR",
+            "MCI",
+            "ONT",
+            "BIL",
+            "OAK",
+            "RDM",
+            "MSO",
+            "ABQ",
+            "YVR",
+            "SMF",
+            "EUG",
+            "MSP",
+            "FAI",
+            "FAT",
+            "SLC",
+            "PSP",
+            "LHR",
+            "KEF"
+        ],
+        "SAN": [
+            "DCA",
+            "JFK",
+            "ANC",
+            "SEA",
+            "PVR",
+            "EWR",
+            "BOS",
+            "PDX",
+            "MCO",
+            "IAD",
+            "OGG",
+            "TPA",
+            "ATL",
+            "LIH",
+            "KOA",
+            "SFO",
+            "GEG",
+            "SJD",
+            "RDM",
+            "PAE",
+            "MFR",
+            "SMF",
+            "AUS",
+            "STS",
+            "LAS",
+            "BOI",
+            "SBP",
+            "SJC",
+            "GPI",
+            "FAT",
+            "EUG",
+            "SLC",
+            "DFW",
+            "PHX",
+            "ORD",
+            "CLT",
+            "LHR"
+        ],
+        "JFK": [
+            "SEA",
+            "PDX",
+            "SAN",
+            "SFO",
+            "ANC",
+            "ORD",
+            "AKL",
+            "LHR",
+            "DOH"
+        ],
+        "ANC": [
+            "SAN",
+            "SLC",
+            "BET",
+            "SEA",
+            "BRW",
+            "LAS",
+            "SCC",
+            "FAI",
+            "MSP",
+            "JNU",
+            "ADQ",
+            "ORD",
+            "OTZ",
+            "LAX",
+            "DEN",
+            "PHX",
+            "DLG",
+            "ADK",
+            "PDX",
+            "DTW",
+            "SFO",
+            "SMF",
+            "JFK",
+            "HNL",
+            "OME",
+            "AKN"
+        ],
+        "SLC": [
+            "ANC",
+            "SEA",
+            "PDX",
+            "SAN",
+            "PHX"
+        ],
+        "JNU": [
+            "SEA",
+            "KTN",
+            "ANC",
+            "SIT"
+        ],
+        "BET": [
+            "ANC"
+        ],
+        "BRW": [
+            "ANC"
+        ],
+        "LAS": [
+            "ANC",
+            "PAE",
+            "SEA",
+            "SFO",
+            "PDX",
+            "LAX",
+            "STS",
+            "BOI",
+            "SAN",
+            "PHX"
+        ],
+        "SIT": [
+            "SEA",
+            "JNU"
+        ],
+        "KTN": [
+            "SEA",
+            "JNU"
+        ],
+        "MSP": [
+            "ANC",
+            "SEA",
+            "ORD",
+            "DFW",
+            "PHX"
+        ],
+        "GST": [
+            "JNU"
+        ],
+        "SCC": [
+            "ANC"
+        ],
+        "DGG": [
+            "ANC"
+        ],
+        "SJD": [
+            "LAX",
+            "SFO",
+            "SAN",
+            "SEA",
+            "PDX",
+            "SJC"
+        ],
+        "FAI": [
+            "ANC",
+            "SEA",
+            "PDX"
+        ],
+        "ORD": [
+            "ANC",
+            "PDX",
+            "SEA",
+            "SFO",
+            "LGA",
+            "CLE",
+            "YUL",
+            "DCA",
+            "GRR",
+            "MCO",
+            "CHS",
+            "DTW",
+            "STL",
+            "HSV",
+            "RDU",
+            "GSP",
+            "MSY",
+            "PIT",
+            "FSD",
+            "RSW",
+            "BUF",
+            "MLI",
+            "ALB",
+            "BZN",
+            "ROC",
+            "CLT",
+            "BWI",
+            "MIA",
+            "IND",
+            "JFK",
+            "CID",
+            "PBI",
+            "PHL",
+            "SAN",
+            "SAT",
+            "SDF",
+            "SNA",
+            "YYZ",
+            "MSP",
+            "MCI",
+            "JAX",
+            "EWR",
+            "OMA",
+            "ELP",
+            "DSM",
+            "SYR",
+            "CVG",
+            "BHM",
+            "MSN",
+            "LEX",
+            "FAR",
+            "TUL",
+            "DAY",
+            "TYS",
+            "IAH",
+            "MEM",
+            "RIC",
+            "MKE",
+            "XNA",
+            "BOS",
+            "BNA",
+            "OKC",
+            "ORF",
+            "LHR",
+            "DOH"
+        ],
+        "BUR": [
+            "PDX",
+            "SEA",
+            "SFO",
+            "BOI",
+            "STS"
+        ],
+        "DFW": [
+            "SEA",
+            "PDX",
+            "RDU",
+            "SAN",
+            "OMA",
+            "CLT",
+            "DAY",
+            "PBI",
+            "BHM",
+            "ABI",
+            "ATL",
+            "GPT",
+            "BDL",
+            "BIL",
+            "BNA",
+            "XNA",
+            "ICT",
+            "CHS",
+            "CRP",
+            "DSM",
+            "FLL",
+            "GEG",
+            "GSO",
+            "STL",
+            "JAX",
+            "IAH",
+            "IND",
+            "MEM",
+            "LIT",
+            "LRD",
+            "MCI",
+            "MSY",
+            "OKC",
+            "PIT",
+            "SAT",
+            "SJC",
+            "SNA",
+            "TYS",
+            "YVR",
+            "CMH",
+            "PNS",
+            "RSW",
+            "MSP",
+            "TUL",
+            "BZN",
+            "BTR",
+            "TYR",
+            "CLL",
+            "MIA",
+            "SDF",
+            "AUS",
+            "RIC",
+            "SJU",
+            "GRK",
+            "ORF",
+            "HNL",
+            "TPA",
+            "EUG",
+            "GSP",
+            "ELP",
+            "HOU",
+            "MRY",
+            "SGF",
+            "BOI",
+            "CVG",
+            "SJT",
+            "MAF",
+            "AMA",
+            "STS",
+            "LBB",
+            "BRO",
+            "SPS",
+            "DOH"
+        ],
+        "DEN": [
+            "ANC",
+            "PDX",
+            "SEA",
+            "PHX",
+            "LAX"
+        ],
+        "SMF": [
+            "SEA",
+            "ANC",
+            "PDX",
+            "BOI",
+            "SAN",
+            "LAX",
+            "PHX"
+        ],
+        "EUG": [
+            "SEA",
+            "LAX",
+            "PDX",
+            "SAN"
+        ],
+        "PHX": [
+            "ANC",
+            "PAE",
+            "PDX",
+            "SEA",
+            "BOI",
+            "MSP",
+            "SLC",
+            "DEN",
+            "DSM",
+            "ICT",
+            "LAS",
+            "MCI",
+            "OKC",
+            "OMA",
+            "SAN",
+            "SAT",
+            "SNA",
+            "STL",
+            "RNO",
+            "RDU",
+            "SMF",
+            "SJC",
+            "ATL",
+            "TUS",
+            "SBP",
+            "MIA",
+            "MKE",
+            "MSY",
+            "NYL",
+            "GJT",
+            "DTW",
+            "CMH",
+            "GEG",
+            "IND",
+            "ABQ",
+            "MEM"
+        ],
+        "GEG": [
+            "SAN",
+            "SEA",
+            "PDX",
+            "LAX",
+            "BOI",
+            "SFO",
+            "DFW"
+        ],
+        "AKN": [
+            "ANC"
+        ],
+        "OME": [
+            "ANC"
+        ],
+        "SJC": [
+            "GDL",
+            "SEA",
+            "LIH",
+            "KOA",
+            "PVR",
+            "SJD",
+            "PDX",
+            "LAX",
+            "BOI",
+            "SAN",
+            "PHX"
+        ],
+        "GDL": [
+            "SJC",
+            "LAX"
+        ],
+        "HNL": [
+            "SAN",
+            "SEA",
+            "ONT",
+            "ANC",
+            "PDX",
+            "SYD"
+        ],
+        "DLG": [
+            "ANC"
+        ],
+        "ADK": [
+            "ANC"
+        ],
+        "ADQ": [
+            "ANC"
+        ],
+        "PAE": [
+            "LAS",
+            "PHX",
+            "SFO",
+            "LAX",
+            "SAN",
+            "SNA"
+        ],
+        "IAD": [
+            "LAX",
+            "SEA",
+            "SFO",
+            "SAN",
+            "DFW",
+            "DOH"
+        ],
+        "CLE": [
+            "SEA",
+            "ORD",
+            "PHL"
+        ],
+        "EWR": [
+            "SFO",
+            "SEA",
+            "LAX",
+            "PDX",
+            "SAN",
+            "ORD"
+        ],
+        "ABQ": [
+            "SEA",
+            "PDX",
+            "LAX"
+        ],
+        "DTW": [
+            "ANC",
+            "SEA",
+            "ORD"
+        ],
+        "MKE": [
+            "SEA",
+            "ORD",
+            "PHX"
+        ],
+        "BOS": [
+            "SAN",
+            "SEA",
+            "SFO",
+            "PDX",
+            "ORD",
+            "DOH"
+        ],
+        "ONT": [
+            "HNL",
+            "SEA",
+            "PDX"
+        ],
+        "BNA": [
+            "SEA",
+            "PDX",
+            "DFW",
+            "ORD"
+        ],
+        "OMA": [
+            "SEA",
+            "ORD",
+            "DFW",
+            "PHX"
+        ],
+        "MCO": [
+            "PDX",
+            "SFO",
+            "SEA",
+            "SAN",
+            "ORD"
+        ],
+        "MIA": [
+            "SEA",
+            "DFW",
+            "PHX",
+            "DCA",
+            "ORD",
+            "DOH"
+        ],
+        "CMH": [
+            "SEA",
+            "PHX",
+            "LAX",
+            "ORD",
+            "DFW"
+        ],
+        "TPA": [
+            "SEA",
+            "SAN",
+            "DFW",
+            "ORD"
+        ],
+        "ATL": [
+            "SEA",
+            "SAN",
+            "PDX",
+            "DFW",
+            "ORD",
+            "PHX",
+            "LAX",
+            "DOH"
+        ],
+        "AUS": [
+            "SEA",
+            "SFO",
+            "PDX",
+            "SAN",
+            "DFW",
+            "ORD",
+            "LAX"
+        ],
+        "PIT": [
+            "SEA",
+            "DFW",
+            "ORD",
+            "DCA"
+        ],
+        "OGG": [
+            "SAN",
+            "PDX",
+            "SEA"
+        ],
+        "BWI": [
+            "SEA"
+        ],
+        "MCI": [
+            "SEA",
+            "CUN",
+            "PDX",
+            "ORD",
+            "DFW"
+        ],
+        "IND": [
+            "SEA",
+            "PHX",
+            "DFW",
+            "ORD"
+        ],
+        "IAH": [
+            "SEA",
+            "PDX",
+            "DFW",
+            "ORD",
+            "PHX",
+            "DOH"
+        ],
+        "SAT": [
+            "SEA",
+            "DFW",
+            "PHX"
+        ],
+        "CVG": [
+            "SEA",
+            "ORD",
+            "DFW"
+        ],
+        "PHL": [
+            "SEA",
+            "TPA",
+            "RSW",
+            "CLE",
+            "ORD",
+            "PWM",
+            "MSN",
+            "ALB",
+            "CHS",
+            "EYW",
+            "RDU",
+            "BGR",
+            "CVG",
+            "PIT",
+            "BTV",
+            "DCA",
+            "MCO",
+            "MIA",
+            "TYS",
+            "BUF",
+            "MHT",
+            "BOS",
+            "PNS",
+            "SYR",
+            "GSP",
+            "PVD",
+            "JAX",
+            "RIC",
+            "SAV"
+        ],
+        "MSY": [
+            "SEA",
+            "DFW"
+        ],
+        "STL": [
+            "SEA",
+            "DFW",
+            "ORD",
+            "LAX"
+        ],
+        "CHS": [
+            "SEA",
+            "ORD",
+            "DFW"
+        ],
+        "FLL": [
+            "SEA",
+            "DFW"
+        ],
+        "RNO": [
+            "SEA",
+            "PDX",
+            "LAX",
+            "PHX"
+        ],
+        "BOI": [
+            "PDX",
+            "SEA",
+            "GEG",
+            "SFO",
+            "SNA",
+            "SMF",
+            "LAX",
+            "LAS",
+            "BUR",
+            "SJC",
+            "SAN",
+            "DFW"
+        ],
+        "YVR": [
+            "SEA",
+            "PDX"
+        ],
+        "KOA": [
+            "LAX",
+            "SFO",
+            "SEA",
+            "SJC",
+            "PDX",
+            "SAN"
+        ],
+        "RDU": [
+            "SEA",
+            "LAX",
+            "DFW",
+            "ORD",
+            "PHL",
+            "DCA"
+        ],
+        "PSP": [
+            "SEA",
+            "SFO",
+            "PDX"
+        ],
+        "TUS": [
+            "SEA",
+            "LAX",
+            "PHX"
+        ],
+        "RDM": [
+            "SEA",
+            "PDX",
+            "LAX",
+            "SFO",
+            "PHX"
+        ],
+        "MSO": [
+            "SEA",
+            "PDX",
+            "ORD"
+        ],
+        "FAT": [
+            "SEA",
+            "SAN",
+            "PDX"
+        ],
+        "NAS": [
+            "LAX"
+        ],
+        "PVR": [
+            "SFO",
+            "LAX",
+            "SEA",
+            "PDX",
+            "SAN",
+            "SJC"
+        ],
+        "SNA": [
+            "SFO",
+            "SEA",
+            "PDX",
+            "BOI",
+            "PAE",
+            "STS",
+            "ORD",
+            "DFW",
+            "PHX"
+        ],
+        "LIH": [
+            "SFO",
+            "SEA",
+            "SAN",
+            "SJC"
+        ],
+        "BZN": [
+            "SEA",
+            "PDX",
+            "SFO",
+            "SAN",
+            "DFW",
+            "ORD"
+        ],
+        "PSC": [
+            "SEA",
+            "LAX"
+        ],
+        "YYZ": [
+            "SEA",
+            "ORD"
+        ],
+        "SBP": [
+            "SEA",
+            "PDX",
+            "SAN"
+        ],
+        "SBA": [
+            "SEA",
+            "PDX"
+        ],
+        "OAK": [
+            "SEA",
+            "PDX"
+        ],
+        "MZT": [
+            "LAX"
+        ],
+        "STS": [
+            "SEA",
+            "PDX",
+            "LAX",
+            "LAS",
+            "SAN",
+            "SNA"
+        ],
+        "LIR": [
+            "LAX"
+        ],
+        "BZE": [
+            "LAX"
+        ],
+        "CUN": [
+            "MCI",
+            "LAX"
+        ],
+        "SJO": [
+            "LAX"
+        ],
+        "GUA": [
+            "LAX"
+        ],
+        "LTO": [
+            "LAX"
+        ],
+        "ZIH": [
+            "LAX"
+        ],
+        "OTZ": [
+            "ANC"
+        ],
+        "ELP": [
+            "SEA",
+            "PHX",
+            "LAX",
+            "ORD"
+        ],
+        "IDA": [
+            "SEA"
+        ],
+        "MFR": [
+            "PDX",
+            "LAX",
+            "SEA",
+            "SAN",
+            "PHX"
+        ],
+        "ALW": [
+            "SEA"
+        ],
+        "YKM": [
+            "SEA"
+        ],
+        "YYJ": [
+            "SEA"
+        ],
+        "PUW": [
+            "SEA"
+        ],
+        "BIL": [
+            "SEA",
+            "PDX"
+        ],
+        "GPI": [
+            "PDX",
+            "SEA"
+        ],
+        "YYC": [
+            "SEA"
+        ],
+        "EAT": [
+            "SEA"
+        ],
+        "MRY": [
+            "SEA",
+            "SAN",
+            "PHX"
+        ],
+        "SUN": [
+            "SEA"
+        ],
+        "GTF": [
+            "SEA"
+        ],
+        "JAC": [
+            "SFO",
+            "SEA",
+            "SAN",
+            "LAX"
+        ],
+        "RDD": [
+            "SEA"
+        ],
+        "BLI": [
+            "SEA"
+        ],
+        "YEG": [
+            "SEA"
+        ],
+        "LAP": [
+            "LAX"
+        ],
+        "MSN": [
+            "PHX",
+            "ORD"
+        ],
+        "MHT": [
+            "DCA"
+        ],
+        "HSV": [
+            "ORD"
+        ],
+        "DAY": [
+            "DFW",
+            "ORD"
+        ],
+        "BHM": [
+            "ORD",
+            "DFW"
+        ],
+        "BDL": [
+            "DFW",
+            "DCA"
+        ],
+        "BRO": [
+            "DFW"
+        ],
+        "ICT": [
+            "DFW",
+            "PHX"
+        ],
+        "GJT": [
+            "PHX"
+        ],
+        "LIT": [
+            "ORD",
+            "DFW"
+        ],
+        "RIC": [
+            "DFW",
+            "ORD"
+        ],
+        "OKC": [
+            "DFW",
+            "ORD",
+            "PHX"
+        ],
+        "GSP": [
+            "DCA",
+            "ORD"
+        ],
+        "DSM": [
+            "DFW",
+            "PHX"
+        ],
+        "HOU": [
+            "DFW"
+        ],
+        "TYR": [
+            "DFW"
+        ],
+        "MEM": [
+            "PHX",
+            "DFW",
+            "ORD"
+        ],
+        "MDT": [
+            "ORD",
+            "PHL"
+        ],
+        "JAX": [
+            "DFW",
+            "ORD"
+        ],
+        "SYR": [
+            "DCA",
+            "ORD"
+        ],
+        "SAV": [
+            "DFW"
+        ],
+        "CLT": [
+            "DFW",
+            "SAN",
+            "PHL",
+            "ORD"
+        ],
+        "SDF": [
+            "ORD",
+            "DFW",
+            "PHL"
+        ],
+        "GPT": [
+            "DFW"
+        ],
+        "PBI": [
+            "DFW",
+            "ORD"
+        ],
+        "XNA": [
+            "DFW",
+            "ORD"
+        ],
+        "BHK": [
+            "TAS"
+        ],
+        "TUL": [
+            "ORD",
+            "LAX",
+            "DFW"
+        ],
+        "TYS": [
+            "DCA",
+            "DFW",
+            "ORD"
+        ],
+        "RSW": [
+            "DFW"
+        ],
+        "LBB": [
+            "DFW"
+        ],
+        "CRP": [
+            "DFW"
+        ],
+        "BUF": [
+            "ORD"
+        ],
+        "SJT": [
+            "DFW"
+        ],
+        "MLI": [
+            "ORD"
+        ],
+        "MFE": [
+            "DFW"
+        ],
+        "CID": [
+            "ORD"
+        ],
+        "PNS": [
+            "DFW"
+        ],
+        "GRR": [
+            "ORD"
+        ],
+        "ORF": [
+            "ORD",
+            "DFW",
+            "DCA"
+        ],
+        "GSO": [
+            "ORD",
+            "DFW"
+        ],
+        "SJU": [
+            "DFW"
+        ],
+        "FSD": [
+            "ORD"
+        ],
+        "TVC": [
+            "ORD"
+        ],
+        "ABI": [
+            "DFW"
+        ],
+        "LGA": [
+            "ORD",
+            "DCA"
+        ],
+        "ROC": [
+            "ORD"
+        ],
+        "EYW": [
+            "DCA"
+        ],
+        "FLG": [
+            "PHX"
+        ],
+        "LEX": [
+            "ORD"
+        ],
+        "HPN": [
+            "ORD"
+        ],
+        "SGF": [
+            "DFW"
+        ],
+        "NYL": [
+            "PHX"
+        ],
+        "ALB": [
+            "ORD"
+        ],
+        "SYD": [
+            "SFO",
+            "HNL",
+            "CHC",
+            "WLG",
+            "AKL",
+            "ADL",
+            "LAX"
+        ],
+        "MEL": [
+            "LAX",
+            "ADL",
+            "PER"
+        ],
+        "BNE": [
+            "LAX",
+            "AKL",
+            "PER"
+        ],
+        "CHC": [
+            "SYD"
+        ],
+        "WLG": [
+            "SYD"
+        ],
+        "ZQN": [
+            "SYD"
+        ],
+        "AKL": [
+            "BNE",
+            "SYD"
+        ],
+        "ADL": [
+            "MEL",
+            "SYD"
+        ],
+        "PER": [
+            "BNE",
+            "SYD"
+        ],
+        "LHR": [
+            "JFK",
+            "SEA",
+            "SAN",
+            "PDX",
+            "SFO",
+            "ORD",
+            "LAX"
+        ],
+        "PPT": [
+            "LAX",
+            "SEA"
+        ],
+        "KEF": [
+            "SEA"
+        ],
+        "DOH": [
+            "BAH",
+            "MIA",
+            "CPT",
+            "JNB",
+            "AMM",
+            "MLE",
+            "BKK",
+            "SIN",
+            "CGK",
+            "DPS",
+            "HKT",
+            "EBB",
+            "KUL",
+            "BOS",
+            "DFW",
+            "IAD",
+            "ORD",
+            "JFK"
+        ],
+        "BAH": [
+            "DOH"
+        ],
+        "CPT": [
+            "DOH"
+        ],
+        "JNB": [
+            "DOH"
+        ],
+        "DAC": [
+            "DOH"
+        ],
+        "AMM": [
+            "DOH"
+        ],
+        "MLE": [
+            "DOH"
+        ],
+        "BKK": [
+            "DOH"
+        ],
+        "SIN": [
+            "DOH"
+        ],
+        "CGK": [
+            "DOH"
+        ],
+        "DPS": [
+            "DOH"
+        ],
+        "CMB": [
+            "DOH"
+        ],
+        "HKT": [
+            "DOH"
+        ],
+        "EBB": [
+            "DOH"
+        ],
+        "KUL": [
+            "DOH"
+        ]
+    }
+}
