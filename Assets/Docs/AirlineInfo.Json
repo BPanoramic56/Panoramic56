@@ -1,0 +1,62 @@
+{
+    "AAL": {
+        "Name": "American Airlines",
+        "ICAO": "AAL",
+        "Color": "0x36495A",
+        "Image": "Assets/Images/AirlineLogos/AAL_Logo.jpg"
+    },
+    "KLM": {
+        "Name": "KLM",
+        "ICAO": "KLM",
+        "Color": "0x00A1E4",
+        "Image": "Assets/Images/AirlineLogos/KLM_logo.png"
+    },
+    "UAL": {
+        "Name": "United Airlines",
+        "ICAO": "UAL",
+        "Color": "0x1414D4",
+        "Image": "Assets/Images/AirlineLogos/KLM_logo.png"
+    },
+    "DAL": {
+        "Name": "Delta Airlines",
+        "ICAO": "DAL",
+        "Color": "0xE41C34",
+        "Image": "Assets/Images/AirlineLogos/DAL_logo.png"
+    },
+    "JBU": {
+        "Name": "JetBlue Airways",
+        "ICAO": "JBU",
+        "Color": "0x043C74",
+        "Image": "Assets/Images/AirlineLogos/JBU_Logo.png"
+    },
+    "BAW": {
+        "Name": "British Airways",
+        "ICAO": "BAW",
+        "Color": "0xCC3434",
+        "Image": "Assets/Images/AirlineLogos/BAW_Logo.png"
+    },
+    "QTR": {
+        "Name": "Qatar Airways",
+        "ICAO": "QTR",
+        "Color": "0x5C0434",
+        "Image": "Assets/Images/AirlineLogos/QTR_Logo.png"
+    },
+    "AZU": {
+        "Name": "Azul Airlines",
+        "ICAO": "AZU",
+        "Color": "0x70C6C6",
+        "Image": "Assets/Images/AirlineLogos/AZU_Logo.png"
+    },
+    "ASA": {
+        "Name": "Alaska Airlines",
+        "ICAO": "ASA",
+        "Color": "0x0C446B",
+        "Image": "Assets/Images/AirlineLogos/ASA_Logo.png"
+    },
+    "DLH": {
+        "Name": "Lufthansa",
+        "ICAO": "DLH",
+        "Color": "0x04245C",
+        "Image": "Assets/Images/AirlineLogos/DLH_Logo.png"
+    }
+}
