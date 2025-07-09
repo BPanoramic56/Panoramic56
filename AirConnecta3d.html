@@ -9,6 +9,7 @@
         margin: 0;
       }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/dat.gui@0.7.9/build/dat.gui.min.js"></script>
     <script type="importmap">
 			{
 				"imports": {
@@ -20,5 +21,22 @@
     <script type="module" src="AirConnecta3d.js"></script>
   </head>
   <body>
+    <div id="AirportInfoBox" style=" 
+            position: absolute;
+            top: 20px;
+            left: -400px;
+            width: 280px;
+            padding: 20px;
+            background: rgba(87, 87, 87, 0.8);
+            color: white;
+            font-family: sans-serif;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            transition: left 0.5s ease-in-out;
+            z-index: 1000;">
+            <p id="AirportName" style="font-size:x-large; text-decoration: underline;"></p>
+            <p id="AirportInformation1" style="font-size: medium; color: rgb(202, 202, 202);"></p>
+            <p id="AirportInformation2" style="font-size: medium; color: rgb(202, 202, 202);"></p>
+    </div>
   </body>
 </html>

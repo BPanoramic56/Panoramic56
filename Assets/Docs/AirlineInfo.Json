@@ -26,7 +26,7 @@
     "JBU": {
         "Name": "JetBlue Airways",
         "ICAO": "JBU",
-        "Color": "0x043C74",
+        "Color": "0x043c74",
         "Image": "Assets/Images/AirlineLogos/JBU_Logo.png"
     },
     "BAW": {
