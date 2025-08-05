@@ -17,6 +17,7 @@ let allFlights = new Map();
 let flightDensity = new Map();
 let airlineTabs = [];
 let airlineSelectionStart = 0;
+let operatorTabOpen = true;
 const itemsPerPage = 4;
 
 const params = {
@@ -64,6 +65,7 @@ function swapButtonStyle(buttonName){
 
 document.getElementById('getAirportInfoBtn').addEventListener('click', getAirportInfo);
 document.getElementById('closeAirportInfoBtn').addEventListener('click', closeAirportInfoBtn);
+document.getElementById('switchOperatorBtn').addEventListener('click', switchOperatorTab);
 
 document.getElementById('OperatorMainlineBtn').addEventListener('click',  () => {
     params["Mainline"] = !params["Mainline"];
@@ -114,6 +116,31 @@ scene.add(new THREE.HemisphereLight(0xffffff, 0x000000));
 
 let animationCount = 0;
  
+function switchOperatorTab(){
+    const sidebar = document.getElementById("AirConnectaOperatorSidebar");
+    const children = sidebar.children;
+
+    if (operatorTabOpen){
+        for (let i = 0; i < children.length; i++) {
+            if (children[i].id !== "switchOperatorBtn") {
+                children[i].style.display = "none";
+            }
+        }
+        document.getElementById("switchOperatorBtn").src = "Assets/Images/chevron_right.png";
+        operatorTabOpen = false;
+    }
+    else {
+
+        for (let i = 0; i < children.length; i++) {
+            if (children[i].id !== "switchOperatorBtn") {
+                children[i].style.display = "block";
+            }
+        }
+        document.getElementById("switchOperatorBtn").src = "Assets/Images/chevron_left.png";
+        operatorTabOpen = true;
+    }
+}
+
 function createAirlineButton(airline){
     const overDiv = document.createElement('div');
     const image = document.createElement('img');
@@ -550,6 +577,10 @@ function showOperatorSelection(airlineName) {
 function updateSelectedAirline(airlineName) {
     deleteFlightObjects();
     showOperatorSelection(airlineName);
+    
+    operatorTabOpen = false;
+    switchOperatorTab();
+
     const airlineInfo = allAirlineInfo[airlineName];
 
     if (allFlights.has(airlineName)) {
