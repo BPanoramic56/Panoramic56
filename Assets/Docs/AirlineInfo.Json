@@ -41,7 +41,7 @@
         "Name": "Air Canada",
         "ICAO": "ACA",
         "Color": "0xD82F2E",
-        "Image": "Assets/Images/AirlineLogos/ACA_logo.png",
+        "Image": "Assets/Images/AirlineLogos/ACA_Logo.png",
         "Callsign": "Air Canada \"Air Canada\"",
         "Regionals": [
             "JZA",
@@ -387,7 +387,7 @@
         "Name": "Delta Airlines",
         "ICAO": "DAL",
         "Color": "0xE41C34",
-        "Image": "Assets/Images/AirlineLogos/DAL_logo.png",
+        "Image": "Assets/Images/AirlineLogos/DAL_Logo.png",
         "Callsign": "Delta Air Lines \"Delta\"",
         "Regionals": [
             "EDV",
@@ -630,7 +630,7 @@
         "Name": "KLM",
         "ICAO": "KLM",
         "Color": "0x00A1E4",
-        "Image": "Assets/Images/AirlineLogos/KLM_logo.png",
+        "Image": "Assets/Images/AirlineLogos/KLM_Logo.png",
         "Callsign": "KLM \"KLM\"",
         "Regionals": [
             "TRA",
@@ -641,7 +641,7 @@
         "Name": "KLM Cityhopper",
         "ICAO": "KLC",
         "Color": "0x00A1E4",
-        "Image": "Assets/Images/AirlineLogos/KLM_logo.png",
+        "Image": "Assets/Images/AirlineLogos/KLM_Logo.png",
         "Callsign": "KLM Cityhopper \"City\""
     },
     "KAL": {
@@ -962,7 +962,7 @@
         "Name": "United Airlines",
         "ICAO": "UAL",
         "Color": "0x1414D4",
-        "Image": "Assets/Images/AirlineLogos/UAL_logo.png",
+        "Image": "Assets/Images/AirlineLogos/UAL_Logo.png",
         "Callsign": "United \"United\"",
         "Regionals": [
             "UCA",

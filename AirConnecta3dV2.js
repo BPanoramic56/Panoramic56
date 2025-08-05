@@ -271,7 +271,7 @@ function getAirportInfo(){
     const flights = allFlights.get(originAirportICAO);
 
     if (!flights){
-        console.log(`No flights available for airport: ${params["Airport"]}`)
+        console.warn(`No flights available for airport: ${params["Airport"]}`)
         return;
     }
 
@@ -507,7 +507,6 @@ function updateOperatorGrid(grid, operators){
     grid.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`;
     operators.forEach(operator => {
         const operatorColor = "#" +  allAirlineInfo[operator]["Color"].slice(2);
-        console.log(operatorColor);
         const img = document.createElement('img');
         img.className = 'Operator-Item';
         const imgSize = Math.max(100 - (count * 2), 40);
