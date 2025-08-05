@@ -19268,7 +19268,7 @@
         "icao": "OOKB",
         "latitude": 26.170833333333334,
         "longitude": 56.24055555555556,
-        "state": "KHS of Airport in OmanShow map of OmanKHSKHS (Persian Gulf)Show map of Persian GulfKHSKHS (Indian Ocean)Show map of Indian OceanKHSKHS (Middle East)Show map of Middle EastKHSKHS (West and Central Asia)Show map of West and Central AsiaKHSKHS (Asia)Show map of Asia"
+        "state": "Oman"
     },
     "OEAO": {
         "name": "Al-Ula International Airport",
@@ -19682,5 +19682,12 @@
         "latitude": 21.5157,
         "longitude": -71.5285,
         "state": "Turks and Caicos Islands - TC"
+    },
+    "LFSB": {
+        "name": "EuroAirport Basel Mulhouse Freiburg",
+        "icao": "LFSB",
+        "latitude": 47.59739732887267,
+        "longitude":  7.526389523925007,
+        "state": "Saint_Louis - France"
     }
 }

@@ -1,0 +1,28 @@
+[
+  {},
+  {
+    "airline": "DLH",
+    "flightNumber": 1,
+    "origin": "HAM",
+    "destination": "FRA",
+    "operator": "Lufthansa \"Lufthansa\"",
+    "aircraft": "Airbus A320 (twin-jet) (A320)"
+  },
+  {
+    "airline": "DLH",
+    "flightNumber": 2,
+    "origin": "FRA",
+    "destination": "HAM",
+    "operator": "Lufthansa \"Lufthansa\"",
+    "aircraft": "Airbus A321 (twin-jet) (A321)"
+  },
+  {
+    "airline": "DLH",
+    "flightNumber": 4,
+    "origin": "FRA",
+    "destination": "HAM",
+    "operator": "Lufthansa \"Lufthansa\"",
+    "aircraft": "Airbus A320neo (twin-jet) (A20N)"
+  },
+  {}
+]

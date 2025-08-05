@@ -1,62 +1,1382 @@
 {
-    "AAL": {
-        "Name": "American Airlines",
-        "ICAO": "AAL",
-        "Color": "0x36495A",
-        "Image": "Assets/Images/AirlineLogos/AAL_Logo.jpg"
+    "AEE": {
+        "Name": "Aegean Airlines",
+        "ICAO": "AEE",
+        "Color": "0x94A4D4",
+        "Image": "Assets/Images/AirlineLogos/AEE_Logo.png",
+        "Callsign": "Aegean Airlines \"Aegean\""
     },
-    "KLM": {
-        "Name": "KLM",
-        "ICAO": "KLM",
-        "Color": "0x00A1E4",
-        "Image": "Assets/Images/AirlineLogos/KLM_logo.png"
+    "EIN": {
+        "Name": "Aer Lingus",
+        "ICAO": "EIN",
+        "Color": "0x008274",
+        "Image": "Assets/Images/AirlineLogos/EIN_Logo.png",
+        "Callsign": "Aer Lingus \"Shamrock\""
     },
-    "UAL": {
-        "Name": "United Airlines",
-        "ICAO": "UAL",
-        "Color": "0x1414D4",
-        "Image": "Assets/Images/AirlineLogos/KLM_logo.png"
+    "ARG": {
+        "Name": "Aerolineas Argentinas",
+        "ICAO": "ARG",
+        "Color": "0x0484CC",
+        "Image": "Assets/Images/AirlineLogos/ARG_Logo.png",
+        "Callsign": "Aerolineas Argentinas \"Argentina\""
     },
-    "DAL": {
-        "Name": "Delta Airlines",
-        "ICAO": "DAL",
-        "Color": "0xE41C34",
-        "Image": "Assets/Images/AirlineLogos/DAL_logo.png"
+    "AMX": {
+        "Name": "AeroMexico",
+        "ICAO": "AMX",
+        "Color": "0x040444",
+        "Image": "Assets/Images/AirlineLogos/AMX_Logo.png",
+        "Callsign": "AeroM\u00e9xico \"Aeromexico\"",
+        "Regionals": [
+            "SLI"
+        ]
     },
-    "JBU": {
-        "Name": "JetBlue Airways",
-        "ICAO": "JBU",
-        "Color": "0x043c74",
-        "Image": "Assets/Images/AirlineLogos/JBU_Logo.png"
+    "SLI": {
+        "Name": "AeroMexico Connect",
+        "ICAO": "SLI",
+        "Color": "0x040444",
+        "Image": "Assets/Images/AirlineLogos/AMX_Logo.png",
+        "Callsign": "Aeroméxico Connect \"Costera\""
     },
-    "BAW": {
-        "Name": "British Airways",
-        "ICAO": "BAW",
-        "Color": "0xCC3434",
-        "Image": "Assets/Images/AirlineLogos/BAW_Logo.png"
+    "ACA": {
+        "Name": "Air Canada",
+        "ICAO": "ACA",
+        "Color": "0xD82F2E",
+        "Image": "Assets/Images/AirlineLogos/ACA_logo.png",
+        "Callsign": "Air Canada \"Air Canada\"",
+        "Regionals": [
+            "JZA",
+            "PVL",
+            "ROU"
+        ]
     },
-    "QTR": {
-        "Name": "Qatar Airways",
-        "ICAO": "QTR",
-        "Color": "0x5C0434",
-        "Image": "Assets/Images/AirlineLogos/QTR_Logo.png"
+    "ROU": {
+        "Name": "Air Canada Rouge",
+        "ICAO": "ROU",
+        "Color": "0xA40C34",
+        "Image": "Assets/Images/AirlineLogos/ROU_Logo.png",
+        "Callsign": "Air Canada Rouge \"ROUGE\""
     },
-    "AZU": {
-        "Name": "Azul Airlines",
-        "ICAO": "AZU",
-        "Color": "0x70C6C6",
-        "Image": "Assets/Images/AirlineLogos/AZU_Logo.png"
+    "CCA": {
+        "Name": "Air China",
+        "ICAO": "CCA",
+        "Color": "0xED1C24",
+        "Image": "Assets/Images/AirlineLogos/CCA_Logo.png",
+        "Callsign": "Air China \"Air China\""
+    },
+    "DLA": {
+        "Name": "Air Dolomiti",
+        "ICAO": "DLA",
+        "Color": "0x048C8C",
+        "Image": "Assets/Images/AirlineLogos/DLA_Logo.png",
+        "Callsign": "Air Dolomiti \"Dolomiti\""
+    },
+    "AEA": {
+        "Name": "Air Europa",
+        "ICAO": "AEA",
+        "Color": "0x047CC4",
+        "Image": "Assets/Images/AirlineLogos/AEA_Logo.png",
+        "Callsign": "Air Europa \"Europa\"",
+        "Regionals": [
+            "OVA"
+        ]
+    },
+    "OVA": {
+        "Name": "Air Europa Express",
+        "ICAO": "OVA",
+        "Color": "0x047CC4",
+        "Image": "Assets/Images/AirlineLogos/OVA_Logo.png",
+        "Callsign": "Air Europa Express \"Aeronova\""
+    },
+    "AFR": {
+        "Name": "Air France",
+        "ICAO": "AFR",
+        "Color": "0xAB0414",
+        "Image": "Assets/Images/AirlineLogos/AFR_Logo.png",
+        "Callsign": "Air France \"Airfrance\"",
+        "Regionals": [
+            "HOP"
+        ]
+    },
+    "HOP": {
+        "Name": "Air France Hop",
+        "ICAO": "HOP",
+        "Color": "0xC4041B",
+        "Image": "Assets/Images/AirlineLogos/HOP_Logo.png",
+        "Callsign": "HOP! \"Air Hop\""
+    },
+    "AJX": {
+        "Name": "Air Japan",
+        "ICAO": "AJX",
+        "Color": "0xEC8C84",
+        "Image": "Assets/Images/AirlineLogos/AJX_Logo.png",
+        "Callsign": "Air Japan \"Air Japan\""
+    },
+    "ANZ": {
+        "Name": "Air New Zealand",
+        "ICAO": "ANZ",
+        "Color": "0x231f20",
+        "Image": "Assets/Images/AirlineLogos/ANZ_Logo.png",
+        "Callsign": "Air New Zealand \"New Zealand\""
+    },
+    "ANE": {
+        "Name": "Air Nostrum",
+        "ICAO": "ANE",
+        "Color": "0x1C5CAC",
+        "Image": "Assets/Images/AirlineLogos/ANE_Logo.png",
+        "Callsign": "Air Nostrum \"NOSTRU AIR\""
+    },
+    "THT": {
+        "Name": "Air Tahiti Nui",
+        "ICAO": "THT",
+        "Color": "0x2CCCD4",
+        "Image": "Assets/Images/AirlineLogos/THT_Logo.png",
+        "Callsign": "Air Tahiti Nui \"Tahiti Airlines\""
+    },
+    "AWI": {
+        "Name": "Air Wisconsin",
+        "ICAO": "AWI",
+        "Color": "0x645C24",
+        "Image": "Assets/Images/AirlineLogos/AWI_Logo.png",
+        "Callsign": "Air Wisconsin \"WISCONSIN\""
+    },
+    "BTI": {
+        "Name": "airBaltic",
+        "ICAO": "BTI",
+        "Color": "0xCBDB34",
+        "Image": "Assets/Images/AirlineLogos/BTI_Logo.png",
+        "Callsign": "Air Baltic \"Airbaltic\""
     },
     "ASA": {
         "Name": "Alaska Airlines",
         "ICAO": "ASA",
         "Color": "0x0C446B",
-        "Image": "Assets/Images/AirlineLogos/ASA_Logo.png"
+        "Image": "Assets/Images/AirlineLogos/ASA_Logo.png",
+        "Callsign": "Alaska Airlines \"Alaska\"",
+        "Regionals": [
+            "QXE",
+            "SKW"
+        ]
+    },
+    "ANA": {
+        "Name": "All Nippon Airways",
+        "ICAO": "ANA",
+        "Color": "0x0C338C",
+        "Image": "Assets/Images/AirlineLogos/ANA_Logo.png",
+        "Callsign": "All Nippon \"All Nippon\"",
+        "Regionals": [
+            "AJX",
+            "AKX"
+        ]
+    },
+    "UTY": {
+        "Name": "Alliance Airlines",
+        "ICAO": "UTY",
+        "Color": "0xFCBC24",
+        "Image": "Assets/Images/AirlineLogos/UTY_Logo.png",
+        "Callsign": "Alliance Airlines \"Unity\""
+    },
+    "AAL": {
+        "Name": "American Airlines",
+        "ICAO": "AAL",
+        "Color": "0x36495A",
+        "Image": "Assets/Images/AirlineLogos/AAL_Logo.png",
+        "Callsign": "American Airlines \"American\"",
+        "Regionals": [
+            "JIA",
+            "JIA",
+            "ENY",
+            "SKW"
+        ]
+    },
+    "AKX": {
+        "Name": "ANA Wings",
+        "ICAO": "AKX",
+        "Color": "0x0C338C",
+        "Image": "Assets/Images/AirlineLogos/AKX_Logo.png",
+        "Callsign": "ANA Wings \"Alpha Wing\""
+    },
+    "AAR": {
+        "Name": "Asiana Airlines",
+        "ICAO": "AAR",
+        "Color": "0xC21E3F",
+        "Image": "Assets/Images/AirlineLogos/AAR_Logo.png",
+        "Callsign": "Asiana \"Asiana\""
+    },
+    "AUA": {
+        "Name": "Austrian Airlines",
+        "ICAO": "AUA",
+        "Color": "0xD41C04",
+        "Image": "Assets/Images/AirlineLogos/AUA_Logo.png",
+        "Callsign": "Austrian Airlines \"Austrian\""
+    },
+    "AVA": {
+        "Name": "Avianca",
+        "ICAO": "AVA",
+        "Color": "0xDA291C",
+        "Image": "Assets/Images/AirlineLogos/AVA_Logo.png",
+        "Callsign": "Avianca \"Avianca\"",
+        "Regionals": [
+            "TAI"
+        ]
+    },
+    "TAI": {
+        "Name": "Avianca El Salvador",
+        "ICAO": "TAI",
+        "Color": "0xDA291C",
+        "Image": "Assets/Images/AirlineLogos/AVA_Logo.png",
+        "Callsign": "Avianca El Salvador \"TACA\""
+    },
+    "GLG": {
+        "Name": "Avianca Ecuador",
+        "ICAO": "GLG",
+        "Color": "0xDA291C",
+        "Image": "Assets/Images/AirlineLogos/AVA_Logo.png",
+        "Callsign": "Avianca Ecuador \"Avianca-Ecuador\""
+    },
+    "LRC": {
+        "Name": "Avianca Costa Rica",
+        "ICAO": "LRC",
+        "Color": "0xDA291C",
+        "Image": "Assets/Images/AirlineLogos/AVA_Logo.png",
+        "Callsign": "Avianca Costa Rica \"Lacsa\""
+    },
+    "NVD": {
+        "Name": "Avion Express",
+        "ICAO": "NVD",
+        "Color": "0x044CA4",
+        "Image": "Assets/Images/AirlineLogos/NVD_Logo.png",
+        "Callsign": "Avion Express"
+    },
+    "AZU": {
+        "Name": "Azul Airlines",
+        "ICAO": "AZU",
+        "Color": "0x70C6C6",
+        "Image": "Assets/Images/AirlineLogos/AZU_Logo.png",
+        "Callsign": "Azul Brazilian Airlines \"AZUL BLUEBIRD\"",
+        "Regionals": [
+            "ACN"
+        ]
+    },
+    "CFE": {
+        "Name": "BA CityFlyer",
+        "ICAO": "CFE",
+        "Color": "0xDC043C",
+        "Image": "Assets/Images/AirlineLogos/BAW_Logo.png",
+        "Callsign": "BA CityFlyer \"Flyer\""
+    },
+    "EFW": {
+        "Name": "BA Euroflyer",
+        "ICAO": "EFW",
+        "Color": "0xDC043C",
+        "Image": "Assets/Images/AirlineLogos/BAW_Logo.png",
+        "Callsign": "BA Euroflyer \"GRIFFIN\""
+    },
+    "BKP": {
+        "Name": "Bangkok Airways",
+        "ICAO": "BKP",
+        "Color": "0x0C149C",
+        "Image": "Assets/Images/AirlineLogos/BKP_Logo.png",
+        "Callsign": "Bangkok \"Bangkok Air\""
+    },
+    "BRX": {
+        "Name": "Braathens Regional Airways",
+        "ICAO": "BRX",
+        "Color": "0xA8AAAD",
+        "Image": "Assets/Images/AirlineLogos/BRX_Logo.png",
+        "Callsign": "Braathens Regional Airways \"Braathens\""
+    },
+    "BAW": {
+        "Name": "British Airways",
+        "ICAO": "BAW",
+        "Color": "0xCC3434",
+        "Image": "Assets/Images/AirlineLogos/BAW_Logo.png",
+        "Callsign": "British Airways \"Speedbird\"",
+        "Regionals": [
+            "EFW",
+            "CFE"
+        ]
+    },
+    "BEL": {
+        "Name": "Brussels Airlines",
+        "ICAO": "BEL",
+        "Color": "0xE4042C",
+        "Image": "Assets/Images/AirlineLogos/BEL_Logo.png",
+        "Callsign": "Brussels Airlines \"BEELINE\""
+    },
+    "KAP": {
+        "Name": "Cape Air",
+        "ICAO": "KAP",
+        "Color": "0xA8AAAB",
+        "Image": "Assets/Images/AirlineLogos/KAP_Logo.png",
+        "Callsign": "Cape Air \"Cair\""
+    },
+    "KRP": {
+        "Name": "Carpatair",
+        "ICAO": "KRP",
+        "Color": "0x048464",
+        "Image": "Assets/Images/AirlineLogos/KRP_Logo.png",
+        "Callsign": "Carpatair"
+    },
+    "CPA": {
+        "Name": "Cathay Pacific",
+        "ICAO": "CPA",
+        "Color": "0x005D63",
+        "Image": "Assets/Images/AirlineLogos/CPA_Logo.png",
+        "Callsign": "Cathay Pacific \"Cathay\""
+    },
+    "GLR": {
+        "Name": "Central Mountain Air",
+        "ICAO": "GLR",
+        "Color": "0xE4241C",
+        "Image": "Assets/Images/AirlineLogos/GLR_Logo.png",
+        "Callsign": "Central Mountain \"Glacier\""
+    },
+    "CAL": {
+        "Name": "China Airlines",
+        "ICAO": "CAL",
+        "Color": "0xE9AFB8",
+        "Image": "Assets/Images/AirlineLogos/CAL_Logo.png",
+        "Callsign": "China Airlines \"DYNASTY\""
+    },
+    "CES": {
+        "Name": "China Eastern Airlines",
+        "ICAO": "CES",
+        "Color": "0xD70819",
+        "Image": "Assets/Images/AirlineLogos/CES_Logo.png",
+        "Callsign": "China Eastern \"China Eastern\"",
+        "Regionals": [
+            "CSH"
+        ]
+    },
+    "CSN": {
+        "Name": "China Southern Airlines",
+        "ICAO": "CSN",
+        "Color": "0x0494D4",
+        "Image": "Assets/Images/AirlineLogos/CSN_Logo.png",
+        "Callsign": "China Southern Airlines \"China Southern\""
+    },
+    "BCY": {
+        "Name": "CityJet",
+        "ICAO": "BCY",
+        "Color": "0x80684B",
+        "Image": "Assets/Images/AirlineLogos/BCY_Logo.png",
+        "Callsign": "Cityjet \"City-Ireland\""
+    },
+    "UCA": {
+        "Name": "CommuteAir",
+        "ICAO": "UCA",
+        "Color": "0x4AB9E9",
+        "Image": "Assets/Images/AirlineLogos/UCA_Logo.png",
+        "Callsign": "CommuteAir \"Commuteair\""
+    },
+    "CFG": {
+        "Name": "Condor",
+        "ICAO": "CFG",
+        "Color": "0x040404",
+        "Image": "Assets/Images/AirlineLogos/CFG_Logo.png",
+        "Callsign": "Condor \"Condor\""
+    },
+    "CTN": {
+        "Name": "Croatia Airlines",
+        "ICAO": "CTN",
+        "Color": "0xC40414",
+        "Image": "Assets/Images/AirlineLogos/CTN_Logo.png",
+        "Callsign": "Croatia Airlines \"Croatia\""
+    },
+    "DAL": {
+        "Name": "Delta Airlines",
+        "ICAO": "DAL",
+        "Color": "0xE41C34",
+        "Image": "Assets/Images/AirlineLogos/DAL_logo.png",
+        "Callsign": "Delta Air Lines \"Delta\"",
+        "Regionals": [
+            "EDV",
+            "RPA",
+            "SKW"
+        ]
+    },
+    "OCN": {
+        "Name": "Discover Airlines",
+        "ICAO": "OCN",
+        "Color": "0x3F8DCC",
+        "Image": "Assets/Images/AirlineLogos/OCN_Logo.png",
+        "Callsign": "Discover \"Ocean\""
+    },
+    "EDW": {
+        "Name": "Edelweiss Air",
+        "ICAO": "EDW",
+        "Color": "0xCC0C2C",
+        "Image": "Assets/Images/AirlineLogos/EDW_Logo.png",
+        "Callsign": "Edelweiss Air AG \"Edelweiss\""
+    },
+    "MSR": {
+        "Name": "Egypt Air",
+        "ICAO": "MSR",
+        "Color": "0x04245C",
+        "Image": "Assets/Images/AirlineLogos/MSR_Logo.png",
+        "Callsign": "Egypt Air \"Egyptair\""
+    },
+    "ELY": {
+        "Name": "El Al",
+        "ICAO": "ELY",
+        "Color": "0x1C3494",
+        "Image": "Assets/Images/AirlineLogos/ELY_Logo.png",
+        "Callsign": "El Al \"Elal\""
+    },
+    "EAI": {
+        "Name": "Emerald Airlines",
+        "ICAO": "EAI",
+        "Color": "0x2D695C",
+        "Image": "Assets/Images/AirlineLogos/EAI_Logo.png",
+        "Callsign": "Emerald Airlines \"Gemstone\""
+    },
+    "UAE": {
+        "Name": "Emirates",
+        "ICAO": "UAE",
+        "Color": "0xD42424",
+        "Image": "Assets/Images/AirlineLogos/UAE_Logo.png",
+        "Callsign": "Emirates \"Emirates\""
+    },
+    "EDV": {
+        "Name": "Endeavor Air",
+        "ICAO": "EDV",
+        "Color": "0xCC1C2C",
+        "Image": "Assets/Images/AirlineLogos/EDV_Logo.png",
+        "Callsign": "Endeavor Air \"Endeavor\""
+    },
+    "ENY": {
+        "Name": "Envoy Air",
+        "ICAO": "ENY",
+        "Color": "0x240C64",
+        "Image": "Assets/Images/AirlineLogos/ENY_Logo.png",
+        "Callsign": "Envoy Air \"Envoy\""
+    },
+    "ETH": {
+        "Name": "Ethiopian Airlines",
+        "ICAO": "ETH",
+        "Color": "0xC32434",
+        "Image": "Assets/Images/AirlineLogos/ETH_Logo.png",
+        "Callsign": "Ethiopian Airlines \"Ethiopian\""
+    },
+    "ETD": {
+        "Name": "Etihad Airways",
+        "ICAO": "ETD",
+        "Color": "0xD3831C",
+        "Image": "Assets/Images/AirlineLogos/ETD_Logo.png",
+        "Callsign": "Etihad Airways \"ETIHAD\""
+    },
+    "EWG": {
+        "Name": "Eurowings",
+        "ICAO": "EWG",
+        "Color": "0x8C144C",
+        "Image": "Assets/Images/AirlineLogos/EWG_Logo.png",
+        "Callsign": "Eurowings \"Eurowings\""
+    },
+    "EVA": {
+        "Name": "EVA Air",
+        "ICAO": "EVA",
+        "Color": "0x049B44",
+        "Image": "Assets/Images/AirlineLogos/EVA_Logo.png",
+        "Callsign": "EVA Air \"Eva\""
+    },
+    "FJI": {
+        "Name": "Fiji Airways",
+        "ICAO": "FJI",
+        "Color": "0x2C1C14",
+        "Image": "Assets/Images/AirlineLogos/FJI_Logo.png",
+        "Callsign": "Fiji Airways \"Fiji\""
+    },
+    "FIN": {
+        "Name": "Finnair",
+        "ICAO": "FIN",
+        "Color": "0x040842",
+        "Image": "Assets/Images/AirlineLogos/FIN_Logo.png",
+        "Callsign": "Finnair \"Finnair\""
+    },
+    "FDB": {
+        "Name": "FlyDubai",
+        "ICAO": "FDB",
+        "Color": "0x346CAC",
+        "Image": "Assets/Images/AirlineLogos/FDB_Logo.png",
+        "Callsign": "FlyDubai"
+    },
+    "GER": {
+        "Name": "German Airways",
+        "ICAO": "GER",
+        "Color": "0xB41C3C",
+        "Image": "Assets/Images/AirlineLogos/GER_Logo.png",
+        "Callsign": "German Airways \"German Eagle\""
+    },
+    "GJS": {
+        "Name": "GoJet Airlines",
+        "ICAO": "GJS",
+        "Color": "0x3376BB",
+        "Image": "Assets/Images/AirlineLogos/GJS_Logo.png",
+        "Callsign": "GoJet \"Lindbergh\""
+    },
+    "GLO": {
+        "Name": "Gol Airlines",
+        "ICAO": "GLO",
+        "Color": "0xFC7323",
+        "Image": "Assets/Images/AirlineLogos/GLO_Logo.png",
+        "Callsign": "GOL Linhas A\u00e9reas Inteligentes \"GOL\""
+    },
+    "HAL": {
+        "Name": "Hawaiian Airlines",
+        "ICAO": "HAL",
+        "Color": "0x86278B",
+        "Image": "Assets/Images/AirlineLogos/HAL_Logo.png",
+        "Callsign": "Hawaiian Airlines \"Hawaiian\""
+    },
+    "OAW": {
+        "Name": "Helvetic Airways",
+        "ICAO": "OAW",
+        "Color": "0xE4241C",
+        "Image": "Assets/Images/AirlineLogos/OAW_Logo.png",
+        "Callsign": "Helvetic"
+    },
+    "QXE": {
+        "Name": "Horizon Air",
+        "ICAO": "QXE",
+        "Color": "0x5BA6CA",
+        "Image": "Assets/Images/AirlineLogos/QXE_Logo.png",
+        "Callsign": "Horizon \"Horizon Air\""
+    },
+    "IBE": {
+        "Name": "Iberia",
+        "ICAO": "IBE",
+        "Color": "0xB11C25",
+        "Image": "Assets/Images/AirlineLogos/IBE_Logo.png",
+        "Callsign": "Iberia \"Iberia\""
+    },
+    "IBS": {
+        "Name": "Iberia Express",
+        "ICAO": "IBS",
+        "Color": "0xB5141C",
+        "Image": "Assets/Images/AirlineLogos/IBS_Logo.png",
+        "Callsign": "Iberia Express \"Iberexpres\""
+    },
+    "ICE": {
+        "Name": "Icelandair",
+        "ICAO": "ICE",
+        "Color": "0x041C74",
+        "Image": "Assets/Images/AirlineLogos/ICE_Logo.png",
+        "Callsign": "Icelandair \"Iceair\""
+    },
+    "IGO": {
+        "Name": "IndiGo",
+        "ICAO": "IGO",
+        "Color": "0x001B94",
+        "Image": "Assets/Images/AirlineLogos/IGO_Logo.png",
+        "Callsign": "IndiGO \"IFLY\""
+    },
+    "ITY": {
+        "Name": "ITA Airways",
+        "ICAO": "ITY",
+        "Color": "0x046444",
+        "Image": "Assets/Images/AirlineLogos/ITY_Logo.png",
+        "Callsign": "ITA Airways \"Itarrow\""
+    },
+    "JAL": {
+        "Name": "Japan Airlines",
+        "ICAO": "JAL",
+        "Color": "0xCC0000",
+        "Image": "Assets/Images/AirlineLogos/JAL_Logo.png",
+        "Callsign": "Japan Airlines \"Japanair\""
+    },
+    "JZA": {
+        "Name": "Jazz Aviation",
+        "ICAO": "JZA",
+        "Color": "0xC64434",
+        "Image": "Assets/Images/AirlineLogos/JZA_Logo.png",
+        "Callsign": "Jazz \"Jazz\""
+    },
+    "JBU": {
+        "Name": "JetBlue Airways",
+        "ICAO": "JBU",
+        "Color": "0x043c74",
+        "Image": "Assets/Images/AirlineLogos/JBU_Logo.png",
+        "Callsign": "JetBlue \"JetBlue\""
+    },
+    "JAT": {
+        "Name": "JetSmart",
+        "ICAO": "JAT",
+        "Color": "0x143C6C",
+        "Image": "Assets/Images/AirlineLogos/JAT_Logo.png",
+        "Callsign": "JetSMART \"Rocksmart\""
+    },
+    "JST": {
+        "Name": "Jetstar",
+        "ICAO": "JST",
+        "Color": "0xFC5414",
+        "Image": "Assets/Images/AirlineLogos/JJP_Logo.png",
+        "Callsign": "Jetstar \"Jetstar\""
+    },
+    "JJP": {
+        "Name": "Jetstar Japan",
+        "ICAO": "JJP",
+        "Color": "0xFC5414",
+        "Image": "Assets/Images/AirlineLogos/JJP_Logo.png",
+        "Callsign": "Jetstar Japan \"Orange Liner\""
+    },
+    "KQA": {
+        "Name": "Kenya Airways",
+        "ICAO": "KQA",
+        "Color": "0xEC1C24",
+        "Image": "Assets/Images/AirlineLogos/KQA_Logo.png",
+        "Callsign": "Kenya Airways \"Kenya\""
+    },
+    "KLM": {
+        "Name": "KLM",
+        "ICAO": "KLM",
+        "Color": "0x00A1E4",
+        "Image": "Assets/Images/AirlineLogos/KLM_logo.png",
+        "Callsign": "KLM \"KLM\"",
+        "Regionals": [
+            "TRA",
+            "KLC"
+        ]
+    },
+    "KLC": {
+        "Name": "KLM Cityhopper",
+        "ICAO": "KLC",
+        "Color": "0x00A1E4",
+        "Image": "Assets/Images/AirlineLogos/KLM_logo.png",
+        "Callsign": "KLM Cityhopper \"City\""
+    },
+    "KAL": {
+        "Name": "Korean Air",
+        "ICAO": "KAL",
+        "Color": "0x041464",
+        "Image": "Assets/Images/AirlineLogos/KAL_Logo.png",
+        "Callsign": "Korean Air \"Koreanair\""
+    },
+    "LAN": {
+        "Name": "LATAM",
+        "ICAO": "LAN",
+        "Color": "0x1C048C",
+        "Image": "Assets/Images/AirlineLogos/LAN_Logo.png",
+        "Callsign": "LATAM \"LAN Chile\"",
+        "Regionals": [
+            "TAM",
+            "LAP",
+            "ARE",
+            "LNE",
+            "LPE"
+        ]
+    },
+    "TAM": {
+        "Name": "LATAM Airlines Brasil",
+        "ICAO": "TAM",
+        "Color": "0x1C048C",
+        "Image": "Assets/Images/AirlineLogos/LAN_Logo.png",
+        "Callsign": "LATAM Brasil \"Tam\""
+    },
+    "LAP": {
+        "Name": "LATAM Paraguay",
+        "ICAO": "LAP",
+        "Color": "0x1C048C",
+        "Image": "Assets/Images/AirlineLogos/LAN_Logo.png",
+        "Callsign": "LATAM Paraguay \"Paraguaya\""
+    },
+    "ARE": {
+        "Name": "LATAM Airlines Colombia",
+        "ICAO": "ARE",
+        "Color": "0x1C048C",
+        "Image": "Assets/Images/AirlineLogos/LAN_Logo.png",
+        "Callsign": "LATAM Colombia \"Lan Colombia\""
+    },
+    "LNE": {
+        "Name": "LATAM Airlines Ecuador",
+        "ICAO": "LNE",
+        "Color": "0x1C048C",
+        "Image": "Assets/Images/AirlineLogos/LAN_Logo.png",
+        "Callsign": "LATAM Airlines Ecuador \"Aerolane\""
+    },
+    "LPE": {
+        "Name": "LATAM Airlines Peru",
+        "ICAO": "LPE",
+        "Color": "0x2C048C",
+        "Image": "Assets/Images/AirlineLogos/LAN_Logo.png",
+        "Callsign": "LATAM Peru \"Lanperu\""
+    },
+    "LOG": {
+        "Name": "Loganair",
+        "ICAO": "LOG",
+        "Color": "0x2D695C",
+        "Image": "Assets/Images/AirlineLogos/LOG_Logo.png",
+        "Callsign": "Loganair \"Logan\""
+    },
+    "LOT": {
+        "Name": "LOT Polish Airlines",
+        "ICAO": "LOT",
+        "Color": "0x1C2C5C",
+        "Image": "Assets/Images/AirlineLogos/LOT_Logo.png",
+        "Callsign": "LOT Polish Airlines \"Lot\""
     },
     "DLH": {
         "Name": "Lufthansa",
         "ICAO": "DLH",
-        "Color": "0x04245C",
-        "Image": "Assets/Images/AirlineLogos/DLH_Logo.png"
+        "Color": "0xf4b53f",
+        "Image": "Assets/Images/AirlineLogos/DLH_Logo.png",
+        "Callsign": "Lufthansa \"Lufthansa\"",
+        "Regionals": [
+            "DLA",
+            "AUA",
+            "BEL",
+            "EWG",
+            "CLH",
+            "SWR",
+            "EDW",
+            "GEC"
+        ]
+    },
+    "GEC": {
+        "Name": "Lufthansa Cargo",
+        "ICAO": "GEC",
+        "Color": "0xf4b53f",
+        "Image": "Assets/Images/AirlineLogos/DLH_Logo.png",
+        "Callsign": "Lufthansa Cargo \"Lufthansa Cargo\""
+    },
+    "CLH": {
+        "Name": "Lufthansa Cityline",
+        "ICAO": "CLH",
+        "Color": "0x04144C",
+        "Image": "Assets/Images/AirlineLogos/CLH_Logo.png",
+        "Callsign": "Lufthansa Cityline \"Hansaline\""
+    },
+    "MAS": {
+        "Name": "Malaysia Airlines",
+        "ICAO": "MAS",
+        "Color": "0x002B5C",
+        "Image": "Assets/Images/AirlineLogos/MAS_Logo.png",
+        "Callsign": "Malaysia Airlines \"Malaysian\""
+    },
+    "ASH": {
+        "Name": "Mesa Airlines",
+        "ICAO": "ASH",
+        "Color": "0xDADDDD",
+        "Image": "Assets/Images/AirlineLogos/ASH_Logo.png",
+        "Callsign": "Mesa \"Air Shuttle\""
+    },
+    "MEA": {
+        "Name": "Middle East Airlines",
+        "ICAO": "MEA",
+        "Color": "0x047C5C",
+        "Image": "Assets/Images/AirlineLogos/MEA_Logo.png",
+        "Callsign": "Middle East Airlines - Air Liban \"Cedar Jet\""
+    },
+    "OMA": {
+        "Name": "Oman Air",
+        "ICAO": "OMA",
+        "Color": "0xB5985A",
+        "Image": "Assets/Images/AirlineLogos/OMA_Logo.png",
+        "Callsign": "Oman Air \"Oman Air\""
+    },
+    "GAP": {
+        "Name": "PAL Express",
+        "ICAO": "GAP",
+        "Color": "0xF2A83B",
+        "Image": "Assets/Images/AirlineLogos/PAL_Logo.png",
+        "Callsign": "PAL Express \"AIRPHIL\""
+    },
+    "PAL": {
+        "Name": "Philippine Air Lines",
+        "ICAO": "PAL",
+        "Color": "0xFC0404",
+        "Image": "Assets/Images/AirlineLogos/PAL_Logo.png",
+        "Callsign": "Philippine Air Lines \"Philippine\"",
+        "Regionals": [
+            "GAP"
+        ]
+    },
+    "PDT": {
+        "Name": "Piedmont Airlines",
+        "ICAO": "PDT",
+        "Color": "0x045C9C",
+        "Image": "Assets/Images/AirlineLogos/PDT_Logo.png",
+        "Callsign": "Piedmont \"Piedmont\""
+    },
+    "PGA": {
+        "Name": "Portugalia Airlines",
+        "ICAO": "PGA",
+        "Color": "0x9AD32C",
+        "Image": "Assets/Images/AirlineLogos/PGA_Logo.png",
+        "Callsign": "Portugalia \"Portugalia\""
+    },
+    "JIA": {
+        "Name": "PSA Airlines",
+        "ICAO": "JIA",
+        "Color": "0x0AA5DE",
+        "Image": "Assets/Images/AirlineLogos/JIA_Logo.png",
+        "Callsign": "PSA Airlines \"Blue Streak\""
+    },
+    "QFA": {
+        "Name": "Qantas",
+        "ICAO": "QFA",
+        "Color": "0xBE0000",
+        "Image": "Assets/Images/AirlineLogos/QFA_Logo.png",
+        "Callsign": "Qantas \"Qantas\"",
+        "Regionals": [
+            "QLK",
+            "JST"
+        ]
+    },
+    "QLK": {
+        "Name": "QantasLink",
+        "ICAO": "QLK",
+        "Color": "0xE40404",
+        "Image": "Assets/Images/AirlineLogos/QLK_Logo.png",
+        "Callsign": "QantasLink \"Q-Link\""
+    },
+    "QTR": {
+        "Name": "Qatar Airways",
+        "ICAO": "QTR",
+        "Color": "0x5C0434",
+        "Image": "Assets/Images/AirlineLogos/QTR_Logo.png",
+        "Callsign": "Qatar Airways \"Qatari\""
+    },
+    "RPA": {
+        "Name": "Republic Airways",
+        "ICAO": "RPA",
+        "Color": "0x04243C",
+        "Image": "Assets/Images/AirlineLogos/RPA_Logo.png",
+        "Callsign": "Republic \"Brickyard\""
+    },
+    "RAM": {
+        "Name": "Royal Air Maroc",
+        "ICAO": "RAM",
+        "Color": "0xC2002F",
+        "Image": "Assets/Images/AirlineLogos/RAM_Logo.png",
+        "Callsign": "Royal Air Maroc \"Royalair Maroc\""
+    },
+    "RJA": {
+        "Name": "Royal Jordanian",
+        "ICAO": "RJA",
+        "Color": "0xB48C4C",
+        "Image": "Assets/Images/AirlineLogos/RJA_Logo.png",
+        "Callsign": "Royal Jordanian \"Jordanian\""
+    },
+    "SVA": {
+        "Name": "Saudia",
+        "ICAO": "SVA",
+        "Color": "0x046434",
+        "Image": "Assets/Images/AirlineLogos/SVA_Logo.png",
+        "Callsign": "Saudia \"Saudia\""
+    },
+    "SAS": {
+        "Name": "Scandinavian Airlines",
+        "ICAO": "SAS",
+        "Color": "0x040444",
+        "Image": "Assets/Images/AirlineLogos/SAS_Logo.png",
+        "Callsign": "SAS \"Scandi\""
+    },
+    "TGW": {
+        "Name": "Scoot",
+        "ICAO": "TGW",
+        "Color": "0xFCEC04",
+        "Image": "Assets/Images/AirlineLogos/TGW_Logo.png",
+        "Callsign": "Scoot \"Scooter\""
+    },
+    "CSH": {
+        "Name": "Shanghai Airlines",
+        "ICAO": "CSH",
+        "Color": "0xDC043C",
+        "Image": "Assets/Images/AirlineLogos/CSH_Logo.png",
+        "Callsign": "Shanghai Airlines \"Shanghai Air\""
+    },
+    "SIA": {
+        "Name": "Singapore Airlines",
+        "ICAO": "SIA",
+        "Color": "0xFCA404",
+        "Image": "Assets/Images/AirlineLogos/SIA_Logo.png",
+        "Callsign": "Singapore Airlines \"Singapore\"",
+        "Regionals": [
+            "TGW"
+        ]
+    },
+    "SKW": {
+        "Name": "SkyWest Airlines",
+        "ICAO": "SKW",
+        "Color": "0x04549C",
+        "Image": "Assets/Images/AirlineLogos/SKW_Logo.png",
+        "Callsign": "SkyWest \"SkyWest\""
+    },
+    "LNK": {
+        "Name": "South African Airlink",
+        "ICAO": "LNK",
+        "Color": "0xE4AE5C",
+        "Image": "Assets/Images/AirlineLogos/LNK_Logo.png",
+        "Callsign": "South African Airlink \"Link\""
+    },
+    "SWA": {
+        "Name": "Southwest Airlines",
+        "ICAO": "SWA",
+        "Color": "0x2C4299",
+        "Image": "Assets/Images/AirlineLogos/SWA_Logo.png",
+        "Callsign": "Southwest \"Southwest\""
+    },
+    "ALK": {
+        "Name": "SriLankan Airlines",
+        "ICAO": "ALK",
+        "Color": "0xDC001C",
+        "Image": "Assets/Images/AirlineLogos/ALK_Logo.png",
+        "Callsign": "SriLankan Airlines \"SRILANKAN\""
+    },
+    "SWR": {
+        "Name": "Swiss International Air Lines",
+        "ICAO": "SWR",
+        "Color": "0xE40404",
+        "Image": "Assets/Images/AirlineLogos/SWR_Logo.png",
+        "Callsign": "Swiss \"SWISS\""
+    },
+    "TAP": {
+        "Name": "TAP Air Portugal",
+        "ICAO": "TAP",
+        "Color": "0xBBD33C",
+        "Image": "Assets/Images/AirlineLogos/TAP_Logo.png",
+        "Callsign": "TAP Air Portugal \"Air Portugal\""
+    },
+    "THA": {
+        "Name": "Thai Airways International",
+        "ICAO": "THA",
+        "Color": "0x340C63",
+        "Image": "Assets/Images/AirlineLogos/THA_Logo.png",
+        "Callsign": "Thai Airways \"Thai\""
+    },
+    "AWC": {
+        "Name": "Titan Airways",
+        "ICAO": "AWC",
+        "Color": "0xD9933E",
+        "Image": "Assets/Images/AirlineLogos/AWC_Logo.png",
+        "Callsign": "Titan \"Zap\""
+    },
+    "THY": {
+        "Name": "Turkish Airlines",
+        "ICAO": "THY",
+        "Color": "0xCC2424",
+        "Image": "Assets/Images/AirlineLogos/THY_Logo.png",
+        "Callsign": "Turkish Airlines \"Turkair\""
+    },
+    "UAL": {
+        "Name": "United Airlines",
+        "ICAO": "UAL",
+        "Color": "0x1414D4",
+        "Image": "Assets/Images/AirlineLogos/UAL_logo.png",
+        "Callsign": "United \"United\"",
+        "Regionals": [
+            "UCA",
+            "GJS",
+            "ASH",
+            "RPA",
+            "SKW"
+        ]
+    },
+    "HVN": {
+        "Name": "Vietnam Airlines",
+        "ICAO": "HVN",
+        "Color": "0x046C84",
+        "Image": "Assets/Images/AirlineLogos/HVN_Logo.png",
+        "Callsign": "Vietnam Airlines \"Viet Nam Airlines\""
+    },
+    "VIR": {
+        "Name": "Virgin Atlantic",
+        "ICAO": "VIR",
+        "Color": "0xAB1C2A",
+        "Image": "Assets/Images/AirlineLogos/VIR_Logo.png",
+        "Callsign": "Virgin Atlantic \"Virgin\""
+    },
+    "VOZ": {
+        "Name": "Virgin Australia",
+        "ICAO": "VOZ",
+        "Color": "0xE4040C",
+        "Image": "Assets/Images/AirlineLogos/VOZ_Logo.png",
+        "Callsign": "Virgin Australia \"Velocity\""
+    },
+    "VLG": {
+        "Name": "Vueling",
+        "ICAO": "VLG",
+        "Color": "0xFFCC00",
+        "Image": "Assets/Images/AirlineLogos/VLG_Logo.png",
+        "Callsign": "Vueling Airlines \"Vueling\""
+    },
+    "PLM": {
+        "Name": "Wamos Air",
+        "ICAO": "PLM",
+        "Color": "0x843C8C",
+        "Image": "Assets/Images/AirlineLogos/PLM_Logo.png",
+        "Callsign": "Wamos Air \"Pullmantur\""
+    },
+    "WJA": {
+        "Name": "WestJet",
+        "ICAO": "WJA",
+        "Color": "0x04ACA4",
+        "Image": "Assets/Images/AirlineLogos/WJA_Logo.png",
+        "Callsign": "WestJet \"WestJet\""
+    },
+    "WEN": {
+        "Name": "WestJet Encore",
+        "ICAO": "WEN",
+        "Color": "0x04ACA4",
+        "Image": "Assets/Images/AirlineLogos/WJA_Logo.png",
+        "Callsign": "WestJet Encore \"Encore\""
+    },
+    "EVE": {
+        "Name": "Iberojet",
+        "ICAO": "EVE",
+        "Color": "0x1C9C8C",
+        "Image": "Assets/Images/AirlineLogos/EVE_Logo.png",
+        "Callsign": "Iberojet \"EVELOP\""
+    },
+    "GFA": {
+        "Name": "Gulf Air",
+        "ICAO": "GFA",
+        "Color": "0xA48C64",
+        "Image": "Assets/Images/AirlineLogos/GFA_Logo.png",
+        "Callsign": "Gulf Air \"Gulf Air\""
+
+    },
+    "DTR": {
+        "Name": "DAT",
+        "ICAO": "DTR",
+        "Color": "0x049C64",
+        "Image": "Assets/Images/AirlineLogos/DTR_Logo.png",
+        "Callsign": "Danish Air Transport \"Danish\"",
+        "Regioonals": [
+            "DNU"
+        ]
+
+    },
+    "DNU": {
+        "Name": "DAT LT",
+        "ICAO": "DNU",
+        "Color": "0x049C64",
+        "Image": "Assets/Images/AirlineLogos/DTR_Logo.png",
+        "Callsign": "DAT \"Danu\""
+
+    },
+    "ACN": {
+        "Name": "Azul Conecta",
+        "ICAO": "ACN",
+        "Color": "0x049C64",
+        "Image": "Assets/Images/AirlineLogos/AZU_Logo.png",
+        "Callsign": "Azul Conecta \"Azul Conecta\""
+
+    },
+    "BOX": {
+        "Name": "AeroLogic",
+        "ICAO": "BOX",
+        "Color": "0xF7CE46",
+        "Image": "Assets/Images/AirlineLogos/BOX_Logo.png",
+        "Callsign": "AeroLogic \"German Cargo\""
+
+    },
+    "ROT": {
+        "Name": "TAROM",
+        "ICAO": "ROT",
+        "Color": "0x041B5C",
+        "Image": "Assets/Images/AirlineLogos/ROT_Logo.png",
+        "Callsign": "TAROM \"TAROM\""
+    },
+    "ABN": {
+        "Name": "Air Albania",
+        "ICAO": "ABN",
+        "Color": "0XEC0C04",
+        "Image": "Assets/Images/AirlineLogos/ABN_Logo.png",
+        "Callsign": "Air Albania \"Airalbania\""
+    },
+    "LHX": {
+        "Name": "Lufthansa City Airlines",
+        "ICAO": "LHX",
+        "Color": "0xf4b53f",
+        "Image": "Assets/Images/AirlineLogos/DLH_Logo.png",
+        "Callsign": "City Airlines"
+    },
+    "SAA": {
+        "Name": "Lufthansa City Airlines",
+        "ICAO": "SAS",
+        "Color": "0xE4AE5C",
+        "Image": "Assets/Images/AirlineLogos/LNK_Logo.png",
+        "Callsign": "South African Airways \"Springbok\""
+    },
+    "BTK": {
+        "Name": "Batik Air",
+        "ICAO": "BTK",
+        "Color": "0xC42454",
+        "Image": "Assets/Images/AirlineLogos/MXD_Logo.png",
+        "Callsign": "Batik Air \"BATIK\""
+    },
+    "MXD": {
+        "Name": "Batik Air Malaysia",
+        "ICAO": "MXD",
+        "Color": "0xC42454",
+        "Image": "Assets/Images/AirlineLogos/MXD_Logo.png",
+        "Callsign": "Malindo Air \"MALINDO\""
+    },
+    "AHY": {
+        "Name": "Azerbaijan Airlines",
+        "ICAO": "AHY",
+        "Color": "0x24A4DC",
+        "Image": "Assets/Images/AirlineLogos/AHY_Logo.png",
+        "Callsign": "Azerbaijan Airlines \"Azal\""
+    },
+    "GIA": {
+        "Name": "Garuda Indonesia",
+        "ICAO": "GIA",
+        "Color": "0x04144C",
+        "Image": "Assets/Images/AirlineLogos/GIA_Logo.png",
+        "Callsign": "Garuda Indonesia \"Indonesia\""
+    },
+    "SEY": {
+        "Name": "Air Seychelles",
+        "ICAO": "SEY",
+        "Color": "0xACD141",
+        "Image": "Assets/Images/AirlineLogos/SEY_Logo.png",
+        "Callsign": "Air Seychelles \"Seychelles\""
+    },
+    "EZE": {
+        "Name": "Eastern Airways",
+        "ICAO": "EZE",
+        "Color": "0x243C74",
+        "Image": "Assets/Images/AirlineLogos/EZE_Logo.png",
+        "Callsign": "Eastern Airways \"Eastflight\""
+    },
+    "JTD": {
+        "Name": "Jettime",
+        "ICAO": "JTD",
+        "Color": "0x044CA4",
+        "Image": "Assets/Images/AirlineLogos/JTD_Logo.png",
+        "Callsign": "Jet Time \"New Jet\""
+    },
+    "ART": {
+        "Name": "SmartLynx Airlines",
+        "ICAO": "ART",
+        "Color": "0xD13624",
+        "Image": "Assets/Images/AirlineLogos/ART_Logo.png",
+        "Callsign": "Smart Lynx \"Smart Lynx\""
+    },
+    "MDO": {
+        "Name": "Mel Air",
+        "ICAO": "MDO",
+        "Color": "0x475BA1",
+        "Image": "Assets/Images/AirlineLogos/MDO_Logo.png",
+        "Callsign": "Mel Air \"Kuda\""
+    },
+    "ASL": {
+        "Name": "Air Serbia",
+        "ICAO": "ASL",
+        "Color": "0x0C243C",
+        "Image": "Assets/Images/AirlineLogos/ASL_Logo.png",
+        "Callsign": "Air Serbia \"Air Serbia\""
+    },
+    "RUN": {
+        "Name": "Air ACT",
+        "ICAO": "RUN",
+        "Color": "0x95CE4E",
+        "Image": "Assets/Images/AirlineLogos/RUN_Logo.png",
+        "Callsign": "ACT Havayollari \"Cargo Turk\""
+    },
+    "RBA": {
+        "Name": "Royal Brunei Airlines",
+        "ICAO": "RBA",
+        "Color": "0xFCEC04",
+        "Image": "Assets/Images/AirlineLogos/RUN_Logo.png",
+        "Callsign": "Royal Brunei \"Brunei\""
+    },
+    "DAH": {
+        "Name": "Air Algerie",
+        "ICAO": "DAH",
+        "Color": "0xE4241C",
+        "Image": "Assets/Images/AirlineLogos/DAH_Logo.png",
+        "Callsign": "Air Algerie \"Air Algerie\""
+    },
+    "WIA": {
+        "Name": "Winair",
+        "ICAO": "WIA",
+        "Color": "0xCC2424",
+        "Image": "Assets/Images/AirlineLogos/WIA_Logo.png",
+        "Callsign": "Winair \"Windward\""
+    },
+    "MGL": {
+        "Name": "MIAT Mongolian Airlines",
+        "ICAO": "MGL",
+        "Color": "0x204E9D",
+        "Image": "Assets/Images/AirlineLogos/MGL_Logo.png",
+        "Callsign": "Mongolian \"Mongol Air\""
+    },
+    "JSA": {
+        "Name": "Jetstar Asia",
+        "ICAO": "JSA",
+        "Color": "0xFC5414",
+        "Image": "Assets/Images/AirlineLogos/JJP_Logo.png",
+        "Callsign": "Jetstar Asia"
+    },
+    "PGT": {
+        "Name": "Pegasus Airlines",
+        "ICAO": "PGT",
+        "Color": "0xFCA404",
+        "Image": "Assets/Images/AirlineLogos/PGT_Logo.png",
+        "Callsign": "Pegasus Airlines \"Sunturk\""
+    },
+    "MAU": {
+        "Name": "Air Mauritius",
+        "ICAO": "MAU",
+        "Color": "0xC4042C",
+        "Image": "Assets/Images/AirlineLogos/MAU_Logo.png",
+        "Callsign": "Air Mauritius \"Airmauritius\""
+    },
+    "RWD": {
+        "Name": "RwandAir",
+        "ICAO": "RWD",
+        "Color": "0x14B4E4",
+        "Image": "Assets/Images/AirlineLogos/RWD_Logo.png",
+        "Callsign": "RwandAir \"RwandAir\""
+    },
+    "BOT": {
+        "Name": "Air Botswana",
+        "ICAO": "BOT",
+        "Color": "0x14B4E4",
+        "Image": "Assets/Images/AirlineLogos/BOT_Logo.png",
+        "Callsign": "Air Botswana \"Botswana\""
+    },
+    "OAL": {
+        "Name": "Olympic Air",
+        "ICAO": "OAL",
+        "Color": "0x141C43",
+        "Image": "Assets/Images/AirlineLogos/OAL_Logo.png",
+        "Callsign": "Olympic Air \"Olympic\""
+    },
+    "KZR": {
+        "Name": "Air Astana",
+        "ICAO": "KZR",
+        "Color": "0xA48C64",
+        "Image": "Assets/Images/AirlineLogos/KZR_Logo.png",
+        "Callsign": "Air Astana \"ASTANALINE\""
+    },
+    "CSC": {
+        "Name": "Sichuan Airlines",
+        "ICAO": "CSC",
+        "Color": "0xD4040C",
+        "Image": "Assets/Images/AirlineLogos/CSC_Logo.png",
+        "Callsign": "Sichuan Airlines \"Chuanhang\""
+    },
+    "AIC": {
+        "Name": "Air India",
+        "ICAO": "AIC",
+        "Color": "0xDC0C2C",
+        "Image": "Assets/Images/AirlineLogos/AIC_Logo.png",
+        "Callsign": "Air India \"Airindia\""
+    },
+    "SXS": {
+        "Name": "SunExpress",
+        "ICAO": "SXS",
+        "Color": "0x04448C",
+        "Image": "Assets/Images/AirlineLogos/SXS_Logo.png",
+        "Callsign": "Sun Express"
+    },
+    "WIF": {
+        "Name": "Widerøe",
+        "ICAO": "WIF",
+        "Color": "0x1C7C24",
+        "Image": "Assets/Images/AirlineLogos/WIF_Logo.png",
+        "Callsign": "Wideroe's Flyveselskap A/s \"Wideroe\""
+    },
+    "MMZ": {
+        "Name": "Euroatlantic Airways",
+        "ICAO": "MMZ",
+        "Color": "0x9CC4E4",
+        "Image": "Assets/Images/AirlineLogos/MMZ_Logo.png",
+        "Callsign": "Euroatlantic Airways"
+    },
+    "UZB": {
+        "Name": "Uzbekistan Airways",
+        "ICAO": "UZB",
+        "Color": "0xFCD444",
+        "Image": "Assets/Images/AirlineLogos/UZB_Logo.png",
+        "Callsign": "Uzbekistan Airways \"Uzbek\""
+    },
+    "KMM": {
+        "Name": "KM Malta Airlines",
+        "ICAO": "KMM",
+        "Color": "0xEC042C",
+        "Image": "Assets/Images/AirlineLogos/KMM_Logo.png",
+        "Callsign": "KM Malta Airlines \"Sky Night\""
+    },
+    "CRK": {
+        "Name": "Hong Kong Airlines",
+        "ICAO": "CRK",
+        "Color": "0xE40414",
+        "Image": "Assets/Images/AirlineLogos/CRK_Logo.png",
+        "Callsign": "Hong Kong Airlines \"Bauhinia\""
+    },
+    "CMP": {
+        "Name": "Copa Airlines",
+        "ICAO": "CMP",
+        "Color": "0x0434A4",
+        "Image": "Assets/Images/AirlineLogos/CMP_Logo.png",
+        "Callsign": "Copa Airlines \"Copa\""
+    },
+    "LZB": {
+        "Name": "Bulgaria Air",
+        "ICAO": "LZB",
+        "Color": "0xECECED",
+        "Image": "Assets/Images/AirlineLogos/LZB_Logo.png",
+        "Callsign": "Bulgaria Air \"FLYING BULGARIA\""
+    },
+    "ATG": {
+        "Name": "Aerotranscargo",
+        "ICAO": "ATG",
+        "Color": "0xD9252A",
+        "Image": "Assets/Images/AirlineLogos/ATG_Logo.png",
+        "Callsign": "Aerotranscargo \"Moldcargo\""
+    },
+    "PVL": {
+        "Name": "PAL Airlines",
+        "ICAO": "PVL",
+        "Color": "0xFCA404",
+        "Image": "Assets/Images/AirlineLogos/PVL_Logo.png",
+        "Callsign": "PAL Airlines \"Provincial\""
+    },
+    "CXA": {
+        "Name": "XiamenAir",
+        "ICAO": "CXA",
+        "Color": "0x048CC4",
+        "Image": "Assets/Images/AirlineLogos/CXA_Logo.png",
+        "Callsign": "XiamenAir \"Xiamen Air\""
+    },
+    "FLI": {
+        "Name": "Atlantic Airways",
+        "ICAO": "FLI",
+        "Color": "0x044C94",
+        "Image": "Assets/Images/AirlineLogos/FLI_Logo.png",
+        "Callsign": "Atlantic Airways \"Faroeline\""
+    },
+    "KAC": {
+        "Name": "Kuwait Airways",
+        "ICAO": "KAC",
+        "Color": "0x1C2C5C",
+        "Image": "Assets/Images/AirlineLogos/KAC_Logo.png",
+        "Callsign": "Kuwait Airways Corporation \"Kuwaiti\""
+    },
+    "TGZ": {
+        "Name": "Georgian Airways",
+        "ICAO": "TGZ",
+        "Color": "0xE4143C",
+        "Image": "Assets/Images/AirlineLogos/TGZ_Logo.png",
+        "Callsign": "Georgian Airways \"Tamazi\""
+    },
+    "TRA": {
+        "Name": "Transavia Airlines",
+        "ICAO": "TRA",
+        "Color": "0x0CAC5C",
+        "Image": "Assets/Images/AirlineLogos/TRA_Logo.png",
+        "Callsign": "Transavia Airlines \"Transavia\""
+    },
+    "LVL": {
+        "Name": "Level",
+        "ICAO": "LVL",
+        "Color": "0x04ACDC",
+        "Image": "Assets/Images/AirlineLogos/LVL_Logo.png",
+        "Callsign": "LEVEL \"DALI\""
     }
 }

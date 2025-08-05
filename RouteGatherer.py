@@ -9,6 +9,14 @@ from selenium.webdriver.support.ui  import WebDriverWait
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.support     import expected_conditions as EC
 
+class Flight():
+    def __init__(self, airline, origin, destination, operator, aircraft):
+        self.airline = airline
+        self.origin  = origin
+        self.destination = destination
+        self.operator = operator
+        self.aircraft = aircraft
+
 def update_start(airline, code):
     with open("AirlineStarter.JSON", "r") as infile:
         try:
