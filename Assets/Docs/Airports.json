@@ -19689,5 +19689,2798 @@
         "latitude": 47.59739732887267,
         "longitude":  7.526389523925007,
         "state": "Saint_Louis - France"
-    }
+    },
+    "ROKJ": {
+        "name": "Kumejima Airport",
+        "icao": "ROKJ",
+        "latitude": 26.365017734344868,
+        "longitude": 126.71723727588119,
+        "state": "Okinawa - Japan"
+    },
+    "UTSK": {
+        "name": "Qarshi Airport",
+        "icao": "UTSK",
+        "latitude": 38.811629174851106,
+        "longitude": 65.77484068237536,
+        "state": "Qarshi - Uzbekistan"
+    },
+    "MKBS": {
+        "name": "Ian Fleming International Airport",
+        "icao": "MKBS",
+        "latitude": 18.4042,
+        "longitude": -76.969,
+        "state": "Ocho Rios - Jamaica"
+    },
+    "MDLR": {
+        "name": "La Romana International Airport (Casa de Campo International Airport)",
+        "icao": "MDLR",
+        "latitude": 18.4507,
+        "longitude": -68.9118,
+        "state": "La Romana - Dominican Republic"
+    },
+    "SGAS": {
+        "name": "Silvio Pettirossi International Airport",
+        "icao": "SGAS",
+        "latitude": -25.456713831575335,
+        "longitude":  -54.838881488222015,
+        "state": "Luque - Paraguay"
+    },
+    "SCIE": {
+        "name": "Carriel Sur International Airport",
+        "icao": "SCIE",
+        "latitude": -36.776615540709045,
+        "longitude": -73.05945449153332,
+        "state": "Concepción - Chile"
+    },
+    "SCTE": {
+        "name": "El Tepual International Airport",
+        "icao": "SCTE",
+        "latitude": -41.29087149353595,
+        "longitude": -72.58737472288765,
+        "state": "Puerto Montt - Chile"
+    },
+    "SCQP": {
+        "name": "La Araucania International Airport",
+        "icao": "SCQP",
+        "latitude": -38.927048421466594,
+        "longitude": -72.64555501340817,
+        "state": "Temuco - Chile"
+    },
+    "VIJP": {
+        "name": "Jaipur International Airport",
+        "icao": "VIJP",
+        "latitude": 26.82849078689329,
+        "longitude":  75.80659175393048,
+        "state": "Rajasthan - India"
+    },
+    "KDPA": {
+        "name": "DuPage Airport",
+        "icao": "KDPA",
+        "latitude": 41.9078,
+        "longitude": -88.2486,
+        "state": "Illinois"
+    },
+    "CYQX": {
+        "name": "Gander International Airport / CFB Gander",
+        "icao": "CYQX",
+        "latitude": 48.9369,
+        "longitude": -54.5681,
+        "state": "Newfoundland and Labrador - Canada"
+    },
+    "CYDF": {
+        "name": "Deer Lake Regional Airport",
+        "icao": "CYDF",
+        "latitude": 49.2108,
+        "longitude": -57.3914,
+        "state": "Newfoundland and Labrador - Canada"
+    },
+    "CYQY": {
+        "name": "Sydney/J.A. Douglas McCurdy Airport",
+        "icao": "CYQY",
+        "latitude": 46.1614,
+        "longitude": -60.0478,
+        "state": "Nova Scotia - Canada"
+    },
+    "MUCC": {
+        "name": "Jardines del Rey Airport",
+        "icao": "MUCC",
+        "latitude": 22.461,
+        "longitude": -78.3284,
+        "state": "Ciego de Avila - Cuba"
+    },
+    "CYSJ": {
+        "name": "Saint John Airport",
+        "icao": "CYSJ",
+        "latitude": 45.3161,
+        "longitude":  -65.8903,
+        "state": "New Brunswick - Canada"
+    },
+    "MDCY": {
+        "name": "Samana El Catey International Airport",
+        "icao": "MDCY",
+        "latitude": 19.267,
+        "longitude": -69.742,
+        "state": "Samana - Dominican Republic"
+    },
+    "MYSM": {
+        "name": "San Salvador Airport (Cockburn Town Airport)",
+        "icao": "MYSM",
+        "latitude": 24.0633,
+        "longitude": -74.524,
+        "state": "San Salvador - Bahamas"
+    },
+    "CYRQ": {
+        "name": "Trois-Rivieres Airport",
+        "icao": "CYRQ",
+        "latitude": 46.3528,
+        "longitude": -72.6794,
+        "state": "Quebec - Canada"
+    },
+    "CYQG": {
+        "name": "Windsor International Airport",
+        "icao": "CYQG",
+        "latitude": 42.2756,
+        "longitude": -82.9556,
+        "state": "Ontario - Canada"
+    },
+    "EPKT": {
+        "name": "Katowice International Airport",
+        "icao": "EPKT",
+        "latitude": 50.4743,
+        "longitude": 19.08,
+        "state": "Pyrzowice - Poland"
+    },
+    "CYTS": {
+        "name": "Timmins/Victor M. Power Airport",
+        "icao": "CYTS",
+        "latitude": 48.5697,
+        "longitude": -81.3767,
+        "state": "Ontario - Canada"
+    },
+    "OISL": {
+        "name": "Larestan International Airport",
+        "icao": "OISL",
+        "latitude": 27.6747,
+        "longitude": 54.3833,
+        "state": "Fars - Iran"
+    },
+	"ZSNB": {
+		"name": "Ningbo Lishe International Airport",
+		"icao": "ZSNB",
+		"latitude": 29.8267,
+		"longitude": 121.462,
+		"state": "Zhejiang - CN"
+	},
+	"LCEN": {
+		"name": "Ercan International Airport",
+		"icao": "LCEN",
+		"latitude": 35.1547,
+		"longitude": 33.4961,
+		"state": "Lefkosia - CY"
+	},
+	"SNRU": {
+		"name": "Caruaru Airport (Oscar Laranjeiras Airport)",
+		"icao": "SNRU",
+		"latitude": -8.28239,
+		"longitude": -36.0135,
+		"state": "Pernambuco - BR"
+	},
+	"KMGE": {
+		"name": "Dobbins Air Reserve Base",
+		"icao": "KMGE",
+		"latitude": 33.9154,
+		"longitude": -84.5163,
+		"state": "Georgia - US"
+	},
+	"LTCB": {
+		"name": "Ordu-Giresun Airport",
+		"icao": "LTCB",
+		"latitude": 40.966,
+		"longitude": 38.081,
+		"state": "Ordu - TR"
+	},
+	"SBMY": {
+		"name": "Manicore Airport",
+		"icao": "SBMY",
+		"latitude": -5.81138,
+		"longitude": -61.2783,
+		"state": "Amazonas - BR"
+	},
+	"MMNL": {
+		"name": "Quetzalcoatl International Airport",
+		"icao": "MMNL",
+		"latitude": 27.4439,
+		"longitude": -99.5705,
+		"state": "Tamaulipas - MX"
+	},
+	"LGMT": {
+		"name": "Mytilene International Airport",
+		"icao": "LGMT",
+		"latitude": 39.0567,
+		"longitude": 26.5983,
+		"state": "Voreio Aigaio - GR"
+	},
+	"CYZP": {
+		"name": "Sandspit Airport",
+		"icao": "CYZP",
+		"latitude": 53.2543,
+		"longitude": -131.814,
+		"state": "British Columbia - CA"
+	},
+	"SBCJ": {
+		"name": "Carajas Airport",
+		"icao": "SBCJ",
+		"latitude": -6.11528,
+		"longitude": -50.0014,
+		"state": "Para - BR"
+	},
+	"SAWH": {
+		"name": "Ushuaia - Malvinas Argentinas International Airport",
+		"icao": "SAWH",
+		"latitude": -54.8433,
+		"longitude": -68.2958,
+		"state": "Tierra del Fuego - AR"
+	},
+	"ENBO": {
+		"name": "Bodo Airport",
+		"icao": "ENBO",
+		"latitude": 67.2692,
+		"longitude": 14.3653,
+		"state": "Nordland - NO"
+	},
+	"VLVT": {
+		"name": "Wattay International Airport",
+		"icao": "VLVT",
+		"latitude": 17.9883,
+		"longitude": 102.563,
+		"state": "Viangchan - LA"
+	},
+	"BKPR": {
+		"name": "Pristina Adem Jashari Airport",
+		"icao": "BKPR",
+		"latitude": 42.5745,
+		"longitude": 21.0294,
+		"state": "Pristina - XK"
+	},
+	"HEGN": {
+		"name": "Hurghada International Airport",
+		"icao": "HEGN",
+		"latitude": 27.1783,
+		"longitude": 33.7994,
+		"state": "Al Bahr al Ahmar - EG"
+	},
+	"TNCS": {
+		"name": "Juancho E. Yrausquin Airport",
+		"icao": "TNCS",
+		"latitude": 17.645,
+		"longitude": -63.22,
+		"state": "Saba - BQ"
+	},
+	"VEPT": {
+		"name": "Lok Nayak Jayaprakash Airport",
+		"icao": "VEPT",
+		"latitude": 25.5913,
+		"longitude": 85.088,
+		"state": "Bihar - IN"
+	},
+	"CYYD": {
+		"name": "Smithers Airport",
+		"icao": "CYYD",
+		"latitude": 54.8247,
+		"longitude": -127.183,
+		"state": "British Columbia - CA"
+	},
+	"EFTP": {
+		"name": "Tampere-Pirkkala Airport",
+		"icao": "EFTP",
+		"latitude": 61.4141,
+		"longitude": 23.6044,
+		"state": "Pirkanmaa - FI"
+	},
+	"OIMM": {
+		"name": "Mashhad International Airport (Shahid Hashemi Nejad Airport)",
+		"icao": "OIMM",
+		"latitude": 36.2352,
+		"longitude": 59.641,
+		"state": "Khorasan-e Razavi - IR"
+	},
+	"UWKD": {
+		"name": "Kazan International Airport",
+		"icao": "UWKD",
+		"latitude": 55.6062,
+		"longitude": 49.2787,
+		"state": "Tatarstan, Respublika - RU"
+	},
+	"OEGS": {
+		"name": "Prince Nayef bin Abdulaziz Regional Airport",
+		"icao": "OEGS",
+		"latitude": 26.3028,
+		"longitude": 43.7744,
+		"state": "Al Qasim - SA"
+	},
+	"OISS": {
+		"name": "Shiraz International Airport (Shahid Dastghaib Int'l)",
+		"icao": "OISS",
+		"latitude": 29.5392,
+		"longitude": 52.5898,
+		"state": "Fars - IR"
+	},
+	"SBCN": {
+		"name": "Caldas Novas Airport",
+		"icao": "SBCN",
+		"latitude": -17.7253,
+		"longitude": -48.6075,
+		"state": "Goias - BR"
+	},
+	"CYYF": {
+		"name": "Penticton Regional Airport",
+		"icao": "CYYF",
+		"latitude": 49.4631,
+		"longitude": -119.602,
+		"state": "British Columbia - CA"
+	},
+	"CYSB": {
+		"name": "Sudbury Airport",
+		"icao": "CYSB",
+		"latitude": 46.625,
+		"longitude": -80.7989,
+		"state": "Ontario - CA"
+	},
+	"HESN": {
+		"name": "Aswan International Airport",
+		"icao": "HESN",
+		"latitude": 23.9644,
+		"longitude": 32.82,
+		"state": "Aswan - EG"
+	},
+	"LFKB": {
+		"name": "Bastia - Poretta Airport",
+		"icao": "LFKB",
+		"latitude": 42.5527,
+		"longitude": 9.48373,
+		"state": "Corse - FR"
+	},
+	"ENKR": {
+		"name": "Kirkenes Airport",
+		"icao": "ENKR",
+		"latitude": 69.7258,
+		"longitude": 29.8913,
+		"state": "Finnmark - NO"
+	},
+	"EPRZ": {
+		"name": "Rzeszow-Jasionka Airport",
+		"icao": "EPRZ",
+		"latitude": 50.11,
+		"longitude": 22.019,
+		"state": "Podlaskie - PL"
+	},
+	"SNDV": {
+		"name": "Divinopolis Airport (Brigadeiro Cabral Airport)",
+		"icao": "SNDV",
+		"latitude": -20.1807,
+		"longitude": -44.8709,
+		"state": "Minas Gerais - BR"
+	},
+	"DABC": {
+		"name": "Mohamed Boudiaf International Airport",
+		"icao": "DABC",
+		"latitude": 36.276,
+		"longitude": 6.62039,
+		"state": "Constantine - DZ"
+	},
+	"WARQ": {
+		"name": "Adisumarmo International Airport",
+		"icao": "WARQ",
+		"latitude": -7.51609,
+		"longitude": 110.757,
+		"state": "Jawa Tengah - ID"
+	},
+	"SWKO": {
+		"name": "Coari Airport",
+		"icao": "SWKO",
+		"latitude": -4.13406,
+		"longitude": -63.1326,
+		"state": "Amazonas - BR"
+	},
+	"ESTA": {
+		"name": "Angelholm-Helsingborg Airport",
+		"icao": "ESTA",
+		"latitude": 56.2961,
+		"longitude": 12.8471,
+		"state": "Skane lan - SE"
+	},
+	"YMAV": {
+		"name": "Avalon Airport",
+		"icao": "YMAV",
+		"latitude": -38.0394,
+		"longitude": 144.469,
+		"state": "Victoria - AU"
+	},
+	"EGMC": {
+		"name": "London Southend Airport",
+		"icao": "EGMC",
+		"latitude": 51.5703,
+		"longitude": 0.693333,
+		"state": "England - GB"
+	},
+	"GMFF": {
+		"name": "Fes-Saiss Airport",
+		"icao": "GMFF",
+		"latitude": 33.9273,
+		"longitude": -4.97796,
+		"state": "Fes- Meknes - MA"
+	},
+	"CYPR": {
+		"name": "Prince Rupert Airport",
+		"icao": "CYPR",
+		"latitude": 54.2861,
+		"longitude": -130.445,
+		"state": "British Columbia - CA"
+	},
+	"SCCI": {
+		"name": "Presidente Carlos Ibanez del Campo International Airport",
+		"icao": "SCCI",
+		"latitude": -53.0026,
+		"longitude": -70.8546,
+		"state": "Magallanes - CL"
+	},
+	"SEGS": {
+		"name": "Seymour Airport",
+		"icao": "SEGS",
+		"latitude": -0.453758,
+		"longitude": -90.2659,
+		"state": "Galapagos - EC"
+	},
+	"LDZD": {
+		"name": "Zadar Airport",
+		"icao": "LDZD",
+		"latitude": 44.1083,
+		"longitude": 15.3467,
+		"state": "Zadarska zupanija - HR"
+	},
+	"SASA": {
+		"name": "Martin Miguel de Guemes International Airport",
+		"icao": "SASA",
+		"latitude": -24.856,
+		"longitude": -65.4862,
+		"state": "Salta - AR"
+	},
+	"SBAU": {
+		"name": "Aracatuba Airport",
+		"icao": "SBAU",
+		"latitude": -21.1413,
+		"longitude": -50.4247,
+		"state": "Sao Paulo - BR"
+	},
+	"SBBT": {
+		"name": "Chafei Amsei Airport",
+		"icao": "SBBT",
+		"latitude": -20.5845,
+		"longitude": -48.5941,
+		"state": "Sao Paulo - BR"
+	},
+	"EHGG": {
+		"name": "Groningen Airport Eelde",
+		"icao": "EHGG",
+		"latitude": 53.1197,
+		"longitude": 6.57944,
+		"state": "Drenthe - NL"
+	},
+	"MMRX": {
+		"name": "General Lucio Blanco International Airport",
+		"icao": "MMRX",
+		"latitude": 26.0089,
+		"longitude": -98.2285,
+		"state": "Tamaulipas - MX"
+	},
+	"CYBR": {
+		"name": "Brandon Municipal Airport (McGill Field)",
+		"icao": "CYBR",
+		"latitude": 49.91,
+		"longitude": -99.9519,
+		"state": "Manitoba - CA"
+	},
+	"HLLM": {
+		"name": "Mitiga International Airport",
+		"icao": "HLLM",
+		"latitude": 32.8941,
+		"longitude": 13.276,
+		"state": "Tarabulus - LY"
+	},
+	"LTAS": {
+		"name": "Zonguldak Airport",
+		"icao": "LTAS",
+		"latitude": 41.5064,
+		"longitude": 32.0886,
+		"state": "Zonguldak - TR"
+	},
+	"SNVS": {
+		"name": "Breves Airport",
+		"icao": "SNVS",
+		"latitude": -1.63653,
+		"longitude": -50.4436,
+		"state": "Para - BR"
+	},
+	"YSTW": {
+		"name": "Tamworth Regional Airport",
+		"icao": "YSTW",
+		"latitude": -31.0839,
+		"longitude": 150.847,
+		"state": "New South Wales - AU"
+	},
+	"UUWW": {
+		"name": "Vnukovo International Airport",
+		"icao": "UUWW",
+		"latitude": 55.5979,
+		"longitude": 37.2709,
+		"state": "Moskva - RU"
+	},
+	"ESPA": {
+		"name": "Lulea Airport (Kallax Airport)",
+		"icao": "ESPA",
+		"latitude": 65.5438,
+		"longitude": 22.122,
+		"state": "Norrbottens lan - SE"
+	},
+	"SAZM": {
+		"name": "Astor Piazzolla International Airport",
+		"icao": "SAZM",
+		"latitude": -37.9342,
+		"longitude": -57.5733,
+		"state": "Buenos Aires - AR"
+	},
+	"SBUR": {
+		"name": "Mario de Almeida Franco Airport",
+		"icao": "SBUR",
+		"latitude": -19.7647,
+		"longitude": -47.9661,
+		"state": "Minas Gerais - BR"
+	},
+	"SCAT": {
+		"name": "Desierto de Atacama Airport",
+		"icao": "SCAT",
+		"latitude": -27.2612,
+		"longitude": -70.7792,
+		"state": "Atacama - CL"
+	},
+	"RKPU": {
+		"name": "Ulsan Airport",
+		"icao": "RKPU",
+		"latitude": 35.5935,
+		"longitude": 129.352,
+		"state": "Gyeongsangnam-do - KR"
+	},
+	"VEBN": {
+		"name": "Lal Bahadur Shastri Airport",
+		"icao": "VEBN",
+		"latitude": 25.4524,
+		"longitude": 82.8593,
+		"state": "Uttar Pradesh - IN"
+	},
+	"SKIB": {
+		"name": "Perales Airport",
+		"icao": "SKIB",
+		"latitude": 4.42161,
+		"longitude": -75.1333,
+		"state": "Tolima - CO"
+	},
+	"ENSH": {
+		"name": "Svolvaer Airport",
+		"icao": "ENSH",
+		"latitude": 68.2433,
+		"longitude": 14.6692,
+		"state": "Nordland - NO"
+	},
+	"LTCO": {
+		"name": "Agri Airport",
+		"icao": "LTCO",
+		"latitude": 39.6545,
+		"longitude": 43.026,
+		"state": "Agri - TR"
+	},
+	"VTCT": {
+		"name": "Chiang Rai International Airport (Mae Fah Luang Int'l)",
+		"icao": "VTCT",
+		"latitude": 19.9523,
+		"longitude": 99.8829,
+		"state": "Chiang Rai - TH"
+	},
+	"LTAP": {
+		"name": "Amasya Merzifon Airport",
+		"icao": "LTAP",
+		"latitude": 40.8294,
+		"longitude": 35.522,
+		"state": "Amasya - TR"
+	},
+	"SBFN": {
+		"name": "Fernando de Noronha Airport (Gov. Carlos Wilson Airport)",
+		"icao": "SBFN",
+		"latitude": -3.85493,
+		"longitude": -32.4233,
+		"state": "Pernambuco - BR"
+	},
+	"LWOH": {
+		"name": "Ohrid St. Paul the Apostle Airport",
+		"icao": "LWOH",
+		"latitude": 41.18,
+		"longitude": 20.7423,
+		"state": "Ohrid - MK"
+	},
+	"SBUG": {
+		"name": "Rubem Berta International Airport",
+		"icao": "SBUG",
+		"latitude": -29.7822,
+		"longitude": -57.0382,
+		"state": "Rio Grande do Sul - BR"
+	},
+	"SBRP": {
+		"name": "Leite Lopes Airport",
+		"icao": "SBRP",
+		"latitude": -21.1364,
+		"longitude": -47.7767,
+		"state": "Sao Paulo - BR"
+	},
+	"SARC": {
+		"name": "Doctor Fernando Piragine Niveyro International Airport",
+		"icao": "SARC",
+		"latitude": -27.4455,
+		"longitude": -58.7619,
+		"state": "Corrientes - AR"
+	},
+	"VTUU": {
+		"name": "Ubon Ratchathani Airport",
+		"icao": "VTUU",
+		"latitude": 15.2513,
+		"longitude": 104.87,
+		"state": "Ubon Ratchathani - TH"
+	},
+	"CYHU": {
+		"name": "Montreal Saint-Hubert Longueuil Aiport",
+		"icao": "CYHU",
+		"latitude": 45.5142,
+		"longitude": -73.4098,
+		"state": "Quebec - CA"
+	},
+	"ENKB": {
+		"name": "Kristiansund Airport",
+		"icao": "ENKB",
+		"latitude": 63.1118,
+		"longitude": 7.82452,
+		"state": "More og Romsdal - NO"
+	},
+	"LEZG": {
+		"name": "Zaragoza Airport",
+		"icao": "LEZG",
+		"latitude": 41.6662,
+		"longitude": -1.04155,
+		"state": "Aragon - ES"
+	},
+	"ESDF": {
+		"name": "Ronneby Airport",
+		"icao": "ESDF",
+		"latitude": 56.2667,
+		"longitude": 15.265,
+		"state": "Blekinge lan - SE"
+	},
+	"SPTU": {
+		"name": "Padre Aldamiz International Airport",
+		"icao": "SPTU",
+		"latitude": -12.6136,
+		"longitude": -69.2286,
+		"state": "Madre de Dios - PE"
+	},
+	"ZBDS": {
+		"name": "Ordos Ejin Horo Airport",
+		"icao": "ZBDS",
+		"latitude": 39.49,
+		"longitude": 109.861,
+		"state": "Nei Mongol - CN"
+	},
+	"LTCM": {
+		"name": "Sinop Airport",
+		"icao": "LTCM",
+		"latitude": 42.0158,
+		"longitude": 35.0664,
+		"state": "Sinop - TR"
+	},
+	"LTCK": {
+		"name": "Mus Airport",
+		"icao": "LTCK",
+		"latitude": 38.7478,
+		"longitude": 41.6612,
+		"state": "Mus - TR"
+	},
+	"LTCP": {
+		"name": "Adiyaman Airport",
+		"icao": "LTCP",
+		"latitude": 37.7314,
+		"longitude": 38.4689,
+		"state": "Adiyaman - TR"
+	},
+	"LTBH": {
+		"name": "Canakkale Airport",
+		"icao": "LTBH",
+		"latitude": 40.1377,
+		"longitude": 26.4268,
+		"state": "Canakkale - TR"
+	},
+	"SKYP": {
+		"name": "El Alcaravan Airport",
+		"icao": "SKYP",
+		"latitude": 5.31911,
+		"longitude": -72.384,
+		"state": "Casanare - CO"
+	},
+	"SBPP": {
+		"name": "Ponta Pora International Airport",
+		"icao": "SBPP",
+		"latitude": -22.5496,
+		"longitude": -55.7026,
+		"state": "Mato Grosso do Sul - BR"
+	},
+	"CYYR": {
+		"name": "CFB Goose Bay",
+		"icao": "CYYR",
+		"latitude": 53.3192,
+		"longitude": -60.4258,
+		"state": "Newfoundland and Labrador - CA"
+	},
+	"HELX": {
+		"name": "Luxor International Airport",
+		"icao": "HELX",
+		"latitude": 25.671,
+		"longitude": 32.7066,
+		"state": "Al Uqsur - EG"
+	},
+	"SBIH": {
+		"name": "Itaituba Airport",
+		"icao": "SBIH",
+		"latitude": -4.24234,
+		"longitude": -56.0007,
+		"state": "Para - BR"
+	},
+	"URMM": {
+		"name": "Mineralnye Vody Airport",
+		"icao": "URMM",
+		"latitude": 44.2251,
+		"longitude": 43.0819,
+		"state": "Stavropol'skiy kray - RU"
+	},
+	"SANE": {
+		"name": "Vicecomodoro Angel de la Paz Aragones Airport",
+		"icao": "SANE",
+		"latitude": -27.7656,
+		"longitude": -64.31,
+		"state": "Santiago del Estero - AR"
+	},
+	"SBMD": {
+		"name": "Serra do Areao Airport",
+		"icao": "SBMD",
+		"latitude": -0.889839,
+		"longitude": -52.6022,
+		"state": "Para - BR"
+	},
+	"SPJJ": {
+		"name": "Francisco Carle Airport",
+		"icao": "SPJJ",
+		"latitude": -11.7831,
+		"longitude": -75.4734,
+		"state": "Junin - PE"
+	},
+	"LTBZ": {
+		"name": "Zafer Airport",
+		"icao": "LTBZ",
+		"latitude": 39.1131,
+		"longitude": 30.1281,
+		"state": "Kutahya - TR"
+	},
+	"DTMB": {
+		"name": "Monastir Habib Bourguiba International Airport",
+		"icao": "DTMB",
+		"latitude": 35.7581,
+		"longitude": 10.7547,
+		"state": "Monastir - TN"
+	},
+	"ZJHK": {
+		"name": "Haikou Meilan International Airport",
+		"icao": "ZJHK",
+		"latitude": 19.9349,
+		"longitude": 110.459,
+		"state": "Hainan - CN"
+	},
+	"ENCN": {
+		"name": "Kristiansand Airport",
+		"icao": "ENCN",
+		"latitude": 58.2042,
+		"longitude": 8.08537,
+		"state": "Vest-Agder - NO"
+	},
+	"LIPY": {
+		"name": "Ancona Falconara Airport",
+		"icao": "LIPY",
+		"latitude": 43.6163,
+		"longitude": 13.3623,
+		"state": "Marche - IT"
+	},
+	"SEST": {
+		"name": "San Cristobal Airport",
+		"icao": "SEST",
+		"latitude": -0.910206,
+		"longitude": -89.6174,
+		"state": "Galapagos - EC"
+	},
+	"SBAT": {
+		"name": "Alta Floresta Airport",
+		"icao": "SBAT",
+		"latitude": -9.86639,
+		"longitude": -56.105,
+		"state": "Mato Grosso - BR"
+	},
+	"LTCF": {
+		"name": "Kars Harakani Airport",
+		"icao": "LTCF",
+		"latitude": 40.5622,
+		"longitude": 43.115,
+		"state": "Kars - TR"
+	},
+	"ESMQ": {
+		"name": "Kalmar Airport",
+		"icao": "ESMQ",
+		"latitude": 56.6855,
+		"longitude": 16.2876,
+		"state": "Kalmar lan - SE"
+	},
+	"ENST": {
+		"name": "Sandnessjoen Airport",
+		"icao": "ENST",
+		"latitude": 65.9568,
+		"longitude": 12.4689,
+		"state": "Nordland - NO"
+	},
+	"ENTO": {
+		"name": "Sandefjord Airport",
+		"icao": "ENTO",
+		"latitude": 59.1867,
+		"longitude": 10.2586,
+		"state": "Vestfold - NO"
+	},
+	"ESSV": {
+		"name": "Visby Airport",
+		"icao": "ESSV",
+		"latitude": 57.6628,
+		"longitude": 18.3462,
+		"state": "Gotlands lan - SE"
+	},
+	"CZBF": {
+		"name": "Bathurst Airport (New Brunswick)",
+		"icao": "CZBF",
+		"latitude": 47.6297,
+		"longitude": -65.7389,
+		"state": "New Brunswick - CA"
+	},
+	"SANL": {
+		"name": "Capitan Vicente Almandos Almonacid Airport",
+		"icao": "SANL",
+		"latitude": -29.3816,
+		"longitude": -66.7958,
+		"state": "La Rioja - AR"
+	},
+	"SWPI": {
+		"name": "Julio Belem",
+		"icao": "SWPI",
+		"latitude": -2.67302,
+		"longitude": -56.7772,
+		"state": "Amazonas - BR"
+	},
+	"SARF": {
+		"name": "Formosa International Airport (El Pucu Airport)",
+		"icao": "SARF",
+		"latitude": -26.2127,
+		"longitude": -58.2281,
+		"state": "Formosa - AR"
+	},
+	"UAIT": {
+		"name": "Hazret-Sultan Turkistan International Airport",
+		"icao": "UAIT",
+		"latitude": 43.3152,
+		"longitude": 68.5471,
+		"state": "Ongtustik Qazaqstan oblysy - KZ"
+	},
+	"LTCC": {
+		"name": "Diyarbakir Airport",
+		"icao": "LTCC",
+		"latitude": 37.8939,
+		"longitude": 40.201,
+		"state": "Diyarbakir - TR"
+	},
+	"NSTU": {
+		"name": "Pago Pago International Airport",
+		"icao": "NSTU",
+		"latitude": -14.331,
+		"longitude": -170.71,
+		"state": "Eastern District - AS"
+	},
+	"SWJI": {
+		"name": "Jose Coleto Airport",
+		"icao": "SWJI",
+		"latitude": -10.8708,
+		"longitude": -61.8465,
+		"state": "Rondonia - BR"
+	},
+	"UTDD": {
+		"name": "Dushanbe International Airport",
+		"icao": "UTDD",
+		"latitude": 38.5433,
+		"longitude": 68.825,
+		"state": "Dushanbe - TJ"
+	},
+	"URSS": {
+		"name": "Sochi International Airport",
+		"icao": "URSS",
+		"latitude": 43.4499,
+		"longitude": 39.9566,
+		"state": "Krasnodarskiy kray - RU"
+	},
+	"YSWG": {
+		"name": "Wagga Wagga Airport",
+		"icao": "YSWG",
+		"latitude": -35.1653,
+		"longitude": 147.466,
+		"state": "New South Wales - AU"
+	},
+	"TNCE": {
+		"name": "F. D. Roosevelt Airport",
+		"icao": "TNCE",
+		"latitude": 17.4965,
+		"longitude": -62.9794,
+		"state": "Sint Eustatius - BQ"
+	},
+	"SBAQ": {
+		"name": "Araraquara Airport",
+		"icao": "SBAQ",
+		"latitude": -21.812,
+		"longitude": -48.133,
+		"state": "Sao Paulo - BR"
+	},
+	"VTUK": {
+		"name": "Khon Kaen Airport",
+		"icao": "VTUK",
+		"latitude": 16.4666,
+		"longitude": 102.784,
+		"state": "Khon Kaen - TH"
+	},
+	"SCVD": {
+		"name": "Pichoy Airport",
+		"icao": "SCVD",
+		"latitude": -39.65,
+		"longitude": -73.0861,
+		"state": "Los Rios - CL"
+	},
+	"LTFC": {
+		"name": "Isparta Suleyman Demirel Airport",
+		"icao": "LTFC",
+		"latitude": 37.8554,
+		"longitude": 30.3684,
+		"state": "Isparta - TR"
+	},
+	"SKMR": {
+		"name": "Los Garzones Airport",
+		"icao": "SKMR",
+		"latitude": 8.82374,
+		"longitude": -75.8258,
+		"state": "Cordoba - CO"
+	},
+	"LTCS": {
+		"name": "Sanliurfa GAP Airport",
+		"icao": "LTCS",
+		"latitude": 37.4457,
+		"longitude": 38.8956,
+		"state": "Sanliurfa - TR"
+	},
+	"RJNT": {
+		"name": "Toyama Airport",
+		"icao": "RJNT",
+		"latitude": 36.6483,
+		"longitude": 137.188,
+		"state": "Toyama - JP"
+	},
+	"SARP": {
+		"name": "Libertador General Jose de San Martin Airport",
+		"icao": "SARP",
+		"latitude": -27.3858,
+		"longitude": -55.9707,
+		"state": "Misiones - AR"
+	},
+	"LWSK": {
+		"name": "Skopje Alexander the Great Airport",
+		"icao": "LWSK",
+		"latitude": 41.9616,
+		"longitude": 21.6214,
+		"state": "Skopje - MK"
+	},
+	"SPJR": {
+		"name": "Mayor General FAP Armando Revoredo Iglesias Airport",
+		"icao": "SPJR",
+		"latitude": -7.13918,
+		"longitude": -78.4894,
+		"state": "Cajamarca - PE"
+	},
+	"SDOW": {
+		"name": "Ourilandia do Norte Airport",
+		"icao": "SDOW",
+		"latitude": -6.7631,
+		"longitude": -51.0499,
+		"state": "Para - BR"
+	},
+	"LTAN": {
+		"name": "Konya Airport",
+		"icao": "LTAN",
+		"latitude": 37.979,
+		"longitude": 32.5619,
+		"state": "Konya - TR"
+	},
+	"ENAL": {
+		"name": "Alesund Airport",
+		"icao": "ENAL",
+		"latitude": 62.5625,
+		"longitude": 6.1197,
+		"state": "More og Romsdal - NO"
+	},
+	"FEFF": {
+		"name": "Bangui M'Poko International Airport",
+		"icao": "FEFF",
+		"latitude": 4.39848,
+		"longitude": 18.5188,
+		"state": "Bangui - CF"
+	},
+	"ENLK": {
+		"name": "Leknes Airport",
+		"icao": "ENLK",
+		"latitude": 68.1525,
+		"longitude": 13.6094,
+		"state": "Nordland - NO"
+	},
+	"LTCR": {
+		"name": "Mardin Airport",
+		"icao": "LTCR",
+		"latitude": 37.2233,
+		"longitude": 40.6317,
+		"state": "Mardin - TR"
+	},
+	"SBSN": {
+		"name": "Santarem-Maestro Wilson Fonseca Airport",
+		"icao": "SBSN",
+		"latitude": -2.42472,
+		"longitude": -54.7858,
+		"state": "Para - BR"
+	},
+	"LROD": {
+		"name": "Oradea International Airport",
+		"icao": "LROD",
+		"latitude": 47.0253,
+		"longitude": 21.9025,
+		"state": "Bihor - RO"
+	},
+	"SBBV": {
+		"name": "Boa Vista International Airport",
+		"icao": "SBBV",
+		"latitude": 2.84139,
+		"longitude": -60.6922,
+		"state": "Roraima - BR"
+	},
+	"SCAR": {
+		"name": "Chacalluta International Airport",
+		"icao": "SCAR",
+		"latitude": -18.3485,
+		"longitude": -70.3387,
+		"state": "Arica y Parinacota - CL"
+	},
+	"LTFD": {
+		"name": "Balikesir Koca Seyit Airport",
+		"icao": "LTFD",
+		"latitude": 39.5546,
+		"longitude": 27.0138,
+		"state": "Balikesir - TR"
+	},
+	"EHBK": {
+		"name": "Maastricht Aachen Airport",
+		"icao": "EHBK",
+		"latitude": 50.9117,
+		"longitude": 5.77014,
+		"state": "Limburg - NL"
+	},
+	"UGSB": {
+		"name": "Batumi International Airport (Alexander Kartveli Batumi Int'l Airport)",
+		"icao": "UGSB",
+		"latitude": 41.6103,
+		"longitude": 41.5997,
+		"state": "Ajaria - GE"
+	},
+	"SMJP": {
+		"name": "Johan Adolf Pengel International Airport",
+		"icao": "SMJP",
+		"latitude": 5.45283,
+		"longitude": -55.1878,
+		"state": "Para - SR"
+	},
+	"EPPO": {
+		"name": "Poznań–Ławica Henryk Wieniawski Airport",
+		"icao": "EPPO",
+		"latitude": 52.421,
+		"longitude": 16.8263,
+		"state": "Wielkopolskie - PL"
+	},
+	"ENBN": {
+		"name": "Bronnoysund Airport",
+		"icao": "ENBN",
+		"latitude": 65.4611,
+		"longitude": 12.2175,
+		"state": "Nordland - NO"
+	},
+	"SCBA": {
+		"name": "Balmaceda Airport",
+		"icao": "SCBA",
+		"latitude": -45.9161,
+		"longitude": -71.6895,
+		"state": "Aisen del General Carlos Ibanez del Campo - CL"
+	},
+	"UAII": {
+		"name": "Shymkent International Airport",
+		"icao": "UAII",
+		"latitude": 42.3642,
+		"longitude": 69.4789,
+		"state": "Ongtustik Qazaqstan oblysy - KZ"
+	},
+	"HLLB": {
+		"name": "Benina International Airport",
+		"icao": "HLLB",
+		"latitude": 32.0968,
+		"longitude": 20.2695,
+		"state": "Banghazi - LY"
+	},
+	"SECO": {
+		"name": "Francisco de Orellana Airport",
+		"icao": "SECO",
+		"latitude": -0.462886,
+		"longitude": -76.9868,
+		"state": "Orellana - EC"
+	},
+	"LTAY": {
+		"name": "Denizli Cardak Airport",
+		"icao": "LTAY",
+		"latitude": 37.7856,
+		"longitude": 29.7013,
+		"state": "Denizli - TR"
+	},
+	"SPYL": {
+		"name": "Capitan FAP VIctor Montes Arias International Airport",
+		"icao": "SPYL",
+		"latitude": -4.57664,
+		"longitude": -81.2541,
+		"state": "Piura - PE"
+	},
+	"SAAV": {
+		"name": "Sauce Viejo Airport",
+		"icao": "SAAV",
+		"latitude": -31.7117,
+		"longitude": -60.8117,
+		"state": "Santa Fe - AR"
+	},
+	"SPCL": {
+		"name": "FAP Captain David Abensur Rengifo International Airport",
+		"icao": "SPCL",
+		"latitude": -8.37794,
+		"longitude": -74.5743,
+		"state": "Ucayali - PE"
+	},
+	"LTAT": {
+		"name": "Malatya Erhac Airport",
+		"icao": "LTAT",
+		"latitude": 38.4353,
+		"longitude": 38.091,
+		"state": "Malatya - TR"
+	},
+	"OAKB": {
+		"name": "Kabul International Airport",
+		"icao": "OAKB",
+		"latitude": 34.5658,
+		"longitude": 69.2131,
+		"state": "Kabul - AF"
+	},
+	"UUMO": {
+		"name": "Ostafyevo International Airport",
+		"icao": "UUMO",
+		"latitude": 55.5117,
+		"longitude": 37.5072,
+		"state": "Moskva - RU"
+	},
+	"LTCN": {
+		"name": "Kahramanmaras Airport",
+		"icao": "LTCN",
+		"latitude": 37.5388,
+		"longitude": 36.9535,
+		"state": "Kahramanmaras - TR"
+	},
+	"RKSO": {
+		"name": "Osan Air Base",
+		"icao": "RKSO",
+		"latitude": 37.0906,
+		"longitude": 127.03,
+		"state": "Gyeonggi-do - KR"
+	},
+	"SARE": {
+		"name": "Resistencia International Airport",
+		"icao": "SARE",
+		"latitude": -27.45,
+		"longitude": -59.0561,
+		"state": "Chaco - AR"
+	},
+	"CYZV": {
+		"name": "Sept-Iles Airport",
+		"icao": "CYZV",
+		"latitude": 50.2233,
+		"longitude": -66.2656,
+		"state": "Quebec - CA"
+	},
+	"ENFL": {
+		"name": "Floro Airport",
+		"icao": "ENFL",
+		"latitude": 61.5836,
+		"longitude": 5.02472,
+		"state": "Sogn og Fjordane - NO"
+	},
+	"SAVC": {
+		"name": "General Enrique Mosconi International Airport",
+		"icao": "SAVC",
+		"latitude": -45.7853,
+		"longitude": -67.4655,
+		"state": "Chubut - AR"
+	},
+	"DAOO": {
+		"name": "Oran Es Senia Airport",
+		"icao": "DAOO",
+		"latitude": 35.6239,
+		"longitude": -0.621183,
+		"state": "Oran - DZ"
+	},
+	"CYYB": {
+		"name": "North Bay/Jack Garland Airport",
+		"icao": "CYYB",
+		"latitude": 46.3636,
+		"longitude": -79.4228,
+		"state": "Ontario - CA"
+	},
+	"YPMQ": {
+		"name": "Port Macquarie Airport",
+		"icao": "YPMQ",
+		"latitude": -31.4358,
+		"longitude": 152.863,
+		"state": "New South Wales - AU"
+	},
+	"SAZY": {
+		"name": "Aviador Carlos Campos Airport",
+		"icao": "SAZY",
+		"latitude": -40.0754,
+		"longitude": -71.1373,
+		"state": "Neuquen - AR"
+	},
+	"SBDN": {
+		"name": "Presidente Prudente Airport",
+		"icao": "SBDN",
+		"latitude": -22.1751,
+		"longitude": -51.4246,
+		"state": "Sao Paulo - BR"
+	},
+	"SCPQ": {
+		"name": "Mocopulli Airport",
+		"icao": "SCPQ",
+		"latitude": -42.3404,
+		"longitude": -73.7157,
+		"state": "Los Lagos - CL"
+	},
+	"EFTU": {
+		"name": "Turku Airport",
+		"icao": "EFTU",
+		"latitude": 60.5141,
+		"longitude": 22.2628,
+		"state": "Varsinais-Suomi - FI"
+	},
+	"SAMR": {
+		"name": "San Rafael Airport (Argentina)",
+		"icao": "SAMR",
+		"latitude": -34.5883,
+		"longitude": -68.4039,
+		"state": "Mendoza - AR"
+	},
+	"YDPO": {
+		"name": "Devonport Airport",
+		"icao": "YDPO",
+		"latitude": -41.1697,
+		"longitude": 146.43,
+		"state": "Tasmania - AU"
+	},
+	"UATG": {
+		"name": "Atyrau Airport",
+		"icao": "UATG",
+		"latitude": 47.1219,
+		"longitude": 51.8214,
+		"state": "Atyrau oblysy - KZ"
+	},
+	"UBBG": {
+		"name": "Ganja International Airport (formerly KVD)",
+		"icao": "UBBG",
+		"latitude": 40.7377,
+		"longitude": 46.3176,
+		"state": "Ganca - AZ"
+	},
+	"LGLM": {
+		"name": "Lemnos International Airport",
+		"icao": "LGLM",
+		"latitude": 39.9171,
+		"longitude": 25.2363,
+		"state": "Voreio Aigaio - GR"
+	},
+	"LRTR": {
+		"name": "Timisoara Traian Vuia International Airport",
+		"icao": "LRTR",
+		"latitude": 45.8099,
+		"longitude": 21.3379,
+		"state": "Timis - RO"
+	},
+	"LTCE": {
+		"name": "Erzurum Airport",
+		"icao": "LTCE",
+		"latitude": 39.9565,
+		"longitude": 41.1702,
+		"state": "Erzincan - TR"
+	},
+	"LOWK": {
+		"name": "Klagenfurt Airport",
+		"icao": "LOWK",
+		"latitude": 46.6425,
+		"longitude": 14.3377,
+		"state": "Karnten - AT"
+	},
+	"ZBYZ": {
+		"name": "Bayannur Tianjitai Airport",
+		"icao": "ZBYZ",
+		"latitude": 40.926,
+		"longitude": 107.743,
+		"state": "Nei Mongol - CN"
+	},
+	"OPQT": {
+		"name": "Quetta International Airport",
+		"icao": "OPQT",
+		"latitude": 30.2514,
+		"longitude": 66.9378,
+		"state": "Balochistan - PK"
+	},
+	"LETL": {
+		"name": "Teruel Airport",
+		"icao": "LETL",
+		"latitude": 40.403,
+		"longitude": -1.2183,
+		"state": "Aragon - ES"
+	},
+	"LGSM": {
+		"name": "Samos International Airport",
+		"icao": "LGSM",
+		"latitude": 37.69,
+		"longitude": 26.9117,
+		"state": "Voreio Aigaio - GR"
+	},
+	"HESH": {
+		"name": "Sharm el-Sheikh International Airport",
+		"icao": "HESH",
+		"latitude": 27.9773,
+		"longitude": 34.395,
+		"state": "Janub Sina' - EG"
+	},
+	"FMCH": {
+		"name": "Prince Said Ibrahim International Airport",
+		"icao": "FMCH",
+		"latitude": -11.5337,
+		"longitude": 43.2719,
+		"state": "Grande Comore - KM"
+	},
+	"SKCC": {
+		"name": "Camilo Daza International Airport",
+		"icao": "SKCC",
+		"latitude": 7.92757,
+		"longitude": -72.5115,
+		"state": "Norte de Santander - CO"
+	},
+	"LELN": {
+		"name": "Leon Airport",
+		"icao": "LELN",
+		"latitude": 42.589,
+		"longitude": -5.65556,
+		"state": "Castilla y Leon - ES"
+	},
+	"SNHS": {
+		"name": "Serra Talhada Santa Magalhaes Regional Airport",
+		"icao": "SNHS",
+		"latitude": -8.0619,
+		"longitude": -38.324,
+		"state": "Pernambuco - BR"
+	},
+	"UAKK": {
+		"name": "Sary-Arka Airport",
+		"icao": "UAKK",
+		"latitude": 49.6708,
+		"longitude": 73.3344,
+		"state": "Qaraghandy oblysy - KZ"
+	},
+	"OPFA": {
+		"name": "Faisalabad International Airport",
+		"icao": "OPFA",
+		"latitude": 31.365,
+		"longitude": 72.9948,
+		"state": "Punjab - PK"
+	},
+	"LTFG": {
+		"name": "Gazipasa-Alanya Airport",
+		"icao": "LTFG",
+		"latitude": 36.2992,
+		"longitude": 32.3006,
+		"state": "Antalya - TR"
+	},
+	"LRIA": {
+		"name": "Iasi International Airport",
+		"icao": "LRIA",
+		"latitude": 47.1785,
+		"longitude": 27.6206,
+		"state": "Iasi - RO"
+	},
+	"UWWW": {
+		"name": "Kurumoch International Airport",
+		"icao": "UWWW",
+		"latitude": 53.5049,
+		"longitude": 50.1643,
+		"state": "Samarskaya oblast' - RU"
+	},
+	"SNPD": {
+		"name": "Pedro Pereira dos Santos Airport",
+		"icao": "SNPD",
+		"latitude": -18.6728,
+		"longitude": -46.4912,
+		"state": "Minas Gerais - BR"
+	},
+	"USRR": {
+		"name": "Surgut International Airport",
+		"icao": "USRR",
+		"latitude": 61.3437,
+		"longitude": 73.4018,
+		"state": "Khanty-Mansiyskiy avtonomnyy okrug - RU"
+	},
+	"OEGN": {
+		"name": "Jizan Regional Airport (King Abdullah bin Abdulaziz Airport)",
+		"icao": "OEGN",
+		"latitude": 16.9011,
+		"longitude": 42.5858,
+		"state": "Jazan - SA"
+	},
+	"EFVA": {
+		"name": "Vaasa Airport",
+		"icao": "EFVA",
+		"latitude": 63.0507,
+		"longitude": 21.7622,
+		"state": "Pohjanmaa - FI"
+	},
+	"MMMA": {
+		"name": "General Servando Canales International Airport",
+		"icao": "MMMA",
+		"latitude": 25.7699,
+		"longitude": -97.5253,
+		"state": "Tamaulipas - MX"
+	},
+	"EPWR": {
+		"name": "Copernicus Airport Wroclaw",
+		"icao": "EPWR",
+		"latitude": 51.1027,
+		"longitude": 16.8858,
+		"state": "Dolnoslaskie - PL"
+	},
+	"UTAA": {
+		"name": "Ashgabat International Airport",
+		"icao": "UTAA",
+		"latitude": 37.9868,
+		"longitude": 58.361,
+		"state": "Dasoguz - TM"
+	},
+	"SWTP": {
+		"name": "Tapuruquara Airport",
+		"icao": "SWTP",
+		"latitude": -0.3786,
+		"longitude": -64.9923,
+		"state": "Amazonas - BR"
+	},
+	"LTAZ": {
+		"name": "Nevsehir Kapadokya Air",
+		"icao": "LTAZ",
+		"latitude": 38.7719,
+		"longitude": 34.5345,
+		"state": "Nevsehir - TR"
+	},
+	"CYUY": {
+		"name": "Rouyn-Noranda Airport",
+		"icao": "CYUY",
+		"latitude": 48.2061,
+		"longitude": -78.8356,
+		"state": "Quebec - CA"
+	},
+	"LGAL": {
+		"name": "Alexandroupoli Airport (Dimokritos Airport)",
+		"icao": "LGAL",
+		"latitude": 40.8559,
+		"longitude": 25.9563,
+		"state": "Anatoliki Makedonia kai Thraki - GR"
+	},
+	"SNBR": {
+		"name": "Barreiras Airport",
+		"icao": "SNBR",
+		"latitude": -12.0789,
+		"longitude": -45.009,
+		"state": "Bahia - BR"
+	},
+	"SWMW": {
+		"name": "Maues Airport",
+		"icao": "SWMW",
+		"latitude": -3.37217,
+		"longitude": -57.7248,
+		"state": "Amazonas - BR"
+	},
+	"DTTJ": {
+		"name": "Djerba-Zarzis International Airport",
+		"icao": "DTTJ",
+		"latitude": 33.875,
+		"longitude": 10.7755,
+		"state": "Medenine - TN"
+	},
+	"EKVG": {
+		"name": "Vagar Airport",
+		"icao": "EKVG",
+		"latitude": 62.0636,
+		"longitude": -7.27722,
+		"state": "Falkland Islands (Malvinas) - FK"
+	},
+	"SSGY": {
+		"name": "Guaira Airport",
+		"icao": "SSGY",
+		"latitude": -24.0797,
+		"longitude": -54.1881,
+		"state": "Parana - BR"
+	},
+	"UARR": {
+		"name": "Oral Ak Zhol Airport",
+		"icao": "UARR",
+		"latitude": 51.1508,
+		"longitude": 51.5431,
+		"state": "Batys Qazaqstan oblysy - KZ"
+	},
+	"SNTO": {
+		"name": "Teofilo Otoni Airport (Juscelino Kubitscheck Airport)",
+		"icao": "SNTO",
+		"latitude": -17.8923,
+		"longitude": -41.5136,
+		"state": "Minas Gerais - BR"
+	},
+	"SAWA": {
+		"name": "Comandante Armando Tola International Airport",
+		"icao": "SAWA",
+		"latitude": -50.2803,
+		"longitude": -72.0531,
+		"state": "Santa Cruz - AR"
+	},
+	"SPHO": {
+		"name": "Coronel FAP Alfredo Mendivil Duarte Airport",
+		"icao": "SPHO",
+		"latitude": -13.1548,
+		"longitude": -74.2044,
+		"state": "Ayacucho - PE"
+	},
+	"LTFO": {
+		"name": "Rize Artvin Airport",
+		"icao": "LTFO",
+		"latitude": 41.1692,
+		"longitude": 40.8289,
+		"state": "Rize - TR"
+	},
+	"EHSE": {
+		"name": "Breda International Airport",
+		"icao": "EHSE",
+		"latitude": 51.5549,
+		"longitude": 4.5526,
+		"state": "Noord-Brabant - NL"
+	},
+	"CYOJ": {
+		"name": "High Level Airport",
+		"icao": "CYOJ",
+		"latitude": 58.6214,
+		"longitude": -117.165,
+		"state": "Alberta - CA"
+	},
+	"SBVG": {
+		"name": "Major Brigadeiro Trompowsky Airport",
+		"icao": "SBVG",
+		"latitude": -21.5901,
+		"longitude": -45.4733,
+		"state": "Minas Gerais - BR"
+	},
+	"GVNP": {
+		"name": "Nelson Mandela International Airport",
+		"icao": "GVNP",
+		"latitude": 14.9245,
+		"longitude": -23.4935,
+		"state": "Ribeira Grande de Santiago - CV"
+	},
+	"LTCI": {
+		"name": "Van Ferit Melen Airport",
+		"icao": "LTCI",
+		"latitude": 38.4682,
+		"longitude": 43.3323,
+		"state": "Van - TR"
+	},
+	"SEMT": {
+		"name": "Eloy Alfaro International Airport",
+		"icao": "SEMT",
+		"latitude": -0.946078,
+		"longitude": -80.6788,
+		"state": "Manabi - EC"
+	},
+	"CYAM": {
+		"name": "Sault Ste. Marie Airport",
+		"icao": "CYAM",
+		"latitude": 46.485,
+		"longitude": -84.5094,
+		"state": "Ontario - CA"
+	},
+	"SCNT": {
+		"name": "Teniente Julio Gallardo Airport",
+		"icao": "SCNT",
+		"latitude": -51.6715,
+		"longitude": -72.5284,
+		"state": "Magallanes - CL"
+	},
+	"ENHF": {
+		"name": "Hammerfest Airport",
+		"icao": "ENHF",
+		"latitude": 70.6797,
+		"longitude": 23.6686,
+		"state": "Finnmark - NO"
+	},
+	"YSDU": {
+		"name": "Dubbo City Regional Airport",
+		"icao": "YSDU",
+		"latitude": -32.2167,
+		"longitude": 148.575,
+		"state": "New South Wales - AU"
+	},
+	"VTUD": {
+		"name": "Udon Thani International Airport",
+		"icao": "VTUD",
+		"latitude": 17.3864,
+		"longitude": 102.788,
+		"state": "Udon Thani - TH"
+	},
+	"ZSLG": {
+		"name": "Lianyungang Baitabu Airport",
+		"icao": "ZSLG",
+		"latitude": 34.5717,
+		"longitude": 118.874,
+		"state": "Jiangsu - CN"
+	},
+	"SBTT": {
+		"name": "Tabatinga International Airport",
+		"icao": "SBTT",
+		"latitude": -4.25567,
+		"longitude": -69.9358,
+		"state": "Amazonas - BR"
+	},
+	"ESMT": {
+		"name": "Halmstad Airport (Halmstad City Airport)",
+		"icao": "ESMT",
+		"latitude": 56.6911,
+		"longitude": 12.8202,
+		"state": "Hallands lan - SE"
+	},
+	"LTCU": {
+		"name": "Bingol Airport",
+		"icao": "LTCU",
+		"latitude": 38.8593,
+		"longitude": 40.596,
+		"state": "Bingol - TR"
+	},
+	"URML": {
+		"name": "Uytash Airport",
+		"icao": "URML",
+		"latitude": 42.8168,
+		"longitude": 47.6523,
+		"state": "Dagestan, Respublika - RU"
+	},
+	"YCFS": {
+		"name": "Coffs Harbour Airport",
+		"icao": "YCFS",
+		"latitude": -30.3206,
+		"longitude": 153.116,
+		"state": "New South Wales - AU"
+	},
+	"SWBR": {
+		"name": "Borba Airport",
+		"icao": "SWBR",
+		"latitude": -4.40634,
+		"longitude": -59.6024,
+		"state": "Amazonas - BR"
+	},
+	"LTFH": {
+		"name": "Samsun-Carsamba Airport",
+		"icao": "LTFH",
+		"latitude": 41.2545,
+		"longitude": 36.5671,
+		"state": "Samsun - TR"
+	},
+	"WAAA": {
+		"name": "Sultan Hasanuddin International Airport",
+		"icao": "WAAA",
+		"latitude": -5.06163,
+		"longitude": 119.554,
+		"state": "Sulawesi Selatan - ID"
+	},
+	"EDDG": {
+		"name": "Munster Osnabruck International Airport",
+		"icao": "EDDG",
+		"latitude": 52.1346,
+		"longitude": 7.68483,
+		"state": "Nordrhein-Westfalen - DE"
+	},
+	"LICG": {
+		"name": "Pantelleria Airport",
+		"icao": "LICG",
+		"latitude": 36.8165,
+		"longitude": 11.9689,
+		"state": "Sicilia - IT"
+	},
+	"CYXT": {
+		"name": "Northwest Regional Airport",
+		"icao": "CYXT",
+		"latitude": 54.4685,
+		"longitude": -128.576,
+		"state": "British Columbia - CA"
+	},
+	"YHBA": {
+		"name": "Hervey Bay Airport",
+		"icao": "YHBA",
+		"latitude": -25.3189,
+		"longitude": 152.88,
+		"state": "Queensland - AU"
+	},
+	"LTAJ": {
+		"name": "Gaziantep Oguzeli International Airport",
+		"icao": "LTAJ",
+		"latitude": 36.9472,
+		"longitude": 37.4787,
+		"state": "Gaziantep - TR"
+	},
+	"SCIP": {
+		"name": "Mataveri International Airport (Isla de Pascua Airport)",
+		"icao": "SCIP",
+		"latitude": -27.1648,
+		"longitude": -109.422,
+		"state": "Valparaiso - CL"
+	},
+	"LTAW": {
+		"name": "Tokat Airport",
+		"icao": "LTAW",
+		"latitude": 40.3074,
+		"longitude": 36.3674,
+		"state": "Tokat - TR"
+	},
+	"SKNV": {
+		"name": "Benito Salas Airport",
+		"icao": "SKNV",
+		"latitude": 2.95015,
+		"longitude": -75.294,
+		"state": "Huila - CO"
+	},
+	"SBTC": {
+		"name": "Una-Comandatuba Airport",
+		"icao": "SBTC",
+		"latitude": -15.3552,
+		"longitude": -38.999,
+		"state": "Bahia - BR"
+	},
+	"SBUA": {
+		"name": "Sao Gabriel da Cachoeira Airport",
+		"icao": "SBUA",
+		"latitude": -0.14835,
+		"longitude": -66.9855,
+		"state": "Amazonas - BR"
+	},
+	"LTCW": {
+		"name": "Hakkari Yuksekova Airport",
+		"icao": "LTCW",
+		"latitude": 37.5497,
+		"longitude": 44.2381,
+		"state": "Hakkari - TR"
+	},
+	"LIME": {
+		"name": "Milan Bergamo Airport",
+		"icao": "LIME",
+		"latitude": 45.66546,
+		"longitude": 9.69948,
+		"state": "Lombardia - IT"
+	},
+	"WALL": {
+		"name": "Sultan Aji Muhammad Sulaiman Airport",
+		"icao": "WALL",
+		"latitude": -1.26827,
+		"longitude": 116.894,
+		"state": "Kalimantan Timur - ID"
+	},
+	"ENHD": {
+		"name": "Haugesund Airport",
+		"icao": "ENHD",
+		"latitude": 59.3453,
+		"longitude": 5.20836,
+		"state": "Rogaland - NO"
+	},
+	"WAMM": {
+		"name": "Sam Ratulangi International Airport",
+		"icao": "WAMM",
+		"latitude": 1.54926,
+		"longitude": 124.926,
+		"state": "Sulawesi Utara - ID"
+	},
+	"SAZB": {
+		"name": "Comandante Espora Airport",
+		"icao": "SAZB",
+		"latitude": -38.725,
+		"longitude": -62.1693,
+		"state": "Buenos Aires - AR"
+	},
+	"EKAH": {
+		"name": "Aarhus Airport",
+		"icao": "EKAH",
+		"latitude": 56.3,
+		"longitude": 10.619,
+		"state": "Midtjylland - DK"
+	},
+	"MMML": {
+		"name": "General Rodolfo Sanchez Taboada International Airport",
+		"icao": "MMML",
+		"latitude": 32.6306,
+		"longitude": -115.242,
+		"state": "Baja California - MX"
+	},
+	"SBDB": {
+		"name": "Bonito Airport",
+		"icao": "SBDB",
+		"latitude": -21.2473,
+		"longitude": -56.4525,
+		"state": "Mato Grosso do Sul - BR"
+	},
+	"SBVH": {
+		"name": "Vilhena Airport (Brigadeiro Camarao Airport)",
+		"icao": "SBVH",
+		"latitude": -12.6944,
+		"longitude": -60.0983,
+		"state": "Rondonia - BR"
+	},
+	"SBZM": {
+		"name": "Presidente Itamar Franco Airport (Zona da Mata Regional Airport)",
+		"icao": "SBZM",
+		"latitude": -21.5131,
+		"longitude": -43.1731,
+		"state": "Minas Gerais - BR"
+	},
+	"LOWG": {
+		"name": "Graz Airport",
+		"icao": "LOWG",
+		"latitude": 46.9911,
+		"longitude": 15.4396,
+		"state": "Steiermark - AT"
+	},
+	"SPHZ": {
+		"name": "Comandante FAP German Arias Graziani Airport",
+		"icao": "SPHZ",
+		"latitude": -9.34744,
+		"longitude": -77.5984,
+		"state": "Ancash - PE"
+	},
+	"SCJO": {
+		"name": "Canal Bajo Carlos Hott Siebert Airport",
+		"icao": "SCJO",
+		"latitude": -40.6112,
+		"longitude": -73.061,
+		"state": "Los Lagos - CL"
+	},
+	"USSS": {
+		"name": "Koltsovo International Airport",
+		"icao": "USSS",
+		"latitude": 56.7431,
+		"longitude": 60.8027,
+		"state": "Sverdlovskaya oblast' - RU"
+	},
+	"LYKV": {
+		"name": "Morava Aerodrom",
+		"icao": "LYKV",
+		"latitude": 43.8274,
+		"longitude": 20.5812,
+		"state": "Raski okrug - RS"
+	},
+	"SAZN": {
+		"name": "Presidente Peron International Air",
+		"icao": "SAZN",
+		"latitude": -38.949,
+		"longitude": -68.1557,
+		"state": "Neuquen - AR"
+	},
+	"LTCL": {
+		"name": "Siirt Airport",
+		"icao": "LTCL",
+		"latitude": 37.9789,
+		"longitude": 41.8404,
+		"state": "Siirt - TR"
+	},
+	"ZSYW": {
+		"name": "Yiwu Airport",
+		"icao": "ZSYW",
+		"latitude": 29.3447,
+		"longitude": 120.032,
+		"state": "Zhejiang - CN"
+	},
+	"LRBS": {
+		"name": "Aurel Vlaicu International Airport",
+		"icao": "LRBS",
+		"latitude": 44.496,
+		"longitude": 26.0814,
+		"state": "Bucuresti - RO"
+	},
+	"LTAU": {
+		"name": "Erkilet International Airport",
+		"icao": "LTAU",
+		"latitude": 38.7704,
+		"longitude": 35.4954,
+		"state": "Kayseri - TR"
+	},
+	"LIEA": {
+		"name": "Alghero-Fertilia Airport",
+		"icao": "LIEA",
+		"latitude": 40.6321,
+		"longitude": 8.29077,
+		"state": "Sardegna - IT"
+	},
+	"KLBL": {
+		"name": "Liberal Mid-America Regional Airport",
+		"icao": "KLBL",
+		"latitude": 37.0442,
+		"longitude": -100.96,
+		"state": "Kansas - US"
+	},
+	"EDNY": {
+		"name": "Friedrichshafen Airport (Bodensee Airport)",
+		"icao": "EDNY",
+		"latitude": 47.6713,
+		"longitude": 9.51149,
+		"state": "Baden-Wurttemberg - DE"
+	},
+	"SBGV": {
+		"name": "Coronel Altino Machado de Oliveira Airport",
+		"icao": "SBGV",
+		"latitude": -18.8952,
+		"longitude": -41.9822,
+		"state": "Minas Gerais - BR"
+	},
+	"GVAC": {
+		"name": "Amilcar Cabral International Airport",
+		"icao": "GVAC",
+		"latitude": 16.7414,
+		"longitude": -22.9494,
+		"state": "Sal - CV"
+	},
+	"ESNQ": {
+		"name": "Kiruna Airport",
+		"icao": "ESNQ",
+		"latitude": 67.822,
+		"longitude": 20.3368,
+		"state": "Norrbottens lan - SE"
+	},
+	"LOWL": {
+		"name": "Linz Airport (Blue Danube Airport)",
+		"icao": "LOWL",
+		"latitude": 48.2332,
+		"longitude": 14.1875,
+		"state": "Oberosterreich - AT"
+	},
+	"SBJR": {
+		"name": "Jacarepagua Airport",
+		"icao": "SBJR",
+		"latitude": -22.9878,
+		"longitude": -43.3702,
+		"state": "Rio de Janeiro - BR"
+	},
+	"OIFM": {
+		"name": "Isfahan International Airport (Shahid Beheshti Int'l)",
+		"icao": "OIFM",
+		"latitude": 32.7508,
+		"longitude": 51.8613,
+		"state": "Esfahan - IR"
+	},
+	"SAWG": {
+		"name": "Piloto Civil Norberto Fernandez International Airport",
+		"icao": "SAWG",
+		"latitude": -51.6089,
+		"longitude": -69.3126,
+		"state": "Santa Cruz - AR"
+	},
+	"SBPK": {
+		"name": "Joao Simoes Lopes Neto International Airport",
+		"icao": "SBPK",
+		"latitude": -31.7184,
+		"longitude": -52.3277,
+		"state": "Rio Grande do Sul - BR"
+	},
+	"YBMA": {
+		"name": "Mount Isa Airport",
+		"icao": "YBMA",
+		"latitude": -20.6639,
+		"longitude": 139.489,
+		"state": "Queensland - AU"
+	},
+	"LSPL": {
+		"name": "Langenthal Airport",
+		"icao": "LSPL",
+		"latitude": 47.1828,
+		"longitude": 7.7408,
+		"state": "Bern - CH"
+	},
+	"UAFM": {
+		"name": "Manas International Airport",
+		"icao": "UAFM",
+		"latitude": 43.0613,
+		"longitude": 74.4776,
+		"state": "Chuy - KG"
+	},
+	"UUDD": {
+		"name": "Domodedovo Airport",
+		"icao": "UUDD",
+		"latitude": 55.4102,
+		"longitude": 37.902,
+		"state": "Moskovskaya Oblast - RU"
+	},
+	"EPSC": {
+		"name": "Solidarity Szczecin-Goleniow Airport",
+		"icao": "EPSC",
+		"latitude": 53.5847,
+		"longitude": 14.9022,
+		"state": "Zachodniopomorskie - PL"
+	},
+	"ESMS": {
+		"name": "Malmo Airport",
+		"icao": "ESMS",
+		"latitude": 55.5346,
+		"longitude": 13.3704,
+		"state": "Skane lan - SE"
+	},
+	"CYGR": {
+		"name": "Iles-de-la-Madeleine Airport",
+		"icao": "CYGR",
+		"latitude": 47.4247,
+		"longitude": -61.7781,
+		"state": "Quebec - CA"
+	},
+	"SKLT": {
+		"name": "Alfredo Vasquez Cobo International Airport",
+		"icao": "SKLT",
+		"latitude": -4.19355,
+		"longitude": -69.9432,
+		"state": "Amazonas - CO"
+	},
+	"LDPL": {
+		"name": "Pula Airport",
+		"icao": "LDPL",
+		"latitude": 44.8935,
+		"longitude": 13.9222,
+		"state": "Istarska zupanija - HR"
+	},
+	"OSDI": {
+		"name": "Damascus International Airport",
+		"icao": "OSDI",
+		"latitude": 33.4115,
+		"longitude": 36.5156,
+		"state": "Dimashq - SY"
+	},
+	"CYQZ": {
+		"name": "Quesnel Airport",
+		"icao": "CYQZ",
+		"latitude": 53.0261,
+		"longitude": -122.51,
+		"state": "British Columbia - CA"
+	},
+	"LUKK": {
+		"name": "Chisinau International Airport",
+		"icao": "LUKK",
+		"latitude": 46.9277,
+		"longitude": 28.931,
+		"state": "Chisinau - MD"
+	},
+	"EDFH": {
+		"name": "Frankfurt-Hahn Airport",
+		"icao": "EDFH",
+		"latitude": 49.9487,
+		"longitude": 7.26389,
+		"state": "Rheinland-Pfalz - DE"
+	},
+	"LHDC": {
+		"name": "Debrecen International Airport",
+		"icao": "LHDC",
+		"latitude": 47.4889,
+		"longitude": 21.6153,
+		"state": "Hajdu-Bihar - HU"
+	},
+	"ENEV": {
+		"name": "Harstad/Narvik Airport",
+		"icao": "ENEV",
+		"latitude": 68.4913,
+		"longitude": 16.6781,
+		"state": "Nordland - NO"
+	},
+	"SPJL": {
+		"name": "Inca Manco Capac International Airport",
+		"icao": "SPJL",
+		"latitude": -15.4671,
+		"longitude": -70.1582,
+		"state": "Puno - PE"
+	},
+	"UWUU": {
+		"name": "Ufa International Airport",
+		"icao": "UWUU",
+		"latitude": 54.5575,
+		"longitude": 55.8744,
+		"state": "Bashkortostan, Respublika - RU"
+	},
+	"SBSJ": {
+		"name": "Professor Urbano Ernesto Stumpf International Airport",
+		"icao": "SBSJ",
+		"latitude": -23.2292,
+		"longitude": -45.8615,
+		"state": "Sao Paulo - BR"
+	},
+	"KRIV": {
+		"name": "March Air Reserve Base",
+		"icao": "KRIV",
+		"latitude": 33.8807,
+		"longitude": -117.259,
+		"state": "California - US"
+	},
+	"HEMA": {
+		"name": "Marsa Alam International Airport",
+		"icao": "HEMA",
+		"latitude": 25.5571,
+		"longitude": 34.5837,
+		"state": "Al Bahr al Ahmar - EG"
+	},
+	"SBTF": {
+		"name": "Tefe Airport",
+		"icao": "SBTF",
+		"latitude": -3.38294,
+		"longitude": -64.7241,
+		"state": "Amazonas - BR"
+	},
+	"ESNS": {
+		"name": "Skelleftea Airport",
+		"icao": "ESNS",
+		"latitude": 64.6248,
+		"longitude": 21.0769,
+		"state": "Vasterbottens lan - SE"
+	},
+	"SKPS": {
+		"name": "Antonio Narino Airport",
+		"icao": "SKPS",
+		"latitude": 1.39625,
+		"longitude": -77.2915,
+		"state": "Narino - CO"
+	},
+	"SBCX": {
+		"name": "Caxias do Sul Airport (Hugo Cantergiani Regional Airport)",
+		"icao": "SBCX",
+		"latitude": -29.1971,
+		"longitude": -51.1875,
+		"state": "Rio Grande do Sul - BR"
+	},
+	"GVSV": {
+		"name": "Cesaria Evora Airport",
+		"icao": "GVSV",
+		"latitude": 16.8332,
+		"longitude": -25.0553,
+		"state": "Sao Vicente - CV"
+	},
+	"LQMO": {
+		"name": "Mostar Airport",
+		"icao": "LQMO",
+		"latitude": 43.2829,
+		"longitude": 17.8459,
+		"state": "Federacija Bosne i Hercegovine - BA"
+	},
+	"SBCR": {
+		"name": "Corumba International Airport",
+		"icao": "SBCR",
+		"latitude": -19.0119,
+		"longitude": -57.6714,
+		"state": "Mato Grosso do Sul - BR"
+	},
+	"ENSB": {
+		"name": "Svalbard Airport",
+		"icao": "ENSB",
+		"latitude": 78.2461,
+		"longitude": 15.4656,
+		"state": "Svalbard and Jan Mayen - SJ"
+	},
+	"SBML": {
+		"name": "Frank Miloye Milenkowichi-Marilia State Airport",
+		"icao": "SBML",
+		"latitude": -22.1969,
+		"longitude": -49.9264,
+		"state": "Sao Paulo - BR"
+	},
+	"OMRK": {
+		"name": "Ras Al Khaimah International Airport",
+		"icao": "OMRK",
+		"latitude": 25.6135,
+		"longitude": 55.9388,
+		"state": "Ra's al Khaymah - AE"
+	},
+	"UTKF": {
+		"name": "Fergana International Airport",
+		"icao": "UTKF",
+		"latitude": 40.3588,
+		"longitude": 71.745,
+		"state": "Farg'ona - UZ"
+	},
+	"YARM": {
+		"name": "Armidale Airport",
+		"icao": "YARM",
+		"latitude": -30.5281,
+		"longitude": 151.617,
+		"state": "New South Wales - AU"
+	},
+	"LDRI": {
+		"name": "Rijeka Airport",
+		"icao": "LDRI",
+		"latitude": 45.2169,
+		"longitude": 14.5703,
+		"state": "Primorsko-goranska zupanija - HR"
+	},
+	"VEDH": {
+		"name": "Darbhanga Airport",
+		"icao": "VEDH",
+		"latitude": 26.1947,
+		"longitude": 85.9175,
+		"state": "Bihar - IN"
+	},
+	"GFLL": {
+		"name": "Lungi International Airport",
+		"icao": "GFLL",
+		"latitude": 8.61644,
+		"longitude": -13.1955,
+		"state": "Western Area - SL"
+	},
+	"SULS": {
+		"name": "Capitan de Corbeta Carlos A. Curbelo International Airport",
+		"icao": "SULS",
+		"latitude": -34.8551,
+		"longitude": -55.0943,
+		"state": "Maldonado - UY"
+	},
+	"CYXU": {
+		"name": "London International Airport",
+		"icao": "CYXU",
+		"latitude": 43.0356,
+		"longitude": -81.1539,
+		"state": "Ontario - CA"
+	},
+	"ZWKM": {
+		"name": "Karamay Airport",
+		"icao": "ZWKM",
+		"latitude": 45.4665,
+		"longitude": 84.9527,
+		"state": "Xinjiang - CN"
+	},
+	"SNMZ": {
+		"name": "Porto de Moz Airport",
+		"icao": "SNMZ",
+		"latitude": -1.74145,
+		"longitude": -52.2361,
+		"state": "Para - BR"
+	},
+	"ENAT": {
+		"name": "Alta Airport",
+		"icao": "ENAT",
+		"latitude": 69.9761,
+		"longitude": 23.3717,
+		"state": "Finnmark - NO"
+	},
+	"VISR": {
+		"name": "Sheikh ul Alam International Airport",
+		"icao": "VISR",
+		"latitude": 33.9871,
+		"longitude": 74.7742,
+		"state": "Jammu and Kashmir - IN"
+	},
+	"GCLA": {
+		"name": "La Palma Airport",
+		"icao": "GCLA",
+		"latitude": 28.6265,
+		"longitude": -17.7556,
+		"state": "Canarias - ES"
+	},
+	"LTCV": {
+		"name": "Sirnak Airport",
+		"icao": "LTCV",
+		"latitude": 37.3647,
+		"longitude": 42.0582,
+		"state": "Sirnak - TR"
+	},
+	"CYXC": {
+		"name": "Cranbrook/Canadian Rockies International Airport",
+		"icao": "CYXC",
+		"latitude": 49.6108,
+		"longitude": -115.782,
+		"state": "British Columbia - CA"
+	},
+	"TFFJ": {
+		"name": "Gustaf III Airport",
+		"icao": "TFFJ",
+		"latitude": 17.9044,
+		"longitude": -62.8436,
+		"state": "Saint Barthelemy - BL"
+	},
+	"SPTN": {
+		"name": "Coronel FAP Carlos Ciriani Santa Rosa International Airport",
+		"icao": "SPTN",
+		"latitude": -18.0533,
+		"longitude": -70.2758,
+		"state": "Tacna - PE"
+	},
+	"SANT": {
+		"name": "Teniente General Benjamin Matienzo International Airport",
+		"icao": "SANT",
+		"latitude": -26.8409,
+		"longitude": -65.1049,
+		"state": "Tucuman - AR"
+	},
+	"SECU": {
+		"name": "Mariscal Lamar International Airport",
+		"icao": "SECU",
+		"latitude": -2.88947,
+		"longitude": -78.9844,
+		"state": "Azuay - EC"
+	},
+	"SBNM": {
+		"name": "Sepe Tiaraju Airport",
+		"icao": "SBNM",
+		"latitude": -28.2817,
+		"longitude": -54.1691,
+		"state": "Rio Grande do Sul - BR"
+	},
+	"LTCJ": {
+		"name": "Batman Airport",
+		"icao": "LTCJ",
+		"latitude": 37.929,
+		"longitude": 41.1166,
+		"state": "Batman - TR"
+	},
+	"SBSM": {
+		"name": "Santa Maria Airport (Rio Grande do Sul)",
+		"icao": "SBSM",
+		"latitude": -29.7114,
+		"longitude": -53.6882,
+		"state": "Rio Grande do Sul - BR"
+	},
+	"WAPP": {
+		"name": "Pattimura Airport",
+		"icao": "WAPP",
+		"latitude": -3.71026,
+		"longitude": 128.089,
+		"state": "Maluku - ID"
+	},
+	"EPBY": {
+		"name": "Bydgoszcz Ignacy Jan Paderewski Airport",
+		"icao": "EPBY",
+		"latitude": 53.0968,
+		"longitude": 17.9777,
+		"state": "Kujawsko-pomorskie - PL"
+	},
+	"SBIP": {
+		"name": "Vale do Aco Regional Airport",
+		"icao": "SBIP",
+		"latitude": -19.4707,
+		"longitude": -42.4876,
+		"state": "Minas Gerais - BR"
+	},
+	"KSKA": {
+		"name": "Fairchild Air Force Base",
+		"icao": "KSKA",
+		"latitude": 47.6151,
+		"longitude": -117.656,
+		"state": "Washington - US"
+	},
+	"SBLE": {
+		"name": "Coronel Horacio de Mattos Airport",
+		"icao": "SBLE",
+		"latitude": -12.4823,
+		"longitude": -41.277,
+		"state": "Bahia - BR"
+	},
+	"CYCG": {
+		"name": "West Kootenay Regional Airport (Castlegar Airport)",
+		"icao": "CYCG",
+		"latitude": 49.2964,
+		"longitude": -117.632,
+		"state": "British Columbia - CA"
+	},
+	"SBKG": {
+		"name": "Campina Grande Airport (Presidente Joao Suassuna Airport)",
+		"icao": "SBKG",
+		"latitude": -7.26992,
+		"longitude": -35.8964,
+		"state": "Paraiba - BR"
+	},
+	"LFST": {
+		"name": "Strasbourg Airport",
+		"icao": "LFST",
+		"latitude": 48.5383,
+		"longitude": 7.62823,
+		"state": "Grand-Est - FR"
+	},
+	"LRCK": {
+		"name": "Mihail Kogalniceanu International Airport",
+		"icao": "LRCK",
+		"latitude": 44.3622,
+		"longitude": 28.4883,
+		"state": "Constanta - RO"
+	},
+	"SARI": {
+		"name": "Cataratas del Iguazu International Airport",
+		"icao": "SARI",
+		"latitude": -25.7373,
+		"longitude": -54.4734,
+		"state": "Misiones - AR"
+	},
+	"ESSL": {
+		"name": "Linkoping City Airport",
+		"icao": "ESSL",
+		"latitude": 58.4062,
+		"longitude": 15.6805,
+		"state": "Ostergotlands lan - SE"
+	},
+	"LRSV": {
+		"name": "Suceava International Airport (Stefan cel Mare Int'l)",
+		"icao": "LRSV",
+		"latitude": 47.6875,
+		"longitude": 26.3541,
+		"state": "Suceava - RO"
+	},
+	"SBAE": {
+		"name": "Moussa Nakhl Tobias-Bauru/Arealva State Airport",
+		"icao": "SBAE",
+		"latitude": -22.1669,
+		"longitude": -49.0503,
+		"state": "Sao Paulo - BR"
+	},
+	"OENN": {
+		"name": "Neom Bay Airport",
+		"icao": "OENN",
+		"latitude": 27.9276,
+		"longitude": 35.2887,
+		"state": "Tabuk - SA"
+	},
+	"LTBA": {
+		"name": "Istanbul Ataturk Airport",
+		"icao": "LTBA",
+		"latitude": 40.9769,
+		"longitude": 28.8146,
+		"state": "Istanbul - TR"
+	},
+	"SASJ": {
+		"name": "Gobernador Horacio Guzman International Airport",
+		"icao": "SASJ",
+		"latitude": -24.3928,
+		"longitude": -65.0978,
+		"state": "Jujuy - AR"
+	},
+	"CYXY": {
+		"name": "Erik Nielsen Whitehorse International Airport",
+		"icao": "CYXY",
+		"latitude": 60.7096,
+		"longitude": -135.067,
+		"state": "Yukon - CA"
+	},
+	"SAVT": {
+		"name": "Almirante Marcos A. Zar Airport",
+		"icao": "SAVT",
+		"latitude": -43.2105,
+		"longitude": -65.2703,
+		"state": "Chubut - AR"
+	},
+	"SAZS": {
+		"name": "San Carlos de Bariloche Airport",
+		"icao": "SAZS",
+		"latitude": -41.1512,
+		"longitude": -71.1575,
+		"state": "Rio Negro - AR"
+	},
+	"SSPB": {
+		"name": "Juvenal Loureiro Cardoso Airport",
+		"icao": "SSPB",
+		"latitude": -26.2172,
+		"longitude": -52.6945,
+		"state": "Parana - BR"
+	},
+	"LTDA": {
+		"name": "Hatay Airport",
+		"icao": "LTDA",
+		"latitude": 36.3628,
+		"longitude": 36.2822,
+		"state": "Hatay - TR"
+	},
+	"SANU": {
+		"name": "Domingo Faustino Sarmiento Airport",
+		"icao": "SANU",
+		"latitude": -31.5715,
+		"longitude": -68.4182,
+		"state": "San Juan - AR"
+	},
+	"SPST": {
+		"name": "Cad. FAP Guillermo del Castillo Paredes Airport",
+		"icao": "SPST",
+		"latitude": -6.50874,
+		"longitude": -76.3732,
+		"state": "San Martin - PE"
+	},
+	"ZUMT": {
+		"name": "Zunyi Maotai Airport",
+		"icao": "ZUMT",
+		"latitude": 27.8164,
+		"longitude": 106.333,
+		"state": "Guizhou - CN"
+	},
+	"SAWE": {
+		"name": "Hermes Quijada International Airport",
+		"icao": "SAWE",
+		"latitude": -53.7777,
+		"longitude": -67.7494,
+		"state": "Tierra del Fuego - AR"
+	},
+	"OITT": {
+		"name": "Tabriz International Airport",
+		"icao": "OITT",
+		"latitude": 38.1339,
+		"longitude": 46.235,
+		"state": "Azarbayjan-e Sharqi - IR"
+	},
+	"SCSE": {
+		"name": "La Florida Airport",
+		"icao": "SCSE",
+		"latitude": -29.9162,
+		"longitude": -71.1995,
+		"state": "Coquimbo - CL"
+	},
+	"LTCT": {
+		"name": "Igdir Airport",
+		"icao": "LTCT",
+		"latitude": 39.9766,
+		"longitude": 43.8766,
+		"state": "Igdir - TR"
+	},
+	"OEHL": {
+		"name": "Ha'il Regional Airport",
+		"icao": "OEHL",
+		"latitude": 27.4379,
+		"longitude": 41.6863,
+		"state": "Ha'il - SA"
+	},
+	"YMIA": {
+		"name": "Mildura Airport",
+		"icao": "YMIA",
+		"latitude": -34.2292,
+		"longitude": 142.086,
+		"state": "Victoria - AU"
+	},
+	"YBUD": {
+		"name": "Bundaberg Airport",
+		"icao": "YBUD",
+		"latitude": -24.9039,
+		"longitude": 152.319,
+		"state": "Queensland - AU"
+	},
+	"RJSS": {
+		"name": "Sendai Airport",
+		"icao": "RJSS",
+		"latitude": 38.1397,
+		"longitude": 140.917,
+		"state": "Miyagi - JP"
+	},
+	"ULLI": {
+		"name": "Pulkovo Airport",
+		"icao": "ULLI",
+		"latitude": 59.8003,
+		"longitude": 30.2625,
+		"state": "Leningradskaya oblast' - RU"
+	},
+	"SNGI": {
+		"name": "Guanambi Airport",
+		"icao": "SNGI",
+		"latitude": -14.2082,
+		"longitude": -42.7461,
+		"state": "Bahia - BR"
+	},
+	"SSKW": {
+		"name": "Capital do Cafe Airport",
+		"icao": "SSKW",
+		"latitude": -11.496,
+		"longitude": -61.4508,
+		"state": "Rondonia - BR"
+	},
+	"WMKM": {
+		"name": "Malacca International Airport",
+		"icao": "WMKM",
+		"latitude": 2.26336,
+		"longitude": 102.252,
+		"state": "Melaka - MY"
+	},
+	"SKRH": {
+		"name": "Almirante Padilla Airport",
+		"icao": "SKRH",
+		"latitude": 11.5262,
+		"longitude": -72.926,
+		"state": "La Guajira - CO"
+	},
+	"YMAY": {
+		"name": "Albury Airport",
+		"icao": "YMAY",
+		"latitude": -36.0678,
+		"longitude": 146.958,
+		"state": "New South Wales - AU"
+	},
+	"SANC": {
+		"name": "Coronel Felipe Varela International Airport",
+		"icao": "SANC",
+		"latitude": -28.5956,
+		"longitude": -65.7517,
+		"state": "Catamarca - AR"
+	},
+	"LTCA": {
+		"name": "Elazig Airport",
+		"icao": "LTCA",
+		"latitude": 38.6069,
+		"longitude": 39.2914,
+		"state": "Elazig - TR"
+	},
+	"LTCD": {
+		"name": "Erzincan Airport",
+		"icao": "LTCD",
+		"latitude": 39.7102,
+		"longitude": 39.527,
+		"state": "Erzincan - TR"
+	},
+	"WAHI": {
+		"name": "Yogyakarta International Airport",
+		"icao": "WAHI",
+		"latitude": -7.90534,
+		"longitude": 110.057,
+		"state": "Jawa Tengah - ID"
+	},
+	"LTBR": {
+		"name": "Yenisehir Airport",
+		"icao": "LTBR",
+		"latitude": 40.2552,
+		"longitude": 29.5626,
+		"state": "Bursa - TR"
+	},
+	"WIPT": {
+		"name": "Minangkabau International Airport",
+		"icao": "WIPT",
+		"latitude": -0.786917,
+		"longitude": 100.281,
+		"state": "Sumatera Barat - ID"
+	},
+	"SAZR": {
+		"name": "Santa Rosa Airport (Argentina)",
+		"icao": "SAZR",
+		"latitude": -36.5883,
+		"longitude": -64.2757,
+		"state": "La Pampa - AR"
+	},
+	"HHAS": {
+		"name": "Asmara International Airport",
+		"icao": "HHAS",
+		"latitude": 15.2919,
+		"longitude": 38.9107,
+		"state": "Al Awsat - ER"
+	},
+	"OMDW": {
+		"name": "Al Maktoum International Airport",
+		"icao": "OMDW",
+		"latitude": 24.8964,
+		"longitude": 55.1614,
+		"state": "Dubayy - AE"
+	},
+	"LTAR": {
+		"name": "Sivas Airport",
+		"icao": "LTAR",
+		"latitude": 39.8138,
+		"longitude": 36.9035,
+		"state": "Sivas - TR"
+	},
+	"SKAR": {
+		"name": "El Eden International Airport",
+		"icao": "SKAR",
+		"latitude": 4.45278,
+		"longitude": -75.7664,
+		"state": "Quindio - CO"
+	},
+	"CYBG": {
+		"name": "Canadian Forces Base Bagotville",
+		"icao": "CYBG",
+		"latitude": 48.3306,
+		"longitude": -70.9964,
+		"state": "Quebec - CA"
+	},
+	"SBHT": {
+		"name": "Altamira Airport",
+		"icao": "SBHT",
+		"latitude": -3.25391,
+		"longitude": -52.254,
+		"state": "Para - BR"
+	},
+	"LTAL": {
+		"name": "Kastamonu Airport",
+		"icao": "LTAL",
+		"latitude": 41.3142,
+		"longitude": 33.7958,
+		"state": "Kastamonu - TR"
+	},
+	"SPME": {
+		"name": "Cap. FAP Pedro Canga Rodriguez Airport",
+		"icao": "SPME",
+		"latitude": -3.55253,
+		"longitude": -80.3814,
+		"state": "Tumbes - PE"
+	},
+	"SBMA": {
+		"name": "Joao Correa da Rocha Airport",
+		"icao": "SBMA",
+		"latitude": -5.36859,
+		"longitude": -49.138,
+		"state": "Para - BR"
+	},
+	"SAOU": {
+		"name": "Brigadier Mayor Cesar Raul Ojeda Airport",
+		"icao": "SAOU",
+		"latitude": -33.2732,
+		"longitude": -66.3564,
+		"state": "San Luis - AR"
+	},
+	"UNNT": {
+		"name": "Tolmachevo Airport",
+		"icao": "UNNT",
+		"latitude": 55.0126,
+		"longitude": 82.6507,
+		"state": "Novosibirskaya oblast' - RU"
+	},
+	"DABB": {
+		"name": "Rabah Bitat Airport (Les Salines Airport)",
+		"icao": "DABB",
+		"latitude": 36.8222,
+		"longitude": 7.80917,
+		"state": "Annaba - DZ"
+	},
+	"HCMH": {
+		"name": "Hargeisa International Airport (Egal Int'l)",
+		"icao": "HCMH",
+		"latitude": 9.51321,
+		"longitude": 44.0824,
+		"state": "Woqooyi Galbeed - SO"
+	}
 }

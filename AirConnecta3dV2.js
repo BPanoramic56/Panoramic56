@@ -506,6 +506,8 @@ function updateOperatorGrid(grid, operators){
     grid.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
     grid.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`;
     operators.forEach(operator => {
+        const operatorColor = "#" +  allAirlineInfo[operator]["Color"].slice(2);
+        console.log(operatorColor);
         const img = document.createElement('img');
         img.className = 'Operator-Item';
         const imgSize = Math.max(100 - (count * 2), 40);
@@ -513,6 +515,7 @@ function updateOperatorGrid(grid, operators){
         img.style.height = `${imgSize}px`
         img.style.width = `${imgSize}px`
         img.src = allAirlineInfo[operator]["Image"];
+        img.style.boxShadow = `3px 3px 10px ${operatorColor}`
         grid.appendChild(img);
     });
 }

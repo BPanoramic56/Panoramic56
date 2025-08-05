@@ -30353,14 +30353,6 @@
   },
   {
     "airline": "ASA",
-    "flightNumber": 9671,
-    "origin": "ANC",
-    "destination": "DGG",
-    "operator": "Alaska Airlines \"Alaska\"",
-    "aircraft": "Boeing 737-700 (twin-jet) (B737)"
-  },
-  {
-    "airline": "ASA",
     "flightNumber": 9676,
     "origin": "ANC",
     "destination": "OME",
