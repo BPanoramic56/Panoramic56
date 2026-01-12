@@ -12,34 +12,6 @@
     <!-- <link rel="icon" type="image/x-icon" href="docs/assets/images/Panoramic-4.ico"> -->
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
-<style>
-    .collapsible {
-        background-color: rgba(178, 175, 255, 0.566);
-        color: rgba(0, 0, 0, 0.566);
-        cursor: pointer;
-        padding: 18px;
-        width: 100%;
-        border: none;
-        text-align: left;
-        outline: none;
-        font-size: 15px;
-        margin-top: 40px;
-        margin-bottom: 20px;
-        margin-right: 20px;
-    }
-
-    .active, .collapsible:hover {
-        background-color: #555;
-    }
-
-    .content {
-        padding: 0 18px;
-        max-height: 200px;
-        overflow: hidden;
-        transition: max-height 0.2s ease-out;
-        background-color: #141414;
-    }
-</style>
 <body class="plan_graphs">
     <div class="side-nav">
         <nav class="nav-bar">
@@ -70,60 +42,441 @@
             </ul>
         </nav>
     </div>
-
     <div class="main">
-        <h2>Sky Route</h2>
-        <br>
-        <p>Sky Route is a small project I made to visualize air traffic above and around airports, through the creation of traffic images</p>
-        <br>
-        <p>Languages used were Python and MySQL</p>
-        <br>
-        <p>The data is initially scrapped from ADS-B Exchange, mostly from the Historical Data section. Then, a python script sees which flights fit withing a 100km square around the airport, saving that to the database under a specifc airport table. That info is then fed into another python script that draws lines between each flight</p>
-        <br>
-        <p>Below are some examples of flights that have been completed. I am posting these flights daily in my instagram <b style="color:royalblue">@skyroute2025</b>, so check that out!</p>
-        <br>
-        <p>You can also see all completed fligts in the Git repo listed above. Some videos from airports may not be available due to Git's file size limits</p>
-        <br>
-        <p>Some notes about the logic behind the creation of the images</p>
-        <ol>
-            <li>The airport coordinates are taken from Google Maps, some airports maybe centered on the runways for better visibility of the flights</li>
-            <li>The colors are set with the airport or airport's location in mind, with arrivals and departures being the exact opposite colors. For example, the default color of the San Francisco Internaional Airport is the same color as the Golden Gate Bridge, while Honolulu utilizes the same shade of pink as Hawaiian Airline liveries</li>
-            <li>Lines are only draw if two points are close together. Since the historical data from ADS-B Exchange is recorded every 5 seconds, some points may be very far away from each other and cause the images to look disconnected, or make lines overlap weirdly</li>
-        </ol>
+        <div class="skyroute-header">
+            <h2 class="title">✈️ Sky Route</h2>
+            <p class="subtitle">Airport Traffic Visualization</p>
+        </div>
 
-        <button class="collapsible">KORD - O'Hare International Airport</button>
-        <div class="content">
-            <img src="Assets/Images/KORD_100.png">
-            <img src="Assets/Images/KORD_100.png">
-        </div><button class="collapsible">KORD - O'Hare International Airport</button>
-        <div class="content">
-            <img src="Assets/Images/KORD_100.png">
-            <img src="Assets/Images/KORD_100.png">
-        </div><button class="collapsible">KORD - O'Hare International Airport</button>
-        <div class="content">
-            <img src="Assets/Images/KORD_100.png">
-            <img src="Assets/Images/KORD_100.png">
-        </div><button class="collapsible">KORD - O'Hare International Airport</button>
-        <div class="content">
-            <img src="Assets/Images/KORD_100.png">
-            <img src="Assets/Images/KORD_100.png">
+        <div class="skyroute-intro">
+            <p>Sky Route is a data visualization project that captures and illustrates air traffic patterns above and around major airports through animated traffic images and videos.</p>
+            
+            <div class="tech-stack">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">MySQL</span>
+                <span class="tech-badge">ADS-B Exchange</span>
+            </div>
+
+            <p>Data is scraped from ADS-B Exchange's Historical Data section. A Python script identifies flights within a 100km radius of each airport and stores them in a MySQL database. Another script then generates visualizations by drawing flight paths based on this data.</p>
+
+            <div class="social-links">
+                <a href="https://instagram.com/skyroute2025" class="stylized-button" target="_blank">
+                    <i class='bx bxl-instagram'></i> Follow @skyroute2025
+                </a>
+                <a href="#" class="github-button">
+                    <i class='bx bxl-github'></i> View on GitHub
+                </a>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <h3 class="section_title">About the Visualizations</h3>
+            <ol>
+                <li><strong>Airport Positioning:</strong> Coordinates are sourced from Google Maps, with some airports centered on runways for optimal flight path visibility.</li>
+                <li><strong>Color Coding:</strong> Each airport features unique colors inspired by its location or iconic landmarks. Arrivals and departures use opposite colors for clear distinction (e.g., SFO uses Golden Gate Bridge orange, while Honolulu features Hawaiian Airlines pink).</li>
+                <li><strong>Path Rendering:</strong> Lines connect only adjacent data points. Since ADS-B Exchange records every 5 seconds, distant points are excluded to prevent disconnected or overlapping paths.</li>
+            </ol>
+        </div>
+
+        <h3 class="section_title">Featured Airports</h3>
+
+        <div class="controls-section">
+            <input type="text" class="search-box" id="searchBox" placeholder="Search by airport code or name...">
+            <select class="region-selector" id="regionFilter">
+                <option value="all">All Regions</option>
+                <option value="North America">North America</option>
+                <option value="Europe">Europe</option>
+                <option value="Asia">Asia</option>
+                <option value="South America">South America</option>
+                <option value="Africa">Africa</option>
+                <option value="Oceania">Oceania</option>
+            </select>
+            <span class="stats-display" id="statsDisplay">Showing 12 of 100 airports</span>
+        </div>
+
+        <div class="master-projects-div" id="airportsGrid"></div>
+
+        <div class="no-results hidden" id="noResults">
+            No airports found matching your search criteria
+        </div>
+
+        <div class="pagination" id="pagination">
+            <button id="prevBtn">← Previous</button>
+            <span class="page-info" id="pageInfo">Page 1 of 9</span>
+            <button id="nextBtn">Next →</button>
+        </div>
+
+        <div class="note-section">
+            <p>Note: Some airport videos may be unavailable due to GitHub file size limitations.</p>
+            <p>© 2025 Sky Route • All visualizations generated from ADS-B Exchange data</p>
         </div>
     </div>
-</body>
-<script>
-var coll = document.getElementsByClassName("collapsible");
-var i;
 
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
-    } 
-  });
-}
-</script>
+    <script>
+        // Sample airport data - replace with your actual data
+        const airports = [
+            {
+                code: "CYYZ",
+                name: "Toronto Pearson International Airport",
+                region: "North America"
+            },
+            {
+                code: "EDDM",
+                name: "Munich Airport",
+                region: "Europe"
+            },
+            {
+                code: "EDFF",
+                name: "Frankfurt Airport",
+                region: "Europe"
+            },
+            {
+                code: "EFHK",
+                name: "Helsinki Airport",
+                region: "Europe"
+            },
+            {
+                code: "EGLL",
+                name: "Heathrow Airport",
+                region: "Europe"
+            },
+            {
+                code: "EIDW",
+                name: "Dublin Airport",
+                region: "Europe"
+            },
+            {
+                code: "KATL",
+                name: "Hartsfield–Jackson Atlanta International Airport",
+                region: "North America"
+            },
+            {
+                code: "KBIL",
+                name: "Billings Logan International Airport",
+                region: "North America"
+            },
+            {
+                code: "KBOI",
+                name: "Boise Airport",
+                region: "North America"
+            },
+            {
+                code: "KBOS",
+                name: "Boston Logan International Airport",
+                region: "North America"
+            },
+            {
+                code: "KCLT",
+                name: "Charlotte Douglas International Airport",
+                region: "North America"
+            },
+            {
+                code: "KDEN",
+                name: "Denver International Airport",
+                region: "North America"
+            },
+            {
+                code: "KDFW",
+                name: "Dallas Fort Worth International Airport",
+                region: "North America"
+            },
+            {
+                code: "KEWR",
+                name: "Newark Liberty International Airport",
+                region: "North America"
+            },
+            {
+                code: "KFLL",
+                name: "Fort Lauderdale–Hollywood International Airport",
+                region: "North America"
+            },
+            {
+                code: "KIAD",
+                name: "Washington Dulles International Airport",
+                region: "North America"
+            },
+            {
+                code: "KIAH",
+                name: "George Bush Intercontinental Airport",
+                region: "North America"
+            },
+            {
+                code: "KJFK",
+                name: "John F. Kennedy International Airport",
+                region: "North America"
+            },
+            {
+                code: "KLAS",
+                name: "Harry Reid International Airport",
+                region: "North America"
+            },
+            {
+                code: "KLAX",
+                name: "Los Angeles International Airport",
+                region: "North America"
+            },
+            {
+                code: "KLGA",
+                name: "LaGuardia Airport",
+                region: "North America"
+            },
+            {
+                code: "KMCO",
+                name: "Orlando International Airport",
+                region: "North America"
+            },
+            {
+                code: "KMEM",
+                name: "Memphis International Airport",
+                region: "North America"
+            },
+            {
+                code: "KMIA",
+                name: "Miami International Airport",
+                region: "North America"
+            },
+            {
+                code: "KMSP",
+                name: "Minneapolis–Saint Paul International Airport",
+                region: "North America"
+            },
+            {
+                code: "KORD",
+                name: "Chicago O'Hare International Airport",
+                region: "North America"
+            },
+            {
+                code: "KPDX",
+                name: "Portland International Airport",
+                region: "North America"
+            },
+            {
+                code: "KPHL",
+                name: "Philadelphia International Airport",
+                region: "North America"
+            },
+            {
+                code: "KPHX",
+                name: "Phoenix Sky Harbor International Airport",
+                region: "North America"
+            },
+            {
+                code: "KSAN",
+                name: "San Diego International Airport",
+                region: "North America"
+            },
+            {
+                code: "KSEA",
+                name: "Seattle–Tacoma International Airport",
+                region: "North America"
+            },
+            {
+                code: "KSFO",
+                name: "San Francisco International Airport",
+                region: "North America"
+            },
+            {
+                code: "KSLC",
+                name: "Salt Lake City International Airport",
+                region: "North America"
+            },
+            {
+                code: "LEMD",
+                name: "Madrid–Barajas Airport",
+                region: "Europe"
+            },
+            {
+                code: "LFPG",
+                name: "Paris Charles de Gaulle Airport",
+                region: "Europe"
+            },
+            {
+                code: "LIRF",
+                name: "Rome Fiumicino Airport",
+                region: "Europe"
+            },
+            {
+                code: "LOWW",
+                name: "Vienna International Airport",
+                region: "Europe"
+            },
+            {
+                code: "LPPT",
+                name: "Lisbon Airport",
+                region: "Europe"
+            },
+            {
+                code: "LSZH",
+                name: "Zurich Airport",
+                region: "Europe"
+            },
+            {
+                code: "LTFM",
+                name: "Istanbul Airport",
+                region: "Europe"
+            },
+            {
+                code: "MMMX",
+                name: "Mexico City International Airport",
+                region: "North America"
+            },
+            {
+                code: "NZAA",
+                name: "Auckland Airport",
+                region: "Oceania"
+            },
+            {
+                code: "OMDB",
+                name: "Dubai International Airport",
+                region: "Asia"
+            },
+            {
+                code: "OTHH",
+                name: "Doha Hamad International Airport",
+                region: "Asia"
+            },
+            {
+                code: "PAFA",
+                name: "Fairbanks International Airport",
+                region: "North America"
+            },
+            {
+                code: "PANC",
+                name: "Ted Stevens Anchorage International Airport",
+                region: "North America"
+            },
+            {
+                code: "PHNL",
+                name: "Honolulu Daniel K. Inouye International Airport",
+                region: "North America"
+            },
+            {
+                code: "RCTP",
+                name: "Taoyuan International Airport",
+                region: "Asia"
+            },
+            {
+                code: "RJTT",
+                name: "Tokyo Haneda Airport",
+                region: "Asia"
+            },
+            {
+                code: "RKSI",
+                name: "Seoul Incheon International Airport",
+                region: "Asia"
+            },
+            {
+                code: "SBGR",
+                name: "São Paulo/Guarulhos International Airport",
+                region: "South America"
+            },
+            {
+                code: "VHHH",
+                name: "Hong Kong International Airport",
+                region: "Asia"
+            },
+            {
+                code: "WSSS",
+                name: "Singapore Changi Airport",
+                region: "Asia"
+            },
+            {
+                code: "YSSY",
+                name: "Sydney Airport",
+                region: "Oceania"
+            },
+        ];
+
+        let currentPage = 1;
+        const itemsPerPage = 12;
+        let filteredAirports = [...airports];
+
+        function renderAirports() {
+            const grid = document.getElementById('airportsGrid');
+            const start = (currentPage - 1) * itemsPerPage;
+            const end = start + itemsPerPage;
+            const pageAirports = filteredAirports.slice(start, end);
+
+            grid.innerHTML = pageAirports.map(airport => `
+                <div class="skyroute-card">
+                    <div class="airport-header">
+                        <div class="airport-code">${airport.code}</div>
+                        <div class="airport-name">${airport.name}</div>
+                        <div class="airport-region">${airport.region}</div>
+                    </div>
+                    <div class="video-container">
+                        <video controls loop muted>
+                            <source src="Assets/Images/SkyRoute/${airport.code}_10_animated.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            `).join('');
+
+            updatePagination();
+            updateStats();
+        }
+
+        function updatePagination() {
+            const totalPages = Math.ceil(filteredAirports.length / itemsPerPage);
+            document.getElementById('pageInfo').textContent = `Page ${currentPage} of ${totalPages}`;
+            document.getElementById('prevBtn').disabled = currentPage === 1;
+            document.getElementById('nextBtn').disabled = currentPage === totalPages || totalPages === 0;
+            
+            document.getElementById('pagination').style.display = filteredAirports.length === 0 ? 'none' : 'flex';
+        }
+
+        function updateStats() {
+            const showing = Math.min(filteredAirports.length, currentPage * itemsPerPage) - ((currentPage - 1) * itemsPerPage);
+            const actualShowing = Math.min(showing, filteredAirports.length - (currentPage - 1) * itemsPerPage);
+            document.getElementById('statsDisplay').textContent = 
+                `Showing ${actualShowing} of ${filteredAirports.length} airports`;
+            
+            const noResults = document.getElementById('noResults');
+            if (filteredAirports.length === 0) {
+                noResults.classList.remove('hidden');
+            } else {
+                noResults.classList.add('hidden');
+            }
+        }
+
+        function filterAirports() {
+            const searchTerm = document.getElementById('searchBox').value.toLowerCase();
+            const region = document.getElementById('regionFilter').value;
+
+            filteredAirports = airports.filter(airport => {
+                const matchesSearch = airport.code.toLowerCase().includes(searchTerm) || 
+                                     airport.name.toLowerCase().includes(searchTerm);
+                const matchesRegion = region === 'all' || airport.region === region;
+                return matchesSearch && matchesRegion;
+            });
+
+            currentPage = 1;
+            renderAirports();
+        }
+
+        document.getElementById('searchBox').addEventListener('input', filterAirports);
+        document.getElementById('regionFilter').addEventListener('change', filterAirports);
+
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            if (currentPage > 1) {
+                currentPage--;
+                renderAirports();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        });
+
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            const totalPages = Math.ceil(filteredAirports.length / itemsPerPage);
+            if (currentPage < totalPages) {
+                currentPage++;
+                renderAirports();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        });
+
+        // Initial render
+        renderAirports();
+    </script>
+</body>
 </html> 
